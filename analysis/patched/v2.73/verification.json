@@ -1,9 +1,9 @@
 {
   "status": "PASS",
   "firmware_version": "2.73",
-  "rendered_version": "v2.73  Jul 13 2016",
+  "rendered_version": "v2.73  Nov  1 2026",
   "boundary_comparisons": 326777,
-  "crc32": "0x3da58a4d",
+  "crc32": "0x465d03d",
   "opening_timeout_examples": {
     "0.0": {
       "configured_seconds": 0.0,

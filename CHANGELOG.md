@@ -1,5 +1,16 @@
 # Changelog
 
+## Custom build date in Info — 2026-11-01
+
+- Set the literal v2.73 Info label to `v2.73  Nov  1 2026`, using today's custom build date instead of the vendor date.
+- Regenerated firmware CRC32, SHA-256, manifest, and verification results. Other patches remain unchanged.
+
+## Literal Info label — 2026-11-01
+
+- Replaced the v2.73 numeric-argument display patch with the literal `v2.73  Jul 13 2016` in the existing 28-byte format/date region. Call instructions, pointers, and stack cleanup stay original.
+- Retained the clock, opening-allowance, and five-attempt changes. Regenerated CRC32, SHA-256, and the patch manifest.
+- Added checks for the literal, pointers, call bytes, visible date, and label size. The reported on-device `1.73` discrepancy remains unexplained; the previous build also statically predicted `2.73`. The current rebuild is not hardware-tested.
+
 ## Five startup attempts and update-file checks — 2026-11-01
 
 - Rebuilt custom v2.73 for five total normal startup attempts, retaining fuel-charge conditions and adjusting the special startup counter to preserve first-timeout failure.

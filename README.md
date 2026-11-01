@@ -62,7 +62,7 @@ This produces [`DTX9003.uc3`](analysis/patched/v1.72.42/DTX9003.uc3). I also inc
 
 Offsets and patch instructions are specific to each source image. Both generators refuse a source with a different SHA-256.
 
-The combined image displays **v1.72.42**. Both custom revision labels preserve the original build date.
+The combined image displays **v1.72.42**. The v1.72.42 label preserves the vendor build date; v2.73 displays the custom build date, November 1, 2026.
 
 ## :floppy_disk: Update the boiler software
 

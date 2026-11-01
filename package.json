@@ -77,7 +77,7 @@
       {
         "icon": "hourglass_flowing_sand",
         "title": "The same changes on v1.72",
-        "body": "```sh\npython3 analysis/tools/patch_firmware.py\npython3 analysis/tools/verify_patch.py\n```\n\nThis produces [`DTX9003.uc3`](analysis/patched/v1.72.42/DTX9003.uc3). I also increased the ash-plate opening allowance to 30 seconds beyond the configured movement duration. This changes motor fault timing; read the [full patch notes](analysis/patched/v1.72.42/README.md) for the details.\n\nOffsets and patch instructions are specific to each source image. Both generators refuse a source with a different SHA-256.\n\nThe combined image displays **v1.72.42**. Both custom revision labels preserve the original build date."
+        "body": "```sh\npython3 analysis/tools/patch_firmware.py\npython3 analysis/tools/verify_patch.py\n```\n\nThis produces [`DTX9003.uc3`](analysis/patched/v1.72.42/DTX9003.uc3). I also increased the ash-plate opening allowance to 30 seconds beyond the configured movement duration. This changes motor fault timing; read the [full patch notes](analysis/patched/v1.72.42/README.md) for the details.\n\nOffsets and patch instructions are specific to each source image. Both generators refuse a source with a different SHA-256.\n\nThe combined image displays **v1.72.42**. The v1.72.42 label preserves the vendor build date; v2.73 displays the custom build date, November 1, 2026."
       },
       {
         "icon": "floppy_disk",

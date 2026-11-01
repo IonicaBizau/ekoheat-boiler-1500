@@ -56,19 +56,27 @@ pointer=struct.unpack_from('>I',b,pointer_address-delta)[0]
 assert pointer==destination
 # The same timer still decrements and expires; only its expiry brightness value changes.
 assert a[timer_start-delta:o]==b[timer_start-delta:o]
-# The version string fits its original 16-byte allocation and preserves the date.
+# Check the actual Info label storage and the call's pointer/arguments.
 version_offset={'1.72': 0xccc5, '1.73': 0xd149}[version]
 assert a[version_offset:version_offset+16] == b'v%d.%02d  %s\0\0\0\0'
-assert b[version_offset:version_offset+16] == (b'v%d.%02d.42 %s\0\0' if version == '1.72' else a[version_offset:version_offset+16])
 if version == '1.73':
- major_offset = 0x80016780-delta
- assert a[major_offset:major_offset+2] == bytes.fromhex('3018')
- assert b[major_offset:major_offset+2] == bytes.fromhex('3028')
-assert a[version_offset+16:version_offset+28] == b[version_offset+16:version_offset+28]
-fmt=b[version_offset:].split(b'\0',1)[0].decode('ascii')
-date=b[version_offset+16:].split(b'\0',1)[0].decode('ascii')
-rendered=fmt % (2 if version == '1.73' else 1, int(version.split('.')[1]), date)
-assert rendered == 'v'+custom_version+('  ' if version == '1.73' else ' ')+date
+ label = b'v2.73  Nov  1 2026'
+ assert b[version_offset:version_offset+28] == (label+b'\0').ljust(28,b'\0')
+ assert b'%' not in label  # No numeric/date arguments are consumed.
+ assert b[0x80016776-delta:0x80016794-delta] == a[0x80016776-delta:0x80016794-delta]
+ assert b[0x80016780-delta:0x80016784-delta] == bytes.fromhex('30181ad8')
+ # Constant pool used by the Info label call: date, format, destination.
+ assert b[0x800169b0-delta:0x800169bc-delta] == bytes.fromhex('80015140800151300000545c')
+ assert a.count(bytes.fromhex('80015140')) == 1  # Only the now-unused date argument.
+ assert label.endswith(b'Nov  1 2026')
+ rendered=label.decode('ascii')
+else:
+ assert b[version_offset:version_offset+16] == b'v%d.%02d.42 %s\0\0'
+ assert a[version_offset+16:version_offset+28] == b[version_offset+16:version_offset+28]
+ fmt=b[version_offset:].split(b'\0',1)[0].decode('ascii')
+ date=b[version_offset+16:].split(b'\0',1)[0].decode('ascii')
+ rendered=fmt % (1,72,date)
+ assert rendered == 'v'+custom_version+' '+date
 assert len(rendered)+1 <= 0x21
 assert m['firmware_version'] == custom_version
 startup_attempts = 3

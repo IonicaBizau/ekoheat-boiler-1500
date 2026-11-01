@@ -8,8 +8,9 @@ patch.OUTPUT = Path('analysis/patched/v2.73/DTX9003.uc3')
 patch.EXPECTED_SHA256 = 'e57bb9517c66e8f37ecb864daca5735bc14e3ef6a2614c94a962dc62809f2e3a'
 patch.FIRMWARE_VERSION = "2.73"
 patch.PATCHES = [
-    (0x80016780, '3018', '3028',
-     'Display v2.73: MOV R8,1 -> MOV R8,2 for the major version argument; preserve format and date'),
+    (0x80015130, b'v%d.%02d  %s\0\0\0\0Jul 13 2016\0'.hex(),
+     b'v2.73  Nov  1 2026\0'.ljust(28, b'\0').hex(),
+     'Info label: literal v2.73 and custom build date 2026-11-01 in the existing 28-byte format/date storage; unused numeric arguments unchanged'),
     (0x8000ba8e, '3008', '3648',
      'Idle expiry: MOV R8,0 -> MOV R8,100; retain active display brightness'),
     (0x8001136a, '29c81039e08a0013', 'f0c8fed41238c122',

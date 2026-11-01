@@ -73,7 +73,7 @@ If the controller rejects the files or does not return to its normal interface, 
 
 ## Check before restarting the boiler
 
-Open **Info** and check the software label: **v1.72.42** or **v2.73**, depending on the image you chose. The original build date should still appear alongside it. The physical layout of the longer label has not been checked on the display.
+Open **Info** and check the software label: **v1.72.42** or **v2.73**, depending on the image you chose. The v2.73 label should read `v2.73  Nov  1 2026`; v1.72.42 retains its original vendor build date. The physical layout of the longer label has not been checked on the display.
 
 Verify the boiler model is **Ekoheat 1500**, then compare all settings with your record and restore the pellet calibration if it was reset. The 2014 manual describes selecting the boiler size under **Menu → Self test**; use the model-selection instructions that match your controller, and avoid activating unrelated test outputs.
 
