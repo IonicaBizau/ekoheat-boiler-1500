@@ -1,5 +1,7 @@
 # v1.72: keep the screen awake and give the ash plate more time
 
+The combined patch now displays **v1.72.42**. I changed the version format from `v%d.%02d  %s` to `v%d.%02d.42 %s` inside its original 16-byte allocation, including the terminating NUL and padding. The build date remains visible; file size, pointers, numeric version arguments, and update-header metadata stay unchanged. This is a display revision label, not a new vendor release or bootloader version. The earlier v1.73 screen-only image keeps its original label.
+
 Output: `DTX9003_no_idle_clock_30s.uc3`
 
 Created from `DTX9003 v1.72/DTX9003.uc3`. I left the original untouched. I have checked this patch offline, but have not flashed it or run it on the controller.
@@ -10,7 +12,7 @@ Created from `DTX9003 v1.72/DTX9003.uc3`. I left the original untouched. I have 
 | --- | --- | --- | --- | --- |
 | Keep display active at inactivity expiry | `0x8000B964` | `0x397D` | `30 08` | `36 48` |
 | Increase opening tolerance to 300 deciseconds | `0x80010F26` | `0x8F3F` | `29 C8 10 39 E0 8A 00 13` | `F0 C8 FE D4 12 38 C1 22` |
-| Payload CRC32, big endian | Header | `0x15` | `42 45 23 53` | `74 74 D0 86` |
+| Payload CRC32, big endian | Header | `0x15` | `42 45 23 53` | `DE BB 4F C5` |
 
 Address mapping: `VA = file_offset + 0x80008000 - 25`.
 
@@ -62,8 +64,8 @@ python3 analysis/tools/verify_patch.py
 The patch script refuses any input whose SHA-256 differs from the analyzed image. Verification checks unchanged regions, instruction encoding, branch destination, CRC, and 326777 boundary comparisons across every 16-bit movement value. Ghidra's native SLEIGH decoder also independently decoded the patched instructions, and its decompiler reconstructed the modified routines.
 
 - Source SHA-256: `b5ab1b7380f2486c29cf6708954cdb5bbaa2d7798fd0103f845fa254da51a5e8`
-- Derivative SHA-256: `b26b0b0177737d3884c2d4afb00cf03595c3f0b4c081e7d2dcc8388863f0a8ae`
+- Derivative SHA-256: `1f35cad23f091dacd35a45dc1048ac0e409acaa5bcdc9c0aa20b3870e3e6ba19`
 - Size: 450509 bytes, unchanged.
-- CRC32 of bytes from offset 25 through EOF: `0x7474D086`.
+- CRC32 of bytes from offset 25 through EOF: `0xDEBB4FC5`.
 
 See the accompanying JSON manifest and `verification.json` for machine-readable results. Static checks do not establish controller bootloader acceptance or physical motor/display behavior. Opaque header metadata remains unchanged.

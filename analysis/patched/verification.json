@@ -1,7 +1,9 @@
 {
   "status": "PASS",
+  "firmware_version": "1.72.42",
+  "rendered_version": "v1.72.42 Dec  3 2014",
   "boundary_comparisons": 326777,
-  "crc32": "0x7474d086",
+  "crc32": "0xdebb4fc5",
   "opening_timeout_examples": {
     "0.0": {
       "configured_seconds": 0.0,

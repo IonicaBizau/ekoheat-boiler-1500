@@ -1,5 +1,13 @@
 # Changelog
 
+## Custom revision labels 1.72.42 and 1.73.42 — 2026-11-01
+
+- Updated the combined screen-awake/30-second-opening images to display `v1.72.42` and `v1.73.42`.
+- Preserved the build date and reused the existing version-string allocation without moving code or pointers. Numeric version arguments and update-header metadata remain unchanged.
+- Regenerated CRC32, hashes, manifests, and verification results. Checks cover the rendered labels, string bounds, unchanged dates, existing instruction patches, and timing boundaries.
+- The earlier v1.73 screen-only image retains its original label.
+- Offline checks only; display layout and bootloader acceptance remain untested on hardware.
+
 ## 30-second opening allowance for both versions — 2026-11-01
 
 - Added a combined v1.73 patch with the screen-awake change and 30 extra seconds for ash-plate opening, matching the existing v1.72 patch.

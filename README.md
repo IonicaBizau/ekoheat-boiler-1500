@@ -52,6 +52,8 @@ The script checks the source hash and CRC32, leaves the original untouched, and 
 
 I also kept the earlier screen-only patch: `python3 analysis/tools/patch_v173_no_idle_clock.py`. Its output is `DTX9003_no_idle_clock.uc3`, which retains the original 10-second opening allowance.
 
+The combined image displays **v1.73.42** to distinguish it from the original firmware.
+
 ## :hourglass_flowing_sand: The same changes on v1.72
 
 ```sh
@@ -62,6 +64,8 @@ python3 analysis/tools/verify_patch.py
 This produces [`DTX9003_no_idle_clock_30s.uc3`](analysis/patched/DTX9003_no_idle_clock_30s.uc3). I also increased the ash-plate opening allowance to 30 seconds beyond the configured movement duration. This changes motor fault timing; read the [full patch notes](analysis/patched/README.md) for the details.
 
 Offsets and patch instructions are specific to each source image. Both generators refuse a source with a different SHA-256.
+
+The combined image displays **v1.72.42**. Both custom revision labels preserve the original build date.
 
 ## :mag: What the binaries tell us
 

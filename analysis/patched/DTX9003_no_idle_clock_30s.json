@@ -1,12 +1,20 @@
 {
+  "firmware_version": "1.72.42",
   "source": "DTX9003 v1.72/DTX9003.uc3",
   "output": "analysis/patched/DTX9003_no_idle_clock_30s.uc3",
   "source_sha256": "b5ab1b7380f2486c29cf6708954cdb5bbaa2d7798fd0103f845fa254da51a5e8",
-  "output_sha256": "b26b0b0177737d3884c2d4afb00cf03595c3f0b4c081e7d2dcc8388863f0a8ae",
+  "output_sha256": "1f35cad23f091dacd35a45dc1048ac0e409acaa5bcdc9c0aa20b3870e3e6ba19",
   "size": 450509,
   "original_crc32": "0x42452353",
-  "patched_crc32": "0x7474d086",
+  "patched_crc32": "0xdebb4fc5",
   "patches": [
+    {
+      "address": "0x80014cac",
+      "file_offset": "0xccc5",
+      "before": "7625642e253032642020257300000000",
+      "after": "7625642e253032642e34322025730000",
+      "purpose": "Display custom firmware revision .42; preserve build date"
+    },
     {
       "address": "0x8000b964",
       "file_offset": "0x397d",
@@ -35,7 +43,13 @@
     "0x8f43",
     "0x8f44",
     "0x8f45",
-    "0x8f46"
+    "0x8f46",
+    "0xcccd",
+    "0xccce",
+    "0xcccf",
+    "0xccd0",
+    "0xccd1",
+    "0xccd2"
   ],
   "validation_scope": "Static disassembly, checksum and bounded logical checks; no hardware execution or flashing"
 }

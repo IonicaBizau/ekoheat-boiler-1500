@@ -46,13 +46,24 @@ pointer=struct.unpack_from('>I',b,pointer_address-delta)[0]
 assert pointer==destination
 # The same timer still decrements and expires; only its expiry brightness value changes.
 assert a[timer_start-delta:o]==b[timer_start-delta:o]
+# The version string fits its original 16-byte allocation and preserves the date.
+version_offset={'1.72': 0xccc5, '1.73': 0xd149}[version]
+assert a[version_offset:version_offset+16] == b'v%d.%02d  %s\0\0\0\0'
+assert b[version_offset:version_offset+16] == b'v%d.%02d.42 %s\0\0'
+assert a[version_offset+16:version_offset+28] == b[version_offset+16:version_offset+28]
+fmt=b[version_offset:].split(b'\0',1)[0].decode('ascii')
+date=b[version_offset+16:].split(b'\0',1)[0].decode('ascii')
+rendered=fmt % (1, int(version.split('.')[1]), date)
+assert rendered == 'v'+version+'.42 '+date
+assert len(rendered)+1 <= 0x21
+assert m['firmware_version'] == version+'.42'
 # Failure check happens after the wait with a counter initially zero.
 examples={}
 for n in (0,100,1000):
  first_error=next(c for c in range(n+302) if c>n+300)
  assert first_error==n+301
  examples[str(n/10)]=dict(configured_seconds=n/10,nominal_failure_seconds=(first_error+1)/10)
-result=dict(status='PASS',boundary_comparisons=checks,crc32=hex(zlib.crc32(b[25:])),
+result=dict(status='PASS',firmware_version=version+'.42',rendered_version=rendered,boundary_comparisons=checks,crc32=hex(zlib.crc32(b[25:])),
             opening_timeout_examples=examples,hardware_execution=False)
 (root/'verification-30s.json' if version == '1.73' else root/'verification.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result,indent=2))

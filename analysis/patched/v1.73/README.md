@@ -1,5 +1,7 @@
 # v1.73: keep the screen awake and give the ash plate more time
 
+The combined patch now displays **v1.73.42**. I changed the version format from `v%d.%02d  %s` to `v%d.%02d.42 %s` inside its original 16-byte allocation, including the terminating NUL and padding. The build date remains visible; file size, pointers, numeric version arguments, and update-header metadata stay unchanged. This is a display revision label, not a new vendor release or bootloader version. The earlier v1.73 screen-only image keeps its original label.
+
 I added the same 30-second ash-plate opening allowance as the v1.72 patch, together with the screen-awake change. The original firmware and supplied license file stay untouched.
 
 ```sh
@@ -13,7 +15,7 @@ Output: [`DTX9003_no_idle_clock_30s.uc3`](DTX9003_no_idle_clock_30s.uc3), based 
 | --- | --- | --- | --- | --- |
 | Keep screen awake | `0x8000BA8E` | `0x3AA7` | `30 08` | `36 48` |
 | Allow 300 extra deciseconds for opening | `0x8001136A` | `0x9383` | `29 C8 10 39 E0 8A 00 13` | `F0 C8 FE D4 12 38 C1 22` |
-| Update payload CRC32 | Header | `0x15` | `A6 9E A7 CF` | `21 AF 35 9A` |
+| Update payload CRC32 | Header | `0x15` | `A6 9E A7 CF` | `D5 04 F4 AC` |
 
 The opening check now reports a fault when `counter > configured_movement_deciseconds + 300`, up from `+100`. The replacement uses `SUB R8,R8,-300`, `CP.W R8,R9`, and `BRHS 0x80011394`. Configuration and counter values are zero-extended 16-bit values, so the unsigned comparison keeps the intended ordering throughout their ranges.
 
@@ -21,8 +23,8 @@ This allows **30 extra seconds**, rather than limiting total opening time to 30 
 
 The [manifest](DTX9003_no_idle_clock_30s.json) records each patch and changed byte. The [verification results](verification-30s.json) cover checksums, unchanged regions, file size, decoded instructions, branch target, and 326777 boundary comparisons. Native SLEIGH output is in [opening-original.tsv](opening-original.tsv) and [opening-patched.tsv](opening-patched.tsv); the [patched decompilation](decompiled-80011238.txt) independently shows the `+300` check.
 
-- Output SHA-256: `6b5375058171125474635418674760b0f26a6ac0ed6d50f3ab95c2687e7b4d0d`
-- Payload CRC32: `0x21AF359A`
+- Output SHA-256: `7e5a1a3a980c00eb719fa74ac8b54d012cb62402bcdd670088ad4a67652fae85`
+- Payload CRC32: `0xD504F4AC`
 - Size: 453229 bytes, unchanged.
 
 I have checked this offline. I have not flashed it, tested physical motor/display behavior, or verified bootloader/license-file acceptance.
