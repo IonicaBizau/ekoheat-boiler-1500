@@ -13,6 +13,8 @@ Keep original images intact. Guard against the wrong source hash, verify the pay
 For the existing patches, run from the repository root:
 
 ```sh
+python3 analysis/tools/patch_v173_30s.py
+python3 analysis/tools/verify_patch.py --version 1.73
 python3 analysis/tools/patch_v173_no_idle_clock.py
 python3 analysis/tools/patch_firmware.py
 python3 analysis/tools/verify_patch.py

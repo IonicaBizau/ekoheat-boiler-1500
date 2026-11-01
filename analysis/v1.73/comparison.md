@@ -1,6 +1,6 @@
 # Official v1.73 compared with supplied v1.72
 
-I compared the two firmware images to see what changed between v1.72 and v1.73. These are my findings from the binaries, rather than release notes from the vendor. I left both originals untouched and later made a [small v1.73 patch to keep the screen awake](../patched/v1.73/README.md).
+I compared the two firmware images to see what changed between v1.72 and v1.73. These are my findings from the binaries, rather than release notes from the vendor. I left both originals untouched and later made [v1.73 patches to keep the screen awake and extend the opening allowance](../patched/v1.73/README.md).
 
 ## Image identity
 
@@ -92,3 +92,7 @@ python3 analysis/tools/compare_decompiled.py
 ```
 
 The XML image was generated directly from the new file's bytes after its 25-byte wrapper and loaded at `0x80008000`. The default Ghidra path in the helper can be overridden with `--ghidra`.
+
+## Custom patches after this comparison
+
+The table above describes the original vendor images. I have since added a [combined v1.73 patch](../patched/v1.73/README.md) that keeps the screen awake and raises the ash-plate opening allowance from 10 to 30 seconds beyond the configured movement time, matching the v1.72 patch. The earlier screen-only option is also available.

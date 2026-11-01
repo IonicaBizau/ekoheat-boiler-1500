@@ -21,8 +21,8 @@ This repo is where I keep my notes, tools, firmware comparisons, and patches. I 
 Here is what I have put together so far:
 
 - A **v1.72 → v1.73 comparison**, covering low-fuel warnings, status messages, pump control, and UI changes.
-- A **v1.73 patch to keep the screen awake**. It changes two instruction bytes and updates the checksum.
-- An **earlier v1.72 patch** that also gives the ash plate more time to open: 30 seconds beyond the configured movement time, up from 10.
+- **Patches for v1.72 and v1.73** that keep the screen awake and give the ash plate more time to open: 30 seconds beyond the configured movement time, up from 10.
+- The earlier **v1.73 screen-only patch**, if you want the original ash-plate timing.
 - Disassembly, decompiled routines, hashes, and checksums so you can follow the findings.
 - Manuals and notes about ignition, touchscreen calibration, wiring, and the images used by the display.
 
@@ -37,28 +37,22 @@ cd ekoheat-boiler-1500
 
 Start with the [firmware comparison](analysis/v1.73/comparison.md), [changelog](CHANGELOG.md), or [interesting findings](FUN_FACTS.md).
 
-## :wrench: Keep the screen awake on v1.73
+## :wrench: Keep the screen awake and give the ash plate more time on v1.73
 
 Run from the repository root:
 
 ```sh
-python3 analysis/tools/patch_v173_no_idle_clock.py
+python3 analysis/tools/patch_v173_30s.py
+python3 analysis/tools/verify_patch.py --version 1.73
 ```
 
-The script checks the source SHA-256 and CRC32, writes the patched file, verifies the changed regions and checksum, and confirms the source is unchanged.
+This creates [`DTX9003_no_idle_clock_30s.uc3`](analysis/patched/v1.73/DTX9003_no_idle_clock_30s.uc3). It keeps the current screen visible and increases the ash-plate opening allowance from 10 to **30 seconds beyond the configured movement time**. For a 10-second movement setting, the nominal opening fault point is 40.2 seconds, including the existing loop timing. This is not a 30-second total opening limit.
 
-| File | Purpose |
-| --- | --- |
-| [`DTX9003 v1.73/DTX9003.uc3`](DTX9003%20v1.73/DTX9003.uc3) | Original v1.73 source image |
-| [`DTX9003_no_idle_clock.uc3`](analysis/patched/v1.73/DTX9003_no_idle_clock.uc3) | Patched image |
-| [JSON manifest](analysis/patched/v1.73/DTX9003_no_idle_clock.json) | SHA-256 values, CRC32, offsets, and verification results |
-| [Patch notes](analysis/patched/v1.73/README.md) | Instruction changes and supporting evidence |
+The script checks the source hash and CRC32, leaves the original untouched, and records the changes in a [JSON manifest](analysis/patched/v1.73/DTX9003_no_idle_clock_30s.json). See the [patch notes](analysis/patched/v1.73/README.md) for instruction details and verification results. Closing checks and ignition behavior are unchanged.
 
-The instruction at `0x8000BA8E` changes from `MOV R8,0` to `MOV R8,100`. When the inactivity timer expires, the firmware keeps the display bright, which prevents the automatic switch to the clock screen. The timer still expires for other UI uses.
+I also kept the earlier screen-only patch: `python3 analysis/tools/patch_v173_no_idle_clock.py`. Its output is `DTX9003_no_idle_clock.uc3`, which retains the original 10-second opening allowance.
 
-**This v1.73 patch changes display behavior only.**
-
-## :hourglass_flowing_sand: Earlier v1.72 patch
+## :hourglass_flowing_sand: The same changes on v1.72
 
 ```sh
 python3 analysis/tools/patch_firmware.py

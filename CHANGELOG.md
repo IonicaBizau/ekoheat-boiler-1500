@@ -1,5 +1,16 @@
 # Changelog
 
+## 30-second opening allowance for both versions — 2026-11-01
+
+- Added a combined v1.73 patch with the screen-awake change and 30 extra seconds for ash-plate opening, matching the existing v1.72 patch.
+- Changed the opening threshold at `0x8001136A` from configured deciseconds +100 to +300; closing checks and ignition behavior stay unchanged.
+- Kept the earlier v1.73 screen-only image as a separate option.
+- Verified both combined images: source/output hashes, CRC32, unchanged regions, instruction encoding, branch targets, and 326777 timing-boundary comparisons per version. Native SLEIGH and decompilation confirm the v1.73 replacement.
+- New v1.73 SHA-256: `6b5375058171125474635418674760b0f26a6ac0ed6d50f3ab95c2687e7b4d0d`; CRC32: `0x21AF359A`.
+- Offline checks only; no controller execution or flashing.
+
+See [v1.73 patch notes](analysis/patched/v1.73/README.md) for reproduction and evidence.
+
 ## Minimal v1.73 display patch — 2026-11-01
 
 - Prevent automatic idle clock-screen switching by changing `MOV R8,0` to `MOV R8,100` at `0x8000BA8E` (file offset `0x3AA7`).
@@ -44,7 +55,7 @@ Binary-derived findings from `DTX9003 v1.73/DTX9003.uc3`. Embedded build date: *
 - Image size: **453229 bytes**, an increase of 2720 bytes.
 - SHA-256: `e57bb9517c66e8f37ecb864daca5735bc14e3ef6a2614c94a962dc62809f2e3a`.
 - Stored payload CRC32 `0xA69EA7CF` verified.
-- The v1.72 combined patch has not been ported as a whole. A separate minimal v1.73 display-only patch is documented above; v1.72 offsets must not be reused for v1.73.
+- Both combined and screen-only v1.73 patches are documented above; v1.72 offsets must not be reused for v1.73.
 - Static comparison only; this list covers verified findings, not every possible driver or library change.
 
 See [v1.73 comparison and evidence](analysis/v1.73/comparison.md) for function addresses, data offsets, original/new decompilations, and unresolved details.

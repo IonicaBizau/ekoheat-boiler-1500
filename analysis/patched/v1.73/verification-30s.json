@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "boundary_comparisons": 326777,
+  "crc32": "0x21af359a",
+  "opening_timeout_examples": {
+    "0.0": {
+      "configured_seconds": 0.0,
+      "nominal_failure_seconds": 30.2
+    },
+    "10.0": {
+      "configured_seconds": 10.0,
+      "nominal_failure_seconds": 40.2
+    },
+    "100.0": {
+      "configured_seconds": 100.0,
+      "nominal_failure_seconds": 130.2
+    }
+  },
+  "hardware_execution": false
+}
