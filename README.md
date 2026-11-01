@@ -67,6 +67,14 @@ Offsets and patch instructions are specific to each source image. Both generator
 
 The combined image displays **v1.72.42**. Both custom revision labels preserve the original build date.
 
+## :floppy_disk: Update the boiler software
+
+I wrote down the [USB update procedure](docs/updating-firmware.md), including which patched image and `license.key` to use, renaming the USB copy to `DTX9003.uc3`, and the controller menu steps.
+
+**Record your settings first:** the manual warns that an update can reset everything and select EkoHeat 900. Check the model is **EkoHeat 1500** and restore the pellet calibration before restarting.
+
+The guide follows the supplied manuals. I have not flashed these patches or verified bootloader/license-file acceptance on hardware.
+
 ## :mag: What the binaries tell us
 
 | Finding | Evidence |

@@ -1,5 +1,7 @@
 # Reference documents
 
+For the USB preparation, controller menu steps, and checks after updating, see [Updating the boiler software](updating-firmware.md).
+
 | File | Contents | Useful pages |
 | --- | --- | --- |
 | [Ekoheat series manual](ekoheat_series.pdf) | Boiler installation, operation, and wiring | PDF page 11: ambient thermostat connection described. PDF page 48 / printed page 44: J1 terminals 8–9 labelled TA (air thermostat), with a link shown. |
