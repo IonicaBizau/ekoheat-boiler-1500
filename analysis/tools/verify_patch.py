@@ -5,7 +5,8 @@ from pathlib import Path
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--version', choices=('1.72','1.73'), default='1.72')
 version=parser.parse_args().version
-root=Path('analysis/patched')/('v'+version+'.42')
+custom_version = {'1.72': '1.72.42', '1.73': '2.73'}[version]
+root=Path('analysis/patched')/('v'+custom_version)
 opening, continuation, idle, pointer_address, destination, timer_start = {
  '1.72': (0x80010f26, 0x80010f50, 0x8000b964, 0x8000bc0c, 0x228a, 0x8000b910),
  '1.73': (0x8001136a, 0x80011394, 0x8000ba8e, 0x8000bd7c, 0x2336, 0x8000ba3a),
@@ -48,21 +49,25 @@ assert a[timer_start-delta:o]==b[timer_start-delta:o]
 # The version string fits its original 16-byte allocation and preserves the date.
 version_offset={'1.72': 0xccc5, '1.73': 0xd149}[version]
 assert a[version_offset:version_offset+16] == b'v%d.%02d  %s\0\0\0\0'
-assert b[version_offset:version_offset+16] == b'v%d.%02d.42 %s\0\0'
+assert b[version_offset:version_offset+16] == (b'v%d.%02d.42 %s\0\0' if version == '1.72' else a[version_offset:version_offset+16])
+if version == '1.73':
+ major_offset = 0x80016780-delta
+ assert a[major_offset:major_offset+2] == bytes.fromhex('3018')
+ assert b[major_offset:major_offset+2] == bytes.fromhex('3028')
 assert a[version_offset+16:version_offset+28] == b[version_offset+16:version_offset+28]
 fmt=b[version_offset:].split(b'\0',1)[0].decode('ascii')
 date=b[version_offset+16:].split(b'\0',1)[0].decode('ascii')
-rendered=fmt % (1, int(version.split('.')[1]), date)
-assert rendered == 'v'+version+'.42 '+date
+rendered=fmt % (2 if version == '1.73' else 1, int(version.split('.')[1]), date)
+assert rendered == 'v'+custom_version+('  ' if version == '1.73' else ' ')+date
 assert len(rendered)+1 <= 0x21
-assert m['firmware_version'] == version+'.42'
+assert m['firmware_version'] == custom_version
 # Failure check happens after the wait with a counter initially zero.
 examples={}
 for n in (0,100,1000):
  first_error=next(c for c in range(n+302) if c>n+300)
  assert first_error==n+301
  examples[str(n/10)]=dict(configured_seconds=n/10,nominal_failure_seconds=(first_error+1)/10)
-result=dict(status='PASS',firmware_version=version+'.42',rendered_version=rendered,boundary_comparisons=checks,crc32=hex(zlib.crc32(b[25:])),
+result=dict(status='PASS',firmware_version=custom_version,rendered_version=rendered,boundary_comparisons=checks,crc32=hex(zlib.crc32(b[25:])),
             opening_timeout_examples=examples,hardware_execution=False)
 (root/'verification.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result,indent=2))

@@ -4,7 +4,7 @@
 
 # Ekoheat 1500
 
-[![Support me on Patreon](https://ionicabizau.github.io/badges/patreon.svg)](https://www.patreon.com/ionicabizau) [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Firmware](https://img.shields.io/badge/firmware-1.72%20%7C%201.73-ef8e46)](analysis/v1.73/comparison.md) [![Validation](https://img.shields.io/badge/validation-static%20only-64748b)](analysis/patched/v1.73.42/README.md)
+[![Support me on Patreon](https://ionicabizau.github.io/badges/patreon.svg)](https://www.patreon.com/ionicabizau) [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Firmware](https://img.shields.io/badge/firmware-1.72%20%7C%201.73-ef8e46)](analysis/v1.73/comparison.md) [![Validation](https://img.shields.io/badge/validation-static%20only-64748b)](analysis/patched/v2.73/README.md)
 
 > Reverse engineering, firmware notes, and small quality-of-life patches for the Ekoheat 1500 pellet boiler.
 
@@ -45,11 +45,11 @@ python3 analysis/tools/patch_v173_30s.py
 python3 analysis/tools/verify_patch.py --version 1.73
 ```
 
-This creates [`DTX9003.uc3`](analysis/patched/v1.73.42/DTX9003.uc3). It keeps the current screen visible and increases the ash-plate opening allowance from 10 to **30 seconds beyond the configured movement time**. For a 10-second movement setting, the nominal opening fault point is 40.2 seconds, including the existing loop timing. This is not a 30-second total opening limit.
+This creates [`DTX9003.uc3`](analysis/patched/v2.73/DTX9003.uc3). It keeps the current screen visible and increases the ash-plate opening allowance from 10 to **30 seconds beyond the configured movement time**. For a 10-second movement setting, the nominal opening fault point is 40.2 seconds, including the existing loop timing. This is not a 30-second total opening limit.
 
-The script checks the source hash and CRC32, leaves the original untouched, and records the changes in a [JSON manifest](analysis/patched/v1.73.42/DTX9003.json). See the [patch notes](analysis/patched/v1.73.42/README.md) for instruction details and verification results. Closing checks and ignition behavior are unchanged.
+The script checks the source hash and CRC32, leaves the original untouched, and records the changes in a [JSON manifest](analysis/patched/v2.73/DTX9003.json). See the [patch notes](analysis/patched/v2.73/README.md) for instruction details and verification results. Closing checks and ignition behavior are unchanged.
 
-The combined image displays **v1.73.42** to distinguish it from the original firmware.
+The combined image displays **v2.73** to distinguish it from the original firmware.
 
 ## :hourglass_flowing_sand: The same changes on v1.72
 

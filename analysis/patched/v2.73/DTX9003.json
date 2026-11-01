@@ -1,19 +1,19 @@
 {
-  "firmware_version": "1.73.42",
+  "firmware_version": "2.73",
   "source": "DTX9003 v1.73/DTX9003.uc3",
-  "output": "analysis/patched/v1.73.42/DTX9003.uc3",
+  "output": "analysis/patched/v2.73/DTX9003.uc3",
   "source_sha256": "e57bb9517c66e8f37ecb864daca5735bc14e3ef6a2614c94a962dc62809f2e3a",
-  "output_sha256": "7e5a1a3a980c00eb719fa74ac8b54d012cb62402bcdd670088ad4a67652fae85",
+  "output_sha256": "d14f1f5cd2f2008e008cc78534dda1e8b4194b0005e8f403c999b14bb80f5471",
   "size": 453229,
   "original_crc32": "0xa69ea7cf",
-  "patched_crc32": "0xd504f4ac",
+  "patched_crc32": "0xdd3e71ac",
   "patches": [
     {
-      "address": "0x80015130",
-      "file_offset": "0xd149",
-      "before": "7625642e253032642020257300000000",
-      "after": "7625642e253032642e34322025730000",
-      "purpose": "Display custom firmware revision .42; preserve build date"
+      "address": "0x80016780",
+      "file_offset": "0xe799",
+      "before": "3018",
+      "after": "3028",
+      "purpose": "Display v2.73: MOV R8,1 -> MOV R8,2 for the major version argument; preserve format and date"
     },
     {
       "address": "0x8000ba8e",
@@ -44,12 +44,7 @@
     "0x9388",
     "0x9389",
     "0x938a",
-    "0xd151",
-    "0xd152",
-    "0xd153",
-    "0xd154",
-    "0xd155",
-    "0xd156"
+    "0xe79a"
   ],
   "validation_scope": "Static disassembly, checksum and bounded logical checks; no hardware execution or flashing"
 }

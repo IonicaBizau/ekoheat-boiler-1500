@@ -1,5 +1,12 @@
 # Changelog
 
+## Custom v2.73 and clock-screen recheck — 2026-11-01
+
+- Rechecked the v1.73 inactivity timer, brightness task, and GUI clock transition; retained the idle-expiry request of 100.
+- Changed the displayed major-version argument to 2, producing `v2.73` with the original build date and format.
+- Moved the v1.73 derivative to `analysis/patched/v2.73/` and regenerated its image, manifest, CRC32, and verification results. The 30-second opening allowance remains.
+- Validation is offline; controller execution and bootloader acceptance remain untested.
+
 ## Remove earlier screen-only patch — 2026-11-01
 
 - Removed the earlier v1.73 screen-only image, its generator, and its supporting files.

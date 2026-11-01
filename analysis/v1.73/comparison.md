@@ -1,6 +1,6 @@
 # Official v1.73 compared with supplied v1.72
 
-I compared the two firmware images to see what changed between v1.72 and v1.73. These are my findings from the binaries, rather than release notes from the vendor. I left both originals untouched and later made [v1.73 patches to keep the screen awake and extend the opening allowance](../patched/v1.73.42/README.md).
+I compared the two firmware images to see what changed between v1.72 and v1.73. These are my findings from the binaries, rather than release notes from the vendor. I left both originals untouched and later made [v1.73 patches to keep the screen awake and extend the opening allowance](../patched/v2.73/README.md).
 
 ## Image identity
 
@@ -95,4 +95,4 @@ The XML image was generated directly from the new file's bytes after its 25-byte
 
 ## Custom patches after this comparison
 
-The table above describes the original vendor images. I have since added a [combined v1.73 patch](../patched/v1.73.42/README.md) that keeps the screen awake and raises the ash-plate opening allowance from 10 to 30 seconds beyond the configured movement time, matching the v1.72 patch.
+The table above describes the original vendor images. I have since added a [combined v1.73 patch](../patched/v2.73/README.md) that keeps the screen awake and raises the ash-plate opening allowance from 10 to 30 seconds beyond the configured movement time, matching the v1.72 patch.

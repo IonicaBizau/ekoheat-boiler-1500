@@ -19,7 +19,7 @@ Use one firmware image and the license file supplied with its source version:
 | Custom version | Patched image in this repository | Matching license file |
 | --- | --- | --- |
 | **1.72.42** | [`analysis/patched/v1.72.42/DTX9003.uc3`](../analysis/patched/v1.72.42/DTX9003.uc3) | [`analysis/patched/v1.72.42/license.key`](../analysis/patched/v1.72.42/license.key) |
-| **1.73.42** | [`analysis/patched/v1.73.42/DTX9003.uc3`](../analysis/patched/v1.73.42/DTX9003.uc3) | [`analysis/patched/v1.73.42/license.key`](../analysis/patched/v1.73.42/license.key) |
+| **2.73** | [`analysis/patched/v2.73/DTX9003.uc3`](../analysis/patched/v2.73/DTX9003.uc3) | [`analysis/patched/v2.73/license.key`](../analysis/patched/v2.73/license.key) |
 
 Both custom versions keep the current screen awake and allow the ash plate **30 seconds beyond the configured opening time**. The version numbers identify these custom patches; they are not official vendor releases.
 
@@ -30,12 +30,12 @@ To regenerate and check the combined images, run these commands from the reposit
 python3 analysis/tools/patch_firmware.py
 python3 analysis/tools/verify_patch.py
 
-# v1.73.42
+# v2.73
 python3 analysis/tools/patch_v173_30s.py
 python3 analysis/tools/verify_patch.py --version 1.73
 ```
 
-These commands write files locally; they do not flash the boiler. See the [v1.72 patch notes](../analysis/patched/v1.72.42/README.md) and [v1.73 patch notes](../analysis/patched/v1.73.42/README.md) for hashes, checksums, and validation limits. Using the supplied license file with its corresponding version follows the original packaging; it is not a tested guarantee of acceptance on your controller.
+These commands write files locally; they do not flash the boiler. See the [v1.72 patch notes](../analysis/patched/v1.72.42/README.md) and [v1.73 patch notes](../analysis/patched/v2.73/README.md) for hashes, checksums, and validation limits. Using the supplied license file with its corresponding version follows the original packaging; it is not a tested guarantee of acceptance on your controller.
 
 ## Prepare the USB drive
 
@@ -65,7 +65,7 @@ If the controller rejects the files or does not return to its normal interface, 
 
 ## Check before restarting the boiler
 
-Open **Info** and check the software label: **v1.72.42** or **v1.73.42**, depending on the image you chose. The original build date should still appear alongside it. The physical layout of the longer label has not been checked on the display.
+Open **Info** and check the software label: **v1.72.42** or **v2.73**, depending on the image you chose. The original build date should still appear alongside it. The physical layout of the longer label has not been checked on the display.
 
 Verify the boiler model is **Ekoheat 1500**, then compare all settings with your record and restore the pellet calibration if it was reset. The 2014 manual describes selecting the boiler size under **Menu → Self test**; use the model-selection instructions that match your controller, and avoid activating unrelated test outputs.
 
