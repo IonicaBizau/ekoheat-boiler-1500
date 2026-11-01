@@ -25,6 +25,6 @@ The corresponding native Ghidra decompilations are in `../ghidra/decompiled/`.
 
 Same-size artwork can replace each pixel payload without moving code, image pointers, or screen resources. Convert the artwork to RGB565, preserve each four-byte dimension header, and recalculate the firmware payload CRC32 at header offset `0x15`.
 
-I have not replaced the logos yet. Future logo edits should build on `../patched/DTX9003_no_idle_clock_30s.uc3` to retain the two previous changes.
+I have not replaced the logos yet. Future logo edits should build on `../patched/v1.72.42/DTX9003.uc3` to retain the two previous changes.
 
 Open `index.html` to view all extracted assets. `bitmaps.json` contains dimensions and offsets. The contact sheet clips wide images; individual PNG previews contain the entire images.

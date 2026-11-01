@@ -3,8 +3,8 @@
 import hashlib, json, struct, subprocess, zlib
 from pathlib import Path
 SOURCE = Path("DTX9003 v1.73/DTX9003.uc3")
-ROOT = Path("analysis/patched/v1.73")
-OUTPUT = ROOT / "DTX9003_no_idle_clock.uc3"
+ROOT = Path("analysis/patched/v1.73-screen-only")
+OUTPUT = ROOT / "DTX9003.uc3"
 EXPECTED = "e57bb9517c66e8f37ecb864daca5735bc14e3ef6a2614c94a962dc62809f2e3a"
 DELTA = 0x80007fe7
 ADDRESS = 0x8000ba8e
@@ -31,6 +31,7 @@ def main():
     ROOT.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_bytes(patched)
     assert OUTPUT.read_bytes() == patched
+    OUTPUT.with_name("license.key").write_bytes(SOURCE.with_name("license.key").read_bytes())
     assert SOURCE.read_bytes() == original
     manifest = dict(source=str(SOURCE), output=str(OUTPUT),
         source_sha256=sha(original), output_sha256=sha(patched), size=len(patched),

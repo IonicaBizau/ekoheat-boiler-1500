@@ -18,10 +18,10 @@ Use one firmware image and the license file supplied with its source version:
 
 | Custom version | Patched image in this repository | Matching license file |
 | --- | --- | --- |
-| **1.72.42** | [`analysis/patched/DTX9003_no_idle_clock_30s.uc3`](../analysis/patched/DTX9003_no_idle_clock_30s.uc3) | [`DTX9003 v1.72/license.key`](../DTX9003%20v1.72/license.key) |
-| **1.73.42** | [`analysis/patched/v1.73/DTX9003_no_idle_clock_30s.uc3`](../analysis/patched/v1.73/DTX9003_no_idle_clock_30s.uc3) | [`DTX9003 v1.73/license.key`](../DTX9003%20v1.73/license.key) |
+| **1.72.42** | [`analysis/patched/v1.72.42/DTX9003.uc3`](../analysis/patched/v1.72.42/DTX9003.uc3) | [`analysis/patched/v1.72.42/license.key`](../analysis/patched/v1.72.42/license.key) |
+| **1.73.42** | [`analysis/patched/v1.73.42/DTX9003.uc3`](../analysis/patched/v1.73.42/DTX9003.uc3) | [`analysis/patched/v1.73.42/license.key`](../analysis/patched/v1.73.42/license.key) |
 
-Both custom versions keep the current screen awake and allow the ash plate **30 seconds beyond the configured opening time**. The version numbers identify these custom patches; they are not official vendor releases. The earlier `DTX9003_no_idle_clock.uc3` image for v1.73 only changes the display behavior and retains the original version label and opening allowance.
+Both custom versions keep the current screen awake and allow the ash plate **30 seconds beyond the configured opening time**. The version numbers identify these custom patches; they are not official vendor releases. The earlier `analysis/patched/v1.73-screen-only/DTX9003.uc3` image for v1.73 only changes the display behavior and retains the original version label and opening allowance.
 
 To regenerate and check the combined images, run these commands from the repository root:
 
@@ -35,12 +35,12 @@ python3 analysis/tools/patch_v173_30s.py
 python3 analysis/tools/verify_patch.py --version 1.73
 ```
 
-These commands write files locally; they do not flash the boiler. See the [v1.72 patch notes](../analysis/patched/README.md) and [v1.73 patch notes](../analysis/patched/v1.73/README.md) for hashes, checksums, and validation limits. Using the supplied license file with its corresponding version follows the original packaging; it is not a tested guarantee of acceptance on your controller.
+These commands write files locally; they do not flash the boiler. See the [v1.72 patch notes](../analysis/patched/v1.72.42/README.md) and [v1.73 patch notes](../analysis/patched/v1.73.42/README.md) for hashes, checksums, and validation limits. Using the supplied license file with its corresponding version follows the original packaging; it is not a tested guarantee of acceptance on your controller.
 
 ## Prepare the USB drive
 
 1. Use an empty USB flash drive. Back up anything on it before clearing it.
-2. Copy the chosen patched `.uc3` file to the drive's root and rename that copy to **`DTX9003.uc3`**. Leave the original file in the repository as it is.
+2. Copy the chosen patched `.uc3` file to the drive's root and keep its name as **`DTX9003.uc3`**. Leave the original file in the repository as it is.
 3. Then copy the matching **`license.key`** to the drive's root. Copy it as a file; do not open and re-save it in a text editor. These supplied files contain nonprinting bytes.
 4. Check that the drive contains the two files below, rather than a ZIP archive, a containing folder, or a file ending in `.uc3.uc3`. Eject the drive cleanly.
 
@@ -49,6 +49,8 @@ USB drive/
 ├── DTX9003.uc3
 └── license.key
 ```
+
+Each patched folder already includes the matching `license.key`, so both USB files can be taken from the same folder.
 
 The manual specifies copying the firmware first and the license file second. It does not specify a filesystem format or USB capacity, so I have not assumed a particular one here.
 

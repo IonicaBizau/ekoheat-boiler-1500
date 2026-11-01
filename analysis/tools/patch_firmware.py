@@ -3,7 +3,7 @@
 import hashlib, json, struct, zlib
 from pathlib import Path
 SOURCE = Path('DTX9003 v1.72/DTX9003.uc3')
-OUTPUT = Path('analysis/patched/DTX9003_no_idle_clock_30s.uc3')
+OUTPUT = Path('analysis/patched/v1.72.42/DTX9003.uc3')
 EXPECTED_SHA256 = 'b5ab1b7380f2486c29cf6708954cdb5bbaa2d7798fd0103f845fa254da51a5e8'
 FIRMWARE_VERSION = "1.72.42"
 DELTA = 0x80008000 - 25
@@ -34,6 +34,7 @@ def main():
     assert struct.unpack_from('>I',patched,21)[0]==zlib.crc32(patched[25:])
     OUTPUT.parent.mkdir(parents=True,exist_ok=True)
     OUTPUT.write_bytes(patched)
+    OUTPUT.with_name("license.key").write_bytes(SOURCE.with_name("license.key").read_bytes())
     assert SOURCE.read_bytes()==original
     manifest=dict(firmware_version=FIRMWARE_VERSION, source=str(SOURCE),output=str(OUTPUT),source_sha256=sha(original),output_sha256=sha(patched),
                   size=len(patched),original_crc32=hex(zlib.crc32(original[25:])),patched_crc32=hex(crc),

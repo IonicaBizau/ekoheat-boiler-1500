@@ -4,7 +4,7 @@
 
 # Ekoheat 1500
 
-[![Support me on Patreon](https://ionicabizau.github.io/badges/patreon.svg)](https://www.patreon.com/ionicabizau) [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Firmware](https://img.shields.io/badge/firmware-1.72%20%7C%201.73-ef8e46)](analysis/v1.73/comparison.md) [![Validation](https://img.shields.io/badge/validation-static%20only-64748b)](analysis/patched/v1.73/README.md)
+[![Support me on Patreon](https://ionicabizau.github.io/badges/patreon.svg)](https://www.patreon.com/ionicabizau) [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Firmware](https://img.shields.io/badge/firmware-1.72%20%7C%201.73-ef8e46)](analysis/v1.73/comparison.md) [![Validation](https://img.shields.io/badge/validation-static%20only-64748b)](analysis/patched/v1.73.42/README.md)
 
 > Reverse engineering, firmware notes, and small quality-of-life patches for the Ekoheat 1500 pellet boiler.
 
@@ -46,11 +46,11 @@ python3 analysis/tools/patch_v173_30s.py
 python3 analysis/tools/verify_patch.py --version 1.73
 ```
 
-This creates [`DTX9003_no_idle_clock_30s.uc3`](analysis/patched/v1.73/DTX9003_no_idle_clock_30s.uc3). It keeps the current screen visible and increases the ash-plate opening allowance from 10 to **30 seconds beyond the configured movement time**. For a 10-second movement setting, the nominal opening fault point is 40.2 seconds, including the existing loop timing. This is not a 30-second total opening limit.
+This creates [`DTX9003.uc3`](analysis/patched/v1.73.42/DTX9003.uc3). It keeps the current screen visible and increases the ash-plate opening allowance from 10 to **30 seconds beyond the configured movement time**. For a 10-second movement setting, the nominal opening fault point is 40.2 seconds, including the existing loop timing. This is not a 30-second total opening limit.
 
-The script checks the source hash and CRC32, leaves the original untouched, and records the changes in a [JSON manifest](analysis/patched/v1.73/DTX9003_no_idle_clock_30s.json). See the [patch notes](analysis/patched/v1.73/README.md) for instruction details and verification results. Closing checks and ignition behavior are unchanged.
+The script checks the source hash and CRC32, leaves the original untouched, and records the changes in a [JSON manifest](analysis/patched/v1.73.42/DTX9003.json). See the [patch notes](analysis/patched/v1.73.42/README.md) for instruction details and verification results. Closing checks and ignition behavior are unchanged.
 
-I also kept the earlier screen-only patch: `python3 analysis/tools/patch_v173_no_idle_clock.py`. Its output is `DTX9003_no_idle_clock.uc3`, which retains the original 10-second opening allowance.
+I also kept the earlier screen-only patch: `python3 analysis/tools/patch_v173_no_idle_clock.py`. Its output is `analysis/patched/v1.73-screen-only/DTX9003.uc3`, which retains the original 10-second opening allowance.
 
 The combined image displays **v1.73.42** to distinguish it from the original firmware.
 
@@ -61,7 +61,7 @@ python3 analysis/tools/patch_firmware.py
 python3 analysis/tools/verify_patch.py
 ```
 
-This produces [`DTX9003_no_idle_clock_30s.uc3`](analysis/patched/DTX9003_no_idle_clock_30s.uc3). I also increased the ash-plate opening allowance to 30 seconds beyond the configured movement duration. This changes motor fault timing; read the [full patch notes](analysis/patched/README.md) for the details.
+This produces [`DTX9003.uc3`](analysis/patched/v1.72.42/DTX9003.uc3). I also increased the ash-plate opening allowance to 30 seconds beyond the configured movement duration. This changes motor fault timing; read the [full patch notes](analysis/patched/v1.72.42/README.md) for the details.
 
 Offsets and patch instructions are specific to each source image. Both generators refuse a source with a different SHA-256.
 
@@ -69,7 +69,7 @@ The combined image displays **v1.72.42**. Both custom revision labels preserve t
 
 ## :floppy_disk: Update the boiler software
 
-I wrote down the [USB update procedure](docs/updating-firmware.md), including which patched image and `license.key` to use, renaming the USB copy to `DTX9003.uc3`, and the controller menu steps.
+I wrote down the [USB update procedure](docs/updating-firmware.md), including which patched image and `license.key` to use, the original `DTX9003.uc3` filename, and the controller menu steps.
 
 **Record your settings first:** the manual warns that an update can reset everything and select EkoHeat 900. Check the model is **EkoHeat 1500** and restore the pellet calibration before restarting.
 
@@ -91,14 +91,14 @@ The mapping between that thermostat connection and firmware GPIO `0x20` is **unc
 
 | Path | Contents |
 | --- | --- |
-| [`DTX9003 v1.72/`](DTX9003%20v1.72/) | Original v1.72 firmware |
-| [`DTX9003 v1.73/`](DTX9003%20v1.73/) | Original v1.73 firmware |
-| [`analysis/tools/`](analysis/tools/) | Python patch/analysis scripts and SLEIGH disassembler source |
-| [`analysis/patched/`](analysis/patched/) | Derivatives, manifests, and patch evidence |
-| [`analysis/v1.73/`](analysis/v1.73/) | Version comparison and decompiled v1.73 routines |
-| [`analysis/ghidra/`](analysis/ghidra/) | Original v1.72 disassembly and decompiled routines |
-| [`analysis/assets/`](analysis/assets/) | Extracted RGB565 bitmap previews and HTML viewer |
-| [`docs/`](docs/) | Boiler manuals and display datasheet |
+| [`DTX9003 v1.72/`](DTX9003%20v1.72) | Original v1.72 firmware |
+| [`DTX9003 v1.73/`](DTX9003%20v1.73) | Original v1.73 firmware |
+| [`analysis/tools/`](analysis/tools) | Python patch/analysis scripts and SLEIGH disassembler source |
+| [`analysis/patched/`](analysis/patched) | Derivatives, manifests, and patch evidence |
+| [`analysis/v1.73/`](analysis/v1.73) | Version comparison and decompiled v1.73 routines |
+| [`analysis/ghidra/`](analysis/ghidra) | Original v1.72 disassembly and decompiled routines |
+| [`analysis/assets/`](analysis/assets) | Extracted RGB565 bitmap previews and HTML viewer |
+| [`docs/`](docs) | Boiler manuals and display datasheet |
 
 See [analysis setup and reproduction](analysis/README.md) for the distinction between Python-only tools and the native Ghidra tooling. The supplied `license.key` files are included in their firmware folders. They are not needed for offline analysis or patch generation. Local native builds, generated XML images, and caches are excluded from Git.
 

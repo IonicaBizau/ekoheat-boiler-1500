@@ -1,5 +1,11 @@
 # Changelog
 
+## Patched firmware folders — 2026-11-01
+
+- Put each custom version in its own directory under `analysis/patched/`, with the original `DTX9003.uc3` and `license.key` filenames.
+- Kept the earlier v1.73 screen-only patch in a separate folder.
+- Updated generators, verification, manifests, and update instructions. Firmware and license bytes are unchanged.
+
 ## USB update guide — 2026-11-01
 
 - Added manual-based update instructions for the custom 1.72.42 and 1.73.42 images: file selection, USB filenames and copy order, controller menu steps, expected update sequence, and checks before restarting.
@@ -22,7 +28,7 @@
 - New v1.73 SHA-256: `6b5375058171125474635418674760b0f26a6ac0ed6d50f3ab95c2687e7b4d0d`; CRC32: `0x21AF359A`.
 - Offline checks only; no controller execution or flashing.
 
-See [v1.73 patch notes](analysis/patched/v1.73/README.md) for reproduction and evidence.
+See [v1.73 patch notes](analysis/patched/v1.73.42/README.md) for reproduction and evidence.
 
 ## Minimal v1.73 display patch — 2026-11-01
 
@@ -33,7 +39,7 @@ See [v1.73 patch notes](analysis/patched/v1.73/README.md) for reproduction and e
 - Payload CRC32: `0xC097A83F`.
 - Static source-hash, checksum, unchanged-region, native disassembly and decompilation checks passed. No controller execution or flashing performed.
 
-See [minimal v1.73 patch](analysis/patched/v1.73/README.md) and [reproduction script](analysis/tools/patch_v173_no_idle_clock.py).
+See [minimal v1.73 patch](analysis/patched/v1.73.42/README.md) and [reproduction script](analysis/tools/patch_v173_no_idle_clock.py).
 
 ## Official v1.73 — compared with v1.72
 
@@ -85,7 +91,7 @@ Based on the firmware supplied in `DTX9003 v1.72/DTX9003.uc3`.
 
 ### Validation
 
-- Original firmware preserved; derivative created at `analysis/patched/DTX9003_no_idle_clock_30s.uc3`.
+- Original firmware preserved; derivative created at `analysis/patched/v1.72.42/DTX9003.uc3`.
 - File size unchanged: 450509 bytes.
 - Patched instruction decoding and decompilation checked with Ghidra's native SLEIGH/decompiler components.
 - Checksum, unchanged regions, branch destination, and 326777 boundary comparisons passed.
@@ -104,4 +110,4 @@ Based on the firmware supplied in `DTX9003 v1.72/DTX9003.uc3`.
 | Original | `b5ab1b7380f2486c29cf6708954cdb5bbaa2d7798fd0103f845fa254da51a5e8` |
 | Custom derivative | `b26b0b0177737d3884c2d4afb00cf03595c3f0b4c081e7d2dcc8388863f0a8ae` |
 
-See [patch details](analysis/patched/README.md) for addresses, bytes, and reproduction instructions.
+See [patch details](analysis/patched/v1.72.42/README.md) for addresses, bytes, and reproduction instructions.

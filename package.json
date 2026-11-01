@@ -50,7 +50,7 @@
       {
         "label": "Validation",
         "image": "https://img.shields.io/badge/validation-static%20only-64748b",
-        "url": "analysis/patched/v1.73/README.md"
+        "url": "analysis/patched/v1.73.42/README.md"
       }
     ],
     "sections": [
@@ -72,17 +72,17 @@
       {
         "icon": "wrench",
         "title": "Keep the screen awake and give the ash plate more time on v1.73",
-        "body": "Run from the repository root:\n\n```sh\npython3 analysis/tools/patch_v173_30s.py\npython3 analysis/tools/verify_patch.py --version 1.73\n```\n\nThis creates [`DTX9003_no_idle_clock_30s.uc3`](analysis/patched/v1.73/DTX9003_no_idle_clock_30s.uc3). It keeps the current screen visible and increases the ash-plate opening allowance from 10 to **30 seconds beyond the configured movement time**. For a 10-second movement setting, the nominal opening fault point is 40.2 seconds, including the existing loop timing. This is not a 30-second total opening limit.\n\nThe script checks the source hash and CRC32, leaves the original untouched, and records the changes in a [JSON manifest](analysis/patched/v1.73/DTX9003_no_idle_clock_30s.json). See the [patch notes](analysis/patched/v1.73/README.md) for instruction details and verification results. Closing checks and ignition behavior are unchanged.\n\nI also kept the earlier screen-only patch: `python3 analysis/tools/patch_v173_no_idle_clock.py`. Its output is `DTX9003_no_idle_clock.uc3`, which retains the original 10-second opening allowance.\n\nThe combined image displays **v1.73.42** to distinguish it from the original firmware."
+        "body": "Run from the repository root:\n\n```sh\npython3 analysis/tools/patch_v173_30s.py\npython3 analysis/tools/verify_patch.py --version 1.73\n```\n\nThis creates [`DTX9003.uc3`](analysis/patched/v1.73.42/DTX9003.uc3). It keeps the current screen visible and increases the ash-plate opening allowance from 10 to **30 seconds beyond the configured movement time**. For a 10-second movement setting, the nominal opening fault point is 40.2 seconds, including the existing loop timing. This is not a 30-second total opening limit.\n\nThe script checks the source hash and CRC32, leaves the original untouched, and records the changes in a [JSON manifest](analysis/patched/v1.73.42/DTX9003.json). See the [patch notes](analysis/patched/v1.73.42/README.md) for instruction details and verification results. Closing checks and ignition behavior are unchanged.\n\nI also kept the earlier screen-only patch: `python3 analysis/tools/patch_v173_no_idle_clock.py`. Its output is `analysis/patched/v1.73-screen-only/DTX9003.uc3`, which retains the original 10-second opening allowance.\n\nThe combined image displays **v1.73.42** to distinguish it from the original firmware."
       },
       {
         "icon": "hourglass_flowing_sand",
         "title": "The same changes on v1.72",
-        "body": "```sh\npython3 analysis/tools/patch_firmware.py\npython3 analysis/tools/verify_patch.py\n```\n\nThis produces [`DTX9003_no_idle_clock_30s.uc3`](analysis/patched/DTX9003_no_idle_clock_30s.uc3). I also increased the ash-plate opening allowance to 30 seconds beyond the configured movement duration. This changes motor fault timing; read the [full patch notes](analysis/patched/README.md) for the details.\n\nOffsets and patch instructions are specific to each source image. Both generators refuse a source with a different SHA-256.\n\nThe combined image displays **v1.72.42**. Both custom revision labels preserve the original build date."
+        "body": "```sh\npython3 analysis/tools/patch_firmware.py\npython3 analysis/tools/verify_patch.py\n```\n\nThis produces [`DTX9003.uc3`](analysis/patched/v1.72.42/DTX9003.uc3). I also increased the ash-plate opening allowance to 30 seconds beyond the configured movement duration. This changes motor fault timing; read the [full patch notes](analysis/patched/v1.72.42/README.md) for the details.\n\nOffsets and patch instructions are specific to each source image. Both generators refuse a source with a different SHA-256.\n\nThe combined image displays **v1.72.42**. Both custom revision labels preserve the original build date."
       },
       {
         "icon": "floppy_disk",
         "title": "Update the boiler software",
-        "body": "I wrote down the [USB update procedure](docs/updating-firmware.md), including which patched image and `license.key` to use, renaming the USB copy to `DTX9003.uc3`, and the controller menu steps.\n\n**Record your settings first:** the manual warns that an update can reset everything and select EkoHeat 900. Check the model is **EkoHeat 1500** and restore the pellet calibration before restarting.\n\nThe guide follows the supplied manuals. I have not flashed these patches or verified bootloader/license-file acceptance on hardware."
+        "body": "I wrote down the [USB update procedure](docs/updating-firmware.md), including which patched image and `license.key` to use, the original `DTX9003.uc3` filename, and the controller menu steps.\n\n**Record your settings first:** the manual warns that an update can reset everything and select EkoHeat 900. Check the model is **EkoHeat 1500** and restore the pellet calibration before restarting.\n\nThe guide follows the supplied manuals. I have not flashed these patches or verified bootloader/license-file acceptance on hardware."
       },
       {
         "icon": "mag",
@@ -92,7 +92,7 @@
       {
         "icon": "file_folder",
         "title": "Repository map",
-        "body": "| Path | Contents |\n| --- | --- |\n| [`DTX9003 v1.72/`](DTX9003%20v1.72/) | Original v1.72 firmware |\n| [`DTX9003 v1.73/`](DTX9003%20v1.73/) | Original v1.73 firmware |\n| [`analysis/tools/`](analysis/tools/) | Python patch/analysis scripts and SLEIGH disassembler source |\n| [`analysis/patched/`](analysis/patched/) | Derivatives, manifests, and patch evidence |\n| [`analysis/v1.73/`](analysis/v1.73/) | Version comparison and decompiled v1.73 routines |\n| [`analysis/ghidra/`](analysis/ghidra/) | Original v1.72 disassembly and decompiled routines |\n| [`analysis/assets/`](analysis/assets/) | Extracted RGB565 bitmap previews and HTML viewer |\n| [`docs/`](docs/) | Boiler manuals and display datasheet |\n\nSee [analysis setup and reproduction](analysis/README.md) for the distinction between Python-only tools and the native Ghidra tooling. The supplied `license.key` files are included in their firmware folders. They are not needed for offline analysis or patch generation. Local native builds, generated XML images, and caches are excluded from Git."
+        "body": "| Path | Contents |\n| --- | --- |\n| [`DTX9003 v1.72/`](DTX9003%20v1.72) | Original v1.72 firmware |\n| [`DTX9003 v1.73/`](DTX9003%20v1.73) | Original v1.73 firmware |\n| [`analysis/tools/`](analysis/tools) | Python patch/analysis scripts and SLEIGH disassembler source |\n| [`analysis/patched/`](analysis/patched) | Derivatives, manifests, and patch evidence |\n| [`analysis/v1.73/`](analysis/v1.73) | Version comparison and decompiled v1.73 routines |\n| [`analysis/ghidra/`](analysis/ghidra) | Original v1.72 disassembly and decompiled routines |\n| [`analysis/assets/`](analysis/assets) | Extracted RGB565 bitmap previews and HTML viewer |\n| [`docs/`](docs) | Boiler manuals and display datasheet |\n\nSee [analysis setup and reproduction](analysis/README.md) for the distinction between Python-only tools and the native Ghidra tooling. The supplied `license.key` files are included in their firmware folders. They are not needed for offline analysis or patch generation. Local native builds, generated XML images, and caches are excluded from Git."
       },
       {
         "icon": "memo",

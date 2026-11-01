@@ -5,13 +5,12 @@ from pathlib import Path
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--version', choices=('1.72','1.73'), default='1.72')
 version=parser.parse_args().version
-root=Path('analysis/patched')
-if version == '1.73': root=root/'v1.73'
+root=Path('analysis/patched')/('v'+version+'.42')
 opening, continuation, idle, pointer_address, destination, timer_start = {
  '1.72': (0x80010f26, 0x80010f50, 0x8000b964, 0x8000bc0c, 0x228a, 0x8000b910),
  '1.73': (0x8001136a, 0x80011394, 0x8000ba8e, 0x8000bd7c, 0x2336, 0x8000ba3a),
 }[version]
-m=json.loads((root/'DTX9003_no_idle_clock_30s.json').read_text())
+m=json.loads((root/'DTX9003.json').read_text())
 a=Path(m['source']).read_bytes();b=Path(m['output']).read_bytes()
 assert hashlib.sha256(a).hexdigest()==m['source_sha256']
 assert hashlib.sha256(b).hexdigest()==m['output_sha256']
@@ -65,5 +64,5 @@ for n in (0,100,1000):
  examples[str(n/10)]=dict(configured_seconds=n/10,nominal_failure_seconds=(first_error+1)/10)
 result=dict(status='PASS',firmware_version=version+'.42',rendered_version=rendered,boundary_comparisons=checks,crc32=hex(zlib.crc32(b[25:])),
             opening_timeout_examples=examples,hardware_execution=False)
-(root/'verification-30s.json' if version == '1.73' else root/'verification.json').write_text(json.dumps(result,indent=2)+'\n')
+(root/'verification.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result,indent=2))

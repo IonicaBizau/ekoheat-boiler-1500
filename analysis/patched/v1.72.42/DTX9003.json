@@ -1,7 +1,7 @@
 {
   "firmware_version": "1.72.42",
   "source": "DTX9003 v1.72/DTX9003.uc3",
-  "output": "analysis/patched/DTX9003_no_idle_clock_30s.uc3",
+  "output": "analysis/patched/v1.72.42/DTX9003.uc3",
   "source_sha256": "b5ab1b7380f2486c29cf6708954cdb5bbaa2d7798fd0103f845fa254da51a5e8",
   "output_sha256": "1f35cad23f091dacd35a45dc1048ac0e409acaa5bcdc9c0aa20b3870e3e6ba19",
   "size": 450509,

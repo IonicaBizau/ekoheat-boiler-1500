@@ -4,7 +4,7 @@ import patch_firmware as patch
 from pathlib import Path
 
 patch.SOURCE = Path('DTX9003 v1.73/DTX9003.uc3')
-patch.OUTPUT = Path('analysis/patched/v1.73/DTX9003_no_idle_clock_30s.uc3')
+patch.OUTPUT = Path('analysis/patched/v1.73.42/DTX9003.uc3')
 patch.EXPECTED_SHA256 = 'e57bb9517c66e8f37ecb864daca5735bc14e3ef6a2614c94a962dc62809f2e3a'
 patch.FIRMWARE_VERSION = "1.73.42"
 patch.PATCHES = [

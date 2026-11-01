@@ -60,8 +60,8 @@ Address mapping for these images: `VA = file_offset + 0x80007FE7`. The first 25 
 
 - [Version comparison](v1.73/comparison.md): verified changes and remaining uncertainties.
 - [Startup-failure analysis](startup-failure.md): detailed original v1.72 ignition paths.
-- [v1.73 patches](patched/v1.73/README.md): screen and opening allowance, plus the earlier screen-only option.
-- [v1.72 patch](patched/README.md): display and opening-allowance changes.
+- [v1.73 patches](patched/v1.73.42/README.md): screen and opening allowance, plus the earlier screen-only option.
+- [v1.72 patch](patched/v1.72.42/README.md): display and opening-allowance changes.
 - [Assets](assets/README.md): bitmap format and original UI placement.
 
 Function matching files are heuristic aids. Address-normalized similarity does not establish semantic equivalence. Decompiled variable names are generated, and some calling-convention/varargs details remain unresolved.
