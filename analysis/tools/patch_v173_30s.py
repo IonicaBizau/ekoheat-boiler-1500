@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Keep the v1.73 screen awake and allow 30 extra seconds for ash-plate opening."""
+"""Keep v1.73 awake, allow 30 extra opening seconds and five startup attempts."""
 import patch_firmware as patch
 from pathlib import Path
 
@@ -14,6 +14,10 @@ patch.PATCHES = [
      'Idle expiry: MOV R8,0 -> MOV R8,100; retain active display brightness'),
     (0x8001136a, '29c81039e08a0013', 'f0c8fed41238c122',
      'Opening check: add 300 instead of 100; swap comparison and use unsigned short branch to same target'),
+    (0x80024440, '3028', '3048',
+     'Startup: compare incremented attempt count with 4 instead of 2; fail after five total attempts'),
+    (0x8000ee0c, '3038', '3058',
+     'Special startup path: seed count to the new exhausted limit 5 instead of 3; retain failure on its first timeout'),
 ]
 
 if __name__ == '__main__':

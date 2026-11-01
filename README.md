@@ -47,7 +47,7 @@ python3 analysis/tools/verify_patch.py --version 1.73
 
 This creates [`DTX9003.uc3`](analysis/patched/v2.73/DTX9003.uc3). It keeps the current screen visible and increases the ash-plate opening allowance from 10 to **30 seconds beyond the configured movement time**. For a 10-second movement setting, the nominal opening fault point is 40.2 seconds, including the existing loop timing. This is not a 30-second total opening limit.
 
-The script checks the source hash and CRC32, leaves the original untouched, and records the changes in a [JSON manifest](analysis/patched/v2.73/DTX9003.json). See the [patch notes](analysis/patched/v2.73/README.md) for instruction details and verification results. Closing checks and ignition behavior are unchanged.
+The script checks the source hash and CRC32, leaves the original untouched, and records the changes in a [JSON manifest](analysis/patched/v2.73/DTX9003.json). See the [patch notes](analysis/patched/v2.73/README.md) for instruction details and verification results. Closing checks are unchanged. The v2.73 build now allows **five total normal startup attempts**, retaining the existing fuel-charge conditions and special startup timeout behavior. This can extend ignition operation; see the patch notes for verification limits.
 
 The combined image displays **v2.73** to distinguish it from the original firmware.
 
@@ -76,7 +76,7 @@ The guide follows the supplied manuals. I have not flashed these patches or veri
 
 | Finding | Evidence |
 | --- | --- |
-| Ignition detection uses a processed light threshold of 18 lux; three failed attempts can produce “Startup failed!” | [Startup analysis](analysis/startup-failure.md) |
+| Original firmware uses a processed light threshold of 18 lux; three failed attempts can produce “Startup failed!” | [Startup analysis](analysis/startup-failure.md) |
 | Three ash-plate endstop activations within five seconds appear to request touchscreen recalibration on next startup | [Calibration notes](FUN_FACTS.md) |
 | v1.73 adds low-fuel warning and expanded communication/status fields | [Version comparison](analysis/v1.73/comparison.md) |
 | v1.73 adds start/standby/shutdown reactions to a digital input | [Input analysis](analysis/v1.73/comparison.md#additional-response-to-digital-input-gpio-0x20) |

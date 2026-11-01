@@ -18,5 +18,9 @@
       "nominal_failure_seconds": 130.2
     }
   },
+  "update_wrapper_preserved": true,
+  "supplied_license_matches_source": true,
+  "normal_startup_attempts": 3,
+  "bootloader_acceptance_verified": false,
   "hardware_execution": false
 }

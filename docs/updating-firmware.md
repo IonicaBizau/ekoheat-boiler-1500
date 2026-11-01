@@ -21,7 +21,7 @@ Use one firmware image and the license file supplied with its source version:
 | **1.72.42** | [`analysis/patched/v1.72.42/DTX9003.uc3`](../analysis/patched/v1.72.42/DTX9003.uc3) | [`analysis/patched/v1.72.42/license.key`](../analysis/patched/v1.72.42/license.key) |
 | **2.73** | [`analysis/patched/v2.73/DTX9003.uc3`](../analysis/patched/v2.73/DTX9003.uc3) | [`analysis/patched/v2.73/license.key`](../analysis/patched/v2.73/license.key) |
 
-Both custom versions keep the current screen awake and allow the ash plate **30 seconds beyond the configured opening time**. The version numbers identify these custom patches; they are not official vendor releases.
+Both custom versions keep the current screen awake and allow the ash plate **30 seconds beyond the configured opening time**. The v2.73 rebuild additionally allows five total normal startup attempts; v1.72.42 retains three. Longer ignition operation has not been validated on hardware. The version numbers identify these custom patches; they are not official vendor releases.
 
 To regenerate and check the combined images, run these commands from the repository root:
 
@@ -51,6 +51,14 @@ USB drive/
 ```
 
 Each patched folder already includes the matching `license.key`, so both USB files can be taken from the same folder.
+
+After copying, you can compare both USB files with the verified v2.73 build (replace the drive path):
+
+```sh
+python3 analysis/tools/verify_patch.py --version 1.73 --update-dir /Volumes/USB_NAME
+```
+
+This detects copied-file mismatches; it does not prove controller acceptance. See the [update investigation](../analysis/update-investigation.md) for the reported v2.73 failure and checks performed.
 
 The manual specifies copying the firmware first and the license file second. It does not specify a filesystem format or USB capacity, so I have not assumed a particular one here.
 

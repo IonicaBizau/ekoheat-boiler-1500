@@ -3,10 +3,10 @@
   "source": "DTX9003 v1.73/DTX9003.uc3",
   "output": "analysis/patched/v2.73/DTX9003.uc3",
   "source_sha256": "e57bb9517c66e8f37ecb864daca5735bc14e3ef6a2614c94a962dc62809f2e3a",
-  "output_sha256": "d14f1f5cd2f2008e008cc78534dda1e8b4194b0005e8f403c999b14bb80f5471",
+  "output_sha256": "63e995560940e029422cd77bdbbb4aefc0e6fe24f116692677b1dfb324d4e546",
   "size": 453229,
   "original_crc32": "0xa69ea7cf",
-  "patched_crc32": "0xdd3e71ac",
+  "patched_crc32": "0x3da58a4d",
   "patches": [
     {
       "address": "0x80016780",
@@ -28,6 +28,20 @@
       "before": "29c81039e08a0013",
       "after": "f0c8fed41238c122",
       "purpose": "Opening check: add 300 instead of 100; swap comparison and use unsigned short branch to same target"
+    },
+    {
+      "address": "0x80024440",
+      "file_offset": "0x1c459",
+      "before": "3028",
+      "after": "3048",
+      "purpose": "Startup: compare incremented attempt count with 4 instead of 2; fail after five total attempts"
+    },
+    {
+      "address": "0x8000ee0c",
+      "file_offset": "0x6e25",
+      "before": "3038",
+      "after": "3058",
+      "purpose": "Special startup path: seed count to the new exhausted limit 5 instead of 3; retain failure on its first timeout"
     }
   ],
   "changed_byte_offsets": [
@@ -37,6 +51,7 @@
     "0x18",
     "0x3aa7",
     "0x3aa8",
+    "0x6e26",
     "0x9383",
     "0x9385",
     "0x9386",
@@ -44,7 +59,8 @@
     "0x9388",
     "0x9389",
     "0x938a",
-    "0xe79a"
+    "0xe79a",
+    "0x1c45a"
   ],
   "validation_scope": "Static disassembly, checksum and bounded logical checks; no hardware execution or flashing"
 }

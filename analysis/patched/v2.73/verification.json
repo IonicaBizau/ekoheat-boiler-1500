@@ -3,7 +3,7 @@
   "firmware_version": "2.73",
   "rendered_version": "v2.73  Jul 13 2016",
   "boundary_comparisons": 326777,
-  "crc32": "0xdd3e71ac",
+  "crc32": "0x3da58a4d",
   "opening_timeout_examples": {
     "0.0": {
       "configured_seconds": 0.0,
@@ -18,5 +18,9 @@
       "nominal_failure_seconds": 130.2
     }
   },
+  "update_wrapper_preserved": true,
+  "supplied_license_matches_source": true,
+  "normal_startup_attempts": 5,
+  "bootloader_acceptance_verified": false,
   "hardware_execution": false
 }

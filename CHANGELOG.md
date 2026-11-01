@@ -1,5 +1,12 @@
 # Changelog
 
+## Five startup attempts and update-file checks — 2026-11-01
+
+- Rebuilt custom v2.73 for five total normal startup attempts, retaining fuel-charge conditions and adjusting the special startup counter to preserve first-timeout failure.
+- Added instruction decoding, timeout-count checks, unchanged-routine verification, and independent native decompilation for the startup changes.
+- Added wrapper/license checks and optional USB file comparison via `verify_patch.py --update-dir`.
+- Documented the reported load failure: no proven updater fix identified. The version remains v2.73; the rebuilt SHA-256 and CRC32 distinguish it from the earlier three-attempt image. Hardware ignition operation and bootloader acceptance remain unverified.
+
 ## Custom v2.73 and clock-screen recheck — 2026-11-01
 
 - Rechecked the v1.73 inactivity timer, brightness task, and GUI clock transition; retained the idle-expiry request of 100.

@@ -4,7 +4,9 @@ import argparse,hashlib,json,struct,zlib
 from pathlib import Path
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--version', choices=('1.72','1.73'), default='1.72')
-version=parser.parse_args().version
+parser.add_argument('--update-dir', type=Path, help='Also compare the two files on a prepared USB drive with the verified build')
+args=parser.parse_args()
+version=args.version
 custom_version = {'1.72': '1.72.42', '1.73': '2.73'}[version]
 root=Path('analysis/patched')/('v'+custom_version)
 opening, continuation, idle, pointer_address, destination, timer_start = {
@@ -16,6 +18,14 @@ a=Path(m['source']).read_bytes();b=Path(m['output']).read_bytes()
 assert hashlib.sha256(a).hexdigest()==m['source_sha256']
 assert hashlib.sha256(b).hexdigest()==m['output_sha256']
 assert len(a)==len(b)==m['size']
+assert a[:5] == b[:5] == b'AVR32'
+assert a[:21] == b[:21], 'Update wrapper changed outside the CRC32 field'
+assert struct.unpack_from('>I',a,21)[0] == zlib.crc32(a[25:])
+license_bytes=(root/'license.key').read_bytes()
+assert license_bytes == Path(m['source']).with_name('license.key').read_bytes(), 'Supplied license differs from source'
+if args.update_dir is not None:
+ assert (args.update_dir/'DTX9003.uc3').read_bytes() == b, 'USB firmware differs from the verified build'
+ assert (args.update_dir/'license.key').read_bytes() == license_bytes, 'USB license differs from the supplied license'
 expected=bytearray(a)
 for p in m['patches']:
  o=int(p['file_offset'],16);old=bytes.fromhex(p['before']);new=bytes.fromhex(p['after'])
@@ -61,6 +71,39 @@ rendered=fmt % (2 if version == '1.73' else 1, int(version.split('.')[1]), date)
 assert rendered == 'v'+custom_version+('  ' if version == '1.73' else ' ')+date
 assert len(rendered)+1 <= 0x21
 assert m['firmware_version'] == custom_version
+startup_attempts = 3
+if version == '1.73':
+ # Decode MOV R8,imm8, CP.B R9,R8, BRHI and its unchanged failure target.
+ limit_offset = 0x80024440-delta
+ limit_ins = b[limit_offset:limit_offset+10]
+ assert limit_ins[2:] == bytes.fromhex('f0091800e08b0006')
+ mov = int.from_bytes(limit_ins[:2], 'big')
+ assert mov & 0xf00f == 0x3008
+ limit = (mov >> 4) & 255
+ assert limit == 4
+ assert 0x80024446 + 2*int.from_bytes(limit_ins[8:10], 'big') == 0x80024452
+ seed_offset = 0x8000ee0c-delta
+ assert b[seed_offset:seed_offset+4] == bytes.fromhex('3058b288')
+ seed = (int.from_bytes(b[seed_offset:seed_offset+2], 'big') >> 4) & 255
+ assert seed == limit+1 == 5
+ # No changes elsewhere in either routine, including charging, waits, and faults.
+ for start, end, changed in [(0x80024100,0x80024a00,limit_offset),
+                             (0x8000ed44,0x8000f598,seed_offset)]:
+  original = bytearray(a[start-delta:end-delta])
+  original[changed-(start-delta):changed-(start-delta)+2] = b[changed:changed+2]
+  assert bytes(original) == b[start-delta:end-delta]
+ count = 0
+ timeouts = 0
+ while True:
+  count = (count+1) & 255
+  timeouts += 1
+  if count > limit:
+   break
+ assert count == timeouts == 5
+ # The special path must still fail at its first timeout, with no retries.
+ assert ((seed+1) & 255) > limit
+ assert ((3+1) & 255) > 2  # original special-path behavior
+ startup_attempts = timeouts
 # Failure check happens after the wait with a counter initially zero.
 examples={}
 for n in (0,100,1000):
@@ -68,6 +111,8 @@ for n in (0,100,1000):
  assert first_error==n+301
  examples[str(n/10)]=dict(configured_seconds=n/10,nominal_failure_seconds=(first_error+1)/10)
 result=dict(status='PASS',firmware_version=custom_version,rendered_version=rendered,boundary_comparisons=checks,crc32=hex(zlib.crc32(b[25:])),
-            opening_timeout_examples=examples,hardware_execution=False)
+            opening_timeout_examples=examples,update_wrapper_preserved=True,supplied_license_matches_source=True,
+            normal_startup_attempts=startup_attempts,
+            bootloader_acceptance_verified=False,hardware_execution=False)
 (root/'verification.json').write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result,indent=2))
