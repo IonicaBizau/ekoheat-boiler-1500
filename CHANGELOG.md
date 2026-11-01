@@ -14,7 +14,7 @@
 ## USB update guide — 2026-11-01
 
 - Added manual-based update instructions for the custom 1.72.42 and 1.73.42 images: file selection, USB filenames and copy order, controller menu steps, expected update sequence, and checks before restarting.
-- Documented the manual's settings-reset warning, EkoHeat 1500 model selection, pellet calibration, and the limits of offline validation.
+- Documented the manual's settings-reset warning, Ekoheat 1500 model selection, pellet calibration, and the limits of offline validation.
 
 ## Custom revision labels 1.72.42 and 1.73.42 — 2026-11-01
 

@@ -8,7 +8,7 @@ I keep the update steps here so I do not have to hunt through the manual each ti
 
 Stop the boiler through its normal shutdown process and let it finish. Record the current software version, controller ID, boiler model, pellet calibration, and your settings before starting. Keep the original firmware and its matching `license.key` available separately. Having the original files does not establish a recovery method if an update fails.
 
-The manual warns that updating can reset **all settings** and select **EkoHeat 900**. My boiler is an **EkoHeat 1500**, so checking the model and restoring the pellet calibration afterwards matters.
+The manual warns that updating can reset **all settings** and select **Ekoheat 900**. My boiler is an **Ekoheat 1500**, so checking the model and restoring the pellet calibration afterwards matters.
 
 Check which controller and manual match your boiler. The USB port may be accessible behind the rubber plug on newer controllers; older units require opening the controller housing. Have a qualified technician handle internal access, with mains power isolated before opening. Do not work inside a powered controller. Keep power stable during the actual software update.
 
@@ -67,6 +67,6 @@ If the controller rejects the files or does not return to its normal interface, 
 
 Open **Info** and check the software label: **v1.72.42** or **v1.73.42**, depending on the image you chose. The original build date should still appear alongside it. The physical layout of the longer label has not been checked on the display.
 
-Verify the boiler model is **EkoHeat 1500**, then compare all settings with your record and restore the pellet calibration if it was reset. The 2014 manual describes selecting the boiler size under **Menu → Self test**; use the model-selection instructions that match your controller, and avoid activating unrelated test outputs.
+Verify the boiler model is **Ekoheat 1500**, then compare all settings with your record and restore the pellet calibration if it was reset. The 2014 manual describes selecting the boiler size under **Menu → Self test**; use the model-selection instructions that match your controller, and avoid activating unrelated test outputs.
 
 Only resume normal operation after the model, calibration, settings, and any faults have been checked. The label alone does not prove that the motor timing or other physical behavior works correctly.

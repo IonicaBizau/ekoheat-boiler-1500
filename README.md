@@ -10,7 +10,7 @@
 
 ## :fire: Why this exists
 
-I own an **EkoHeat 1500 pellet boiler**, and I wanted to personalize it more for my needs. So I started looking into its DTX9003 firmware, figuring out how it works, and making a few small changes.
+I own an **Ekoheat 1500 pellet boiler**, and I wanted to personalize it more for my needs. So I started looking into its DTX9003 firmware, figuring out how it works, and making a few small changes.
 
 The first thing I wanted: **keep the current screen visible instead of switching to the idle clock**. :)
 
@@ -68,7 +68,7 @@ The combined image displays **v1.72.42**. Both custom revision labels preserve t
 
 I wrote down the [USB update procedure](docs/updating-firmware.md), including which patched image and `license.key` to use, the original `DTX9003.uc3` filename, and the controller menu steps.
 
-**Record your settings first:** the manual warns that an update can reset everything and select EkoHeat 900. Check the model is **EkoHeat 1500** and restore the pellet calibration before restarting.
+**Record your settings first:** the manual warns that an update can reset everything and select Ekoheat 900. Check the model is **Ekoheat 1500** and restore the pellet calibration before restarting.
 
 The guide follows the supplied manuals. I have not flashed these patches or verified bootloader/license-file acceptance on hardware.
 
@@ -127,3 +127,7 @@ If this project helps, give it a star or share what you discover. :heart:
 Original project scripts, documentation, and header artwork: [MIT](LICENSE) © [Ionică Bizău](https://ionicabizau.net).
 
 Vendor firmware, patched derivatives, extracted assets, and supplied manuals retain their respective owners’ rights and are excluded from that license grant. See [THIRD_PARTY.md](THIRD_PARTY.md). This project is not affiliated with or endorsed by Ekopower.
+
+Copyright © Ekoheat. The original firmware binaries and the underlying firmware in patched images remain Ekoheat’s property and are not covered by this project’s MIT license.
+
+I downloaded firmware from [NH Bioservice’s Ecoheat 900 / 1500 / 2500 page](https://www.nhbioservice.dk/pillefyr/ecoheat-900-1500-2500/), which provides version 1.72. I requested version 1.73 through [ekoheat.dk](https://ekoheat.dk/), and KESA ApS shared it with me by email from [kesa@kesa.dk](mailto:kesa@kesa.dk).
