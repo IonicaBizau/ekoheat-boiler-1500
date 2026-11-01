@@ -22,7 +22,6 @@ Here is what I have put together so far:
 
 - A **v1.72 → v1.73 comparison**, covering low-fuel warnings, status messages, pump control, and UI changes.
 - **Patches for v1.72 and v1.73** that keep the screen awake and give the ash plate more time to open: 30 seconds beyond the configured movement time, up from 10.
-- The earlier **v1.73 screen-only patch**, if you want the original ash-plate timing.
 - Disassembly, decompiled routines, hashes, and checksums so you can follow the findings.
 - Manuals and notes about ignition, touchscreen calibration, wiring, and the images used by the display.
 
@@ -49,8 +48,6 @@ python3 analysis/tools/verify_patch.py --version 1.73
 This creates [`DTX9003.uc3`](analysis/patched/v1.73.42/DTX9003.uc3). It keeps the current screen visible and increases the ash-plate opening allowance from 10 to **30 seconds beyond the configured movement time**. For a 10-second movement setting, the nominal opening fault point is 40.2 seconds, including the existing loop timing. This is not a 30-second total opening limit.
 
 The script checks the source hash and CRC32, leaves the original untouched, and records the changes in a [JSON manifest](analysis/patched/v1.73.42/DTX9003.json). See the [patch notes](analysis/patched/v1.73.42/README.md) for instruction details and verification results. Closing checks and ignition behavior are unchanged.
-
-I also kept the earlier screen-only patch: `python3 analysis/tools/patch_v173_no_idle_clock.py`. Its output is `analysis/patched/v1.73-screen-only/DTX9003.uc3`, which retains the original 10-second opening allowance.
 
 The combined image displays **v1.73.42** to distinguish it from the original firmware.
 

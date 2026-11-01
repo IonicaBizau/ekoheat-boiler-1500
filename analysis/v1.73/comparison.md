@@ -80,7 +80,7 @@ The subsystem state machine has an additional small change: its running-to-idle 
 - Compared ASCII string sequences, factory-table bytes, whole bitmap payloads, and relevant function bodies.
 - `function-matches.json` and `diffs/` are heuristic triage aids. Address-masked similarity is not proof of equivalence; RAM locations and actual branch conditions must be read in the original outputs. Some decompiled argument lists are incomplete for soft-float, varargs, and indirect dispatch.
 - Not every driver/library instruction or UI widget has been semantically compared. Unlisted changes may exist. No hardware behavior, vendor intent, or update acceptance is claimed.
-- The existing custom derivative and patch script target the v1.72 source hash only. The combined v1.72 patch has not been ported to v1.73; old patch offsets must not be reused. The later minimal v1.73 display-only derivative uses independently identified offsets.
+- The custom patches target their respective source hashes. The v1.73 patch uses independently identified offsets; v1.72 offsets must not be reused.
 
 ## Reproduce the decompilation
 
@@ -95,4 +95,4 @@ The XML image was generated directly from the new file's bytes after its 25-byte
 
 ## Custom patches after this comparison
 
-The table above describes the original vendor images. I have since added a [combined v1.73 patch](../patched/v1.73.42/README.md) that keeps the screen awake and raises the ash-plate opening allowance from 10 to 30 seconds beyond the configured movement time, matching the v1.72 patch. The earlier screen-only option is also available.
+The table above describes the original vendor images. I have since added a [combined v1.73 patch](../patched/v1.73.42/README.md) that keeps the screen awake and raises the ash-plate opening allowance from 10 to 30 seconds beyond the configured movement time, matching the v1.72 patch.

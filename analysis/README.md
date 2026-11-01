@@ -9,9 +9,6 @@ Run from the repository root with Python 3.6 or later:
 python3 analysis/tools/patch_v173_30s.py
 python3 analysis/tools/verify_patch.py --version 1.73
 
-# Earlier v1.73 screen-only patch
-python3 analysis/tools/patch_v173_no_idle_clock.py
-
 # v1.72 display + opening-allowance patch and boundary checks
 python3 analysis/tools/patch_firmware.py
 python3 analysis/tools/verify_patch.py
@@ -60,7 +57,7 @@ Address mapping for these images: `VA = file_offset + 0x80007FE7`. The first 25 
 
 - [Version comparison](v1.73/comparison.md): verified changes and remaining uncertainties.
 - [Startup-failure analysis](startup-failure.md): detailed original v1.72 ignition paths.
-- [v1.73 patches](patched/v1.73.42/README.md): screen and opening allowance, plus the earlier screen-only option.
+- [v1.73 patch](patched/v1.73.42/README.md): screen and opening allowance.
 - [v1.72 patch](patched/v1.72.42/README.md): display and opening-allowance changes.
 - [Assets](assets/README.md): bitmap format and original UI placement.
 

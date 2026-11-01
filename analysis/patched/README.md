@@ -6,7 +6,6 @@ Each patch has its own folder. The firmware keeps the original **`DTX9003.uc3`**
 | --- | --- |
 | [v1.72.42](v1.72.42/README.md) | Screen stays awake; 30 extra seconds for ash-plate opening; custom version label. |
 | [v1.73.42](v1.73.42/README.md) | Same changes, based on original v1.73. |
-| [v1.73-screen-only](v1.73-screen-only/README.md) | Earlier display-only patch; original version label and 10-second opening allowance. |
 
 Each folder also contains the patch manifest and supporting evidence. Copy `DTX9003.uc3` first, then `license.key`, to the USB drive's root. See [Updating the boiler software](../../docs/updating-firmware.md) for the full manual-based procedure and settings checks.
 

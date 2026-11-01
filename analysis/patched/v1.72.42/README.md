@@ -2,7 +2,7 @@
 
 For preparing the USB drive and using the controller update menu, see [Updating the boiler software](../../../docs/updating-firmware.md).
 
-The combined patch now displays **v1.72.42**. I changed the version format from `v%d.%02d  %s` to `v%d.%02d.42 %s` inside its original 16-byte allocation, including the terminating NUL and padding. The build date remains visible; file size, pointers, numeric version arguments, and update-header metadata stay unchanged. This is a display revision label, not a new vendor release or bootloader version. The earlier v1.73 screen-only image keeps its original label.
+The combined patch now displays **v1.72.42**. I changed the version format from `v%d.%02d  %s` to `v%d.%02d.42 %s` inside its original 16-byte allocation, including the terminating NUL and padding. The build date remains visible; file size, pointers, numeric version arguments, and update-header metadata stay unchanged. This is a display revision label, not a new vendor release or bootloader version.
 
 Output: `DTX9003.uc3`
 

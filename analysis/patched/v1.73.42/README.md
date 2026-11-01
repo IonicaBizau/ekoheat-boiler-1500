@@ -2,7 +2,7 @@
 
 For preparing the USB drive and using the controller update menu, see [Updating the boiler software](../../../docs/updating-firmware.md).
 
-The combined patch now displays **v1.73.42**. I changed the version format from `v%d.%02d  %s` to `v%d.%02d.42 %s` inside its original 16-byte allocation, including the terminating NUL and padding. The build date remains visible; file size, pointers, numeric version arguments, and update-header metadata stay unchanged. This is a display revision label, not a new vendor release or bootloader version. The earlier v1.73 screen-only image keeps its original label.
+The combined patch now displays **v1.73.42**. I changed the version format from `v%d.%02d  %s` to `v%d.%02d.42 %s` inside its original 16-byte allocation, including the terminating NUL and padding. The build date remains visible; file size, pointers, numeric version arguments, and update-header metadata stay unchanged. This is a display revision label, not a new vendor release or bootloader version.
 
 I added the same 30-second ash-plate opening allowance as the v1.72 patch, together with the screen-awake change. The original firmware and supplied license file stay untouched.
 
@@ -30,5 +30,3 @@ The [manifest](DTX9003.json) records each patch and changed byte. The [verificat
 - Size: 453229 bytes, unchanged.
 
 I have checked this offline. I have not flashed it, tested physical motor/display behavior, or verified bootloader/license-file acceptance.
-
-The earlier [screen-only patch](../v1.73-screen-only/README.md) is kept separately.

@@ -1,5 +1,10 @@
 # Changelog
 
+## Remove earlier screen-only patch — 2026-11-01
+
+- Removed the earlier v1.73 screen-only image, its generator, and its supporting files.
+- Updated the docs to list only the combined v1.72.42 and v1.73.42 patches. Older entries below describe historical changes.
+
 ## Patched firmware folders — 2026-11-01
 
 - Put each custom version in its own directory under `analysis/patched/`, with the original `DTX9003.uc3` and `license.key` filenames.
@@ -39,7 +44,7 @@ See [v1.73 patch notes](analysis/patched/v1.73.42/README.md) for reproduction an
 - Payload CRC32: `0xC097A83F`.
 - Static source-hash, checksum, unchanged-region, native disassembly and decompilation checks passed. No controller execution or flashing performed.
 
-See [minimal v1.73 patch](analysis/patched/v1.73.42/README.md) and [reproduction script](analysis/tools/patch_v173_no_idle_clock.py).
+This earlier display-only patch has since been removed. The current [v1.73.42 patch](analysis/patched/v1.73.42/README.md) includes the opening allowance change.
 
 ## Official v1.73 — compared with v1.72
 
@@ -74,7 +79,7 @@ Binary-derived findings from `DTX9003 v1.73/DTX9003.uc3`. Embedded build date: *
 - Image size: **453229 bytes**, an increase of 2720 bytes.
 - SHA-256: `e57bb9517c66e8f37ecb864daca5735bc14e3ef6a2614c94a962dc62809f2e3a`.
 - Stored payload CRC32 `0xA69EA7CF` verified.
-- Both combined and screen-only v1.73 patches are documented above; v1.72 offsets must not be reused for v1.73.
+- The current combined v1.73 patch is documented above; v1.72 offsets must not be reused for v1.73.
 - Static comparison only; this list covers verified findings, not every possible driver or library change.
 
 See [v1.73 comparison and evidence](analysis/v1.73/comparison.md) for function addresses, data offsets, original/new decompilations, and unresolved details.

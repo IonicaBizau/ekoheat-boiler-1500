@@ -21,7 +21,7 @@ Use one firmware image and the license file supplied with its source version:
 | **1.72.42** | [`analysis/patched/v1.72.42/DTX9003.uc3`](../analysis/patched/v1.72.42/DTX9003.uc3) | [`analysis/patched/v1.72.42/license.key`](../analysis/patched/v1.72.42/license.key) |
 | **1.73.42** | [`analysis/patched/v1.73.42/DTX9003.uc3`](../analysis/patched/v1.73.42/DTX9003.uc3) | [`analysis/patched/v1.73.42/license.key`](../analysis/patched/v1.73.42/license.key) |
 
-Both custom versions keep the current screen awake and allow the ash plate **30 seconds beyond the configured opening time**. The version numbers identify these custom patches; they are not official vendor releases. The earlier `analysis/patched/v1.73-screen-only/DTX9003.uc3` image for v1.73 only changes the display behavior and retains the original version label and opening allowance.
+Both custom versions keep the current screen awake and allow the ash plate **30 seconds beyond the configured opening time**. The version numbers identify these custom patches; they are not official vendor releases.
 
 To regenerate and check the combined images, run these commands from the repository root:
 
