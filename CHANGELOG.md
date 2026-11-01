@@ -51,7 +51,7 @@ See [v1.73 comparison and evidence](analysis/v1.73/comparison.md) for function a
 
 ## Custom patch — 2026-10-30
 
-Based on the firmware supplied in `Ecoheat_v1.72/DTX9003.uc3`.
+Based on the firmware supplied in `DTX9003 v1.72/DTX9003.uc3`.
 
 ### Changed
 

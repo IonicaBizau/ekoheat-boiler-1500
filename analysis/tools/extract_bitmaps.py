@@ -2,7 +2,7 @@
 """Extract renderer-confirmed little-endian RGB565 bitmaps, without altering firmware."""
 import json,struct,zlib
 from pathlib import Path
-b=Path('Ecoheat_v1.72/DTX9003.uc3').read_bytes();delta=0x80007fe7;table=0x8004f954
+b=Path('DTX9003 v1.72/DTX9003.uc3').read_bytes();delta=0x80007fe7;table=0x8004f954
 out=Path('analysis/assets');out.mkdir(exist_ok=True)
 def png(path,w,h,pixels):
  def chunk(k,v):return struct.pack('>I',len(v))+k+v+struct.pack('>I',zlib.crc32(k+v))

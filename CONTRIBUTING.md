@@ -1,10 +1,10 @@
 # :yum: How to contribute
 
-Issues and pull requests are welcome, especially firmware-version evidence, corrected interpretations, controller pin mappings, and reproducible tooling improvements.
+If you have another firmware version, a correction, or a better way to do something here, I would love to hear about it. Issues and pull requests are welcome.
 
 ## Firmware findings
 
-Include the source image's SHA-256, firmware version, addresses/file offsets, and supporting disassembly or decompilation. Distinguish observed code behavior from inferred vendor intent and hardware-tested behavior. Do not describe the unidentified GPIO as a confirmed thermostat input.
+Include the source image's SHA-256, firmware version, addresses/file offsets, and supporting disassembly or decompilation. Please say what you found in the code, what you think it means, and what you have tested on hardware. Do not describe the unidentified GPIO as a confirmed thermostat input.
 
 ## Patches
 
@@ -29,4 +29,4 @@ npm run readme
 
 Commit the generated `README.md` with its source changes. Python-only patching does not require npm.
 
-Keep `license.key`, credentials, native builds, and caches out of commits. Respect the third-party materials described in [THIRD_PARTY.md](THIRD_PARTY.md).
+The supplied firmware `license.key` files are included. Keep unrelated credentials, native builds, and caches out of commits. Respect the third-party materials described in [THIRD_PARTY.md](THIRD_PARTY.md).

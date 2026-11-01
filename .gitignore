@@ -10,8 +10,7 @@ __pycache__/
 *.py[cod]
 .venv/
 
-# Local keys and credentials (keep supplied activation files off GitHub)
-license.key
+# Local credentials (supplied firmware license.key files are included)
 .env
 .env.*
 *.pem

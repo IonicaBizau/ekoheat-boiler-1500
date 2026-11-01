@@ -2,7 +2,7 @@
 """Create an offline derivative of one hash-identified firmware. Never writes input."""
 import hashlib, json, struct, zlib
 from pathlib import Path
-SOURCE = Path('Ecoheat_v1.72/DTX9003.uc3')
+SOURCE = Path('DTX9003 v1.72/DTX9003.uc3')
 OUTPUT = Path('analysis/patched/DTX9003_no_idle_clock_30s.uc3')
 EXPECTED_SHA256 = 'b5ab1b7380f2486c29cf6708954cdb5bbaa2d7798fd0103f845fa254da51a5e8'
 DELTA = 0x80008000 - 25

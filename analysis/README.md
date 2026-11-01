@@ -1,4 +1,4 @@
-# Analysis and reproduction
+# Working with the firmware
 
 ## Python-only workflows
 
@@ -18,11 +18,11 @@ python3 analysis/tools/inspect_firmware.py
 
 These tools use only Python's standard library. The v1.72 asset extraction script, `analysis/tools/extract_bitmaps.py`, also uses only the standard library and writes the PNG/HTML previews in `analysis/assets/`.
 
-The checked-in `.uc3` derivatives and manifests are reproducible from their hash-identified source images. Neither generator flashes a device. `license.key` files are local-only and unnecessary for offline analysis or patch generation.
+You can recreate the patched `.uc3` files and manifests from the original images using the commands above. The scripts check the source hashes before patching. They do not flash a device. I have included the supplied `license.key` files with the firmware, but these tools do not need them.
 
 ## Native disassembly and decompilation
 
-Existing evidence is committed under `ghidra/decompiled/`, `v1.73/decompiled/`, and the patch directories. Regenerating it requires additional tooling beyond Python:
+I keep the disassembly and decompiled routines under `ghidra/decompiled/`, `v1.73/decompiled/`, and the patch directories. Regenerating it requires additional tooling beyond Python:
 
 - A Ghidra installation with AVR32-A big-endian SLEIGH support (`avr32a.sla`). The recorded analysis used Ghidra 12.2.
 - A locally built native Ghidra decompiler at `analysis/ghidra/native-src/decomp_opt`.

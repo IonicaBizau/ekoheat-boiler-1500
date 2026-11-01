@@ -2,7 +2,7 @@
 """Read-only firmware metadata, strings, entropy, and exact pointer searches."""
 import argparse, collections, hashlib, json, math, re, struct
 from pathlib import Path
-p=argparse.ArgumentParser();p.add_argument('firmware',nargs='?',default='Ecoheat_v1.72/DTX9003.uc3');p.add_argument('--out',default='analysis/evidence');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('firmware',nargs='?',default='DTX9003 v1.72/DTX9003.uc3');p.add_argument('--out',default='analysis/evidence');a=p.parse_args()
 b=Path(a.firmware).read_bytes();out=Path(a.out);out.mkdir(parents=True,exist_ok=True)
 strings=[{'offset':hex(m.start()),'text':m.group().decode('latin1')} for m in re.finditer(rb'[\x20-\x7e]{5,}',b)]
 (out/'strings.json').write_text(json.dumps(strings,indent=2))

@@ -1,6 +1,6 @@
 # Extracted boiler logos
 
-Both requested logos are embedded, uncompressed images. All 23 images in the bitmap pointer table at `0x8004F954` were extracted into PNG previews by `../tools/extract_bitmaps.py`.
+I found both display logos stored as uncompressed images in the firmware. All 23 images in the bitmap pointer table at `0x8004F954` were extracted into PNG previews by `../tools/extract_bitmaps.py`.
 
 | Use | Bitmap index | Dimensions | Machine address | File offset | Pixel bytes |
 | --- | --- | --- | --- | --- | --- |
@@ -25,6 +25,6 @@ The corresponding native Ghidra decompilations are in `../ghidra/decompiled/`.
 
 Same-size artwork can replace each pixel payload without moving code, image pointers, or screen resources. Convert the artwork to RGB565, preserve each four-byte dimension header, and recalculate the firmware payload CRC32 at header offset `0x15`.
 
-No logo replacement has been made yet: the desired replacement artwork has not been supplied. Future logo edits should build on `../patched/DTX9003_no_idle_clock_30s.uc3` to retain the two previous changes.
+I have not replaced the logos yet. Future logo edits should build on `../patched/DTX9003_no_idle_clock_30s.uc3` to retain the two previous changes.
 
 Open `index.html` to view all extracted assets. `bitmaps.json` contains dimensions and offsets. The contact sheet clips wide images; individual PNG previews contain the entire images.

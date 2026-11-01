@@ -1,4 +1,6 @@
-# Startup-failure triggers in the analyzed original firmware
+# Why the boiler says “Startup failed!”
+
+I traced this message to two paths in the original v1.72 firmware.
 
 Error code 4 (RAM `0x224C`) maps to `Startup failed!`. The error handler at `0x80010548` dispatches code 4 to `0x800106B6`, which uses the language string table at RAM `0xAC8`. Its English pointer resolves to `0x8000C8F0`, file offset `0x4909`.
 

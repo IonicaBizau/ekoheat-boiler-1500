@@ -1,8 +1,8 @@
 # Reset touchscreen calibration
 
-The firmware appears to request recalibration on the next startup after **three ash-plate endstop activations within five seconds**. This was identified through static analysis and has not been tested on a boiler.
+The firmware appears to request recalibration on the next startup after **three ash-plate endstop activations within five seconds**. I found this in the firmware; I have not tested it on the boiler.
 
-A software recalibration action also exists, but its exact menu location is still unknown.
+There is also a software recalibration action, but I have not found its menu location yet.
 
 ## The boiler recognizes ignition at 18 lux
 

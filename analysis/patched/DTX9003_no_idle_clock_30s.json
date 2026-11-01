@@ -1,5 +1,5 @@
 {
-  "source": "Ecoheat_v1.72/DTX9003.uc3",
+  "source": "DTX9003 v1.72/DTX9003.uc3",
   "output": "analysis/patched/DTX9003_no_idle_clock_30s.uc3",
   "source_sha256": "b5ab1b7380f2486c29cf6708954cdb5bbaa2d7798fd0103f845fa254da51a5e8",
   "output_sha256": "b26b0b0177737d3884c2d4afb00cf03595c3f0b4c081e7d2dcc8388863f0a8ae",

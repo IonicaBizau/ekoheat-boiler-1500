@@ -1,12 +1,12 @@
 # Official v1.73 compared with supplied v1.72
 
-This is a binary-derived comparison, not a vendor release note. Both input files were read only and remain unchanged. A separate [minimal v1.73 display-only derivative](../patched/v1.73/README.md) was created after this comparison.
+I compared the two firmware images to see what changed between v1.72 and v1.73. These are my findings from the binaries, rather than release notes from the vendor. I left both originals untouched and later made a [small v1.73 patch to keep the screen awake](../patched/v1.73/README.md).
 
 ## Image identity
 
 | | v1.72 folder | v1.73 folder |
 | --- | --- | --- |
-| File | `Ecoheat_v1.72/DTX9003.uc3` | `DTX9003 v1.73/DTX9003.uc3` |
+| File | `DTX9003 v1.72/DTX9003.uc3` | `DTX9003 v1.73/DTX9003.uc3` |
 | Bytes | 450509 | 453229 |
 | Embedded build date | Dec 3 2014 | Jul 13 2016 |
 | SHA-256 | `b5ab1b7380f2486c29cf6708954cdb5bbaa2d7798fd0103f845fa254da51a5e8` | `e57bb9517c66e8f37ecb864daca5735bc14e3ef6a2614c94a962dc62809f2e3a` |

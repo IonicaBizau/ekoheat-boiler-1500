@@ -1,7 +1,7 @@
-# Minimal v1.73 clock-screen patch
+# v1.73: keep the screen awake
 
 Output: `DTX9003_no_idle_clock.uc3`, derived from `DTX9003 v1.73/DTX9003.uc3`.
-The source remains unchanged. Only two payload bytes change, plus the CRC32 field.
+I left the original untouched. This patch changes just two payload bytes and the CRC32 field.
 
 | Address | File offset | Original | Patched |
 | --- | --- | --- | --- |
@@ -21,4 +21,4 @@ python3 analysis/tools/patch_v173_no_idle_clock.py
 
 The script checks the exact source SHA-256, source CRC, surrounding instruction bytes, destination pointer, unchanged regions, output CRC and file size, and preservation of the source. The JSON manifest records hashes and every changed byte. Native Ghidra SLEIGH disassembly is in `idle-expiry-original.tsv` and `idle-expiry-patched.tsv`. Native patched decompilation is in `decompiled-8000b410.txt`.
 
-Static validation only: controller execution, bootloader acceptance and physical display behavior have not been tested.
+I have only checked this offline. I have not tested it on the controller, checked bootloader acceptance, or verified the display behavior on hardware.

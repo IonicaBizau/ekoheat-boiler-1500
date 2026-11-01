@@ -10,19 +10,21 @@
 
 ## :fire: Why this exists
 
-A pellet boiler should be easier to understand than a mystery box with a touchscreen. This project documents the Ekoheat 1500 controller, compares its DTX9003 firmware, and keeps small, reproducible patches alongside the evidence behind them.
+I own an **EkoHeat 1500 pellet boiler**, and I wanted to personalize it more for my needs. So I started looking into its DTX9003 firmware, figuring out how it works, and making a few small changes.
 
-The first quality-of-life fix: **keep the current screen visible instead of switching to the idle clock**.
+The first thing I wanted: **keep the current screen visible instead of switching to the idle clock**. :)
 
-This is independent research based on static binary analysis. The patches have been checked offline; **controller execution and bootloader acceptance have not been tested**.
+This repo is where I keep my notes, tools, firmware comparisons, and patches. I have checked the patches offline, but **I have not tested them on the controller or checked whether the bootloader accepts them**.
 
 ## :sparkles: What is inside
 
-- **v1.72 → v1.73 comparison** — low-fuel warnings, richer status messages, pump-control changes, UI assets, and input handling.
-- **Minimal v1.73 clock-screen patch** — two instruction bytes and the CRC32 field; keeps the display active when the inactivity timer expires.
-- **Earlier v1.72 patch** — keeps the display active and extends the ash-plate opening allowance from 10 to 30 seconds beyond the configured movement time.
-- **Firmware evidence** — native disassembly, decompiled routines, hashes, checksums, and manifests.
-- **Controller notes and manuals** — ignition behavior, calibration findings, wiring references, and extracted bitmap previews.
+Here is what I have put together so far:
+
+- A **v1.72 → v1.73 comparison**, covering low-fuel warnings, status messages, pump control, and UI changes.
+- A **v1.73 patch to keep the screen awake**. It changes two instruction bytes and updates the checksum.
+- An **earlier v1.72 patch** that also gives the ash plate more time to open: 30 seconds beyond the configured movement time, up from 10.
+- Disassembly, decompiled routines, hashes, and checksums so you can follow the findings.
+- Manuals and notes about ignition, touchscreen calibration, wiring, and the images used by the display.
 
 ## :cloud: Getting started
 
@@ -43,7 +45,7 @@ Run from the repository root:
 python3 analysis/tools/patch_v173_no_idle_clock.py
 ```
 
-The script checks the source SHA-256 and CRC32, creates the derivative, verifies the changed regions and checksum, and confirms the source is unchanged.
+The script checks the source SHA-256 and CRC32, writes the patched file, verifies the changed regions and checksum, and confirms the source is unchanged.
 
 | File | Purpose |
 | --- | --- |
@@ -52,7 +54,7 @@ The script checks the source SHA-256 and CRC32, creates the derivative, verifies
 | [JSON manifest](analysis/patched/v1.73/DTX9003_no_idle_clock.json) | SHA-256 values, CRC32, offsets, and verification results |
 | [Patch notes](analysis/patched/v1.73/README.md) | Instruction changes and supporting evidence |
 
-The instruction at `0x8000BA8E` changes from `MOV R8,0` to `MOV R8,100`. At inactivity expiry, the firmware keeps the active brightness request rather than triggering the fade that leads to the clock screen. The timer still expires for other UI uses.
+The instruction at `0x8000BA8E` changes from `MOV R8,0` to `MOV R8,100`. When the inactivity timer expires, the firmware keeps the display bright, which prevents the automatic switch to the clock screen. The timer still expires for other UI uses.
 
 **This v1.73 patch changes display behavior only.**
 
@@ -63,7 +65,7 @@ python3 analysis/tools/patch_firmware.py
 python3 analysis/tools/verify_patch.py
 ```
 
-This produces [`DTX9003_no_idle_clock_30s.uc3`](analysis/patched/DTX9003_no_idle_clock_30s.uc3). Alongside the display change, it increases the ash-plate opening allowance to 30 seconds beyond the configured movement duration. This changes motor fault timing; read the [full patch notes](analysis/patched/README.md) before considering it.
+This produces [`DTX9003_no_idle_clock_30s.uc3`](analysis/patched/DTX9003_no_idle_clock_30s.uc3). I also increased the ash-plate opening allowance to 30 seconds beyond the configured movement duration. This changes motor fault timing; read the [full patch notes](analysis/patched/README.md) for the details.
 
 Offsets and patch instructions are specific to each source image. Both generators refuse a source with a different SHA-256.
 
@@ -83,7 +85,7 @@ The mapping between that thermostat connection and firmware GPIO `0x20` is **unc
 
 | Path | Contents |
 | --- | --- |
-| [`Ecoheat_v1.72/`](Ecoheat_v1.72/) | Original v1.72 firmware |
+| [`DTX9003 v1.72/`](DTX9003%20v1.72/) | Original v1.72 firmware |
 | [`DTX9003 v1.73/`](DTX9003%20v1.73/) | Original v1.73 firmware |
 | [`analysis/tools/`](analysis/tools/) | Python patch/analysis scripts and SLEIGH disassembler source |
 | [`analysis/patched/`](analysis/patched/) | Derivatives, manifests, and patch evidence |
@@ -92,30 +94,24 @@ The mapping between that thermostat connection and firmware GPIO `0x20` is **unc
 | [`analysis/assets/`](analysis/assets/) | Extracted RGB565 bitmap previews and HTML viewer |
 | [`docs/`](docs/) | Boiler manuals and display datasheet |
 
-See [analysis setup and reproduction](analysis/README.md) for the distinction between Python-only tools and the native Ghidra tooling. Local native builds, generated XML images, caches, and `license.key` files are excluded from Git.
+See [analysis setup and reproduction](analysis/README.md) for the distinction between Python-only tools and the native Ghidra tooling. The supplied `license.key` files are included in their firmware folders. They are not needed for offline analysis or patch generation. Local native builds, generated XML images, and caches are excluded from Git.
 
 ## :memo: Regenerate this README
 
-The content lives in the **`blah` field of [`package.json`](package.json)**. The project-local template is [`.blah/README.ejs`](.blah/README.ejs).
+I use [`blah`](https://github.com/ionicabizau/blah) for this README. Edit the **`blah` field in [`package.json`](package.json)**, or [`.blah/README.ejs`](.blah/README.ejs) for layout changes, then run:
 
 ```sh
 npm ci
 npm run readme
 ```
 
-Or, with [`blah`](https://github.com/ionicabizau/blah) already installed:
-
-```sh
-blah --readme
-```
-
-The checked-in template follows my GitHub README conventions and renders without depending on `~/.blah-templates` or fetching npm dependents. Edit the metadata or template, then regenerate `README.md`.
+Commit the generated README along with the source changes.
 
 ## :yum: How to contribute
 
-Found another firmware version, identified an input, or spotted an incorrect interpretation? [Open an issue](https://github.com/ionicabizau/ekoheat-boiler-1500/issues) or send a pull request. Include the firmware hash and the evidence supporting the finding.
+Found another firmware version, figured out an input, or noticed something I got wrong? [Open an issue](https://github.com/ionicabizau/ekoheat-boiler-1500/issues) or send a pull request. Please include the firmware hash and how you reached your conclusion.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for patch-validation and documentation guidelines.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the details.
 
 ## :sparkling_heart: Support my projects
 

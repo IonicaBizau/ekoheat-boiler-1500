@@ -1,8 +1,8 @@
-# Offline firmware derivative: active screen and 30-second opening allowance
+# v1.72: keep the screen awake and give the ash plate more time
 
 Output: `DTX9003_no_idle_clock_30s.uc3`
 
-Created from `Ecoheat_v1.72/DTX9003.uc3`. The original remains unchanged. This derivative has been statically checked; it has not been executed on a controller or flashed.
+Created from `DTX9003 v1.72/DTX9003.uc3`. I left the original untouched. I have checked this patch offline, but have not flashed it or run it on the controller.
 
 ## Changes
 
