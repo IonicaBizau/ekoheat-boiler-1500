@@ -1,0 +1,52 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8001ac28 FUN_8001ac28
+[decomp]> decompile
+Decompiling FUN_8001ac28
+Decompilation complete
+[decomp]> print C
+
+void FUN_8001ac28(void)
+
+{
+  if (cRAM00002328 != '\0') {
+    (*(code *)0x8005e078)(2,0xffffffff,1);
+    cRAM00002328 = '\0';
+    goto code_r0x8001acdc;
+  }
+  if (cRAM00002330 != '\0') goto code_r0x8001acdc;
+  if (iRAM000015be != -1) {
+    cRAM00002328 = '\x01';
+  }
+  if (iRAM000015be == 0) {
+    iRAM000015be = 0xffff;
+    xRAM0000230a = 1;
+    xRAM00002320 = 3;
+    return;
+  }
+  if (iRAM000015be < 1) {
+    if (iRAM000015be != -1) goto code_r0x8001acd0;
+  }
+  else {
+    if (iRAM000015be == 1) {
+      iRAM000015be = 0xffff;
+      xRAM0000230a = 5;
+      xRAM00002320 = 3;
+      return;
+    }
+    if (iRAM000015be == 2) {
+      iRAM000015be = 0xffff;
+      xRAM00002320 = 3;
+      return;
+    }
+code_r0x8001acd0:
+    cRAM00002328 = '\0';
+  }
+  iRAM000015be = -1;
+code_r0x8001acdc:
+  (*(code *)0x8005e558)();
+  return;
+}
+[decomp]> quit

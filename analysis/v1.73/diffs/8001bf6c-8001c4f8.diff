@@ -1,0 +1,15 @@
+--- 8001bf6c
+
++++ 8001c4f8
+
+@@ -89,7 +89,7 @@
+
+         break;
+       case 0xb:
+-        (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd4394));
++        (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd39b8));
+         xVar1 = FUNCTION_ADDR;
+-        (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd4395));
++        (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd39b9));
+         (*(code *)FUNCTION_ADDR)(xRAM_ADDR);
+         xVar2 = (*(code *)FUNCTION_ADDR)(0);

@@ -1,0 +1,41 @@
+{
+  "source": "Ecoheat_v1.72/DTX9003.uc3",
+  "output": "analysis/patched/DTX9003_no_idle_clock_30s.uc3",
+  "source_sha256": "b5ab1b7380f2486c29cf6708954cdb5bbaa2d7798fd0103f845fa254da51a5e8",
+  "output_sha256": "b26b0b0177737d3884c2d4afb00cf03595c3f0b4c081e7d2dcc8388863f0a8ae",
+  "size": 450509,
+  "original_crc32": "0x42452353",
+  "patched_crc32": "0x7474d086",
+  "patches": [
+    {
+      "address": "0x8000b964",
+      "file_offset": "0x397d",
+      "before": "3008",
+      "after": "3648",
+      "purpose": "Idle expiry: MOV R8,0 -> MOV R8,100; retain active display brightness"
+    },
+    {
+      "address": "0x80010f26",
+      "file_offset": "0x8f3f",
+      "before": "29c81039e08a0013",
+      "after": "f0c8fed41238c122",
+      "purpose": "Opening check: add 300 instead of 100; swap comparison and use unsigned short branch to same target"
+    }
+  ],
+  "changed_byte_offsets": [
+    "0x15",
+    "0x16",
+    "0x17",
+    "0x18",
+    "0x397d",
+    "0x397e",
+    "0x8f3f",
+    "0x8f41",
+    "0x8f42",
+    "0x8f43",
+    "0x8f44",
+    "0x8f45",
+    "0x8f46"
+  ],
+  "validation_scope": "Static disassembly, checksum and bounded logical checks; no hardware execution or flashing"
+}

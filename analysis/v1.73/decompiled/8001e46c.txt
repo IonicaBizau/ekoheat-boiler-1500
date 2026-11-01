@@ -1,0 +1,110 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8001e46c FUN_8001e46c
+[decomp]> decompile
+Decompiling FUN_8001e46c
+Decompilation complete
+[decomp]> print C
+
+void FUN_8001e46c(void)
+
+{
+  switch(xRAM00002320) {
+  case 0:
+    (*(code *)0x80016aac)();
+    break;
+  case 1:
+    (*(code *)0x800179c4)();
+    break;
+  case 2:
+    (*(code *)0x8001dea0)();
+    break;
+  case 3:
+    (*(code *)0x8001dcbc)();
+    break;
+  case 4:
+    (*(code *)0x8001ac28)();
+    break;
+  case 5:
+    (*(code *)0x8001da50)();
+    break;
+  case 6:
+    (*(code *)0x8001ad04)();
+    break;
+  case 7:
+    (*(code *)0x8001b288)();
+    break;
+  case 8:
+    (*(code *)0x8001b4a0)();
+    break;
+  case 9:
+    (*(code *)0x8001b67c)();
+    break;
+  case 10:
+    (*(code *)0x8001d968)();
+    break;
+  case 0xb:
+    (*(code *)0x80017b44)();
+    break;
+  case 0xc:
+    (*(code *)0x80017f70)();
+    break;
+  case 0xd:
+    (*(code *)0x8001a1c8)();
+    break;
+  case 0xe:
+    (*(code *)0x80018064)();
+    break;
+  case 0xf:
+    (*(code *)0x8001a500)();
+    break;
+  case 0x10:
+    (*(code *)0x8001a768)();
+    break;
+  case 0x11:
+    (*(code *)0x80019d90)();
+    break;
+  case 0x12:
+    (*(code *)0x8001cfc0)();
+    break;
+  case 0x13:
+    (*(code *)0x8001bb14)();
+    break;
+  case 0x14:
+    (*(code *)0x8001bfc8)();
+    break;
+  default:
+    (*(code *)0x80016aac)();
+    break;
+  case 0x16:
+    (*(code *)0x8001c0bc)();
+    break;
+  case 0x17:
+    (*(code *)0x8001c164)();
+    break;
+  case 0x18:
+    (*(code *)0x8001d3f0)();
+    break;
+  case 0x19:
+    (*(code *)0x8001d77c)();
+    break;
+  case 0x1a:
+    (*(code *)0x8001d840)();
+    break;
+  case 0x1b:
+    (*(code *)0x8001c4f8)();
+    break;
+  case 0x1c:
+    (*(code *)0x8001ca38)();
+    break;
+  case 0x1d:
+    (*(code *)0x8001ce6c)();
+    break;
+  case 0x1e:
+    (*(code *)0x8001df88)();
+  }
+  return;
+}
+[decomp]> quit

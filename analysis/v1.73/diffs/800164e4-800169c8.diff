@@ -1,0 +1,12 @@
+--- 800164e4
+
++++ 800169c8
+
+@@ -8,5 +8,5 @@
+
+   iStack_a = 0;
+   iStack_c = 0;
+-  iVar1 = (*(code *)FUNCTION_ADDR)(&iStack_a,&iStack_c,0x2284);
++  iVar1 = (*(code *)FUNCTION_ADDR)(&iStack_a,&iStack_c,0x2330);
+   xRAM_ADDR = iVar1 != 0;
+   if ((bool)xRAM_ADDR) {

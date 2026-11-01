@@ -1,0 +1,14 @@
+--- 8001ddc8
+
++++ 8001e364
+
+@@ -3,6 +3,6 @@
+
+ {
+   iRAM_ADDR = -1;
+-  (*(code *)FUNCTION_ADDR)(0x51c4,0x41,param_1);
+-  (*(code *)FUNCTION_ADDR)(0x50c4,0x100,param_2);
++  (*(code *)FUNCTION_ADDR)(0x5270,0x41,param_1);
++  (*(code *)FUNCTION_ADDR)(0x5170,0x100,param_2);
+   (*(code *)FUNCTION_ADDR)(5,0xffffffff,1);
+   (*(code *)FUNCTION_ADDR)();

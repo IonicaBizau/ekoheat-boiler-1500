@@ -1,0 +1,48 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x800260fc FUN_800260fc
+[decomp]> decompile
+Decompiling FUN_800260fc
+Decompilation complete
+[decomp]> print C
+
+int4 FUN_800260fc(uint2 param_1)
+
+{
+  xunknown4 xVar1;
+  xunknown4 xVar2;
+  xunknown4 xVar3;
+  uint2 uStack_14;
+  int2 iStack_12;
+  
+  if (param_1 < 0x3e2) {
+    if (param_1 < 0x27) {
+      iStack_12 = 12000;
+    }
+    else {
+      for (uStack_14 = 1; uStack_14 < 0x140; uStack_14 = uStack_14 + 1) {
+        if (*(uint2 *)((uint4)uStack_14 * 2 + -0x7ffdb544) < param_1) {
+          xVar1 = (*(code *)0x8006d1a2)((uint4)uStack_14 * 100 + -4000);
+          xVar2 = (*(code *)0x8006d1a2)
+                            (((uint4)*(uint2 *)((uStack_14 - 1) * 2 + -0x7ffdb544) - (uint4)param_1)
+                             * 100);
+          xVar3 = (*(code *)0x8006d1a2)
+                            ((uint4)*(uint2 *)((uStack_14 - 1) * 2 + -0x7ffdb544) -
+                             (uint4)*(uint2 *)((uint4)uStack_14 * 2 + -0x7ffdb544));
+          xVar2 = (*(code *)0x8006cdb4)(xVar2,xVar3);
+          xVar2 = (*(code *)0x8006cf28)(0x42c80000,xVar2);
+          xVar1 = (*(code *)0x8006cf28)(xVar1,xVar2);
+          iStack_12 = (*(code *)0x8006d2a2)(xVar1);
+          break;
+        }
+      }
+    }
+  }
+  else {
+    iStack_12 = -0x1004;
+  }
+  return (int4)iStack_12;
+}
+[decomp]> quit

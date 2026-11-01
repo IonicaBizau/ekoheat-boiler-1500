@@ -1,0 +1,16 @@
+--- 8001bbd8
+
++++ 8001c164
+
+@@ -55,7 +55,7 @@
+
+         break;
+       case 0xd:
+-        xRAM_ADDR = *(xunknown4 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd43ac);
+-        xRAM_ADDR = *(xunknown4 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd43a8);
+-        xRAM_ADDR = *(xunknown4 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd43a4);
++        xRAM_ADDR = *(xunknown4 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd39d0);
++        xRAM_ADDR = *(xunknown4 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd39cc);
++        xRAM_ADDR = *(xunknown4 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd39c8);
+         xRAM_ADDR = xRAM_ADDR;
+         xRAM_ADDR = xRAM_ADDR;

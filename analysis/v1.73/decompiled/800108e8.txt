@@ -1,0 +1,167 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x800108e8 FUN_800108e8
+[decomp]> decompile
+Decompiling FUN_800108e8
+Decompilation complete
+[decomp]> print C
+
+/* WARNING: Restarted to delay deadcode elimination for space: RAM */
+
+xunknown4 FUN_800108e8(void)
+
+{
+  xunknown4 xVar1;
+  xunknown4 xVar2;
+  int4 iVar3;
+  
+  xRAM00005efe = 0;
+  xRAM00005eff = 0;
+  xRAM00005f00 = 0;
+  xRAM00005f03 = 0;
+  xRAM00002315 = 0;
+  xRAM000022a4 = 0xe10;
+  xRAM00005ef6 = 1;
+  xRAM0000230a = 0;
+  xRAM000022ec = 0;
+  xRAM000022f8 = 0;
+  (*(code *)0x80011dc0)();
+  (*(code *)0x80011e64)();
+  xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0x820);
+  (*(code *)0x8006a028)(0x53a0,0xb,0x8000e2a8,(int4)iRAM00005a5a,xVar1,xVar1);
+  xRAM000022f1 = 0;
+  xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0x8c0);
+  (*(code *)0x8006a028)(0x5358,0x33,0x8000e2a8,(int4)iRAM00005a5a,xVar1,xVar1);
+  xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xa78);
+  (*(code *)0x8006a028)(0x5488,0xd,0x8000e2a8,(int4)iRAM00005a5a,xVar1,xVar1);
+  xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xa78);
+  (*(code *)0x8006a028)(0x5414,0x21,0x8000e2a8,(int4)iRAM00005a5a,xVar1,xVar1);
+  switch(cRAM000022f4) {
+  case '\x01':
+    (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2a8);
+    break;
+  case '\x02':
+    (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2a8);
+    break;
+  case '\x03':
+    (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2a8);
+    break;
+  case '\x04':
+    (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2a8);
+    break;
+  case '\x05':
+    (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2a8);
+    break;
+  case '\x06':
+    (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2a8);
+    break;
+  case '\a':
+    if ((iRAM000050f4 < -3999) && (cRAM00005076 == '\x01')) {
+      xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xb90);
+      (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2e0,(int4)iRAM00005a5a,xVar1,xVar1);
+    }
+    else if ((iRAM000050f0 < -3999) && (cRAM0000505d == '\x01')) {
+      xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 3000);
+      (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2e0,(int4)iRAM00005a5a,xVar1,xVar1);
+    }
+    else if (iRAM000050dc < -3999) {
+      xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xbe0);
+      (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2e0,(int4)iRAM00005a5a,xVar1,xVar1);
+    }
+    else if ((iRAM000050ec < -3999) && (cRAM00005065 == '\x01')) {
+      xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xc08);
+      (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2e0,(int4)iRAM00005a5a,xVar1,xVar1);
+    }
+    else if ((iRAM000050e8 < -3999) && (cRAM000050a3 == '\x01')) {
+      xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xc30);
+      (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2e0,(int4)iRAM00005a5a,xVar1,xVar1);
+    }
+    else {
+      (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2a8);
+    }
+    break;
+  case '\b':
+    if ((iRAM000050f4 < 0x3c8c) || (cRAM00005076 != '\x01')) {
+      if ((iRAM000050f0 < 0x3c8c) || (cRAM0000505d != '\x01')) {
+        if (iRAM000050dc < 0x3c8c) {
+          if ((iRAM000050ec < 0x3c8c) || (cRAM00005065 != '\x01')) {
+            if ((iRAM000050e8 < 0x3c8c) || (cRAM000050a3 != '\x01')) {
+              (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2a8);
+            }
+            else {
+              xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xc30);
+              (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2e0,(int4)iRAM00005a5a,xVar1,xVar1);
+            }
+          }
+          else {
+            xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xc08);
+            (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2e0,(int4)iRAM00005a5a,xVar1,xVar1);
+          }
+        }
+        else {
+          xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xbe0);
+          (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2e0,(int4)iRAM00005a5a,xVar1,xVar1);
+        }
+      }
+      else {
+        xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 3000);
+        (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2e0,(int4)iRAM00005a5a,xVar1,xVar1);
+      }
+    }
+    else {
+      xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xb90);
+      (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2e0,(int4)iRAM00005a5a,xVar1,xVar1);
+    }
+    break;
+  case '\t':
+    xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xcd0);
+    (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2e0,(int4)iRAM00005a5a,xVar1,xVar1);
+    break;
+  case '\n':
+    xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xcd0);
+    (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2e0,(int4)iRAM00005a5a,xVar1,xVar1);
+    break;
+  case '\v':
+    (*(code *)0x8006bf14)(0x19);
+    cRAM000022f4 = '\0';
+    break;
+  case '\f':
+    (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2a8);
+    break;
+  default:
+    (*(code *)0x8006a028)(0x53d0,0x41,0x8000e2a8);
+  }
+  if (cRAM000022f4 != '\v') {
+    xRAM0000538b = 1;
+    xRAM00002328 = 1;
+  }
+  xRAM00002318 = 1;
+  while (cRAM000022f4 != '\0') {
+    xVar1 = (*(code *)0x8006d1a2)(iRAM000050dc);
+    xVar1 = (*(code *)0x8006cdb4)(xVar1,0x42c80000);
+    xVar2 = (*(code *)0x8006d1a2)(uRAM00005064 - 10);
+    iVar3 = (*(code *)0x8006ca3a)(xVar2,xVar1);
+    if (iVar3 == 0) {
+      (*(code *)0x8006bf14)(0x46);
+    }
+    else {
+      (*(code *)0x8006bf14)(0x19);
+    }
+    if (iRAM000022b0 == 0) {
+      (*(code *)0x8006a028)(0x5358,0x33,0x8000e2a8);
+    }
+    else {
+      (*(code *)0x8006a028)(0x5358,0x33,0x8000e2e8);
+    }
+    (*(code *)0x80026a24)(100);
+  }
+  (*(code *)0x8006a028)(0x5358,0x33,0x8000e2a8);
+  xRAM0000538b = 0;
+  xRAM00002318 = 0;
+  xRAM000022f3 = xRAM000022f2;
+  xRAM000022f2 = 0;
+  return 1;
+}
+[decomp]> quit

@@ -1,0 +1,21 @@
+--- 8001c8e0
+
++++ 8001ce6c
+
+@@ -23,11 +23,11 @@
+
+       if (cRAM_ADDR == '\0') {
+         cRAM_ADDR = '\x01';
+-        xVar1 = *(xunknown4 *)(iRAM_ADDR * 4 + 0xe64);
+-        (*(code *)FUNCTION_ADDR)(0x5084,5,FUNCTION_ADDR,(int4)iRAM_ADDR,xVar1,xVar1);
++        xVar1 = *(xunknown4 *)(iRAM_ADDR * 4 + 0xeb4);
++        (*(code *)FUNCTION_ADDR)(0x5130,5,FUNCTION_ADDR,(int4)iRAM_ADDR,xVar1,xVar1);
+       }
+       else {
+         cRAM_ADDR = '\0';
+-        xVar1 = *(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c);
+-        (*(code *)FUNCTION_ADDR)(0x5084,5,FUNCTION_ADDR,(int4)iRAM_ADDR,xVar1,xVar1);
++        xVar1 = *(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c);
++        (*(code *)FUNCTION_ADDR)(0x5130,5,FUNCTION_ADDR,(int4)iRAM_ADDR,xVar1,xVar1);
+       }
+       cRAM_ADDR = '\x01';

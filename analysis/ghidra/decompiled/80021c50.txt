@@ -1,0 +1,377 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x80021c50 FUN_80021c50
+[decomp]> decompile
+Decompiling FUN_80021c50
+Decompilation complete
+[decomp]> print C
+
+void FUN_80021c50(void)
+
+{
+  bool bVar1;
+  xunknown4 xVar2;
+  uint1 *puVar3;
+  int4 iVar4;
+  xunknown4 xVar5;
+  uint1 uVar6;
+  char cVar7;
+  char cVar8;
+  char cVar9;
+  char cVar10;
+  char cVar11;
+  uint1 auStack_110 [3];
+  xunknown2 xStack_10d;
+  uint1 uStack_10b;
+  uint1 uStack_10a;
+  uint1 uStack_109;
+  uint1 uStack_108;
+  xunknown2 xStack_107;
+  uint1 uStack_105;
+  uint1 uStack_104;
+  uint1 uStack_103;
+  uint1 uStack_102;
+  uint1 uStack_101;
+  uint1 uStack_100;
+  uint1 uStack_ff;
+  uint1 uStack_fe;
+  uint1 uStack_f;
+  xunknown2 xStack_e;
+  
+  xRAM00005010 = (*(code *)0x80026a34)(0x100,1);
+  do {
+    while( true ) {
+      do {
+        puVar3 = auStack_110;
+        xVar2 = 0xffffffff;
+        iVar4 = (*(code *)0x80026d68)(xRAM00005010,puVar3,0xffffffff,0);
+      } while (iVar4 != 1);
+      for (uStack_f = 1; uStack_f <= auStack_110[0]; uStack_f = uStack_f + 1) {
+        puVar3 = auStack_110 + uStack_f;
+        xVar2 = 0x32;
+        (*(code *)0x80026d68)(xRAM00005010,puVar3,0x32,0);
+      }
+      if (auStack_110[1] == 2) break;
+      if (auStack_110[1] < 3) {
+        if ((auStack_110[1] == 1) && (auStack_110[2] == '\x03')) {
+          (*(code *)0x8006bed4)(xStack_10d);
+          xVar5 = (*(code *)0x8006b9f8)();
+          xVar5 = (*(code *)0x8006bbe0)(xVar5,puVar3,xVar2,0x40249999,0x9999999a);
+          xRAM00005050 = (*(code *)0x8006ca58)(xVar5,puVar3,xVar2);
+          iVar4 = (*(code *)0x8006c12e)(xRAM00005050,0);
+          if (iVar4 != 0) {
+            xRAM00005050 = 0;
+          }
+        }
+      }
+      else if (auStack_110[1] == 3) {
+        if (auStack_110[2] == '\x03') {
+          xRAM00005054 = (*(code *)0x8006c896)
+                                   ((uint4)xStack_10d._0_1_ << 0x18 |
+                                    (uint4)(uint1)xStack_10d << 0x10 | (uint4)uStack_10b << 8 |
+                                    (uint4)uStack_10a);
+          xRAM00005058 = (*(code *)0x8006c896)
+                                   ((uint4)uStack_109 << 0x18 | (uint4)uStack_108 << 0x10 |
+                                    (uint4)xStack_107._0_1_ << 8 | (uint4)(uint1)xStack_107);
+          xRAM0000505c = (*(code *)0x8006c896)
+                                   ((uint4)uStack_105 << 0x18 | (uint4)uStack_104 << 0x10 |
+                                    (uint4)uStack_103 << 8 | (uint4)uStack_102);
+          xRAM00005060 = (*(code *)0x8006c896)
+                                   ((uint4)uStack_101 << 0x18 | (uint4)uStack_100 << 0x10 |
+                                    (uint4)uStack_ff << 8 | (uint4)uStack_fe);
+        }
+      }
+      else if (auStack_110[1] == 0x21) {
+        switch(auStack_110[2]) {
+        case 0:
+          xVar2 = (*(code *)0x80029ef0)(0x1f,1);
+          (*(code *)0x800279b0)(xVar2,0,0x4571);
+          (*(code *)0x80027aa8)();
+          do {
+                    /* WARNING: Do nothing block with infinite loop */
+          } while( true );
+        case 1:
+          (*(code *)0x80008454)();
+          xRAM0000228a = 0;
+          uRAM00005e4f = 0;
+          xRAM00005e42 = 0;
+          uRAM00005e47 = 0;
+          uRAM00005e4d = 0;
+          uRAM00005e4e = 0;
+          uRAM00005e4b = 0;
+          uRAM00005e4c = 0;
+          uRAM00005e4a = 0;
+          uRAM00005e46 = 0;
+          auStack_110[0] = 1;
+          auStack_110[1] = 1;
+          (*(code *)0x80023588)(0x21,auStack_110,2);
+          break;
+        case 2:
+          auStack_110[0] = 2;
+          auStack_110[1] = 1;
+          auStack_110[2] = 'H';
+          xStack_10d = xStack_10d & 0xff;
+          (*(code *)0x80023588)(0x21,auStack_110,4);
+          break;
+        case 3:
+          auStack_110[0] = 3;
+          auStack_110[1] = uRAM00002240;
+          (*(code *)0x80023588)(0x21,auStack_110,2);
+          break;
+        case 5:
+          auStack_110[0] = 5;
+          auStack_110[1] = uRAM000021c8;
+          (*(code *)0x80023588)(0x21,auStack_110,2);
+          break;
+        case 6:
+          auStack_110[0] = 6;
+          auStack_110[1] = (uint1)((uint4)xRAM00004edc >> 8);
+          auStack_110[2] = (uint1)xRAM00004edc;
+          (*(code *)0x80023588)(0x21,auStack_110,3);
+          break;
+        case 7:
+          uRAM00005e08 = (uint4)xStack_10d._0_1_;
+          uRAM00005e0c = (uint4)(uint1)xStack_10d;
+          uRAM00005e10 = (uint4)uStack_10b;
+          uRAM00005e20 = (uint4)uStack_10a;
+          uRAM00005e14 = (uint4)uStack_109;
+          uRAM00005e18 = (uint4)uStack_108;
+          uRAM00005e1c = (uint4)xStack_107;
+          (*(code *)0x8006abb4)();
+          break;
+        case 8:
+          (*(code *)0x8006aa14)();
+          auStack_110[0] = 8;
+          auStack_110[1] = (uint1)uRAM00005e08;
+          auStack_110[2] = (uint1)uRAM00005e0c;
+          xStack_10d = CONCAT11((char)uRAM00005e10,(char)uRAM00005e20);
+          uStack_10b = (uint1)uRAM00005e14;
+          uStack_10a = (uint1)uRAM00005e18;
+          uStack_109 = (uint1)(uRAM00005e1c >> 8);
+          uStack_108 = (uint1)uRAM00005e1c;
+          (*(code *)0x80023588)(0x21,auStack_110,9);
+          break;
+        case 9:
+          (*(code *)0x8005f4a0)(xStack_10d._0_1_);
+          (*(code *)0x80011990)();
+          (*(code *)0x80011a34)();
+          break;
+        case 10:
+          switch(xStack_10d._0_1_) {
+          case 0:
+            uRAM00005e4f = (uint1)xStack_10d;
+            break;
+          case 1:
+            (*(code *)0x8006b630)(100);
+            xRAM00005e42 = (uint1)xStack_10d;
+            break;
+          case 2:
+            xRAM00005e48 = 0;
+            uRAM00005e47 = (uint1)xStack_10d;
+            break;
+          case 3:
+            uRAM00005e4d = (uint1)xStack_10d;
+            break;
+          case 4:
+            uRAM00005e4e = (uint1)xStack_10d;
+            break;
+          case 5:
+            uRAM00005e4b = (uint1)xStack_10d;
+            break;
+          case 6:
+            uRAM00005e4c = (uint1)xStack_10d;
+            break;
+          case 7:
+            uRAM00005e4a = (uint1)xStack_10d;
+            break;
+          case 8:
+            uRAM00005e46 = (uint1)xStack_10d;
+          }
+          break;
+        case 0xb:
+          (*(code *)0x80025394)(1);
+          switch(xStack_10d._0_1_) {
+          case 0:
+            xStack_e = (xunknown2)xRAM00005048;
+            auStack_110[0] = 0xb;
+            auStack_110[1] = (uint1)((uint4)xRAM00005048 >> 8);
+            auStack_110[2] = (uint1)xRAM00005048;
+            (*(code *)0x80023588)(0x21,auStack_110,3);
+            break;
+          case 1:
+            xStack_e = (xunknown2)xRAM00005044;
+            auStack_110[0] = 0xb;
+            auStack_110[1] = (uint1)((uint4)xRAM00005044 >> 8);
+            auStack_110[2] = (uint1)xRAM00005044;
+            (*(code *)0x80023588)(0x21,auStack_110,3);
+            break;
+          case 2:
+            xStack_e = (xunknown2)xRAM00005030;
+            auStack_110[0] = 0xb;
+            auStack_110[1] = (uint1)((uint4)xRAM00005030 >> 8);
+            auStack_110[2] = (uint1)xRAM00005030;
+            (*(code *)0x80023588)(0x21,auStack_110,3);
+            break;
+          case 3:
+            xStack_e = (xunknown2)xRAM00005038;
+            auStack_110[0] = 0xb;
+            auStack_110[1] = (uint1)((uint4)xRAM00005038 >> 8);
+            auStack_110[2] = (uint1)xRAM00005038;
+            (*(code *)0x80023588)(0x21,auStack_110,3);
+            break;
+          case 4:
+            xStack_e = (xunknown2)xRAM00005034;
+            auStack_110[0] = 0xb;
+            auStack_110[1] = (uint1)((uint4)xRAM00005034 >> 8);
+            auStack_110[2] = (uint1)xRAM00005034;
+            (*(code *)0x80023588)(0x21,auStack_110,3);
+            break;
+          case 5:
+            xStack_e = (xunknown2)xRAM00005040;
+            auStack_110[0] = 0xb;
+            auStack_110[1] = (uint1)((uint4)xRAM00005040 >> 8);
+            auStack_110[2] = (uint1)xRAM00005040;
+            (*(code *)0x80023588)(0x21,auStack_110,3);
+            break;
+          case 6:
+            xStack_e = (xunknown2)xRAM0000503c;
+            auStack_110[0] = 0xb;
+            auStack_110[1] = (uint1)((uint4)xRAM0000503c >> 8);
+            auStack_110[2] = (uint1)xRAM0000503c;
+            (*(code *)0x80023588)(0x21,auStack_110,3);
+          }
+          break;
+        case 0xc:
+          (*(code *)0x80025394)(0);
+          auStack_110[0] = 0xc;
+          auStack_110[1] = (uint1)xRAM0000504c;
+          (*(code *)0x80023588)(0x21,auStack_110,2);
+          break;
+        case 0xd:
+          auStack_110[0] = 0xd;
+          uVar6 = (*(code *)0x80029b08)(0x20);
+          cVar7 = (*(code *)0x80029b08)(0x21);
+          cVar8 = (*(code *)0x80029b08)(0x22);
+          cVar9 = (*(code *)0x80029b08)(0x23);
+          cVar10 = (*(code *)0x80029b08)(0x24);
+          cVar11 = (*(code *)0x80029b08)(0x29);
+          auStack_110[1] = uVar6 | cVar7 << 1 | cVar8 << 2 | cVar9 << 3 | cVar10 << 4 | cVar11 << 5;
+          (*(code *)0x80023588)(0x21,auStack_110,2);
+          break;
+        case 0xe:
+          if (xStack_10d._0_1_ == 1) {
+            (*(code *)0x80029b42)(0x31);
+          }
+          else {
+            (*(code *)0x80029baa)(0x31);
+          }
+          break;
+        case 0xf:
+          xRAM0000228a = 100;
+          if (cRAM000021cc == '\x01') {
+            (*(code *)0x80008b74)(1);
+            iRAM00001546 = -1;
+            while( true ) {
+              (*(code *)0x8005efec)(0x4e,0xffffffff,1);
+              (*(code *)0x8005f4cc)();
+              while ((cRAM0000227d == '\0' || (cRAM00002284 == '\0'))) {
+                (*(code *)0x800164e4)();
+                (*(code *)0x80026048)(10);
+              }
+              if (iRAM00001546 == 0) break;
+              cRAM0000227d = '\0';
+              cRAM00002284 = '\0';
+              iRAM00001546 = -1;
+              (*(code *)0x80008b74)(1);
+            }
+            cRAM0000227d = '\0';
+            cRAM00002284 = '\0';
+            iRAM00001546 = 0xffff;
+            cRAM000021cc = '\x01';
+            (*(code *)0x80011a34)();
+            xRAM0000228a = 0;
+          }
+          else {
+            while (cRAM000021cc != '\x01') {
+              (*(code *)0x80026048)(10);
+            }
+            xRAM0000228a = 0;
+          }
+          break;
+        case 0x10:
+          xRAM00002244 = 0;
+          uRAM00004fe8 = xStack_10d._0_1_;
+          (*(code *)0x8005f4a0)((uint1)xStack_10d);
+          (*(code *)0x80011da0)(uRAM00004fe8,1);
+          break;
+        case 0x11:
+          (*(code *)0x80008a7c)();
+          break;
+        case 0x12:
+          (*(code *)0x8006b630)(xStack_10d._0_1_);
+          xRAM00005e42 = 1;
+          break;
+        case 0x13:
+          auStack_110[0] = 0x13;
+          auStack_110[1] = uRAM000021c9;
+          (*(code *)0x80023588)(0x21,auStack_110,2);
+          break;
+        case 0x14:
+          if (xStack_10d._0_1_ == 1) {
+            (*(code *)0x80029b42)(0x44);
+          }
+          else {
+            (*(code *)0x80029baa)(0x44);
+          }
+          break;
+        case 0x15:
+          (*(code *)0x8002bb6c)();
+        }
+      }
+    }
+    switch(auStack_110[2]) {
+    case 0xb:
+      iVar4 = (*(code *)0x8006d790)(0x52f4,*(xunknown4 *)(iRAM000059a6 * 4 + 0x1618));
+      if ((iVar4 == 0) && (cRAM0000224a == '\0')) {
+        xRAM00002282 = 0;
+        xRAM00002244 = 1;
+      }
+      break;
+    case 0xc:
+      iVar4 = (*(code *)0x8006d790)(0x52f4,*(xunknown4 *)(iRAM000059a6 * 4 + 0x1668));
+      if (iVar4 == 0) {
+        xRAM00005e45 = 0;
+        xRAM00005e42 = 1;
+        (*(code *)0x8006b630)(0x19);
+        uRAM00005e4a = 0;
+        uRAM00005e4f = 0;
+        xRAM00002282 = 1;
+        xRAM00002204 = 0x4b0;
+        if ((uRAM00005e4b == 0) && (uRAM00005e4c == 0)) {
+          bVar1 = false;
+        }
+        else {
+          bVar1 = true;
+        }
+        if (bVar1) {
+          (*(code *)0x80069744)(0x52ac,0x33,0x80021aa4);
+        }
+        else {
+          (*(code *)0x80069744)(0x52ac,0x33,0x80021aa4);
+        }
+        (*(code *)0x80069744)(0x52f4,0xb,0x80021aa4);
+        xRAM00002249 = 0;
+        xRAM00002244 = 0;
+        xRAM00002250 = 0;
+        (*(code *)0x80011990)();
+        (*(code *)0x80011a34)();
+        xRAM0000224c = 0xb;
+        xRAM0000224b = 0;
+        cRAM0000224a = '\0';
+      }
+    }
+  } while( true );
+}
+[decomp]> quit

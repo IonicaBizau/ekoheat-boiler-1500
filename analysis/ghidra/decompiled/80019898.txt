@@ -1,0 +1,103 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x80019898 FUN_80019898
+[decomp]> decompile
+Decompiling FUN_80019898
+Decompilation complete
+[decomp]> print C
+
+/* WARNING: Restarted to delay deadcode elimination for space: RAM */
+
+void FUN_80019898(xunknown4 param_1,xunknown4 param_2,xunknown4 param_3)
+
+{
+  xunknown4 xVar1;
+  uint2 uVar2;
+  
+  if (cRAM0000227c == '\0') {
+    if (cRAM00002284 == '\0') {
+      if (iRAM00001546 != -1) {
+        cRAM0000227c = '\x01';
+      }
+      switch(iRAM00001546) {
+      default:
+        cRAM0000227c = '\0';
+        break;
+      case 0x14:
+        (*(code *)0x8006bed4)(uRAM00005e10);
+        xVar1 = (*(code *)0x8001daac)(0);
+        uRAM00005e10 = (*(code *)0x8006be94)(xVar1,param_2,param_3);
+        uRAM00005e10 = uRAM00005e10 & 0xff;
+        (*(code *)0x80069744)(0x5534,3,0x80014c60);
+        (*(code *)0x8006abb4)();
+        (*(code *)0x80069744)(0x5470,7,0x80014f74);
+        cRAM0000227c = '\x01';
+        break;
+      case 0x15:
+        (*(code *)0x8006bed4)(uRAM00005e0c);
+        xVar1 = (*(code *)0x8001daac)(0);
+        uRAM00005e0c = (*(code *)0x8006be94)(xVar1,param_2,param_3);
+        uRAM00005e0c = uRAM00005e0c & 0xff;
+        xRAM00005e08 = 0;
+        (*(code *)0x80069744)(0x54c8,3,0x80014c60);
+        (*(code *)0x8006abb4)();
+        (*(code *)0x80069744)(0x5470,7,0x80014f74);
+        cRAM0000227c = '\x01';
+        break;
+      case 0x16:
+        (*(code *)0x8006bed4)(uRAM00005e14);
+        xVar1 = (*(code *)0x8001daac)(0);
+        uRAM00005e14 = (*(code *)0x8006be94)(xVar1,param_2,param_3);
+        uRAM00005e14 = uRAM00005e14 & 0xff;
+        (*(code *)0x80069744)(0x5584,3,0x80014c60);
+        (*(code *)0x8006abb4)();
+        cRAM0000227c = '\x01';
+        break;
+      case 0x17:
+        (*(code *)0x8006bed4)(uRAM00005e18);
+        xVar1 = (*(code *)0x8001daac)(0);
+        uRAM00005e18 = (*(code *)0x8006be94)(xVar1,param_2,param_3);
+        uRAM00005e18 = uRAM00005e18 & 0xff;
+        (*(code *)0x80069744)(0x5588,3,0x80014c60);
+        (*(code *)0x8006abb4)();
+        cRAM0000227c = '\x01';
+        break;
+      case 0x18:
+        (*(code *)0x8006bed4)(uRAM00005e1c);
+        xVar1 = (*(code *)0x8001daac)(0);
+        uVar2 = (*(code *)0x8006be94)(xVar1,param_2,param_3);
+        uRAM00005e1c = (uint4)uVar2;
+        (*(code *)0x80069744)(0x5504,5,0x80014c68);
+        (*(code *)0x8006abb4)();
+        cRAM0000227c = '\x01';
+        break;
+      case 0x1e:
+        iRAM00001546 = 0xffff;
+        xRAM00002274 = 3;
+        return;
+      case 0x1f:
+        (*(code *)0x80011990)();
+        (*(code *)0x80011a34)();
+        iRAM00001546 = 0xffff;
+        xRAM00002274 = 0;
+        return;
+      case 0x20:
+        iRAM00001546 = 0xffff;
+        xRAM00002274 = 0xb;
+        return;
+      case -1:
+        break;
+      }
+      iRAM00001546 = -1;
+    }
+  }
+  else {
+    (*(code *)0x8005efec)(0x53,0xffffffff,1);
+    cRAM0000227c = '\0';
+  }
+  (*(code *)0x8005f4cc)();
+  return;
+}
+[decomp]> quit

@@ -1,0 +1,43 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x80026838 FUN_80026838
+[decomp]> decompile
+Decompiling FUN_80026838
+Decompilation complete
+[decomp]> print C
+
+void FUN_80026838(int4 param_1)
+
+{
+  int4 in_EVBA;
+  int4 iStack_14;
+  int4 iStack_10;
+  
+  (*(code *)0x80027e34)();
+  iStack_10 = param_1;
+  if (param_1 == iRAM000025b4) {
+    iStack_10 = 0;
+  }
+  if (iStack_10 == 0) {
+    iStack_14 = iRAM000025b4;
+  }
+  else {
+    iStack_14 = iStack_10;
+  }
+  (*(code *)0x8002823a)(iStack_14 + 4);
+  if (*(int4 *)(iStack_14 + 0x28) != 0) {
+    (*(code *)0x8002823a)(iStack_14 + 0x18);
+  }
+  (*(code *)0x80028126)(0x26c8,iStack_14 + 4);
+  iRAM000025b8 = iRAM000025b8 + 1;
+  iRAM000025e0 = iRAM000025e0 + 1;
+  (*(code *)0x80027e50)();
+  if ((iRAM000025cc != 0) && (iStack_10 == 0)) {
+    SupervisorCallSetup();
+    (*(code *)(in_EVBA + 0x100))();
+  }
+  return;
+}
+[decomp]> quit

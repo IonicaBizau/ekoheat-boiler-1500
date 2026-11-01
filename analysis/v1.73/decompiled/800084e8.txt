@@ -1,0 +1,136 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x800084e8 FUN_800084e8
+[decomp]> decompile
+Decompiling FUN_800084e8
+Decompilation complete
+[decomp]> print C
+
+/* WARNING: Removing unreachable block (RAM,0x8000861c) */
+/* WARNING: Removing unreachable block (RAM,0x8000862a) */
+/* WARNING: Removing unreachable block (RAM,0x80008650) */
+
+xunknown4 FUN_800084e8(void)
+
+{
+  bool bVar1;
+  uint4 in_COUNT;
+  int4 iVar2;
+  int4 iVar3;
+  char cVar4;
+  char cStack_4d;
+  char cStack_45;
+  char cStack_3d;
+  xunknown1 axStack_38 [8];
+  char cStack_30;
+  xunknown4 xStack_2c;
+  xunknown4 xStack_28;
+  xunknown4 xStack_24;
+  xunknown4 xStack_20;
+  xunknown1 *pxStack_1c;
+  int4 iStack_18;
+  xunknown1 *pxStack_14;
+  xunknown4 xStack_10;
+  
+  (*(code *)0x80008a68)();
+  iVar2 = (*(code *)0x80029834)(8);
+  if (iVar2 != 0) {
+    return 0x2a;
+  }
+  (*(code *)0x8002a4aa)(0x20);
+  (*(code *)0x8002a4aa)(6);
+  (*(code *)0x8002a4aa)(7);
+  (*(code *)0x8002a4aa)(8);
+  (*(code *)0x8002a4aa)(9);
+  xStack_28 = 100;
+  xStack_2c = 66000000;
+  xStack_20 = 100;
+  xStack_24 = 66000000;
+  iVar2 = -0x769bfa19;
+  (*(code *)0x8006d474)(1,1,0x896405e7,0,1000);
+  pxStack_1c = axStack_38;
+  cStack_30 = '\0';
+  do {
+    pxStack_14 = axStack_38;
+    if (cStack_30 == '\x02') {
+      bVar1 = false;
+    }
+    else if (cStack_30 == '\x01') {
+      bVar1 = true;
+    }
+    else if (iVar2 + in_COUNT < in_COUNT) {
+      bVar1 = false;
+    }
+    else if (iVar2 + in_COUNT < in_COUNT) {
+      cStack_30 = '\x01';
+      bVar1 = true;
+    }
+    else {
+      bVar1 = false;
+    }
+  } while (!bVar1);
+  iStack_18 = iVar2;
+  iVar2 = (*(code *)0x8002a4e4)(6);
+  iVar3 = (*(code *)0x8002a4e4)(7);
+  if (iVar3 == 0) {
+    cStack_4d = '\x02';
+  }
+  else {
+    cStack_4d = '\0';
+  }
+  iVar3 = (*(code *)0x8002a4e4)(8);
+  if (iVar3 == 0) {
+    cStack_45 = '\x04';
+  }
+  else {
+    cStack_45 = '\0';
+  }
+  iVar3 = (*(code *)0x8002a4e4)(9);
+  if (iVar3 == 0) {
+    cStack_3d = '\b';
+  }
+  else {
+    cStack_3d = '\0';
+  }
+  cRAM000022e8 = cStack_3d + cStack_45 + cStack_4d + (iVar2 == 0) + '\x03';
+  (*(code *)0x8002b50c)(66000000);
+  (*(code *)0x80026514)();
+  (*(code *)0x80008190)();
+  (*(code *)0x800081fc)();
+  cVar4 = (*(code *)0x800080f0)();
+  xRAM00002268 = cVar4 != '\0';
+  (*(code *)0x8002a51e)(0x3f);
+  (*(code *)0x8002a586)(0x31);
+  xStack_10 = 0;
+  pxStack_14 = (xunknown1 *)0x5018;
+  (*(code *)0x80026654)(0x8000e32c,0x80008044,2000,0,4);
+  xStack_10 = 0x5020;
+  (*(code *)0x80026654)(0x80008324,0x80008050,2000,0,2);
+  (*(code *)0x80026654)(0x80008aa4,0x80008058,2000,0,4);
+  (*(code *)0x80026654)(0x8001f978,0x80008064,2000,0,2);
+  (*(code *)0x80026654)(0x800258a4,0x80008070,2000,0,2);
+  (*(code *)0x80026654)(0x8000b410,0x80008078,2000,0,2);
+  (*(code *)0x80026654)(0x80008348,0x80008084,2000,0,4);
+  (*(code *)0x80026654)(0x8001ed84,0x80008094,0x9dd0,0,3);
+  (*(code *)0x80026654)(0x8001f1d0,0x8000809c,2000,0,2);
+  (*(code *)0x80026654)(0x80008a18,0x800080ac,2000,0,1);
+  (*(code *)0x80023b30)();
+  (*(code *)0x80026654)(0x800222ac,0x800080bc,2000,0,5);
+  (*(code *)0x80026654)(0x80022e48,0x800080c8,2000,0,5);
+  (*(code *)0x80026654)(0x80024100,0x800080d4,2000,0,2);
+  (*(code *)0x80026654)(0x8001f694,0x800080e0,2000,0,2);
+  (*(code *)0x80053a44)();
+  (*(code *)0x80052b40)();
+  (*(code *)0x8005e558)();
+  (*(code *)0x8006b5dc)();
+  (*(code *)0x800082b8)();
+  (*(code *)0x80069fc4)();
+  (*(code *)0x8006c104)();
+  (*(code *)0x80026ad8)();
+  do {
+                    /* WARNING: Do nothing block with infinite loop */
+  } while( true );
+}
+[decomp]> quit

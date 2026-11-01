@@ -1,0 +1,51 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x800179c4 FUN_800179c4
+[decomp]> decompile
+Decompiling FUN_800179c4
+Decompilation complete
+[decomp]> print C
+
+void FUN_800179c4(xunknown4 param_1,xunknown4 param_2,xunknown4 param_3)
+
+{
+  int8 iVar1;
+  xunknown4 xVar2;
+  xunknown4 xVar3;
+  int4 iVar4;
+  xunknown4 xVar5;
+  
+  if (((cRAM0000505c == '\x01') && (cRAM00005065 == '\x01')) && (cRAM00005f01 == '\x01')) {
+    xVar2 = 0xbf800000;
+    iVar4 = (*(code *)0x8006c9d2)(xRAM0000233c);
+    if (iVar4 == 0) {
+      (*(code *)0x8006d2f6)(xRAM00002340);
+      (*(code *)0x8006c688)();
+      (*(code *)0x8006a028)(0x5684,0x11,0x80015184,xVar2,param_3,CONCAT44(xVar2,param_3));
+    }
+    else {
+      (*(code *)0x8006a028)(0x5684,0x11,0x80015190);
+    }
+  }
+  else if (cRAM000022f2 == '\x03') {
+    iVar1 = (uint8)uRAM0000506e * (uint8)uRAM00005078 * (uint8)uRAM00002315;
+    xVar2 = (xunknown4)iVar1;
+    xVar5 = (*(code *)0x8006d3f0)(0,(int4)((uint8)iVar1 >> 0x20));
+    xVar3 = 0x4cbebc20;
+    xVar5 = (*(code *)0x8006cdb4)(xVar5);
+    (*(code *)0x8006d2f6)(xVar5);
+    (*(code *)0x8006a028)(0x5684,0x11,0x80015184,xVar3,xVar2,CONCAT44(xVar3,xVar2));
+  }
+  else {
+    (*(code *)0x8006a028)(0x5684,0x11,0x80015190);
+  }
+  if (cRAM00002328 != '\0') {
+    (*(code *)0x8005e078)(0x4c,0xffffffff,1);
+    cRAM00002328 = '\0';
+  }
+  (*(code *)0x8005e558)();
+  return;
+}
+[decomp]> quit

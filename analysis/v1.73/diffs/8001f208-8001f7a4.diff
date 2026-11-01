@@ -1,0 +1,30 @@
+--- 8001f208
+
++++ 8001f7a4
+
+@@ -11,20 +11,20 @@
+
+     else if (param_1 == '\x01') {
+       if (cRAM_ADDR == '\x01') {
+-        (*(code *)FUNCTION_ADDR)(*(xunknown2 *)((uRAM_ADDR - 1) * 2 + -0x7ffe1098));
++        (*(code *)FUNCTION_ADDR)(*(xunknown2 *)((uRAM_ADDR - 1) * 2 + -0x7ffe0afc));
+         xVar1 = (*(code *)FUNCTION_ADDR)();
+         uStack_a = (*(code *)FUNCTION_ADDR)(xVar1,param_2,param_3);
+       }
+       else if (cRAM_ADDR == '\x02') {
+-        (*(code *)FUNCTION_ADDR)(*(xunknown2 *)((uRAM_ADDR - 1) * 2 + -0x7ffe0fd0));
++        (*(code *)FUNCTION_ADDR)(*(xunknown2 *)((uRAM_ADDR - 1) * 2 + -0x7ffe0a34));
+         xVar1 = (*(code *)FUNCTION_ADDR)();
+         uStack_a = (*(code *)FUNCTION_ADDR)(xVar1,param_2,param_3);
+       }
+       else if (cRAM_ADDR == '\0') {
+-        (*(code *)FUNCTION_ADDR)(*(xunknown2 *)((uRAM_ADDR - 1) * 2 + -0x7ffe1160));
++        (*(code *)FUNCTION_ADDR)(*(xunknown2 *)((uRAM_ADDR - 1) * 2 + -0x7ffe0bc4));
+         xVar1 = (*(code *)FUNCTION_ADDR)();
+         uStack_a = (*(code *)FUNCTION_ADDR)(xVar1,param_2,param_3);
+       }
+       else {
+-        (*(code *)FUNCTION_ADDR)(*(xunknown2 *)((uRAM_ADDR - 1) * 2 + -0x7ffe1228));
++        (*(code *)FUNCTION_ADDR)(*(xunknown2 *)((uRAM_ADDR - 1) * 2 + -0x7ffe0c8c));
+         xVar1 = (*(code *)FUNCTION_ADDR)();
+         uStack_a = (*(code *)FUNCTION_ADDR)(xVar1,param_2,param_3);

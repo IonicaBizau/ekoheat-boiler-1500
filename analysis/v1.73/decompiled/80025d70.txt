@@ -1,0 +1,70 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x80025d70 FUN_80025d70
+[decomp]> decompile
+Decompiling FUN_80025d70
+Decompilation complete
+[decomp]> print C
+
+/* WARNING: Restarted to delay deadcode elimination for space: RAM */
+
+void FUN_80025d70(char param_1)
+
+{
+  uint2 uVar1;
+  int4 iVar2;
+  
+  (*(code *)0x80027744)(xRAM000023ac,0,0xffffffff,0);
+  if (param_1 == '\x01') {
+    iRAM0000238c = iRAM0000238c - (iRAM0000238c >> 5);
+    iVar2 = (*(code *)0x80026228)(uRAM0000236c >> 5 & 0xffff);
+    iRAM0000238c = iRAM0000238c + iVar2;
+    iRAM00002390 = iRAM00002390 - (iRAM00002390 >> 5);
+    iVar2 = (*(code *)0x80026354)(uRAM00002370 >> 5 & 0xffff);
+    iRAM00002390 = iRAM00002390 + iVar2;
+    iRAM00002394 = iRAM00002394 - (iRAM00002394 >> 5);
+    iVar2 = (*(code *)0x800260fc)(uRAM00002374 >> 5 & 0xffff);
+    iRAM00002394 = iRAM00002394 + iVar2;
+    iRAM00002398 = iRAM00002398 - (iRAM00002398 >> 5);
+    iVar2 = (*(code *)0x80026228)(uRAM00002378 >> 5 & 0xffff);
+    iRAM00002398 = iRAM00002398 + iVar2;
+    iRAM0000239c = iRAM0000239c - (iRAM0000239c >> 5);
+    iVar2 = (*(code *)0x80026228)(uRAM0000237c >> 5 & 0xffff);
+    iRAM0000239c = iRAM0000239c + iVar2;
+    iRAM000023a0 = iRAM000023a0 - (iRAM000023a0 >> 5);
+    iVar2 = (*(code *)0x80026228)(uRAM00002380 >> 5 & 0xffff);
+    iRAM000023a0 = iRAM000023a0 + iVar2;
+    iRAM000023a4 = iRAM000023a4 - (iRAM000023a4 >> 5);
+    iVar2 = (*(code *)0x80026228)(uRAM00002384 >> 5 & 0xffff);
+    iRAM000023a4 = iRAM000023a4 + iVar2;
+    iRAM000050dc = iRAM0000238c >> 5;
+    iRAM000050e4 = iRAM00002394 >> 5;
+    iRAM000050e0 = (*(code *)0x80026354)(uRAM00002370 >> 5 & 0xffff);
+    iRAM000050e0 = iRAM000050e4 + iRAM000050e0;
+    iRAM000050e8 = iRAM00002398 >> 5;
+    iRAM000050ec = iRAM0000239c >> 5;
+    iRAM00005114 = iRAM000023a0 >> 5;
+    iRAM00005110 = iRAM000023a4 >> 5;
+    uVar1 = *(uint2 *)((uRAM00002388 >> 0xb) * 2 + -0x7ffdaf6c);
+  }
+  else {
+    iRAM000050dc = (*(code *)0x80026228)(uRAM0000236c >> 5 & 0xffff);
+    iRAM000050e4 = (*(code *)0x800260fc)(uRAM00002374 >> 5 & 0xffff);
+    iRAM000050e0 = (*(code *)0x80026354)(uRAM00002370 >> 5 & 0xffff);
+    iRAM000050e0 = iRAM000050e4 + iRAM000050e0;
+    iRAM000050e8 = (*(code *)0x80026228)(uRAM00002378 >> 5 & 0xffff);
+    iRAM000050ec = (*(code *)0x80026228)(uRAM0000237c >> 5 & 0xffff);
+    iRAM000050f0 = (*(code *)0x80026228)(uRAM00002380 >> 5 & 0xffff);
+    iRAM00005110 = (*(code *)0x80026228)(uRAM00002384 >> 5 & 0xffff);
+    uVar1 = *(uint2 *)((uRAM00002388 >> 0xb) * 2 + -0x7ffdaf6c);
+    iRAM00005114 = iRAM000050f0;
+  }
+  iRAM000050f8 = uVar1 - 7;
+  iRAM000050f0 = iRAM00005114;
+  iRAM000050f4 = iRAM00005110;
+  (*(code *)0x8002752c)(xRAM000023ac,0,0,0);
+  return;
+}
+[decomp]> quit

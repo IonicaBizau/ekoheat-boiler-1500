@@ -1,0 +1,62 @@
+--- 80010068
+
++++ 80010380
+
+@@ -23,10 +23,10 @@
+
+   }
+   if (cRAM_ADDR == '\x01') {
+-    xVar2 = *(xunknown4 *)(iRAM_ADDR * 4 + 0x910);
+-    (*(code *)FUNCTION_ADDR)(0x52ac,0x33,FUNCTION_ADDR,(int4)iRAM_ADDR,xVar2,xVar2);
++    xVar2 = *(xunknown4 *)(iRAM_ADDR * 4 + 0x938);
++    (*(code *)FUNCTION_ADDR)(0x5358,0x33,FUNCTION_ADDR,(int4)iRAM_ADDR,xVar2,xVar2);
+   }
+   else {
+-    xVar2 = *(xunknown4 *)(iRAM_ADDR * 4 + 2000);
+-    (*(code *)FUNCTION_ADDR)(0x52ac,0x33,FUNCTION_ADDR,(int4)iRAM_ADDR,xVar2,xVar2);
++    xVar2 = *(xunknown4 *)(iRAM_ADDR * 4 + 0x7f8);
++    (*(code *)FUNCTION_ADDR)(0x5358,0x33,FUNCTION_ADDR,(int4)iRAM_ADDR,xVar2,xVar2);
+   }
+   iVar4 = (*(code *)FUNCTION_ADDR)(1);
+@@ -63,7 +63,7 @@
+
+   (*(code *)FUNCTION_ADDR)(100);
+   xRAM_ADDR = 1;
+-  xVar3 = *(xunknown4 *)(iRAM_ADDR * 4 + 0x938);
+-  (*(code *)FUNCTION_ADDR)(0x52ac,0x33,FUNCTION_ADDR,(int4)iRAM_ADDR,xVar3,xVar3);
+-  iVar4 = (*(code *)FUNCTION_ADDR)((uint2)*(uint1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd43d3) * 10);
++  xVar3 = *(xunknown4 *)(iRAM_ADDR * 4 + 0x960);
++  (*(code *)FUNCTION_ADDR)(0x5358,0x33,FUNCTION_ADDR,(int4)iRAM_ADDR,xVar3,xVar3);
++  iVar4 = (*(code *)FUNCTION_ADDR)((uint2)*(uint1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd39f7) * 10);
+   if (iVar4 != 0) {
+     return 0;
+@@ -75,4 +75,10 @@
+
+   if (iVar4 == 0) {
+     return 0;
++  }
++  if (((cRAM_ADDR != cRAM_ADDR) && (iRAM_ADDR == 0)) &&
++     (cRAM_ADDR = cRAM_ADDR, cRAM_ADDR == '\x01')) {
++    xRAM_ADDR = 1;
++    (*(code *)FUNCTION_ADDR)(0x53a0,0xb,FUNCTION_ADDR);
++    (*(code *)FUNCTION_ADDR)(0);
+   }
+   if (cRAM_ADDR == '\x01') {
+@@ -94,10 +100,10 @@
+
+     iRAM_ADDR = iRAM_ADDR + iRAM_ADDR * 0x3c;
+     iVar4 = (*(code *)FUNCTION_ADDR)(xRAM_ADDR,xRAM_ADDR,iRAM_ADDR);
+-    if (((((iVar4 == 0) &&
+-          (iVar4 = (*(code *)FUNCTION_ADDR)(xRAM_ADDR,xRAM_ADDR,iRAM_ADDR), iVar4 == 0)) &&
+-         ((iVar4 = (*(code *)FUNCTION_ADDR)(xRAM_ADDR,xRAM_ADDR,iRAM_ADDR), iVar4 == 0 &&
+-          ((iVar4 = (*(code *)FUNCTION_ADDR)(xRAM_ADDR,xRAM_ADDR,iRAM_ADDR), iVar4 == 0 &&
+-           (iVar4 = (*(code *)FUNCTION_ADDR)(xRAM_ADDR,xRAM_ADDR,iRAM_ADDR), iVar4 == 0))))))
+-        && (cRAM_ADDR == '\0')) || (xVar1 = xRAM_ADDR, cRAM_ADDR == '\x01')) {
++    if ((((iVar4 == 0) &&
++         (iVar4 = (*(code *)FUNCTION_ADDR)(xRAM_ADDR,xRAM_ADDR,iRAM_ADDR), iVar4 == 0)) &&
++        ((iVar4 = (*(code *)FUNCTION_ADDR)(xRAM_ADDR,xRAM_ADDR,iRAM_ADDR), iVar4 == 0 &&
++         (((iVar4 = (*(code *)FUNCTION_ADDR)(xRAM_ADDR,xRAM_ADDR,iRAM_ADDR), iVar4 == 0 &&
++           (iVar4 = (*(code *)FUNCTION_ADDR)(xRAM_ADDR,xRAM_ADDR,iRAM_ADDR), iVar4 == 0)) &&
++          (cRAM_ADDR == '\0')))))) || (xVar1 = xRAM_ADDR, cRAM_ADDR == '\x01')) {
+       (*(code *)FUNCTION_ADDR)(1);
+       return 1;

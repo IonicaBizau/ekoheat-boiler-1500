@@ -1,0 +1,12 @@
+--- 8001d720
+
++++ 8001dcbc
+
+@@ -49,5 +49,5 @@
+
+       return;
+     }
+-    (*(code *)FUNCTION_ADDR)(FUNCTION_ADDR,*(xunknown4 *)(iRAM_ADDR * 4 + 0x1454));
++    (*(code *)FUNCTION_ADDR)(FUNCTION_ADDR,*(xunknown4 *)(iRAM_ADDR * 4 + 0x14a4));
+     goto code_rFUNCTION_ADDR;
+   case 6:

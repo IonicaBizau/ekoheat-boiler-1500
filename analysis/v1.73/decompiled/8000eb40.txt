@@ -1,0 +1,84 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8000eb40 FUN_8000eb40
+[decomp]> decompile
+Decompiling FUN_8000eb40
+Decompilation complete
+[decomp]> print C
+
+xunknown4 FUN_8000eb40(void)
+
+{
+  xunknown1 xVar1;
+  xunknown4 xVar2;
+  xunknown4 xVar3;
+  int4 iVar4;
+  xunknown4 xStackY_10;
+  
+  xRAM00002315 = 0;
+  (*(code *)0x8006bf14)(0x19);
+  xRAM00005ef6 = 1;
+  xRAM000022e0 = 0xe10;
+  if (iRAM000022dc == 0) {
+    xVar2 = (*(code *)0x8006d1a2)(xRAM000050dc);
+    xVar2 = (*(code *)0x8006cdb4)(xVar2,0x42c80000);
+    xVar3 = (*(code *)0x8006d1a2)(uRAM00005064 - 10);
+    iVar4 = (*(code *)0x8006ca3a)(xVar3,xVar2);
+    xVar1 = xRAM000022f2;
+    if (iVar4 != 0) {
+      xRAM000022f2 = 4;
+      xRAM000022f3 = xVar1;
+      return 1;
+    }
+    if (cRAM00002314 == '\x01') {
+      iVar4 = (*(code *)0x80011238)(2,0);
+      if (iVar4 == 0) {
+        return 0;
+      }
+      cRAM00002314 = '\0';
+    }
+  }
+  if (((iRAM000022dc == 0) || (cRAM00002317 == '\0')) &&
+     (iVar4 = (*(code *)0x80011238)(1,0), iVar4 == 0)) {
+    xStackY_10 = 0;
+  }
+  else {
+    iRAM000022dc = 0;
+    xRAM00005ef9 = 1;
+    (*(code *)0x8006bf14)(100);
+    xRAM00005ef6 = 1;
+    xVar2 = *(xunknown4 *)(iRAM00005a5a * 4 + 0x960);
+    (*(code *)0x8006a028)(0x5358,0x33,0x8000e2ac,(int4)iRAM00005a5a,xVar2,xVar2);
+    iVar4 = (*(code *)0x800110e4)((uint2)*(uint1 *)((uint4)uRAM00005094 * 0xbc + -0x7ffd39f7) * 10);
+    if (iVar4 == 0) {
+      xRAM00005ef9 = 0;
+      (*(code *)0x8006bf14)(0x19);
+      xRAM00005ef6 = 1;
+      if (uRAM000050f8 < 0x12) {
+        xRAM00005efe = 1;
+        iVar4 = (*(code *)0x80011238)(1,0);
+        if (iVar4 == 0) {
+          xStackY_10 = 0;
+        }
+        else {
+          xRAM000022f3 = xRAM000022f2;
+          xRAM000022f2 = 2;
+          xStackY_10 = 1;
+        }
+      }
+      else {
+        xRAM00002315 = 0x19;
+        xRAM000022f3 = xRAM000022f2;
+        xRAM000022f2 = 3;
+        xStackY_10 = 1;
+      }
+    }
+    else {
+      xStackY_10 = 0;
+    }
+  }
+  return xStackY_10;
+}
+[decomp]> quit

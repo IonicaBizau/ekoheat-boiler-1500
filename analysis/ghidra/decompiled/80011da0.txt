@@ -1,0 +1,82 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x80011da0 FUN_80011da0
+[decomp]> decompile
+Decompiling FUN_80011da0
+Decompilation complete
+[decomp]> print C
+
+void FUN_80011da0(uint1 param_1,char param_2)
+
+{
+  xunknown1 xStack_a;
+  
+  xRAM00004fc1 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd443c);
+  xRAM00004fb4 = *(xunknown4 *)(((uint4)param_1 * 0x2f + 1) * 4 + -0x7ffd443c);
+  xRAM00004f98 = *(xunknown4 *)((uint4)param_1 * 0xbc + -0x7ffd4434);
+  xRAM00004ff0 = *(xunknown4 *)((uint4)param_1 * 0xbc + -0x7ffd4430);
+  xRAM00004fa8 = *(xunknown4 *)((uint4)param_1 * 0xbc + -0x7ffd442c);
+  xRAM00004fa0 = *(xunknown4 *)((uint4)param_1 * 0xbc + -0x7ffd4428);
+  xRAM00004fec = *(xunknown4 *)((uint4)param_1 * 0xbc + -0x7ffd4424);
+  xRAM00004fc4 = *(xunknown4 *)((uint4)param_1 * 0xbc + -0x7ffd4420);
+  xRAM00004f8c = *(xunknown4 *)((uint4)param_1 * 0xbc + -0x7ffd441c);
+  xRAM00004fe4 = *(xunknown4 *)((uint4)param_1 * 0xbc + -0x7ffd4418);
+  xRAM00004fbc = *(xunknown4 *)((uint4)param_1 * 0xbc + -0x7ffd4414);
+  xRAM00004fb8 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd440e);
+  xRAM00004fcc = *(xunknown2 *)((uint4)param_1 * 0xbc + -0x7ffd43fc);
+  xRAM00004fae = *(xunknown2 *)((uint4)param_1 * 0xbc + -0x7ffd43f6);
+  xRAM00004fe2 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd43f4);
+  xRAM00004fd1 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd43f1);
+  xRAM00004fe1 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd43ee);
+  xRAM00004ff8 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd43eb);
+  xRAM00004fc8 = *(xunknown2 *)((uint4)param_1 * 0xbc + -0x7ffd43ca);
+  if (param_2 == '\x01') {
+    xRAM00004ff4 = *(xunknown2 *)((uint4)param_1 * 0xbc + -0x7ffd43ea);
+  }
+  xRAM00004f94 = *(xunknown2 *)((uint4)param_1 * 0xbc + -0x7ffd43e4);
+  xRAM00004fce = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd43e0);
+  xRAM00004fc0 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd43c6);
+  xRAM00004ffc = *(xunknown2 *)((uint4)param_1 * 0xbc + -0x7ffd43c0);
+  xRAM00004fa5 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd43bc);
+  xRAM00004f92 = *(xunknown2 *)((uint4)param_1 * 0xbc + -0x7ffd43b6);
+  xRAM00004fc2 = *(xunknown2 *)((uint4)param_1 * 0xbc + -0x7ffd43b0);
+  xRAM00005dd8 = *(xunknown4 *)((uint4)param_1 * 0xbc + -0x7ffd43ac);
+  xRAM00005ddc = *(xunknown4 *)((uint4)param_1 * 0xbc + -0x7ffd43a8);
+  xRAM00005de0 = *(xunknown4 *)((uint4)param_1 * 0xbc + -0x7ffd43a4);
+  xRAM00004fd4 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd43a0);
+  xRAM00004fd5 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd439f);
+  xRAM00004fd6 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd439e);
+  xRAM00004fd7 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd439d);
+  xRAM00004fd8 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd439c);
+  xRAM00004fd9 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd439b);
+  xRAM00004fda = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd439a);
+  xRAM00004fdb = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd4399);
+  xRAM00004fdc = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd4398);
+  xRAM00004fdd = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd4397);
+  xRAM00004fde = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd4396);
+  xRAM00004fb2 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd4393);
+  xRAM00004fbb = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd4392);
+  xRAM00004fe0 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd4391);
+  xRAM00004fa4 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd4390);
+  xRAM00004fb9 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd438f);
+  xRAM00004fb0 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd438e);
+  xRAM00004ff7 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd438d);
+  xRAM00004fb1 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd438c);
+  xRAM00004fca = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd438b);
+  xRAM00004ff6 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd438a);
+  xRAM00004fd2 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd43d8);
+  xRAM00004fcf = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd43d7);
+  xRAM00004fd0 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd4385);
+  xRAM00004f9c = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd4382);
+  xRAM00004ff9 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd4388);
+  xRAM00004ffa = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd43df);
+  xRAM00004f90 = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd43dc);
+  xRAM00004fdf = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd43d9);
+  xRAM00004fba = *(xunknown1 *)((uint4)param_1 * 0xbc + -0x7ffd4389);
+  xRAM000021cc = xStack_a;
+  (*(code *)0x80011a34)();
+  return;
+}
+[decomp]> quit

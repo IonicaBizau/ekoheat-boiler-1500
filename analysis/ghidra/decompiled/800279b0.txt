@@ -1,0 +1,37 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x800279b0 FUN_800279b0
+[decomp]> decompile
+Decompiling FUN_800279b0
+Decompilation complete
+[decomp]> print C
+
+/* WARNING: Removing unreachable block (RAM,0x800279fc) */
+
+void FUN_800279b0(xunknown4 param_1,int4 param_2,uint4 param_3)
+
+{
+  int4 iVar1;
+  uint4 uVar2;
+  uint4 uVar3;
+  uint4 uStack_1c;
+  
+  if ((param_2 - 8U == (uint4)(param_3 < 0xae38e38e) && param_3 == 0xae38e38e) ||
+     (iVar1 = (param_2 + -8) - (uint4)(param_3 < 0xae38e38e),
+     (SUB41((uint4)param_2 >> 0x1f,0) || !SUB41((uint4)iVar1 >> 0x1f,0)) &&
+     (iVar1 != 0 || param_3 != 0xae38e38e))) {
+    uStack_1c = 0xffffffff;
+  }
+  else {
+    uVar3 = param_3 * 0x1c200 + 500000;
+    (*(code *)0x8006cb68)();
+    uVar2 = uVar3 * 2;
+    uStack_1c = ((CARRY4(uVar3,uVar2) - 1) + (uint4)(uVar2 != 0)) * -0x80000000 | uVar2 - 1 >> 1;
+  }
+  (*(code *)0x800278c8)((0x1f - LZCOUNT(uStack_1c)) * 0x100 | 1);
+  (*(code *)0x800278f8)();
+  return;
+}
+[decomp]> quit

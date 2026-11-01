@@ -1,0 +1,246 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x800227ec FUN_800227ec
+[decomp]> decompile
+Decompiling FUN_800227ec
+Decompilation complete
+[decomp]> print C
+
+void FUN_800227ec(xunknown4 param_1,xunknown4 param_2,uint4 param_3)
+
+{
+  xunknown8 xVar1;
+  xunknown8 xVar2;
+  char cVar3;
+  uint4 uVar4;
+  uint4 uVar5;
+  uint4 uVar6;
+  xunknown4 xVar7;
+  xunknown4 xVar8;
+  xunknown4 xVar9;
+  xunknown4 xVar10;
+  xunknown4 xVar11;
+  xunknown4 xVar12;
+  xunknown4 xVar13;
+  xunknown4 xVar14;
+  xunknown4 xVar15;
+  int4 iVar16;
+  int4 iVar17;
+  uint4 uVar18;
+  uint4 uVar19;
+  uint4 uVar20;
+  uint4 uVar21;
+  uint4 uVar22;
+  uint4 uVar23;
+  uint4 uVar24;
+  int4 iVar25;
+  xunknown4 xVar26;
+  int4 iVar27;
+  xunknown4 xVar28;
+  uint8 uVar29;
+  uint8 uVar30;
+  xunknown8 xStack_12c;
+  xunknown8 xStack_124;
+  xunknown4 xStack_11c;
+  xunknown4 xStack_118;
+  xunknown8 xStack_114;
+  xunknown4 xStack_10c;
+  uint4 uStack_108;
+  uint4 uStack_104;
+  uint4 uStack_100;
+  uint4 uStack_fc;
+  uint4 uStack_f8;
+  uint4 uStack_f4;
+  uint4 uStack_f0;
+  uint4 uStack_ec;
+  uint4 uStack_e8;
+  xunknown8 xStack_e4;
+  xunknown8 xStack_dc;
+  uint4 uStack_d4;
+  xunknown8 xStack_d0;
+  xunknown4 xStack_28;
+  char cStack_22;
+  uint1 uStack_21;
+  
+  cStack_22 = '\0';
+  xStack_12c = CONCAT26(0x2500,xStack_12c._2_6_);
+  while (iRAM00000720 != 0) {
+    (*(code *)0x80026048)(100);
+  }
+  xStack_28 = (*(code *)0x800262d4)();
+  do {
+    xVar1 = xStack_12c;
+    if (cRAM00004fe0 == '\x01') {
+      if (((cStack_22 == cRAM0000224c) || (cStack_22 != '\0')) || (cRAM00002270 != '\x01')) {
+        xStack_12c._4_4_ = CONCAT13(3,xStack_12c._5_3_);
+        if (iRAM00002244 == 0) {
+          xVar13 = (*(code *)0x8006c896)(xRAM00005030);
+          xVar13 = (*(code *)0x8006c4a8)(xVar13);
+          (*(code *)0x8006c9ea)(xVar13);
+          (*(code *)0x80069744)((int4)&xStack_12c + 5,0xff,0x80021b84);
+        }
+        else if (uRAM0000224a == 4) {
+          xVar13 = (*(code *)0x8006c896)(xRAM00005030);
+          xVar13 = (*(code *)0x8006c4a8)(xVar13);
+          (*(code *)0x8006c9ea)(xVar13);
+          (*(code *)0x80069744)((int4)&xStack_12c + 5,0xff,0x80021b98);
+        }
+        else {
+          iVar25 = (*(code *)0x8006d84a)(0x52ac);
+          if (*(char *)(iVar25 + 0x52ab) == '%') {
+            xStack_12c = CONCAT17(0x25,xStack_12c._1_7_);
+          }
+          else {
+            xStack_12c = CONCAT17(0x20,xStack_12c._1_7_);
+          }
+          xVar13 = (*(code *)0x8006c896)(xRAM00005030);
+          xVar14 = 0x42c80000;
+          xVar13 = (*(code *)0x8006c4a8)(xVar13);
+          (*(code *)0x8006c9ea)(xVar13);
+          xVar13 = *(xunknown4 *)(iRAM000059a6 * 4 + 0x1c30);
+          (*(code *)0x80069744)
+                    ((int4)&xStack_12c + 5,0xff,0x80021bac,xVar13,0x52ac,0x52ac,&xStack_12c,xVar13,
+                     xVar14,param_3);
+        }
+        uVar4 = (*(code *)0x8006d84a)((int4)&xStack_12c + 5);
+        param_3 = (uVar4 & 0xff) + 2 & 0xff;
+        (*(code *)0x80023588)(2,(int4)&xStack_12c + 4);
+      }
+      else {
+        xStack_12c._4_4_ = CONCAT13(4,xStack_12c._5_3_);
+        xStack_12c._5_3_ = CONCAT12(0x41,(int2)xVar1);
+        xVar13 = *(xunknown4 *)(iRAM000059a6 * 4 + 0x1870);
+        (*(code *)0x80069744)((int4)&xStack_12c + 6,0x100,0x80021b78,xVar13,0x5324,xVar13);
+        uVar4 = (*(code *)0x8006d84a)((int4)&xStack_12c + 6);
+        param_3 = (uVar4 & 0xff) + 3 & 0xff;
+        (*(code *)0x80023588)(2,(int4)&xStack_12c + 4);
+        cStack_22 = cRAM0000224c;
+      }
+      if (cRAM0000224c == '\0') {
+        cStack_22 = cRAM0000224c;
+      }
+    }
+    (*(code *)0x80026048)(100);
+    if (cRAM00004ff9 == '\x01') {
+      xStack_12c._4_4_ = CONCAT13(3,xStack_12c._5_3_);
+      param_3 = 1;
+      (*(code *)0x80023588)(3,(int4)&xStack_12c + 4);
+    }
+    (*(code *)0x80026048)(100);
+    if (cRAM00004fbb == '\x01') {
+      xStack_12c._4_4_ = CONCAT13(3,xStack_12c._5_3_);
+      param_3 = 1;
+      (*(code *)0x80023588)(1,(int4)&xStack_12c + 4);
+    }
+    (*(code *)0x80026048)(100);
+    if (cRAM00004fba == '\x01') {
+      if (cRAM00005e42 == '\x01') {
+        uStack_21 = uRAM00005e44;
+      }
+      else {
+        uStack_21 = 0;
+      }
+      xVar7 = 0x80021bc0;
+      (*(code *)0x80069744)((int4)&xStack_12c + 4,0x100);
+      xVar13 = (*(code *)0x8006c896)(xRAM00005048);
+      xVar8 = 0x42c80000;
+      xVar13 = (*(code *)0x8006c4a8)(xVar13);
+      (*(code *)0x8006c9ea)(xVar13);
+      xVar13 = xVar7;
+      xVar14 = (*(code *)0x8006c896)(xRAM00005044);
+      xVar9 = 0x42c80000;
+      xVar14 = (*(code *)0x8006c4a8)(xVar14);
+      (*(code *)0x8006c9ea)(xVar14);
+      xVar28 = xVar13;
+      xVar14 = (*(code *)0x8006c896)(xRAM00005040);
+      xVar10 = 0x42c80000;
+      xVar14 = (*(code *)0x8006c4a8)(xVar14);
+      (*(code *)0x8006c9ea)(xVar14);
+      xVar26 = xVar13;
+      xVar14 = (*(code *)0x8006c896)(xRAM0000503c);
+      xVar11 = 0x42c80000;
+      xVar14 = (*(code *)0x8006c4a8)(xVar14);
+      (*(code *)0x8006c9ea)(xVar14);
+      xVar14 = xVar13;
+      xVar15 = (*(code *)0x8006c896)(xRAM00005038);
+      xVar12 = 0x42c80000;
+      xVar15 = (*(code *)0x8006c4a8)(xVar15);
+      (*(code *)0x8006c9ea)(xVar15);
+      xVar1 = CONCAT44(xVar12,xVar14);
+      xVar15 = (*(code *)0x8006c896)(xRAM00005030);
+      xVar12 = 0x42c80000;
+      xVar15 = (*(code *)0x8006c4a8)(xVar15);
+      (*(code *)0x8006c9ea)(xVar15);
+      xVar2 = CONCAT44(xVar12,xVar14);
+      xVar15 = (*(code *)0x8006c896)(xRAM00005034);
+      xVar12 = 0x42c80000;
+      xVar15 = (*(code *)0x8006c4a8)(xVar15);
+      (*(code *)0x8006c9ea)(xVar15);
+      iVar16 = (*(code *)0x8006d84a)((int4)&xStack_12c + 4);
+      iVar17 = (*(code *)0x8006d84a)((int4)&xStack_12c + 4);
+      xStack_11c = xVar9;
+      xStack_118 = xVar28;
+      iVar25 = (int4)&xStack_12c + iVar17 + 4;
+      xStack_114 = CONCAT44(xVar8,xVar7);
+      xStack_124 = CONCAT44(xVar10,xVar26);
+      xStack_12c = CONCAT44(xVar11,xVar13);
+      (*(code *)0x80069744)
+                (iVar25,0x100 - iVar16,0x80021be4,iVar25,iVar17,CONCAT44(xVar12,xVar14),xVar2,xVar1)
+      ;
+      cVar3 = cRAM0000224c;
+      uVar5 = (uint4)uRAM0000224a;
+      uVar6 = (uint4)uRAM00005e49;
+      uVar4 = (uint4)uStack_21;
+      uVar18 = (*(code *)0x80029b08)(0x45);
+      uVar19 = (*(code *)0x80029b08)(0x1d);
+      uVar20 = (*(code *)0x80029b08)(0x1e);
+      uVar21 = (*(code *)0x80029b08)(0x2f);
+      uVar22 = (*(code *)0x80029b08)(0x32);
+      uVar23 = (*(code *)0x80029b08)(0x47);
+      uVar24 = (*(code *)0x80029b08)(0x37);
+      uVar24 = uVar24 & 0xff;
+      xVar13 = (*(code *)0x80029b08)(0x36);
+      uVar29 = CONCAT44(uVar24,xVar13) & 0xffffffff000000ff;
+      uVar30 = (uint8)CONCAT14(xRAM0000226d,xRAM0000504c);
+      iVar16 = (*(code *)0x8006d84a)((int4)&xStack_12c + 4);
+      iVar16 = 0x100 - iVar16;
+      iVar25 = (*(code *)0x8006d84a)((int4)&xStack_12c + 4);
+      xStack_e4 = (uint8)CONCAT14(cVar3,xStack_e4._4_4_);
+      xStack_10c = (xunknown4)(uVar29 >> 0x20);
+      xStack_114 = CONCAT44((int4)(uVar30 >> 0x20),(int4)uVar29);
+      _xStack_11c = CONCAT44(xStack_11c,(int4)uVar30);
+      xVar14 = 0x80021c10;
+      uStack_108 = uVar23 & 0xff;
+      uStack_104 = uVar22 & 0xff;
+      uStack_100 = uVar21 & 0xff;
+      uStack_fc = uVar20 & 0xff;
+      uStack_f8 = uVar19 & 0xff;
+      uStack_f4 = uVar18 & 0xff;
+      uStack_f0 = uVar4;
+      uStack_ec = uVar6;
+      uStack_e8 = uVar5;
+      (*(code *)0x80069744)((int4)&xStack_12c + iVar25 + 4);
+      (*(code *)0x8006c9ea)(xRAM00005050);
+      uVar4 = (uint4)uRAM00000e3a;
+      xVar13 = xVar14;
+      iVar25 = iVar16;
+      xVar26 = (*(code *)0x8006a958)();
+      (*(code *)0x8006c9ea)(xVar26);
+      iVar17 = (*(code *)0x8006d84a)((int4)&xStack_12c + 4);
+      iVar27 = (*(code *)0x8006d84a)((int4)&xStack_12c + 4);
+      xStack_d0 = CONCAT44(iVar16,xVar14);
+      xStack_dc = 0;
+      xStack_e4 = CONCAT44(iVar25,xVar13);
+      uStack_d4 = uVar4;
+      (*(code *)0x80069744)((int4)&xStack_12c + iVar27 + 4,0x100 - iVar17,0x80021c3c);
+      param_3 = (*(code *)0x8006d84a)((int4)&xStack_12c + 4);
+      param_3 = param_3 & 0xff;
+      (*(code *)0x80023588)(0x20,(int4)&xStack_12c + 4);
+      uRAM00000e3a = 0;
+    }
+    (*(code *)0x80025f28)(&xStack_28,1000);
+  } while( true );
+}
+[decomp]> quit

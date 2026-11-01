@@ -1,0 +1,62 @@
+--- 80017654
+
++++ 80017b44
+
+@@ -24,7 +24,7 @@
+
+     goto code_rFUNCTION_ADDR;
+   case 0xb:
+-    (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd440f));
++    (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd3a33));
+     xVar3 = FUNCTION_ADDR;
+-    (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd4410));
++    (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd3a34));
+     (*(code *)FUNCTION_ADDR)(cRAM_ADDR);
+     xVar5 = (*(code *)FUNCTION_ADDR)(0);
+@@ -34,4 +34,5 @@
+
+       cRAM_ADDR = cRAM_ADDR;
+       (*(code *)FUNCTION_ADDR)();
++      (*(code *)FUNCTION_ADDR)();
+     }
+     cRAM_ADDR = '\x01';
+@@ -39,9 +40,9 @@
+
+   case 0xc:
+     xVar1 = FUNCTION_ADDR;
+-    (*(code *)FUNCTION_ADDR)(*(xunknown2 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd43fe));
++    (*(code *)FUNCTION_ADDR)(*(xunknown2 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd3a22));
+     (*(code *)FUNCTION_ADDR)();
+     xVar2 = FUNCTION_ADDR;
+     xVar5 = param_2;
+-    (*(code *)FUNCTION_ADDR)(*(xunknown2 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd4400));
++    (*(code *)FUNCTION_ADDR)(*(xunknown2 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd3a24));
+     (*(code *)FUNCTION_ADDR)();
+     xVar3 = xVar2;
+@@ -70,7 +71,7 @@
+
+     break;
+   case 0x10:
+-    (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd43ec));
++    (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd3a10));
+     xVar3 = FUNCTION_ADDR;
+-    (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd43ed));
++    (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd3a11));
+     (*(code *)FUNCTION_ADDR)(xRAM_ADDR);
+     xVar5 = (*(code *)FUNCTION_ADDR)(0);
+@@ -88,9 +89,9 @@
+
+     break;
+   case 0x12:
+-    (*(code *)FUNCTION_ADDR)(0x5534,3,FUNCTION_ADDR,iRAM_ADDR + 1,xRAM_ADDR,xRAM_ADDR);
+-    (*(code *)FUNCTION_ADDR)(0x54c8,3,FUNCTION_ADDR);
+-    (*(code *)FUNCTION_ADDR)(0x5584,3,FUNCTION_ADDR);
+-    (*(code *)FUNCTION_ADDR)(0x5588,3,FUNCTION_ADDR);
+-    (*(code *)FUNCTION_ADDR)(0x5504,5,FUNCTION_ADDR);
++    (*(code *)FUNCTION_ADDR)(0x55e8,3,FUNCTION_ADDR,iRAM_ADDR + 1,xRAM_ADDR,xRAM_ADDR);
++    (*(code *)FUNCTION_ADDR)(0x5574,3,FUNCTION_ADDR);
++    (*(code *)FUNCTION_ADDR)(0x5638,3,FUNCTION_ADDR);
++    (*(code *)FUNCTION_ADDR)(0x563c,3,FUNCTION_ADDR);
++    (*(code *)FUNCTION_ADDR)(0x55b8,5,FUNCTION_ADDR);
+     xRAM_ADDR = 0x11;
+     iRAM_ADDR = -1;

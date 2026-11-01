@@ -1,0 +1,27 @@
+{
+  "file": "Ecoheat_v1.72/DTX9003.uc3",
+  "size": 450509,
+  "sha256": "b5ab1b7380f2486c29cf6708954cdb5bbaa2d7798fd0103f845fa254da51a5e8",
+  "header_hex": "4156523332a321b4203ee911ddae160800200c9a6642452353481f0000"
+}
+{'offset': '0x91', 'text': 'TimerTask'}
+{'offset': '0xc5', 'text': 'WatchDogTask'}
+{'offset': '0x1cc9', 'text': 'Ash plate'}
+{'offset': '0x2531', 'text': 'Opening ash plate...'}
+{'offset': '0x265d', 'text': 'Closing ash plate...'}
+{'offset': '0x49d9', 'text': 'Ash plate'}
+{'offset': '0x5241', 'text': 'Opening ash plate...'}
+{'offset': '0x536d', 'text': 'Closing ash plate...'}
+{'offset': '0xb535', 'text': 'Ash plate'}
+{'offset': '0xbd9d', 'text': 'Opening ash plate...'}
+{'offset': '0xbec9', 'text': 'Closing ash plate...'}
+{'offset': '0x1837d', 'text': 'Ash plate'}
+{'offset': '0x18be5', 'text': 'Opening ash plate...'}
+{'offset': '0x18d11', 'text': 'Closing ash plate...'}
+{'offset': '0x2688f', 'text': ',-Endstop ash plate'}
+{'offset': '0x279b8', 'text': '##Ash plate open'}
+{'offset': '0x27ac3', 'text': '$$Ash plate close'}
+{'offset': '0x28244', 'text': '##Ash plate open'}
+{'offset': '0x2835c', 'text': '$$Ash plate close'}
+{'offset': '0x287be', 'text': ',%+1Ash plate movement (0.0-100.0sec)'}
+{'offset': '0x2edde', 'text': '3Ash plate interval'}

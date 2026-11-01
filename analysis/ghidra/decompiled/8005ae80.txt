@@ -1,0 +1,732 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8005ae80 FUN_8005ae80
+[decomp]> decompile
+Decompiling FUN_8005ae80
+Decompilation complete
+[decomp]> print C
+
+/* WARNING: Restarted to delay deadcode elimination for space: RAM */
+
+void FUN_8005ae80(uint2 param_1)
+
+{
+  xunknown2 xVar1;
+  uint2 uVar2;
+  xunknown2 *pxVar3;
+  uint2 uVar4;
+  uint1 uVar6;
+  int4 iVar5;
+  char cVar7;
+  xunknown1 xVar8;
+  int2 iStack_2c;
+  int2 iStack_2a;
+  uint2 uStack_28;
+  int2 iStack_26;
+  uint2 uStack_1c;
+  uint2 uStack_1a;
+  uint1 uStack_13;
+  uint2 uStack_12;
+  uint2 uStack_10;
+  uint2 uStack_e;
+  uint2 uStack_c;
+  uint1 uStack_a;
+  uint1 uStack_9;
+  
+  uRAM0000284c = uRAM0000284c | 1;
+  uRAM000047d9 = (*(code *)0x80058c78)(&iRAM0000468c);
+  uRAM000047da = (*(code *)0x80058c78)(&iRAM0000468c);
+  uRAM000047db = (*(code *)0x80058c78)(&iRAM0000468c);
+  uRAM000047dc = (*(code *)0x80058c78)(&iRAM0000468c);
+  uRAM000047dd = (*(code *)0x80058c78)(&iRAM0000468c);
+  uRAM000047de = (*(code *)0x80058c78)(&iRAM0000468c);
+  uRAM000047df = (*(code *)0x80058c78)(&iRAM0000468c);
+  uRAM000047e0 = (*(code *)0x80058c78)(&iRAM0000468c);
+  uRAM000028ce = uRAM000047d9 & 0x3f;
+  if (uRAM000028ce < 0x20) {
+    uRAM0000469c = (uint4)(1L << (uRAM000028ce & 0x1f));
+    uRAM000046a0 = 0;
+  }
+  else {
+    uRAM0000469c = 0;
+    uRAM000046a0 = (uint4)(1L << (uRAM000028ce - 0x20 & 0x1f));
+  }
+  if ((uRAM000047e0 & 0x20) == 0) {
+    iRAM0000289c = 0;
+    iRAM0000289e = 0;
+    iRAM000028a0 = 0;
+    iRAM000028a2 = 0;
+  }
+  else {
+    uVar6 = (*(code *)0x80058c78)(&iRAM0000468c);
+    if ((uVar6 & 1) != 0) {
+      iRAM0000289c = (*(code *)0x80058cac)(&iRAM0000468c);
+    }
+    if ((uVar6 & 2) != 0) {
+      iRAM0000289e = (*(code *)0x80058cac)(&iRAM0000468c);
+    }
+    if ((uVar6 & 4) != 0) {
+      iRAM000028a0 = (*(code *)0x80058cac)(&iRAM0000468c);
+    }
+    if ((uVar6 & 8) != 0) {
+      iRAM000028a2 = (*(code *)0x80058cac)(&iRAM0000468c);
+    }
+  }
+  if ((uRAM000047e0 & 0x40) == 0) {
+    uStack_a = 0;
+    uStack_9 = 0;
+  }
+  else {
+    uStack_a = (*(code *)0x80058c78)(&iRAM0000468c);
+    uStack_9 = (*(code *)0x80058c78)(&iRAM0000468c);
+  }
+  uVar4 = uRAM000028b6;
+  xVar1 = xRAM000028ae;
+  if (((uRAM0000469c & 0x2003a97f) == 0) && ((uRAM000046a0 & 0x7fff) == 0)) goto code_r0x8005b556;
+  uVar6 = uStack_a & 3;
+  if (uVar6 == 0) {
+    uRAM000028b6 = 0xffff;
+    uVar6 = uRAM000047dc & 7;
+    if (uVar6 == 3) {
+      xRAM000028ae = (*(code *)0x80058cac)(&iRAM0000468c);
+    }
+    else if (uVar6 < 4) {
+      if (uVar6 == 1) {
+        xRAM000028ae = 0xffff;
+      }
+      else if (uVar6 == 2) {
+        xRAM000028ae = 0;
+      }
+      else {
+code_r0x8005b2c0:
+        uRAM000028b6 = uVar4;
+      }
+    }
+    else if (uVar6 == 6) {
+      iVar5 = (*(code *)0x80058c78)(&iRAM0000468c);
+      xRAM000028ae = *(xunknown2 *)(iVar5 * 2 + -0x7ffb0650);
+    }
+    else if (uVar6 == 7) {
+      uStack_1c = (*(code *)0x80058cac)(&iRAM0000468c);
+      if (0x85 < uStack_1c) {
+        uStack_1c = 0;
+      }
+      pxVar3 = *(xunknown2 **)((uint4)uStack_1c * 4 + -0x7ffc6620);
+      if (pxVar3 == (xunknown2 *)0x0) {
+        xRAM000028ae = 0xffff;
+      }
+      else {
+        xRAM000028ae = *pxVar3;
+        uRAM000028b6 = uStack_1c;
+      }
+    }
+    else {
+      if (uVar6 != 4) goto code_r0x8005b2c0;
+      xRAM000028ae = xRAM000028b0;
+    }
+  }
+  else {
+    xRAM000028ae = *(xunknown2 *)((int4)&uRAM0000284c + (uVar6 + 0x57) * 2);
+    uRAM000028b6 = *(uint2 *)((int4)&uRAM0000284c + (uVar6 + 0xf57) * 2);
+  }
+  if (iRAM0000289c < 1) {
+    if (iRAM0000289c < 0) {
+      xRAM000028ae = (*(code *)0x800512b0)(xRAM000028ae,-iRAM0000289c);
+    }
+  }
+  else {
+    xRAM000028ae = (*(code *)0x8005117c)(xRAM000028ae,iRAM0000289c);
+  }
+  uVar2 = uRAM000028ba;
+  uVar6 = uStack_a & 0x30;
+  if (uVar6 == 0) {
+    uRAM000028ba = 0xffff;
+    uVar6 = uRAM000047de >> 1 & 7;
+    if (uVar6 == 3) {
+      xRAM000028b2 = (*(code *)0x80058cac)(&iRAM0000468c);
+    }
+    else if (uVar6 < 4) {
+      if (uVar6 == 1) {
+        xRAM000028b2 = 0xffff;
+      }
+      else if (uVar6 == 2) {
+        xRAM000028b2 = 0;
+      }
+      else {
+code_r0x8005b4ce:
+        uRAM000028ba = uVar2;
+      }
+    }
+    else if (uVar6 == 6) {
+      iVar5 = (*(code *)0x80058c78)(&iRAM0000468c);
+      xRAM000028b2 = *(xunknown2 *)(iVar5 * 2 + -0x7ffb0650);
+    }
+    else if (uVar6 == 7) {
+      uStack_1c = (*(code *)0x80058cac)(&iRAM0000468c);
+      if (0x85 < uStack_1c) {
+        uStack_1c = 0;
+      }
+      pxVar3 = *(xunknown2 **)((uint4)uStack_1c * 4 + -0x7ffc6620);
+      if (pxVar3 == (xunknown2 *)0x0) {
+        xRAM000028b2 = 0xffff;
+      }
+      else {
+        xRAM000028b2 = *pxVar3;
+        uRAM000028ba = uStack_1c;
+      }
+    }
+    else {
+      if (uVar6 != 4) goto code_r0x8005b4ce;
+      xRAM000028b2 = xRAM000028b0;
+    }
+  }
+  else {
+    xRAM000028b2 = *(xunknown2 *)((int4)&uRAM0000284c + (uVar6 + 0x57) * 2);
+    uRAM000028ba = *(uint2 *)((int4)&uRAM0000284c + (uVar6 + 0xf57) * 2);
+  }
+  if (iRAM000028a0 < 1) {
+    if (iRAM000028a0 < 0) {
+      xRAM000028b2 = (*(code *)0x800512b0)(xRAM000028b2,-iRAM000028a0);
+    }
+  }
+  else {
+    xRAM000028b2 = (*(code *)0x8005117c)(xRAM000028b2,iRAM000028a0);
+  }
+code_r0x8005b556:
+  uVar2 = uRAM000028b8;
+  if (((uRAM0000469c & 0x600ba969) != 0) || ((uRAM000046a0 & 0x7ffd) != 0)) {
+    uVar6 = uStack_9 & 3;
+    if (uVar6 == 0) {
+      uRAM000028b8 = 0xffff;
+      switch(uRAM000047dc >> 3 & 7) {
+      case 1:
+        xRAM000028b0 = 0xffff;
+        uRAM0000284c = uRAM0000284c & 0xfffffffd;
+        break;
+      case 2:
+        xRAM000028b0 = 0;
+        uRAM0000284c = uRAM0000284c & 0xfffffffd;
+        break;
+      case 3:
+        xRAM000028b0 = (*(code *)0x80058cac)(&iRAM0000468c);
+        uRAM0000284c = uRAM0000284c & 0xfffffffd;
+        break;
+      case 4:
+        xRAM000028b0 = xVar1;
+        uRAM000028b8 = uVar4;
+        uRAM0000284c = uRAM0000284c & 0xfffffffd;
+        break;
+      case 5:
+        uRAM0000284c = uRAM0000284c | 2;
+        break;
+      case 6:
+        iVar5 = (*(code *)0x80058c78)(&iRAM0000468c);
+        xRAM000028b0 = *(xunknown2 *)(iVar5 * 2 + -0x7ffb0650);
+        uRAM0000284c = uRAM0000284c & 0xfffffffd;
+        break;
+      case 7:
+        uStack_1c = (*(code *)0x80058cac)(&iRAM0000468c);
+        if (0x85 < uStack_1c) {
+          uStack_1c = 0;
+        }
+        pxVar3 = *(xunknown2 **)((uint4)uStack_1c * 4 + -0x7ffc6620);
+        if (pxVar3 == (xunknown2 *)0x0) {
+          xRAM000028b0 = 0xffff;
+        }
+        else {
+          xRAM000028b0 = *pxVar3;
+          uRAM000028b8 = uStack_1c;
+        }
+        uRAM0000284c = uRAM0000284c & 0xfffffffd;
+        break;
+      default:
+        uRAM000028b8 = uVar2;
+      }
+    }
+    else {
+      xRAM000028b0 = *(xunknown2 *)((int4)&uRAM0000284c + (uVar6 + 0x57) * 2);
+      uRAM0000284c = uRAM0000284c & 0xfffffffd;
+      uRAM000028b8 = *(uint2 *)((int4)&uRAM0000284c + (uVar6 + 0xf57) * 2);
+    }
+    if (iRAM0000289e < 1) {
+      if (iRAM0000289e < 0) {
+        xRAM000028b0 = (*(code *)0x800512b0)(xRAM000028b0,-iRAM0000289e);
+      }
+    }
+    else {
+      xRAM000028b0 = (*(code *)0x8005117c)(xRAM000028b0,iRAM0000289e);
+    }
+    uVar4 = uRAM000028bc;
+    uVar6 = uStack_9 & 0x30;
+    if (uVar6 == 0) {
+      uRAM000028bc = 0xffff;
+      switch(uRAM000047de >> 4 & 7) {
+      case 1:
+        xRAM000028b4 = 0xffff;
+        uRAM0000284c = uRAM0000284c & 0xffff7fff;
+        break;
+      case 2:
+        xRAM000028b4 = 0;
+        uRAM0000284c = uRAM0000284c & 0xffff7fff;
+        break;
+      case 3:
+        xRAM000028b4 = (*(code *)0x80058cac)(&iRAM0000468c);
+        uRAM0000284c = uRAM0000284c & 0xffff7fff;
+        break;
+      case 4:
+        uRAM0000284c = uRAM0000284c & 0xffff7fff;
+        xRAM000028b4 = xRAM000028ae;
+        break;
+      case 5:
+        uRAM0000284c = uRAM0000284c | 0x8000;
+        break;
+      case 6:
+        iVar5 = (*(code *)0x80058c78)(&iRAM0000468c);
+        xRAM000028b4 = *(xunknown2 *)(iVar5 * 2 + -0x7ffb0650);
+        uRAM0000284c = uRAM0000284c & 0xffff7fff;
+        break;
+      case 7:
+        uStack_1c = (*(code *)0x80058cac)(&iRAM0000468c);
+        if (0x85 < uStack_1c) {
+          uStack_1c = 0;
+        }
+        pxVar3 = *(xunknown2 **)((uint4)uStack_1c * 4 + -0x7ffc6620);
+        if (pxVar3 == (xunknown2 *)0x0) {
+          xRAM000028b4 = 0xffff;
+        }
+        else {
+          xRAM000028b4 = *pxVar3;
+          uRAM000028bc = uStack_1c;
+        }
+        uRAM0000284c = uRAM0000284c & 0xffff7fff;
+        break;
+      default:
+        uRAM000028bc = uVar4;
+      }
+    }
+    else {
+      xRAM000028b4 = *(xunknown2 *)((int4)&uRAM0000284c + (uVar6 + 0x57) * 2);
+      uRAM000028bc = *(uint2 *)((int4)&uRAM0000284c + (uVar6 + 0xf57) * 2);
+    }
+    if (iRAM000028a2 < 1) {
+      if (iRAM000028a2 < 0) {
+        xRAM000028b4 = (*(code *)0x800512b0)(xRAM000028b4,-iRAM000028a2);
+      }
+    }
+    else {
+      xRAM000028b4 = (*(code *)0x8005117c)(xRAM000028b4,iRAM000028a2);
+    }
+  }
+  if (((uRAM0000469c & 0x40400) != 0) && ((uRAM000047df & 2) != 0)) {
+    xRAM000028d8 = (*(code *)0x80058cac)(&iRAM0000468c);
+  }
+  uVar6 = uStack_a & 0xc;
+  if (uVar6 != 0) {
+    *(xunknown2 *)((int4)&uRAM0000284c + (uVar6 + 0x57) * 2) = xRAM000028ae;
+    *(uint2 *)((int4)&uRAM0000284c + (uVar6 + 0xf57) * 2) = uRAM000028b6;
+  }
+  uStack_a = uStack_a & 0xc0;
+  if (uStack_a != 0) {
+    *(xunknown2 *)((int4)&uRAM0000284c + (uStack_a + 0x57) * 2) = xRAM000028b2;
+    *(uint2 *)((int4)&uRAM0000284c + (uStack_a + 0xf57) * 2) = uRAM000028ba;
+  }
+  uVar6 = uStack_9 & 0xc;
+  if (uVar6 != 0) {
+    *(xunknown2 *)((int4)&uRAM0000284c + (uVar6 + 0x57) * 2) = xRAM000028b0;
+    *(uint2 *)((int4)&uRAM0000284c + (uVar6 + 0xf57) * 2) = uRAM000028b8;
+  }
+  uStack_9 = uStack_9 & 0xc0;
+  if (uStack_9 != 0) {
+    *(xunknown2 *)((int4)&uRAM0000284c + (uStack_9 + 0x57) * 2) = xRAM000028b4;
+    *(uint2 *)((int4)&uRAM0000284c + (uStack_9 + 0xf57) * 2) = uRAM000028bc;
+  }
+  if ((uRAM000047d9 & 0x40) == 0) {
+    uStack_13 = 0;
+  }
+  else {
+    uStack_13 = (*(code *)0x80058c78)(&iRAM0000468c);
+  }
+  uRAM000047e7 = uStack_13 & 3;
+  uRAM000047e9 = uStack_13 >> 2 & 3;
+  uRAM000047e8 = uStack_13 >> 4 & 3;
+  uRAM000047ea = uStack_13 >> 6;
+  if ((char)uRAM000047d9 < '\0') {
+    uStack_13 = (*(code *)0x80058c78)(&iRAM0000468c);
+  }
+  else {
+    uStack_13 = 0;
+  }
+  uRAM000047eb = uStack_13 & 3;
+  uRAM000047ed = uStack_13 >> 2 & 3;
+  uRAM000047ec = uStack_13 >> 4 & 3;
+  uRAM000047ee = uStack_13 >> 6;
+  if ((uRAM000047e0 & 1) == 0) {
+    uStack_13 = 0;
+  }
+  else {
+    uStack_13 = (*(code *)0x80058c78)(&iRAM0000468c);
+  }
+  uRAM000047ef = uStack_13 & 3;
+  uRAM000047f1 = uStack_13 >> 2 & 3;
+  uRAM000047f0 = uStack_13 >> 4 & 3;
+  uRAM000047f2 = uStack_13 >> 6;
+  if ((char)uRAM000047e0 < '\0') {
+    if (uRAM000047e7 != 0) {
+      uRAM000047e7 = uRAM000047e7 + 3;
+    }
+    if (uRAM000047e9 != 0) {
+      uRAM000047e9 = uRAM000047e9 + 3;
+    }
+    if (uRAM000047e8 != 0) {
+      uRAM000047e8 = uRAM000047e8 + 3;
+    }
+    if (uRAM000047ea != 0) {
+      uRAM000047ea = uRAM000047ea + 3;
+    }
+    if (uRAM000047eb != 0) {
+      uRAM000047eb = uRAM000047eb + 3;
+    }
+    if (uRAM000047ed != 0) {
+      uRAM000047ed = uRAM000047ed + 3;
+    }
+    if (uRAM000047ec != 0) {
+      uRAM000047ec = uRAM000047ec + 3;
+    }
+    if (uRAM000047ee != 0) {
+      uRAM000047ee = uRAM000047ee + 3;
+    }
+    if (uRAM000047ef != 0) {
+      uRAM000047ef = uRAM000047ef + 3;
+    }
+    if (uRAM000047f1 != 0) {
+      uRAM000047f1 = uRAM000047f1 + 3;
+    }
+    if (uRAM000047f0 != 0) {
+      uRAM000047f0 = uRAM000047f0 + 3;
+    }
+    if (uRAM000047f2 != 0) {
+      uRAM000047f2 = uRAM000047f2 + 3;
+    }
+  }
+  if ((uRAM000047df & 1) == 0) {
+    uStack_13 = 0;
+  }
+  else {
+    uStack_13 = (*(code *)0x80058c78)(&iRAM0000468c);
+  }
+  if (((uRAM0000469c & 0x2961) == 0) && ((uRAM000046a0 & 0x4000) == 0)) {
+    xRAM00002857 = 0;
+  }
+  else {
+    xRAM00002857 = uStack_13;
+  }
+  if ((uRAM000047df & 8) == 0) {
+    iStack_2a = 0;
+  }
+  else {
+    iStack_2a = (*(code *)0x80058cac)(&iRAM0000468c);
+    xRAM00002852 = (*(code *)0x80058c78)(&iRAM0000468c);
+    xRAM00002853 = (*(code *)0x80058c78)(&iRAM0000468c);
+  }
+  if (((uRAM0000469c & 0x161) == 0) && ((uRAM000046a0 & 0x4000) == 0)) {
+    xRAM00002850 = 0;
+  }
+  else {
+    xRAM00002850 = iStack_2a;
+  }
+  uRAM000047e1 = uRAM000047da & 3;
+  uRAM000047e2 = uRAM000047da >> 2 & 3;
+  uRAM000047e3 = uRAM000047da >> 4 & 3;
+  uRAM000047e4 = uRAM000047da >> 6;
+  uRAM000047e5 = uRAM000047e0 >> 1 & 3;
+  uRAM000047e6 = uRAM000047e0 >> 3 & 3;
+  if ((uRAM000047db & 1) == 0) {
+    xRAM000046ce = 0;
+  }
+  else {
+    xRAM000046ce = (*(code *)0x80058cac)(&iRAM0000468c);
+  }
+  if ((uRAM000047db & 2) == 0) {
+    xRAM000046d0 = 0;
+  }
+  else {
+    xRAM000046d0 = (*(code *)0x80058cac)(&iRAM0000468c);
+  }
+  if ((uRAM000047db & 4) == 0) {
+    xRAM000046d2 = 0;
+  }
+  else {
+    xRAM000046d2 = (*(code *)0x80058cac)(&iRAM0000468c);
+  }
+  if ((uRAM000047db & 8) == 0) {
+    xRAM000046d4 = 0;
+  }
+  else {
+    xRAM000046d4 = (*(code *)0x80058cac)(&iRAM0000468c);
+  }
+  if ((uRAM000047df & 0x10) == 0) {
+    xRAM000046d6 = 0;
+  }
+  else {
+    xRAM000046d6 = (*(code *)0x80058cac)(&iRAM0000468c);
+  }
+  if ((uRAM000047df & 0x20) == 0) {
+    xRAM000046d8 = 0;
+  }
+  else {
+    xRAM000046d8 = (*(code *)0x80058cac)(&iRAM0000468c);
+  }
+  if (((uRAM000047db & 0x10) != 0) &&
+     (uRAM000046da = (*(code *)0x80058cac)(&iRAM0000468c), 0x85 < uRAM000046da)) {
+    uRAM000046da = 0;
+  }
+  if (((uRAM000047db & 0x20) != 0) &&
+     (uRAM000046dc = (*(code *)0x80058cac)(&iRAM0000468c), 0x85 < uRAM000046dc)) {
+    uRAM000046dc = 0;
+  }
+  if (((uRAM000047db & 0x40) != 0) &&
+     (uRAM000046de = (*(code *)0x80058cac)(&iRAM0000468c), 0x85 < uRAM000046de)) {
+    uRAM000046de = 0;
+  }
+  if (((char)uRAM000047db < '\0') &&
+     (uRAM000046e0 = (*(code *)0x80058cac)(&iRAM0000468c), 0x85 < uRAM000046e0)) {
+    uRAM000046e0 = 0;
+  }
+  if (((uRAM000047df & 0x40) != 0) &&
+     (uRAM000046e2 = (*(code *)0x80058cac)(&iRAM0000468c), 0x85 < uRAM000046e2)) {
+    uRAM000046e2 = 0;
+  }
+  if (((char)uRAM000047df < '\0') &&
+     (uRAM000046e4 = (*(code *)0x80058cac)(&iRAM0000468c), 0x85 < uRAM000046e4)) {
+    uRAM000046e4 = 0;
+  }
+  if ((((uRAM0000469c & 0x600ffdfd) != 0) || ((uRAM000046a0 & 0x7fff) != 0)) &&
+     (uRAM000047dc >> 6 != 0)) {
+    uRAM00002855 = uRAM000047dc >> 6;
+  }
+  if ((((uRAM0000469c & 0x2961) != 0) || ((uRAM000046a0 & 0x6e80) != 0)) &&
+     ((uRAM000047dd & 3) != 0)) {
+    uRAM00002856 = uRAM000047dd & 3;
+  }
+  if (((uRAM0000469c & 0x2961) == 0) && ((uRAM000046a0 & 0x6e80) == 0)) {
+    if ((uRAM0000469c & 0x10004) != 0) {
+      if ((uRAM000047dd & 0x10) == 0) {
+        uRAM0000284c = uRAM0000284c & 0xfffffffb;
+      }
+      else {
+        uRAM0000284c = uRAM0000284c | 4;
+      }
+    }
+  }
+  else if ((uRAM000047dd & 0x10) == 0) {
+    uRAM0000284c = uRAM0000284c & 0xfffffffb;
+  }
+  else {
+    uRAM0000284c = uRAM0000284c | 4;
+  }
+  if ((uRAM000047dd & 0x20) == 0) {
+    uRAM0000284c = uRAM0000284c & 0xffffffdf;
+  }
+  else {
+    uRAM0000284c = uRAM0000284c | 0x20;
+  }
+  if ((char)uRAM000047dd < '\0') {
+    uRAM0000284c = uRAM0000284c | 0x80;
+  }
+  else {
+    uRAM0000284c = uRAM0000284c & 0xffffff7f;
+  }
+  if (((uRAM0000469c & 0x2901) == 0) && ((uRAM000046a0 & 0x40) == 0)) {
+    uStack_13 = '\0';
+  }
+  else if ((char)uRAM000047de < '\0') {
+    uStack_13 = (*(code *)0x80058c78)(&iRAM0000468c);
+  }
+  else {
+    if (((uRAM0000469c & 0x2100) == 0) && (-1 < (char)uRAM000047dd)) {
+      uStack_28 = 0;
+    }
+    else {
+      uStack_28 = param_1;
+    }
+    uStack_13 = *(char *)((int2)uStack_28 + -0x7ff96d3c);
+  }
+  if (uStack_13 == '\0') {
+    uRAM0000284c = uRAM0000284c & 0xfffff7ff;
+  }
+  else {
+    uRAM0000284c = uRAM0000284c | 0x800;
+  }
+  if (((uRAM0000469c & 4) != 0) && ((uRAM0000284c & 4) != 0)) {
+    xRAM000028d6 = (*(code *)0x80058c78)(&iRAM0000468c);
+  }
+  if (((uRAM0000469c & 0x801) == 0) && ((uRAM000046a0 & 0x40) == 0)) {
+    uRAM000028cc = 1;
+  }
+  else {
+    uRAM000028cc = (*(code *)0x80058c78)(&iRAM0000468c);
+  }
+  if (((uRAM0000469c & 0x2000a961) != 0) || ((uRAM000046a0 & 0x6cc0) != 0)) {
+    if (uRAM000028ce == 0x26) {
+      iStack_26 = 3;
+    }
+    else {
+      iStack_26 = 1;
+    }
+    for (uStack_28 = 0; (int2)uStack_28 < iStack_26; uStack_28 = uStack_28 + 1) {
+      cVar7 = (*(code *)0x80058c78)(&iRAM0000468c);
+      if (cVar7 != -1) {
+        *(char *)((int2)uStack_28 * 0xc + 0x2854) = cVar7 + '\x01';
+      }
+    }
+  }
+  if ((uRAM0000469c & 0x2800) != 0) {
+    (*(code *)0x80058c78)(&iRAM0000468c);
+  }
+  xRAM000028d4 = 1;
+  if ((uRAM000046a0 & 0x2cf0) != 0) {
+    uStack_1a = (*(code *)0x80058cac)(&iRAM0000468c);
+    if (0x85 < uStack_1a) {
+      uStack_1a = 0;
+    }
+    uRAM0000284c = uRAM0000284c | 0x20;
+    xRAM00002870 = *(xunknown4 *)((uint4)uStack_1a * 4 + -0x7ffc6620);
+    xRAM000028d5 = *(xunknown1 *)(uStack_1a + 0x80039bf8);
+  }
+  xRAM000028d4 = 1;
+  if (((uRAM0000469c & 0x2140) != 0) || ((uRAM000046a0 & 0x4000) != 0)) {
+    uStack_1a = (*(code *)0x80058cac)(&iRAM0000468c);
+    if (0x85 < uStack_1a) {
+      uStack_1a = 0;
+    }
+    xRAM00002870 = *(xunknown4 *)((uint4)uStack_1a * 4 + -0x7ffc6620);
+    xRAM000028d5 = *(xunknown1 *)(uStack_1a + 0x80039bf8);
+  }
+  xRAM000028d4 = 1;
+  if (((uRAM000047dd & 0x20) != 0) &&
+     (((uRAM0000469c & 0x70c3f) != 0 || ((uRAM000046a0 & 0xf) != 0)))) {
+    uStack_1a = (*(code *)0x80058cac)(&iRAM0000468c);
+    if (0x85 < uStack_1a) {
+      uStack_1a = 0;
+    }
+    xRAM00002870 = *(xunknown4 *)((uint4)uStack_1a * 4 + -0x7ffc6620);
+    xRAM000028d5 = *(xunknown1 *)(uStack_1a + 0x80039bf8);
+  }
+  xRAM000028d4 = 1;
+  if ((uRAM0000469c & 0x30008) != 0) {
+    uRAM000028cf = (*(code *)0x80058c78)(&iRAM0000468c);
+  }
+  if ((uRAM000046a0 & 0xc) != 0) {
+    uRAM000028cf = (*(code *)0x80058c78)(&iRAM0000468c);
+    uRAM000028cf = uRAM000028cf & 3;
+  }
+  if (((uRAM0000469c & 0x40) != 0) || ((uRAM000046a0 & 0x4000) != 0)) {
+    xRAM000028d8 = (*(code *)0x80058cac)(&iRAM0000468c);
+  }
+  if ((uRAM0000469c & 0x4080) != 0) {
+    uVar6 = (*(code *)0x80058c78)(&iRAM0000468c);
+    if ((uVar6 & 1) == 0) {
+      uRAM0000284c = uRAM0000284c & 0xfffffdff;
+    }
+    else {
+      uRAM0000284c = uRAM0000284c | 0x200;
+    }
+    if ((uVar6 & 2) == 0) {
+      uRAM0000284c = uRAM0000284c & 0xfffffbff;
+    }
+    else {
+      uRAM0000284c = uRAM0000284c | 0x400;
+    }
+  }
+  if ((uRAM0000469c & 0x200) != 0) {
+    xRAM000028d3 = (*(code *)0x80058c78)(&iRAM0000468c);
+    uVar6 = (*(code *)0x80058c78)(&iRAM0000468c);
+    if ((uVar6 & 1) == 0) {
+      uRAM0000284c = uRAM0000284c & 0xfffffff7;
+    }
+    else {
+      uRAM0000284c = uRAM0000284c | 8;
+    }
+    if ((uVar6 & 2) == 0) {
+      uRAM0000284c = uRAM0000284c & 0xffffffef;
+    }
+    else {
+      uRAM0000284c = uRAM0000284c | 0x10;
+    }
+    uRAM000028d2 = uVar6 >> 2 & 3;
+    if ((uVar6 & 0x10) == 0) {
+      uRAM0000284c = uRAM0000284c & 0xffffefff;
+    }
+    else {
+      uRAM0000284c = uRAM0000284c | 0x1000;
+    }
+    if ((uVar6 & 0x20) == 0) {
+      uRAM0000284c = uRAM0000284c & 0xffffdfff;
+    }
+    else {
+      uRAM0000284c = uRAM0000284c | 0x2000;
+    }
+    xRAM000028d0 = (*(code *)0x80058c78)(&iRAM0000468c);
+    xRAM000028d1 = (*(code *)0x80058c78)(&iRAM0000468c);
+  }
+  if (((uRAM0000469c & 0x40460) != 0) || ((uRAM000046a0 & 0x4000) != 0)) {
+    xRAM00002874 = (*(code *)0x80058cac)(&iRAM0000468c);
+  }
+  if ((uRAM0000469c & 0x2800) != 0) {
+    xVar8 = (*(code *)0x80058c78)(&iRAM0000468c);
+    xRAM000028d8._0_1_ = xVar8;
+    xVar8 = (*(code *)0x80058c78)(&iRAM0000468c);
+    xRAM000028d8 = CONCAT11(xRAM000028d8._0_1_,xVar8);
+    xRAM000028da = (*(code *)0x80058c78)(&iRAM0000468c);
+    xRAM000028db = (*(code *)0x80058c78)(&iRAM0000468c);
+  }
+  if ((uRAM0000469c & 0x1000) != 0) {
+    xRAM000028d8 = (*(code *)0x80058cac)(&iRAM0000468c);
+  }
+  if ((uRAM000046a0 & 0x8000) != 0) {
+    xRAM000028ac = (*(code *)0x80058cac)(&iRAM0000468c);
+  }
+  if (((uRAM0000469c & 0x801) != 0) || ((uRAM000046a0 & 0x40) != 0)) {
+    if ((char)uRAM000047dd < '\0') {
+      iStack_2a = 10;
+      uStack_12 = param_1;
+    }
+    else {
+      iStack_2a = 1;
+      uStack_12 = 0;
+    }
+    iStack_26 = 0;
+    for (uStack_28 = 0; (int2)uStack_28 < (int2)(uint2)uRAM000028cc; uStack_28 = uStack_28 + 1) {
+      uStack_e = 0;
+      uStack_c = 0;
+      for (iStack_2c = 0; iStack_2c < iStack_2a; iStack_2c = iStack_2c + 1) {
+        uStack_10 = (*(code *)0x80058c78)(&iRAM0000468c);
+        if (uStack_10 == 0xff) {
+          uStack_10 = (*(code *)0x80058cac)(&iRAM0000468c);
+        }
+        if ((int4)iStack_2c == (uint4)uStack_12) {
+          uVar4 = uStack_10;
+          if (200 < uStack_10) {
+            uVar4 = 200;
+          }
+          *(uint2 *)((int4)&uRAM0000284c + (iStack_26 + 0x24) * 2 + 2) =
+               (uint2)((uVar4 & 0x8000) != 0) * -0x8000 | uVar4;
+        }
+        if ((int4)iStack_2c < (int4)(uint4)uStack_12) {
+          uStack_e = uStack_10 + 1 + uStack_e;
+        }
+        else {
+          uStack_c = uStack_10 + 1 + uStack_c;
+        }
+      }
+      iRAM0000468c = uStack_e + iRAM0000468c;
+      (&uRAM0000284c)[iStack_26 + 0x1d] = iRAM0000468c;
+      iRAM0000468c = uStack_c + iRAM0000468c;
+      iStack_26 = iStack_26 + 1;
+    }
+  }
+  return;
+}
+[decomp]> quit

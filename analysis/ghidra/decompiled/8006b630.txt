@@ -1,0 +1,60 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8006b630 FUN_8006b630
+[decomp]> decompile
+Decompiling FUN_8006b630
+Decompilation complete
+[decomp]> print C
+
+/* WARNING: Removing unreachable block (RAM,0x8006b712) */
+/* WARNING: Removing unreachable block (RAM,0x8006b6e6) */
+/* WARNING: Removing unreachable block (RAM,0x8006b73e) */
+
+void FUN_8006b630(xunknown1 param_1,xunknown4 param_2,xunknown4 param_3)
+
+{
+  xunknown4 xVar1;
+  xunknown4 xVar2;
+  uint1 uStack_d;
+  
+  xRAM00005e43 = param_1;
+  if (cRAM00005e45 == '\x01') {
+    uStack_d = 100;
+  }
+  else {
+    xVar1 = (*(code *)0x8006c918)(param_1);
+    xVar2 = (*(code *)0x8006c896)(xRAM00004fb2);
+    xVar2 = (*(code *)0x8006c7a6)(xVar1,xVar2);
+    xVar1 = 0x42c80000;
+    xVar2 = (*(code *)0x8006c4a8)(xVar2,0x42c80000);
+    (*(code *)0x8006c9ea)(xVar2);
+    xVar2 = (*(code *)0x8006bd7c)();
+    uStack_d = (*(code *)0x8006be94)(xVar2,xVar1,param_3);
+    if (100 < uStack_d) {
+      uStack_d = 100;
+    }
+  }
+  uRAM00005e44 = uStack_d;
+  if (uStack_d != 0) {
+    iRAM00005e38 = (int2)((int4)(*(uint1 *)(uStack_d + 0x8006ae83) + 3) >> 2) * 10;
+    iRAM00005e3a = (int2)((int4)(*(uint1 *)(uStack_d + 0x8006ae83) + 1) >> 2) * 10;
+    iRAM00005e3c = (int2)((int4)(*(uint1 *)(uStack_d + 0x8006ae83) + 2) >> 2) * 10;
+    iRAM00005e3e = (uint2)(*(uint1 *)(uStack_d + 0x8006ae83) >> 2) * 10;
+    if (iRAM00005e38 != 0) {
+      iRAM00005e38 = iRAM00005e38 + -5;
+    }
+    if (iRAM00005e3a != 0) {
+      iRAM00005e3a = iRAM00005e3a + -5;
+    }
+    if (iRAM00005e3c != 0) {
+      iRAM00005e3c = iRAM00005e3c + -5;
+    }
+    if (iRAM00005e3e != 0) {
+      iRAM00005e3e = iRAM00005e3e + -5;
+    }
+  }
+  return;
+}
+[decomp]> quit

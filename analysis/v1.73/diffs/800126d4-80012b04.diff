@@ -1,0 +1,14 @@
+--- 800126d4
+
++++ 80012b04
+
+@@ -17,6 +17,6 @@
+
+   }
+   else {
+-    xVar1 = *(xunknown4 *)(iRAM_ADDR * 4 + 0x870);
+-    (*(code *)FUNCTION_ADDR)(0x52ac,0x33,FUNCTION_ADDR,(int4)iRAM_ADDR,xVar1,xVar1);
++    xVar1 = *(xunknown4 *)(iRAM_ADDR * 4 + 0x898);
++    (*(code *)FUNCTION_ADDR)(0x5358,0x33,FUNCTION_ADDR,(int4)iRAM_ADDR,xVar1,xVar1);
+     do {
+       if (uRAM_ADDR < uRAM_ADDR) goto code_rFUNCTION_ADDR;

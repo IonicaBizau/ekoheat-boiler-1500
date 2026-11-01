@@ -1,0 +1,22 @@
+--- 8001af14
+
++++ 8001b4a0
+
+@@ -7,13 +7,13 @@
+
+   xVar1 = (*(code *)FUNCTION_ADDR)(xVar1);
+   (*(code *)FUNCTION_ADDR)(xVar1);
+-  (*(code *)FUNCTION_ADDR)(0x547c,7);
++  (*(code *)FUNCTION_ADDR)(0x5528,7);
+   xVar1 = (*(code *)FUNCTION_ADDR)(xRAM_ADDR);
+   xVar1 = (*(code *)FUNCTION_ADDR)(xVar1);
+   (*(code *)FUNCTION_ADDR)(xVar1);
+-  (*(code *)FUNCTION_ADDR)(0x553c,7);
++  (*(code *)FUNCTION_ADDR)(22000,7);
+   xVar1 = (*(code *)FUNCTION_ADDR)(xRAM_ADDR);
+   xVar1 = (*(code *)FUNCTION_ADDR)(xVar1);
+   (*(code *)FUNCTION_ADDR)(xVar1);
+-  (*(code *)FUNCTION_ADDR)(0x50a8,7,FUNCTION_ADDR);
++  (*(code *)FUNCTION_ADDR)(0x5154,7,FUNCTION_ADDR);
+   xRAM_ADDR = (*(code *)FUNCTION_ADDR)(0x22);
+   if (cRAM_ADDR != '\0') {

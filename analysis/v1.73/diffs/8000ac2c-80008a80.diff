@@ -1,0 +1,16 @@
+--- 8000ac2c
+
++++ 80008a80
+
+@@ -2,9 +2,5 @@
+
+ 
+ {
+-  int4 unaff_R2;
+-  
+-                    
+-                    
+-  (**(code **)(unaff_R2 + 0x18))();
++  (*(code *)FUNCTION_ADDR)();
+   return;
+ }

@@ -1,0 +1,209 @@
+[
+  {
+    "index": 0,
+    "address": "0x80039c80",
+    "file_offset": "0x31c99",
+    "width": 58,
+    "height": 20,
+    "length": 2324,
+    "preview": "bitmap-00-58x20.png"
+  },
+  {
+    "index": 1,
+    "address": "0x8003a594",
+    "file_offset": "0x325ad",
+    "width": 81,
+    "height": 68,
+    "length": 11020,
+    "preview": "bitmap-01-81x68.png"
+  },
+  {
+    "index": 2,
+    "address": "0x8003d0a0",
+    "file_offset": "0x350b9",
+    "width": 260,
+    "height": 17,
+    "length": 8844,
+    "preview": "bitmap-02-260x17.png"
+  },
+  {
+    "index": 3,
+    "address": "0x8003f32c",
+    "file_offset": "0x37345",
+    "width": 43,
+    "height": 39,
+    "length": 3358,
+    "preview": "bitmap-03-43x39.png"
+  },
+  {
+    "index": 4,
+    "address": "0x8004004c",
+    "file_offset": "0x38065",
+    "width": 21,
+    "height": 39,
+    "length": 1642,
+    "preview": "bitmap-04-21x39.png"
+  },
+  {
+    "index": 5,
+    "address": "0x800406b8",
+    "file_offset": "0x386d1",
+    "width": 17,
+    "height": 17,
+    "length": 582,
+    "preview": "bitmap-05-17x17.png"
+  },
+  {
+    "index": 6,
+    "address": "0x80040900",
+    "file_offset": "0x38919",
+    "width": 20,
+    "height": 21,
+    "length": 844,
+    "preview": "bitmap-06-20x21.png"
+  },
+  {
+    "index": 7,
+    "address": "0x80040c4c",
+    "file_offset": "0x38c65",
+    "width": 227,
+    "height": 44,
+    "length": 19980,
+    "preview": "bitmap-07-227x44.png"
+  },
+  {
+    "index": 8,
+    "address": "0x80045a58",
+    "file_offset": "0x3da71",
+    "width": 116,
+    "height": 20,
+    "length": 4644,
+    "preview": "bitmap-08-116x20.png"
+  },
+  {
+    "index": 9,
+    "address": "0x80046c7c",
+    "file_offset": "0x3ec95",
+    "width": 25,
+    "height": 25,
+    "length": 1254,
+    "preview": "bitmap-09-25x25.png"
+  },
+  {
+    "index": 10,
+    "address": "0x80047164",
+    "file_offset": "0x3f17d",
+    "width": 25,
+    "height": 25,
+    "length": 1254,
+    "preview": "bitmap-10-25x25.png"
+  },
+  {
+    "index": 11,
+    "address": "0x8004764c",
+    "file_offset": "0x3f665",
+    "width": 130,
+    "height": 25,
+    "length": 6504,
+    "preview": "bitmap-11-130x25.png"
+  },
+  {
+    "index": 12,
+    "address": "0x80048fb4",
+    "file_offset": "0x40fcd",
+    "width": 41,
+    "height": 20,
+    "length": 1644,
+    "preview": "bitmap-12-41x20.png"
+  },
+  {
+    "index": 13,
+    "address": "0x80049620",
+    "file_offset": "0x41639",
+    "width": 14,
+    "height": 20,
+    "length": 564,
+    "preview": "bitmap-13-14x20.png"
+  },
+  {
+    "index": 14,
+    "address": "0x80049854",
+    "file_offset": "0x4186d",
+    "width": 20,
+    "height": 25,
+    "length": 1004,
+    "preview": "bitmap-14-20x25.png"
+  },
+  {
+    "index": 15,
+    "address": "0x80049c40",
+    "file_offset": "0x41c59",
+    "width": 1,
+    "height": 17,
+    "length": 38,
+    "preview": "bitmap-15-1x17.png"
+  },
+  {
+    "index": 16,
+    "address": "0x80049c68",
+    "file_offset": "0x41c81",
+    "width": 17,
+    "height": 55,
+    "length": 1874,
+    "preview": "bitmap-16-17x55.png"
+  },
+  {
+    "index": 17,
+    "address": "0x8004a3bc",
+    "file_offset": "0x423d5",
+    "width": 3,
+    "height": 3,
+    "length": 22,
+    "preview": "bitmap-17-3x3.png"
+  },
+  {
+    "index": 18,
+    "address": "0x8004a3d4",
+    "file_offset": "0x423ed",
+    "width": 3,
+    "height": 3,
+    "length": 22,
+    "preview": "bitmap-18-3x3.png"
+  },
+  {
+    "index": 19,
+    "address": "0x8004a3ec",
+    "file_offset": "0x42405",
+    "width": 166,
+    "height": 21,
+    "length": 6976,
+    "preview": "bitmap-19-166x21.png"
+  },
+  {
+    "index": 20,
+    "address": "0x8004bf2c",
+    "file_offset": "0x43f45",
+    "width": 49,
+    "height": 37,
+    "length": 3630,
+    "preview": "bitmap-20-49x37.png"
+  },
+  {
+    "index": 21,
+    "address": "0x8004cd5c",
+    "file_offset": "0x44d75",
+    "width": 74,
+    "height": 38,
+    "length": 5628,
+    "preview": "bitmap-21-74x38.png"
+  },
+  {
+    "index": 22,
+    "address": "0x8004e358",
+    "file_offset": "0x46371",
+    "width": 74,
+    "height": 38,
+    "length": 5628,
+    "preview": "bitmap-22-74x38.png"
+  }
+]

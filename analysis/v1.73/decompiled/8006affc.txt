@@ -1,0 +1,76 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8006affc FUN_8006affc
+[decomp]> decompile
+Decompiling FUN_8006affc
+Decompilation complete
+[decomp]> print C
+
+xunknown4 FUN_8006affc(xunknown4 param_1,xunknown4 param_2)
+
+{
+  xunknown4 xVar1;
+  xunknown4 xVar2;
+  xunknown4 xVar3;
+  int4 iVar4;
+  xunknown4 xStack_18;
+  
+  xVar1 = (*(code *)0x8006cf28)(param_1,param_2);
+  if (iRAM00005eb0 == 0) {
+    iRAM00005eb0 = 1;
+    xStack_18 = 0;
+  }
+  else {
+    xVar2 = (*(code *)0x8006cf28)(xVar1,xRAM00005ea4);
+    xStack_18 = (*(code *)0x8006d0b2)(xVar2,xRAM00005e98);
+    xVar2 = (*(code *)0x8006d0b2)(xRAM00005ea0,xVar1);
+    iVar4 = (*(code *)0x8006ca3a)(0,xVar2);
+    if (iVar4 == 0) {
+      xVar3 = (*(code *)0x8006d0b2)(xRAM00005e8c,0xc4160000);
+      iVar4 = (*(code *)0x8006ca3a)(xRAM00005eb4,xVar3);
+      if (iVar4 == 0) {
+        iVar4 = (*(code *)0x8006ca3a)(xRAM00005ea8,xRAM00005eac);
+        if (iVar4 != 0) {
+          xRAM00005eb4 = (*(code *)0x8006cff8)(xRAM00005eb4,xVar2);
+        }
+      }
+      else {
+        xRAM00005eb4 = (*(code *)0x8006d0b2)(xRAM00005e8c,0xc4160000);
+      }
+    }
+    else {
+      xVar3 = (*(code *)0x8006d0b2)(xRAM00005e8c,0x44160000);
+      iVar4 = (*(code *)0x8006ca3a)(xVar3,xRAM00005eb4);
+      if (iVar4 == 0) {
+        iVar4 = (*(code *)0x8006ca3a)(xRAM00005eac,xRAM00005eb8);
+        if (iVar4 != 0) {
+          xRAM00005eb4 = (*(code *)0x8006cff8)(xRAM00005eb4,xVar2);
+        }
+      }
+      else {
+        xRAM00005eb4 = (*(code *)0x8006d0b2)(xRAM00005e8c,0x44160000);
+      }
+    }
+  }
+  xVar2 = xRAM00005e8c;
+  xRAM00005ea4 = xVar1;
+  xVar3 = (*(code *)0x8006d0b2)(xRAM00005e90,xRAM00005eb4);
+  xVar1 = (*(code *)0x8006cff8)(xVar3,xVar1);
+  xVar3 = (*(code *)0x8006d0b2)(xRAM00005e94,xStack_18);
+  xVar1 = (*(code *)0x8006cff8)(xVar1,xVar3);
+  xRAM00005eac = (*(code *)0x8006d0b2)(xVar2,xVar1);
+  iVar4 = (*(code *)0x8006ca3a)(xRAM00005eb8,xRAM00005eac);
+  if (iVar4 == 0) {
+    iVar4 = (*(code *)0x8006ca3a)(xRAM00005eac,xRAM00005ea8);
+    if (iVar4 != 0) {
+      xRAM00005eac = xRAM00005ea8;
+    }
+  }
+  else {
+    xRAM00005eac = xRAM00005eb8;
+  }
+  return xRAM00005eac;
+}
+[decomp]> quit

@@ -1,0 +1,154 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x80011e64 FUN_80011e64
+[decomp]> decompile
+Decompiling FUN_80011e64
+Decompilation complete
+[decomp]> print C
+
+void FUN_80011e64(void)
+
+{
+  xunknown2 xStack_194;
+  xunknown2 xStack_192;
+  xunknown4 xStack_190;
+  xunknown1 xStack_17c;
+  xunknown4 xStack_178;
+  xunknown4 xStack_174;
+  xunknown4 xStack_170;
+  xunknown4 xStack_16c;
+  xunknown4 xStack_168;
+  xunknown4 xStack_164;
+  xunknown4 xStack_160;
+  xunknown4 xStack_15c;
+  xunknown4 xStack_158;
+  xunknown4 xStack_154;
+  xunknown1 xStack_150;
+  xunknown2 xStack_14e;
+  xunknown2 xStack_14c;
+  xunknown1 xStack_14a;
+  xunknown1 xStack_149;
+  xunknown1 xStack_148;
+  xunknown1 xStack_147;
+  xunknown2 xStack_146;
+  xunknown2 xStack_144;
+  xunknown2 xStack_142;
+  xunknown1 xStack_140;
+  xunknown1 xStack_13f;
+  xunknown2 xStack_13e;
+  xunknown1 xStack_13c;
+  xunknown2 xStack_13a;
+  xunknown1 xStack_138;
+  xunknown2 xStack_136;
+  xunknown4 xStack_134;
+  xunknown4 xStack_130;
+  xunknown4 xStack_12c;
+  xunknown1 xStack_128;
+  xunknown1 xStack_127;
+  xunknown1 xStack_126;
+  xunknown1 xStack_125;
+  xunknown1 xStack_124;
+  xunknown1 xStack_123;
+  xunknown1 xStack_122;
+  xunknown1 xStack_121;
+  xunknown1 xStack_120;
+  xunknown1 xStack_11f;
+  xunknown1 xStack_11e;
+  xunknown1 xStack_11d;
+  xunknown1 xStack_11c;
+  xunknown1 xStack_11b;
+  xunknown1 xStack_11a;
+  xunknown1 xStack_119;
+  xunknown1 xStack_118;
+  xunknown1 xStack_117;
+  xunknown1 xStack_116;
+  xunknown1 xStack_115;
+  xunknown1 xStack_114;
+  xunknown1 xStack_113;
+  xunknown1 xStack_112;
+  char cStack_111;
+  xunknown1 xStack_110;
+  xunknown1 xStack_10f;
+  xunknown1 xStack_10e;
+  xunknown1 xStack_10d;
+  xunknown1 xStack_10c;
+  xunknown1 xStack_10b;
+  xunknown1 xStack_10a;
+  xunknown1 axStack_108 [256];
+  
+  (*(code *)0x8006dd2c)(axStack_108,0,0x100);
+  xStack_194 = 0x2608;
+  xStack_190 = xRAM000022ec;
+  xStack_192 = xRAM00005a5a;
+  xStack_17c = xRAM0000506d;
+  xStack_178 = xRAM00005060;
+  xStack_174 = xRAM00005044;
+  xStack_170 = xRAM0000509c;
+  xStack_16c = xRAM00005054;
+  xStack_168 = xRAM0000504c;
+  xStack_164 = xRAM00005098;
+  xStack_160 = xRAM00005070;
+  xStack_15c = xRAM00005038;
+  xStack_158 = xRAM00005090;
+  xStack_154 = xRAM00005068;
+  xStack_150 = xRAM00005064;
+  xStack_14e = xRAM00005078;
+  xStack_14c = xRAM0000505a;
+  xStack_14a = xRAM0000508e;
+  xStack_149 = xRAM0000507d;
+  xStack_148 = xRAM0000508d;
+  xStack_147 = xRAM000050a4;
+  xStack_146 = xRAM00005074;
+  xStack_144 = xRAM000050a0;
+  xStack_142 = xRAM00005040;
+  xStack_140 = xRAM0000507a;
+  xStack_13f = xRAM0000506c;
+  xStack_13e = xRAM000050a8;
+  xStack_13c = xRAM00005051;
+  xStack_13a = xRAM0000503e;
+  xStack_138 = xRAM00005094;
+  xStack_136 = xRAM0000506e;
+  xStack_134 = xRAM00005e8c;
+  xStack_130 = xRAM00005e90;
+  xStack_12c = xRAM00005e94;
+  xStack_128 = xRAM00005080;
+  xStack_127 = xRAM00005081;
+  xStack_126 = xRAM00005082;
+  xStack_125 = xRAM00005083;
+  xStack_124 = xRAM00005084;
+  xStack_123 = xRAM00005085;
+  xStack_122 = xRAM00005086;
+  xStack_121 = xRAM00005087;
+  xStack_120 = xRAM00005088;
+  xStack_11f = xRAM00005089;
+  xStack_11e = xRAM0000508a;
+  xStack_11d = xRAM0000505e;
+  xStack_11c = xRAM00005067;
+  xStack_11b = xRAM0000508c;
+  xStack_11a = xRAM00005050;
+  xStack_119 = xRAM00005065;
+  xStack_118 = xRAM0000505c;
+  xStack_117 = xRAM000050a3;
+  xStack_116 = xRAM0000505d;
+  xStack_115 = xRAM00005076;
+  xStack_114 = xRAM000050a2;
+  xStack_113 = xRAM0000507e;
+  xStack_112 = xRAM0000507b;
+  xStack_110 = xRAM0000507c;
+  xStack_10f = xRAM00005048;
+  cStack_111 = cRAM000050a5;
+  xStack_10e = xRAM000050a6;
+  xStack_10d = xRAM0000503c;
+  xStack_10c = xRAM0000508b;
+  xStack_10b = xRAM00005066;
+  xStack_10a = xRAM0000226c;
+  if (cRAM000050a5 == '\x01') {
+    xStack_150 = xRAM00005058;
+  }
+  (*(code *)0x80011a58)(&xStack_194,0,0x8c,1);
+  (*(code *)0x80011a58)(&xStack_194,0x10,0x8c,1);
+  return;
+}
+[decomp]> quit

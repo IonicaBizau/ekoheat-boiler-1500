@@ -1,0 +1,12 @@
+--- 80025c78
+
++++ 80026654
+
+@@ -34,5 +34,5 @@
+
+       uRAM_ADDR = pxVar2[0xb];
+     }
+-    (*(code *)FUNCTION_ADDR)(pxVar2[0xb] * 0x14 + 0x2538,pxVar2 + 1);
++    (*(code *)FUNCTION_ADDR)(pxVar2[0xb] * 0x14 + 0x25e4,pxVar2 + 1);
+     iStack_18 = 1;
+     (*(code *)FUNCTION_ADDR)();

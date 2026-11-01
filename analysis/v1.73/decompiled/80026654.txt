@@ -1,0 +1,61 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x80026654 FUN_80026654
+[decomp]> decompile
+Decompiling FUN_80026654
+Decompilation complete
+[decomp]> print C
+
+int4 FUN_80026654(xunknown4 param_1,xunknown4 param_2,uint2 param_3,xunknown4 param_4,uint4 param_5,
+                 int4 *param_6,xunknown4 param_7,xunknown4 param_8)
+
+{
+  int4 in_EVBA;
+  int4 iVar1;
+  xunknown4 *pxVar2;
+  xunknown4 xVar3;
+  int4 iStack_18;
+  
+  pxVar2 = (xunknown4 *)(*(code *)0x8002735c)(param_3,param_7);
+  if (pxVar2 == (xunknown4 *)0x0) {
+    iStack_18 = -1;
+  }
+  else {
+    iVar1 = pxVar2[0xc];
+    (*(code *)0x8002717c)(pxVar2,param_2,param_5,param_8,param_3);
+    xVar3 = (*(code *)0x80027e7c)(iVar1 + (1 - (uint4)param_3) * -4 & 0xfffffffc,param_1,param_4);
+    *pxVar2 = xVar3;
+    (*(code *)0x80027e34)();
+    iRAM000025bc = iRAM000025bc + 1;
+    if (iRAM000025bc == 1) {
+      pxRAM000025b4 = pxVar2;
+      (*(code *)0x80027218)();
+    }
+    else if ((iRAM000025cc == 0) && ((uint4)pxRAM000025b4[0xb] <= param_5)) {
+      pxRAM000025b4 = pxVar2;
+    }
+    if (uRAM000025c4 < (uint4)pxVar2[0xb]) {
+      uRAM000025c4 = pxVar2[0xb];
+    }
+    iRAM000025e0 = iRAM000025e0 + 1;
+    if (uRAM000025c8 < (uint4)pxVar2[0xb]) {
+      uRAM000025c8 = pxVar2[0xb];
+    }
+    (*(code *)0x80028126)(pxVar2[0xb] * 0x14 + 0x25e4,pxVar2 + 1);
+    iStack_18 = 1;
+    (*(code *)0x80027e50)();
+  }
+  if (iStack_18 == 1) {
+    if (param_6 != (int4 *)0x0) {
+      *param_6 = (int4)pxVar2;
+    }
+    if ((iRAM000025cc != 0) && ((uint4)pxRAM000025b4[0xb] < param_5)) {
+      SupervisorCallSetup();
+      (*(code *)(in_EVBA + 0x100))();
+    }
+  }
+  return iStack_18;
+}
+[decomp]> quit

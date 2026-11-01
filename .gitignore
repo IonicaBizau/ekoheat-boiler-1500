@@ -1,0 +1,31 @@
+# Local OS/editor state
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependencies and Python caches
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+
+# Local keys and credentials (keep supplied activation files off GitHub)
+license.key
+.env
+.env.*
+*.pem
+*.p12
+
+# Native Ghidra source/build copied locally; use upstream tooling
+/analysis/ghidra/native-src/
+/analysis/tools/avr32_dump
+*.o
+*.gch
+*.dSYM/
+
+# Generated binary-image wrappers and local batch/build output
+/analysis/**/firmware.xml
+*.log
+/analysis/ghidra/test.commands
+/analysis/ghidra/test-output.txt

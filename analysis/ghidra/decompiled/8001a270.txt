@@ -1,0 +1,136 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8001a270 FUN_8001a270
+[decomp]> decompile
+Decompiling FUN_8001a270
+Decompilation complete
+[decomp]> print C
+
+/* WARNING: Restarted to delay deadcode elimination for space: RAM */
+
+void FUN_8001a270(xunknown4 param_1,xunknown4 param_2,xunknown4 param_3)
+
+{
+  int4 iVar1;
+  xunknown4 xVar2;
+  
+  if (cRAM0000227e == '\0') {
+    if (cRAM0000227f != '\0') {
+      param_3 = 0x80015118;
+      (*(code *)0x80069744)
+                (0x5284,0x11,0x80015118,(int4)((uint8)uRAM0000221c * 0x88888889 >> 0x20),
+                 uRAM0000221c / 0x3c,uRAM0000221c / 0x3c,uRAM0000221c % 0x3c);
+    }
+  }
+  else if (iRAM000050bc == 0) {
+    param_3 = 0x80014c5c;
+    (*(code *)0x80069744)(0x54bc,9,0x80014c5c);
+    cRAM0000227e = '\0';
+  }
+  else if (uRAM00004eec < 200) {
+    iRAM000050bc = 200 - uRAM00004eec;
+  }
+  else {
+    iRAM000050bc = 0;
+  }
+  if (cRAM0000227c == '\0') {
+    if (cRAM00002284 == '\0') {
+      if (iRAM00001546 != -1) {
+        cRAM0000227c = '\x01';
+      }
+      iVar1 = iRAM00001546 + 1;
+      switch(iVar1) {
+      case 0:
+        break;
+      default:
+        cRAM0000227c = '\0';
+        break;
+      case 0xb:
+        (*(code *)0x8006becc)(iRAM00004ff4);
+        xVar2 = (*(code *)0x8001daac)(0);
+        iRAM00004ff4 = (*(code *)0x8006be94)(xVar2,iVar1,param_3);
+        if (iRAM000055c6 != iRAM00004ff4) {
+          iRAM000055c6 = iRAM00004ff4;
+          (*(code *)0x8006a944)();
+        }
+        cRAM0000227c = '\x01';
+        break;
+      case 0xc:
+        iVar1 = (*(code *)0x8006d790)(0x543c,*(xunknown4 *)(iRAM000059a6 * 4 + 0xf04));
+        if (iVar1 == 0) {
+          (*(code *)0x80069744)(0x5284,0x11,0x80015124);
+          xVar2 = *(xunknown4 *)(iRAM000059a6 * 4 + 0xf04);
+          (*(code *)0x80069744)(0x54bc,9,0x80014c5c,(int4)iRAM000059a6,xVar2,xVar2);
+          xVar2 = *(xunknown4 *)(iRAM000059a6 * 4 + 0xf54);
+          (*(code *)0x80069744)(0x543c,9,0x80014c5c,(int4)iRAM000059a6,xVar2,xVar2);
+          uRAM0000221c = 0;
+          cRAM0000227e = '\0';
+          cRAM0000227f = '\x01';
+        }
+        else {
+          cRAM0000227f = '\0';
+          xVar2 = *(xunknown4 *)(iRAM000059a6 * 4 + 0xf04);
+          (*(code *)0x80069744)(0x543c,9,0x80014c5c,(int4)iRAM000059a6,xVar2,xVar2);
+        }
+        break;
+      case 0xd:
+        iVar1 = (*(code *)0x8006d790)(0x54bc,*(xunknown4 *)(iRAM000059a6 * 4 + 0xf04));
+        if (iVar1 == 0) {
+          xVar2 = *(xunknown4 *)(iRAM000059a6 * 4 + 0xf04);
+          (*(code *)0x80069744)(0x543c,9,0x80014c5c,(int4)iRAM000059a6,xVar2,xVar2);
+          xVar2 = *(xunknown4 *)(iRAM000059a6 * 4 + 0xf54);
+          (*(code *)0x80069744)(0x54bc,9,0x80014c5c,(int4)iRAM000059a6,xVar2,xVar2);
+          if (iRAM000050bc == 0) {
+            uRAM00004eec = 0;
+            iRAM000050bc = 200;
+          }
+          cRAM0000227f = '\0';
+          cRAM0000227e = '\x01';
+        }
+        else {
+          cRAM0000227e = '\0';
+          xVar2 = *(xunknown4 *)(iRAM000059a6 * 4 + 0xf04);
+          (*(code *)0x80069744)(0x54bc,9,0x80014c5c,(int4)iRAM000059a6,xVar2,xVar2);
+        }
+        break;
+      case 0xe:
+        uRAM00004eec = 0;
+        iRAM000050bc = 200;
+        break;
+      case 0x1f:
+        (*(code *)0x80069744)(0x54bc,9,0x80014c5c);
+        iRAM00001546 = 0xffff;
+        xRAM00002274 = 3;
+        cRAM0000227e = 0;
+        cRAM0000227f = 0;
+        return;
+      case 0x20:
+        (*(code *)0x80069744)(0x54bc,9,0x80014c5c);
+        cRAM0000227e = 0;
+        cRAM0000227f = 0;
+        (*(code *)0x80011990)();
+        (*(code *)0x80011a34)();
+        iRAM00001546 = 0xffff;
+        xRAM00002274 = 0;
+        return;
+      case 0x21:
+        (*(code *)0x80069744)(0x54bc,9,0x80014c5c);
+        iRAM00001546 = 0xffff;
+        xRAM00002274 = 0xb;
+        cRAM0000227e = 0;
+        cRAM0000227f = 0;
+        return;
+      }
+      iRAM00001546 = -1;
+    }
+  }
+  else {
+    (*(code *)0x8005efec)(0x55,0xffffffff,1);
+    cRAM0000227c = '\0';
+  }
+  (*(code *)0x8005f4cc)();
+  return;
+}
+[decomp]> quit

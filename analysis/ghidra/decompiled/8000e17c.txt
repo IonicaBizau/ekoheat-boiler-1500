@@ -1,0 +1,58 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8000e17c FUN_8000e17c
+[decomp]> decompile
+Decompiling FUN_8000e17c
+Decompilation complete
+[decomp]> print C
+
+void FUN_8000e17c(void)
+
+{
+  xunknown4 xVar1;
+  xunknown4 xVar2;
+  
+  (*(code *)0x80011704)();
+  if (cRAM00004ffa == '\0') {
+    xVar1 = (*(code *)0x8006c918)(xRAM00004fcf);
+    xVar2 = (*(code *)0x8006c918)(xRAM00004fd2);
+    (*(code *)0x8006a624)(xRAM00005dd8,xRAM00005ddc,xRAM00005de0,xVar2,xVar1,0x3f800000);
+  }
+  else {
+    xVar1 = (*(code *)0x8006c918)(xRAM00004fdf);
+    xVar2 = (*(code *)0x8006c918)(xRAM00004fd2);
+    (*(code *)0x8006a624)(xRAM00005dd8,xRAM00005ddc,xRAM00005de0,xVar2,xVar1,0x3f800000);
+  }
+  while (iRAM00000720 != 0) {
+    if (iRAM00000720 == 5) {
+      xRAM0000228a = 100;
+    }
+    (*(code *)0x80026048)(100);
+  }
+  do {
+    while( true ) {
+      while (uRAM0000224a == 2) {
+        (*(code *)0x8000eaf8)();
+      }
+      if (uRAM0000224a < 3) break;
+      if (uRAM0000224a == 4) {
+        (*(code *)0x80010068)();
+      }
+      else if (uRAM0000224a < 4) {
+        (*(code *)0x8000f400)();
+      }
+      else if (uRAM0000224a == 5) {
+        (*(code *)0x80010548)();
+      }
+    }
+    if (uRAM0000224a == 0) {
+      (*(code *)0x8000e2cc)();
+    }
+    else if (uRAM0000224a == 1) {
+      (*(code *)0x8000e900)();
+    }
+  } while( true );
+}
+[decomp]> quit

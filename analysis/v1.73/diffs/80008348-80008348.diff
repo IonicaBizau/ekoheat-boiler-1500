@@ -1,0 +1,20 @@
+--- 80008348
+
++++ 80008348
+
+@@ -8,5 +8,5 @@
+
+         iRAM_ADDR = iRAM_ADDR + uRAM_ADDR / 100;
+         iRAM_ADDR = iRAM_ADDR;
+-        (*(code *)FUNCTION_ADDR)(2,0x21a8);
++        (*(code *)FUNCTION_ADDR)(2,0x2248);
+         (*(code *)FUNCTION_ADDR)(0xc);
+       }
+@@ -14,5 +14,5 @@
+
+         iRAM_ADDR = iRAM_ADDR - uRAM_ADDR / 100;
+         iRAM_ADDR = iRAM_ADDR;
+-        (*(code *)FUNCTION_ADDR)(2,0x21a8);
++        (*(code *)FUNCTION_ADDR)(2,0x2248);
+         (*(code *)FUNCTION_ADDR)(3);
+       }

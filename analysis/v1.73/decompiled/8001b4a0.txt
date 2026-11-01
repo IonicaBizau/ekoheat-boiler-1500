@@ -1,0 +1,77 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8001b4a0 FUN_8001b4a0
+[decomp]> decompile
+Decompiling FUN_8001b4a0
+Decompilation complete
+[decomp]> print C
+
+void FUN_8001b4a0(void)
+
+{
+  xunknown4 xVar1;
+  
+  xVar1 = (*(code *)0x8006d1a2)(xRAM000050e0);
+  xVar1 = (*(code *)0x8006cdb4)(xVar1);
+  (*(code *)0x8006d2f6)(xVar1);
+  (*(code *)0x8006a028)(0x5528,7);
+  xVar1 = (*(code *)0x8006d1a2)(xRAM000050e8);
+  xVar1 = (*(code *)0x8006cdb4)(xVar1);
+  (*(code *)0x8006d2f6)(xVar1);
+  (*(code *)0x8006a028)(22000,7);
+  xVar1 = (*(code *)0x8006d1a2)(xRAM000050ec);
+  xVar1 = (*(code *)0x8006cdb4)(xVar1);
+  (*(code *)0x8006d2f6)(xVar1);
+  (*(code *)0x8006a028)(0x5154,7,0x80015158);
+  xRAM0000547d = (*(code *)0x8002a4e4)(0x22);
+  if (cRAM00002328 != '\0') {
+    (*(code *)0x8005e078)(0x23,0xffffffff,1);
+    cRAM00002328 = '\0';
+    goto code_r0x8001b61a;
+  }
+  if (cRAM00002330 != '\0') goto code_r0x8001b61a;
+  if (iRAM000015be != -1) {
+    cRAM00002328 = '\x01';
+  }
+  if (iRAM000015be == 0x1f) {
+    xRAM0000232d = 0;
+    (*(code *)0x80011dc0)();
+    (*(code *)0x80011e64)();
+    iRAM000015be = 0xffff;
+    xRAM00002320 = 0;
+    return;
+  }
+  if (iRAM000015be < 0x20) {
+    if (iRAM000015be != -1) {
+      if (iRAM000015be == 0x1e) {
+        iRAM000015be = 0xffff;
+        xRAM00002320 = 3;
+        xRAM0000232d = 0;
+        return;
+      }
+      goto code_r0x8001b60e;
+    }
+  }
+  else {
+    if (iRAM000015be == 0x20) {
+      iRAM000015be = 0xffff;
+      xRAM00002320 = 7;
+      return;
+    }
+    if (iRAM000015be == 0x21) {
+      iRAM000015be = 0xffff;
+      xRAM00002320 = 9;
+      xRAM00002333 = 0;
+      return;
+    }
+code_r0x8001b60e:
+    cRAM00002328 = '\0';
+  }
+  iRAM000015be = -1;
+code_r0x8001b61a:
+  (*(code *)0x8005e558)();
+  return;
+}
+[decomp]> quit

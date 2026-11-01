@@ -1,0 +1,7 @@
+*.uc3 binary
+*.pdf binary
+
+# Preserve native tool output and firmware string dumps verbatim.
+analysis/**/*.txt -whitespace
+analysis/**/*.diff -whitespace
+Ecoheat_v1.72/strings.txt -whitespace

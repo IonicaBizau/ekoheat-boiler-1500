@@ -1,0 +1,143 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8001b67c FUN_8001b67c
+[decomp]> decompile
+Decompiling FUN_8001b67c
+Decompilation complete
+[decomp]> print C
+
+/* WARNING: Restarted to delay deadcode elimination for space: RAM */
+
+void FUN_8001b67c(void)
+
+{
+  xunknown4 xVar1;
+  bool bVar2;
+  
+  uRAM0000513d = uRAM00002333;
+  if (cRAM00002328 != '\0') {
+    (*(code *)0x8005e078)(0x24,0xffffffff,1);
+    cRAM00002328 = '\0';
+    goto code_r0x8001baa6;
+  }
+  if (cRAM00002330 != '\0') goto code_r0x8001baa6;
+  if (iRAM000015be != -1) {
+    cRAM00002328 = '\x01';
+  }
+  if (iRAM000015be == 0x1e) {
+    xRAM0000232d = 0;
+    uRAM00002333 = 0;
+    xRAM00005efe = 0;
+    xRAM00005eff = 0;
+    xRAM00005f00 = 0;
+    xRAM00005ef6 = 1;
+    (*(code *)0x8006bf14)(0x19);
+    xRAM00005f03 = 0;
+    xRAM00005f01 = 0;
+    xRAM00005f02 = 0;
+    xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xf54);
+    (*(code *)0x8006a028)(0x53a0,0xb,0x800150bc,(int4)iRAM00005a5a,xVar1,xVar1);
+    xRAM000022f1 = 0;
+    xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xff4);
+    (*(code *)0x8006a028)(0x5358,0x33,0x800150bc,(int4)iRAM00005a5a,xVar1,xVar1);
+    iRAM000015be = 0xffff;
+    xRAM00002320 = 3;
+    return;
+  }
+  if (iRAM000015be < 0x1f) {
+    if (iRAM000015be != -1) {
+      if (iRAM000015be != 1) goto code_r0x8001ba9a;
+      if (uRAM00002333 < 9) {
+        uRAM00002333 = uRAM00002333 + 1;
+      }
+      else {
+        uRAM00002333 = 0;
+      }
+      if (uRAM00002333 == 0) {
+        xRAM00005ef6 = 0;
+        xRAM00005f03 = 0;
+        xRAM00005f01 = 0;
+        xRAM00005f02 = 0;
+      }
+      if ((uRAM00002333 == 3) && (cRAM000050ad == '\0')) {
+        xRAM00002317 = 0;
+        xRAM00005eff = 1;
+      }
+      else {
+        xRAM00005eff = 0;
+      }
+      xRAM00005f00 = uRAM00002333 == 4;
+      if ((bool)xRAM00005f00) {
+        xRAM00002317 = 0;
+        uRAM000022c4 = (uint4)(uRAM0000503e / 0x14);
+      }
+      xRAM00005efe = uRAM00002333 == 2;
+      bVar2 = uRAM00002333 != 5;
+      if (bVar2) {
+        (*(code *)0x8006bf14)(0xf);
+      }
+      else {
+        (*(code *)0x8006bf14)(100);
+      }
+      xRAM00005ef6 = !bVar2;
+      xRAM00005f03 = uRAM00002333 == 6;
+      xRAM00005f01 = uRAM00002333 == 8;
+      if (uRAM00002333 == 9) {
+        xRAM00005f02 = 1;
+      }
+      else {
+        xRAM00005f02 = 0;
+      }
+    }
+  }
+  else {
+    if (iRAM000015be == 0x1f) {
+      xRAM0000232d = 0;
+      uRAM00002333 = 0;
+      xRAM00005efe = 0;
+      xRAM00005eff = 0;
+      xRAM00005f00 = 0;
+      xRAM00005ef6 = 1;
+      (*(code *)0x8006bf14)(0x19);
+      xRAM00005f03 = 0;
+      xRAM00005f01 = 0;
+      xRAM00005f02 = 0;
+      (*(code *)0x80011dc0)();
+      (*(code *)0x80011e64)();
+      xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xf54);
+      (*(code *)0x8006a028)(0x53a0,0xb,0x800150bc,(int4)iRAM00005a5a,xVar1,xVar1);
+      xRAM000022f1 = 0;
+      (*(code *)0x8006a028)(0x5358,0x33,0x800150bc);
+      iRAM000015be = 0xffff;
+      xRAM00002320 = 0;
+      return;
+    }
+    if (iRAM000015be == 0x20) {
+      uRAM00002333 = 0;
+      xRAM00005efe = 0;
+      xRAM00005eff = 0;
+      xRAM00005f00 = 0;
+      xRAM00005ef6 = 0;
+      xRAM00005f03 = 0;
+      xRAM00005f01 = 0;
+      xRAM00005f02 = 0;
+      xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xf54);
+      (*(code *)0x8006a028)(0x53a0,0xb,0x800150bc,(int4)iRAM00005a5a,xVar1,xVar1);
+      xRAM000022f1 = 0;
+      xVar1 = *(xunknown4 *)(iRAM00005a5a * 4 + 0xff4);
+      (*(code *)0x8006a028)(0x5358,0x33,0x800150bc,(int4)iRAM00005a5a,xVar1,xVar1);
+      iRAM000015be = 0xffff;
+      xRAM00002320 = 8;
+      return;
+    }
+code_r0x8001ba9a:
+    cRAM00002328 = '\0';
+  }
+  iRAM000015be = -1;
+code_r0x8001baa6:
+  (*(code *)0x8005e558)();
+  return;
+}
+[decomp]> quit

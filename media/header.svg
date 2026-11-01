@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc">
+<title id="title">Ekoheat 1500 — a closer look inside the boiler</title>
+<desc id="desc">An illustrated pellet boiler with its screen awake, alongside firmware research and patch notes.</desc>
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#111c2a"/><stop offset="1" stop-color="#22354b"/></linearGradient>
+<linearGradient id="heat" x2="0" y2="1"><stop stop-color="#ffd080"/><stop offset="1" stop-color="#ec794b"/></linearGradient>
+<pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#9cb2c9" stroke-opacity=".07"/></pattern>
+</defs>
+<rect width="1280" height="420" rx="24" fill="url(#bg)"/>
+<rect width="1280" height="420" rx="24" fill="url(#grid)"/>
+<circle cx="1060" cy="200" r="143" fill="#ed9750" fill-opacity=".06"/>
+<text x="72" y="88" fill="#f3b66c" font-family="monospace" font-size="16" letter-spacing="3">FIRMWARE · FINDINGS · SMALL FIXES</text>
+<text x="68" y="166" fill="#f4f5f7" font-family="sans-serif" font-size="62" font-weight="700">Ekoheat 1500</text>
+<text x="72" y="212" fill="#b8c9da" font-family="sans-serif" font-size="23">A closer look inside the boiler.</text>
+<rect x="72" y="253" width="474" height="62" rx="10" fill="#0d1724" stroke="#3a5168"/>
+<circle cx="99" cy="284" r="5" fill="#82cfa7"/>
+<text x="118" y="290" fill="#c9dae8" font-family="monospace" font-size="18">idle_clock = false;</text>
+<text x="72" y="363" fill="#8da5bd" font-family="monospace" font-size="14">AVR32 / DTX9003 / v1.72 + v1.73</text>
+<path d="M1040 78V48h60v44" fill="none" stroke="#50667b" stroke-width="15" stroke-linejoin="round"/>
+<rect x="907" y="78" width="235" height="287" rx="18" fill="#d9e1e8"/>
+<path d="M925 78h199a18 18 0 0 1 18 18v24H907V96a18 18 0 0 1 18-18" fill="#edf1f4"/>
+<rect x="931" y="138" width="187" height="90" rx="9" fill="#293d50"/>
+<rect x="944" y="150" width="133" height="63" rx="4" fill="#152938"/>
+<text x="955" y="175" fill="#91d9b0" font-family="monospace" font-size="13">SCREEN AWAKE</text>
+<path d="M956 195h18l8-9 10 13 10-7h60" stroke="#efb36f" stroke-width="2" fill="none"/>
+<circle cx="1096" cy="181" r="8" fill="#85c6a6"/>
+<rect x="931" y="243" width="187" height="97" rx="8" fill="#b8c6d1"/>
+<path d="M1026 258c5 22 26 29 23 47-2 14-13 23-27 23-18 0-29-11-27-26 1-12 12-17 16-28 1 12 6 16 10 17 5-8 7-18 5-33" fill="url(#heat)"/>
+<rect x="928" y="365" width="26" height="10" rx="3" fill="#71869a"/>
+<rect x="1096" y="365" width="26" height="10" rx="3" fill="#71869a"/>
+<path d="M578 284h116l20-25h165" fill="none" stroke="#59738b" stroke-width="2" stroke-dasharray="6 7"/>
+<circle cx="879" cy="259" r="4" fill="#efb36f"/>
+</svg>

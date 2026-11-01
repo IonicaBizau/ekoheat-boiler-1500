@@ -1,0 +1,59 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8001f7a4 FUN_8001f7a4
+[decomp]> decompile
+Decompiling FUN_8001f7a4
+Decompilation complete
+[decomp]> print C
+
+void FUN_8001f7a4(char param_1,xunknown4 param_2,xunknown4 param_3)
+
+{
+  xunknown4 xVar1;
+  uint2 uStack_a;
+  
+  if (cRAM000022f4 == '\0') {
+    if ((uRAM00005ef8 == 0) || (cRAM00005ef6 == '\0')) {
+      iRAM000015c2 = 500;
+    }
+    else if (param_1 == '\x01') {
+      if (cRAM00005094 == '\x01') {
+        (*(code *)0x8006c7e0)(*(xunknown2 *)((uRAM00005ef8 - 1) * 2 + -0x7ffe0afc));
+        xVar1 = (*(code *)0x8006c304)();
+        uStack_a = (*(code *)0x8006c7a0)(xVar1,param_2,param_3);
+      }
+      else if (cRAM00005094 == '\x02') {
+        (*(code *)0x8006c7e0)(*(xunknown2 *)((uRAM00005ef8 - 1) * 2 + -0x7ffe0a34));
+        xVar1 = (*(code *)0x8006c304)();
+        uStack_a = (*(code *)0x8006c7a0)(xVar1,param_2,param_3);
+      }
+      else if (cRAM00005094 == '\0') {
+        (*(code *)0x8006c7e0)(*(xunknown2 *)((uRAM00005ef8 - 1) * 2 + -0x7ffe0bc4));
+        xVar1 = (*(code *)0x8006c304)();
+        uStack_a = (*(code *)0x8006c7a0)(xVar1,param_2,param_3);
+      }
+      else {
+        (*(code *)0x8006c7e0)(*(xunknown2 *)((uRAM00005ef8 - 1) * 2 + -0x7ffe0c8c));
+        xVar1 = (*(code *)0x8006c304)();
+        uStack_a = (*(code *)0x8006c7a0)(xVar1,param_2,param_3);
+      }
+      if (uStack_a < uRAM000015c1) {
+        iRAM000015c2 = 500;
+      }
+      else if (iRAM000015c2 == 0) {
+        iRAM000015c2 = 500;
+        cRAM000022f4 = '\f';
+      }
+      else {
+        iRAM000015c2 = iRAM000015c2 + -1;
+      }
+    }
+    else {
+      iRAM000015c2 = 500;
+    }
+  }
+  return;
+}
+[decomp]> quit

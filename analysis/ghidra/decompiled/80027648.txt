@@ -1,0 +1,27 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x80027648 FUN_80027648
+[decomp]> decompile
+Decompiling FUN_80027648
+Decompilation complete
+[decomp]> print C
+
+/* WARNING (jumptable): Unable to track spacebase fully for stack */
+/* WARNING: Unable to track spacebase fully for stack */
+
+void FUN_80027648(void)
+
+{
+  xunknown4 *pxVar1;
+  
+  (*(code *)0x800276bc)();
+  pxVar1 = *(xunknown4 **)xRAM00002508;
+  xRAM00001c58 = *pxVar1;
+                    /* WARNING: Could not recover jumptable at 0x80027680. Too many branches */
+                    /* WARNING: Treating indirect jump as call */
+  (*(code *)pxVar1[10])(pxVar1[0xc],pxVar1[0xd],pxVar1[0xe],pxVar1[0xf],pxVar1[0x10]);
+  return;
+}
+[decomp]> quit

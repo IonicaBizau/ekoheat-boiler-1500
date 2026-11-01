@@ -1,0 +1,63 @@
+--- 8001ca34
+
++++ 8001cfc0
+
+@@ -31,18 +31,20 @@
+
+         if (cRAM_ADDR == '\0') {
+           if (((cRAM_ADDR == '\0') &&
+-              (iVar3 = (*(code *)FUNCTION_ADDR)(0x54cc,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c)),
++              (iVar3 = (*(code *)FUNCTION_ADDR)(0x5578,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c)),
+               iVar3 == 0)) && (cRAM_ADDR == '\0')) {
+             cRAM_ADDR = '\x01';
+-            (*(code *)FUNCTION_ADDR)(0x5468,5,FUNCTION_ADDR);
++            (*(code *)FUNCTION_ADDR)(0x5514,5,FUNCTION_ADDR);
+             xRAM_ADDR = 0x50;
+             xRAM_ADDR = 0x50;
++            (*(code *)FUNCTION_ADDR)();
++            (*(code *)FUNCTION_ADDR)();
+           }
+           else {
+-            (*(code *)FUNCTION_ADDR)(FUNCTION_ADDR,*(xunknown4 *)(iRAM_ADDR * 4 + 0x14cc));
++            (*(code *)FUNCTION_ADDR)(FUNCTION_ADDR,*(xunknown4 *)(iRAM_ADDR * 4 + 0x151c));
+           }
+         }
+         else {
+           cRAM_ADDR = '\0';
+-          (*(code *)FUNCTION_ADDR)(0x5468,5,FUNCTION_ADDR);
++          (*(code *)FUNCTION_ADDR)(0x5514,5,FUNCTION_ADDR);
+           xRAM_ADDR = 0x3c;
+           xRAM_ADDR = 0x3c;
+@@ -51,25 +53,25 @@
+
+         break;
+       case 0xb:
+-        xVar2 = (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd4386));
++        xVar2 = (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd39aa));
+         (*(code *)FUNCTION_ADDR)(xVar2);
+         xVar2 = FUNCTION_ADDR;
+-        xVar4 = (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd4387));
++        xVar4 = (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd39ab));
+         (*(code *)FUNCTION_ADDR)(xVar4);
+         (*(code *)FUNCTION_ADDR)(xRAM_ADDR);
+         xVar4 = (*(code *)FUNCTION_ADDR)(0);
+         xRAM_ADDR = (*(code *)FUNCTION_ADDR)(xVar4,xVar1,xVar2);
+-        (*(code *)FUNCTION_ADDR)(0x52ec,7,FUNCTION_ADDR);
++        (*(code *)FUNCTION_ADDR)(0x5398,7,FUNCTION_ADDR);
+         cRAM_ADDR = '\x01';
+         break;
+       case 0xc:
+-        xVar2 = (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd4383));
++        xVar2 = (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd39a7));
+         (*(code *)FUNCTION_ADDR)(xVar2);
+         xVar2 = FUNCTION_ADDR;
+-        xVar4 = (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd4384));
++        xVar4 = (*(code *)FUNCTION_ADDR)(*(xunknown1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd39a8));
+         (*(code *)FUNCTION_ADDR)(xVar4);
+         (*(code *)FUNCTION_ADDR)(xRAM_ADDR);
+         xVar4 = (*(code *)FUNCTION_ADDR)(0);
+         xRAM_ADDR = (*(code *)FUNCTION_ADDR)(xVar4,xVar1,xVar2);
+-        (*(code *)FUNCTION_ADDR)(0x506c,7,FUNCTION_ADDR);
++        (*(code *)FUNCTION_ADDR)(0x5118,7,FUNCTION_ADDR);
+         cRAM_ADDR = '\x01';
+         break;

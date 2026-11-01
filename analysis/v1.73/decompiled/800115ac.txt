@@ -1,0 +1,81 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x800115ac FUN_800115ac
+[decomp]> decompile
+Decompiling FUN_800115ac
+Decompilation complete
+[decomp]> print C
+
+void FUN_800115ac(int4 param_1)
+
+{
+  (*(code *)0x8005e52c)((int4)*(int2 *)(param_1 + 2));
+  xRAM000022ec = *(xunknown4 *)(param_1 + 4);
+  xRAM0000506d = *(xunknown1 *)(param_1 + 0x18);
+  xRAM00005060 = *(xunknown4 *)(param_1 + 0x1c);
+  xRAM00005044 = *(xunknown4 *)(param_1 + 0x20);
+  xRAM0000509c = *(xunknown4 *)(param_1 + 0x24);
+  xRAM00005054 = *(xunknown4 *)(param_1 + 0x28);
+  xRAM0000504c = *(xunknown4 *)(param_1 + 0x2c);
+  xRAM00005098 = *(xunknown4 *)(param_1 + 0x30);
+  xRAM00005070 = *(xunknown4 *)(param_1 + 0x34);
+  xRAM00005038 = *(xunknown4 *)(param_1 + 0x38);
+  xRAM00005090 = *(xunknown4 *)(param_1 + 0x3c);
+  xRAM00005068 = *(xunknown4 *)(param_1 + 0x40);
+  xRAM00005064 = *(xunknown1 *)(param_1 + 0x44);
+  xRAM00005078 = *(xunknown2 *)(param_1 + 0x46);
+  xRAM0000505a = *(xunknown2 *)(param_1 + 0x48);
+  xRAM0000508e = *(xunknown1 *)(param_1 + 0x4a);
+  xRAM0000507d = *(xunknown1 *)(param_1 + 0x4b);
+  xRAM0000508d = *(xunknown1 *)(param_1 + 0x4c);
+  xRAM000050a4 = *(xunknown1 *)(param_1 + 0x4d);
+  xRAM00005074 = *(xunknown2 *)(param_1 + 0x4e);
+  xRAM000050a0 = *(xunknown2 *)(param_1 + 0x50);
+  xRAM00005040 = *(xunknown2 *)(param_1 + 0x52);
+  xRAM0000507a = *(xunknown1 *)(param_1 + 0x54);
+  xRAM0000506c = *(xunknown1 *)(param_1 + 0x55);
+  xRAM000050a8 = *(xunknown2 *)(param_1 + 0x56);
+  xRAM00005051 = *(xunknown1 *)(param_1 + 0x58);
+  xRAM0000503e = *(xunknown2 *)(param_1 + 0x5a);
+  xRAM00005094 = *(xunknown1 *)(param_1 + 0x5c);
+  xRAM0000506e = *(xunknown2 *)(param_1 + 0x5e);
+  xRAM00005e8c = *(xunknown4 *)(param_1 + 0x60);
+  xRAM00005e90 = *(xunknown4 *)(param_1 + 100);
+  xRAM00005e94 = *(xunknown4 *)(param_1 + 0x68);
+  xRAM00005080 = *(xunknown1 *)(param_1 + 0x6c);
+  xRAM00005081 = *(xunknown1 *)(param_1 + 0x6d);
+  xRAM00005082 = *(xunknown1 *)(param_1 + 0x6e);
+  xRAM00005083 = *(xunknown1 *)(param_1 + 0x6f);
+  xRAM00005084 = *(xunknown1 *)(param_1 + 0x70);
+  xRAM00005085 = *(xunknown1 *)(param_1 + 0x71);
+  xRAM00005086 = *(xunknown1 *)(param_1 + 0x72);
+  xRAM00005087 = *(xunknown1 *)(param_1 + 0x73);
+  xRAM00005088 = *(xunknown1 *)(param_1 + 0x74);
+  xRAM00005089 = *(xunknown1 *)(param_1 + 0x75);
+  xRAM0000508a = *(xunknown1 *)(param_1 + 0x76);
+  xRAM0000505e = *(xunknown1 *)(param_1 + 0x77);
+  xRAM00005067 = *(xunknown1 *)(param_1 + 0x78);
+  xRAM0000508c = *(xunknown1 *)(param_1 + 0x79);
+  xRAM00005050 = *(xunknown1 *)(param_1 + 0x7a);
+  xRAM00005065 = *(xunknown1 *)(param_1 + 0x7b);
+  xRAM0000505c = *(xunknown1 *)(param_1 + 0x7c);
+  xRAM000050a3 = *(xunknown1 *)(param_1 + 0x7d);
+  xRAM0000505d = *(xunknown1 *)(param_1 + 0x7e);
+  xRAM00005076 = *(xunknown1 *)(param_1 + 0x7f);
+  xRAM000050a2 = *(xunknown1 *)(param_1 + 0x80);
+  xRAM0000507e = *(xunknown1 *)(param_1 + 0x81);
+  xRAM0000507b = *(xunknown1 *)(param_1 + 0x82);
+  xRAM0000507c = *(xunknown1 *)(param_1 + 0x84);
+  xRAM00005048 = *(xunknown1 *)(param_1 + 0x85);
+  xRAM000050a5 = *(xunknown1 *)(param_1 + 0x83);
+  xRAM000050a6 = *(xunknown1 *)(param_1 + 0x86);
+  xRAM0000503c = *(xunknown1 *)(param_1 + 0x87);
+  xRAM0000508b = *(xunknown1 *)(param_1 + 0x88);
+  xRAM00005066 = *(xunknown1 *)(param_1 + 0x89);
+  xRAM0000226c = *(xunknown1 *)(param_1 + 0x8a);
+  xRAM00005058 = *(xunknown1 *)(param_1 + 0x44);
+  return;
+}
+[decomp]> quit

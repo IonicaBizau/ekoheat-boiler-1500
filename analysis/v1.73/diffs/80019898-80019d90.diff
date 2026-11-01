@@ -1,0 +1,50 @@
+--- 80019898
+
++++ 80019d90
+
+@@ -19,7 +19,7 @@
+
+         uRAM_ADDR = (*(code *)FUNCTION_ADDR)(xVar1,param_2,param_3);
+         uRAM_ADDR = uRAM_ADDR & 0xff;
+-        (*(code *)FUNCTION_ADDR)(0x5534,3,FUNCTION_ADDR);
++        (*(code *)FUNCTION_ADDR)(0x55e8,3,FUNCTION_ADDR);
+         (*(code *)FUNCTION_ADDR)();
+-        (*(code *)FUNCTION_ADDR)(0x5470,7,FUNCTION_ADDR);
++        (*(code *)FUNCTION_ADDR)(0x551c,7,FUNCTION_ADDR);
+         cRAM_ADDR = '\x01';
+         break;
+@@ -30,7 +30,7 @@
+
+         uRAM_ADDR = uRAM_ADDR & 0xff;
+         xRAM_ADDR = 0;
+-        (*(code *)FUNCTION_ADDR)(0x54c8,3,FUNCTION_ADDR);
++        (*(code *)FUNCTION_ADDR)(0x5574,3,FUNCTION_ADDR);
+         (*(code *)FUNCTION_ADDR)();
+-        (*(code *)FUNCTION_ADDR)(0x5470,7,FUNCTION_ADDR);
++        (*(code *)FUNCTION_ADDR)(0x551c,7,FUNCTION_ADDR);
+         cRAM_ADDR = '\x01';
+         break;
+@@ -40,5 +40,5 @@
+
+         uRAM_ADDR = (*(code *)FUNCTION_ADDR)(xVar1,param_2,param_3);
+         uRAM_ADDR = uRAM_ADDR & 0xff;
+-        (*(code *)FUNCTION_ADDR)(0x5584,3,FUNCTION_ADDR);
++        (*(code *)FUNCTION_ADDR)(0x5638,3,FUNCTION_ADDR);
+         (*(code *)FUNCTION_ADDR)();
+         cRAM_ADDR = '\x01';
+@@ -49,5 +49,5 @@
+
+         uRAM_ADDR = (*(code *)FUNCTION_ADDR)(xVar1,param_2,param_3);
+         uRAM_ADDR = uRAM_ADDR & 0xff;
+-        (*(code *)FUNCTION_ADDR)(0x5588,3,FUNCTION_ADDR);
++        (*(code *)FUNCTION_ADDR)(0x563c,3,FUNCTION_ADDR);
+         (*(code *)FUNCTION_ADDR)();
+         cRAM_ADDR = '\x01';
+@@ -58,5 +58,5 @@
+
+         uVar2 = (*(code *)FUNCTION_ADDR)(xVar1,param_2,param_3);
+         uRAM_ADDR = (uint4)uVar2;
+-        (*(code *)FUNCTION_ADDR)(0x5504,5,FUNCTION_ADDR);
++        (*(code *)FUNCTION_ADDR)(0x55b8,5,FUNCTION_ADDR);
+         (*(code *)FUNCTION_ADDR)();
+         cRAM_ADDR = '\x01';

@@ -1,0 +1,13 @@
+8000b946	LD.W	R8,PC[0x2b6]	; bytes=fef802b6
+8000b94a	LD.W	R8, R8[0x0]	; bytes=7008
+8000b94c	SUB	R9, R8, 0x1	; bytes=f0c90001
+8000b950	LD.W	R8,PC[0x2ac]	; bytes=fef802ac
+8000b954	ST.W	R8[0x0],R9	; bytes=9109
+8000b956	LD.W	R8,PC[0x2a6]	; bytes=fef802a6
+8000b95a	LD.W	R8, R8[0x0]	; bytes=7008
+8000b95c	CP.W	R8, 0x0	; bytes=5808
+8000b95e	BR{ne}	0x8000b968	; bytes=c051
+8000b960	LD.W	R9,PC[0x2ac]	; bytes=fef902ac
+8000b964	MOV	R8, 0x0	; bytes=3008
+8000b966	ST.H	R9[0x0], R8	; bytes=b208
+8000b968	LD.W	R8,PC[0x2a0]	; bytes=fef802a0

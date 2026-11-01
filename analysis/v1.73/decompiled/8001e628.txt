@@ -1,0 +1,90 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8001e628 FUN_8001e628
+[decomp]> decompile
+Decompiling FUN_8001e628
+Decompilation complete
+[decomp]> print C
+
+xunknown4 FUN_8001e628(uint4 param_1,char param_2)
+
+{
+  uint4 uVar1;
+  uint4 uVar2;
+  uint4 uVar3;
+  uint4 uVar4;
+  uint4 uVar5;
+  uint4 uVar6;
+  uint4 uVar7;
+  uint4 uVar8;
+  uint4 uVar9;
+  uint4 uVar10;
+  xunknown4 xStack_3c;
+  
+  uVar1 = (uint4)uRAM000055c1 * 0x3c + (uint4)uRAM000055c0 * 600 +
+          (uint4)uRAM00005530 * 10 + (uRAM00005531 - 0x7dd0);
+  uVar2 = (uint4)uRAM00005451 * 0x3c + (uint4)uRAM00005450 * 600 +
+          (uint4)uRAM0000532c * 10 + (uRAM0000532d - 0x7dd0);
+  uVar3 = (uint4)uRAM000052b9 * 0x3c + (uint4)uRAM000052b8 * 600 +
+          (uint4)uRAM000055a0 * 10 + (uRAM000055a1 - 0x7dd0);
+  uVar4 = (uint4)uRAM00005441 * 0x3c + (uint4)uRAM00005440 * 600 +
+          (uint4)uRAM00005594 * 10 + (uRAM00005595 - 0x7dd0);
+  uVar5 = (uint4)uRAM0000565d * 0x3c + (uint4)uRAM0000565c * 600 +
+          (uint4)uRAM000053c4 * 10 + (uRAM000053c5 - 0x7dd0);
+  uVar6 = (uint4)uRAM00005165 * 0x3c + (uint4)uRAM00005164 * 600 +
+          (uint4)uRAM000052b4 * 10 + (uRAM000052b5 - 0x7dd0);
+  uVar7 = (uint4)uRAM00005661 * 0x3c + (uint4)uRAM00005660 * 600 +
+          (uint4)uRAM000055ec * 10 + (uRAM000055ed - 0x7dd0);
+  uVar8 = (uint4)uRAM000054b1 * 0x3c + (uint4)uRAM000054b0 * 600 +
+          (uint4)uRAM0000512c * 10 + (uRAM0000512d - 0x7dd0);
+  uVar9 = (uint4)uRAM000055b5 * 0x3c + (uint4)uRAM000055b4 * 600 +
+          (uint4)uRAM00005504 * 10 + (uRAM00005505 - 0x7dd0);
+  uVar10 = (uint4)uRAM000055d5 * 0x3c + (uint4)uRAM000055d4 * 600 +
+           (uint4)uRAM00005324 * 10 + (uRAM00005325 - 0x7dd0);
+  if (param_2 == '\x01') {
+    if (((((((uVar1 == 0) && (uVar2 == 0)) ||
+           (((param_1 != uVar2 && ((uVar2 <= param_1 || (0x3b < uVar2 - param_1)))) &&
+            ((param_1 <= uVar2 || (param_1 - uVar2 < 0x565)))))) &&
+          (((uVar3 == 0 && (uVar4 == 0)) ||
+           (((param_1 != uVar4 && ((uVar4 <= param_1 || (0x3b < uVar4 - param_1)))) &&
+            ((param_1 <= uVar4 || (param_1 - uVar4 < 0x565)))))))) &&
+         (((uVar5 == 0 && (uVar6 == 0)) ||
+          (((param_1 != uVar6 && ((uVar6 <= param_1 || (0x3b < uVar6 - param_1)))) &&
+           ((param_1 <= uVar6 || (param_1 - uVar6 < 0x565)))))))) &&
+        (((uVar7 == 0 && (uVar8 == 0)) ||
+         (((param_1 != uVar8 && ((uVar8 <= param_1 || (0x3b < uVar8 - param_1)))) &&
+          ((param_1 <= uVar8 || (param_1 - uVar8 < 0x565)))))))) &&
+       (((uVar9 == 0 && (uVar10 == 0)) ||
+        (((param_1 != uVar10 && ((uVar10 <= param_1 || (0x3b < uVar10 - param_1)))) &&
+         ((param_1 <= uVar10 || (param_1 - uVar10 < 0x565)))))))) {
+      xStack_3c = 1;
+    }
+    else {
+      xStack_3c = 0;
+    }
+  }
+  else if ((((((uVar1 == 0) && (uVar2 == 0)) ||
+             (((param_1 != uVar1 && ((param_1 <= uVar1 || (0x3b < param_1 - uVar1)))) &&
+              ((uVar1 <= param_1 || (uVar1 - param_1 < 0x565)))))) &&
+            (((uVar3 == 0 && (uVar4 == 0)) ||
+             (((param_1 != uVar3 && ((param_1 <= uVar3 || (0x3b < param_1 - uVar3)))) &&
+              ((uVar3 <= param_1 || (uVar3 - param_1 < 0x565)))))))) &&
+           (((uVar5 == 0 && (uVar6 == 0)) ||
+            (((param_1 != uVar5 && ((param_1 <= uVar5 || (0x3b < param_1 - uVar5)))) &&
+             ((uVar5 <= param_1 || (uVar5 - param_1 < 0x565)))))))) &&
+          ((((uVar7 == 0 && (uVar8 == 0)) ||
+            (((param_1 != uVar7 && ((param_1 <= uVar7 || (0x3b < param_1 - uVar7)))) &&
+             ((uVar7 <= param_1 || (uVar7 - param_1 < 0x565)))))) &&
+           (((uVar9 == 0 && (uVar10 == 0)) ||
+            (((param_1 != uVar9 && ((param_1 <= uVar9 || (0x3b < param_1 - uVar9)))) &&
+             ((uVar9 <= param_1 || (uVar9 - param_1 < 0x565)))))))))) {
+    xStack_3c = 1;
+  }
+  else {
+    xStack_3c = 0;
+  }
+  return xStack_3c;
+}
+[decomp]> quit

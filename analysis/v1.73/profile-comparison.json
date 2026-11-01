@@ -1,0 +1,61 @@
+[
+  {
+    "profile": 0,
+    "changed_bytes": [
+      {
+        "relative_offset": "0x4a",
+        "old": 70,
+        "new": 90
+      }
+    ],
+    "ignition_wait_seconds": 600
+  },
+  {
+    "profile": 1,
+    "changed_bytes": [
+      {
+        "relative_offset": "0x4a",
+        "old": 70,
+        "new": 90
+      }
+    ],
+    "ignition_wait_seconds": 600
+  },
+  {
+    "profile": 2,
+    "changed_bytes": [
+      {
+        "relative_offset": "0x4a",
+        "old": 70,
+        "new": 90
+      }
+    ],
+    "ignition_wait_seconds": 600
+  },
+  {
+    "profile": 3,
+    "changed_bytes": [
+      {
+        "relative_offset": "0x4a",
+        "old": 70,
+        "new": 90
+      },
+      {
+        "relative_offset": "0x66",
+        "old": 50,
+        "new": 40
+      },
+      {
+        "relative_offset": "0x67",
+        "old": 30,
+        "new": 25
+      }
+    ],
+    "ignition_wait_seconds": 600
+  },
+  {
+    "profile": 4,
+    "changed_bytes": [],
+    "ignition_wait_seconds": 600
+  }
+]

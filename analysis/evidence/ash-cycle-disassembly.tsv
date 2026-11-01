@@ -1,0 +1,305 @@
+80010df4	STM	--SP,R7,LR	; bytes=ebcd4080
+80010df8	MOV	R7, SP	; bytes=1a97
+80010dfa	SUB	SP, 0x14	; bytes=205d
+80010dfc	MOV	R8, R12	; bytes=1898
+80010dfe	MOV	R9, R11	; bytes=1699
+80010e00	ST.B	R7[-0xc], R8	; bytes=ef68fff4
+80010e04	MOV	R8, R9	; bytes=1298
+80010e06	ST.B	R7[-0x10], R8	; bytes=ef68fff0
+80010e0a	MOV	R8, 0x0	; bytes=3008
+80010e0c	ST.H	R7[-0x4], R8	; bytes=ef58fffc
+80010e10	MOV	R8, 0x0	; bytes=3008
+80010e12	ST.B	R7[-0x1], R8	; bytes=ef68ffff
+80010e16	LD.W	R8,PC[0x29e]	; bytes=fef8029e
+80010e1a	LD.SH	R8, R8[0x0]	; bytes=9008
+80010e1c	MOV	R9, R8	; bytes=1099
+80010e1e	LD.W	R8,PC[0x29a]	; bytes=fef8029a
+80010e22	LD.W	R8,R8[R9 << 0x2]	; bytes=f0090328
+80010e26	MOV	R11, R8	; bytes=109b
+80010e28	LD.W	R12,PC[0x294]	; bytes=fefc0294
+80010e2c	MCALL	PC[0x800110c0]	; bytes=f01f00a5 ; literal=0x8006d790 b'\xf9\xeb\x10\n\xe2\x1a'
+80010e30	MOV	R8, R12	; bytes=1898
+80010e32	CP.W	R8, 0x0	; bytes=5808
+80010e34	BR{eq}	0x80010e58	; bytes=c120
+80010e36	LD.W	R8,PC[0x27e]	; bytes=fef8027e
+80010e3a	LD.SH	R8, R8[0x0]	; bytes=9008
+80010e3c	MOV	R9, R8	; bytes=1099
+80010e3e	LD.W	R8,PC[0x286]	; bytes=fef80286
+80010e42	LD.W	R8,R8[R9 << 0x2]	; bytes=f0090328
+80010e46	ST.W	--SP,R8	; bytes=1ad8
+80010e48	LD.W	R10,PC[0x280]	; bytes=fefa0280
+80010e4c	MOV	R11, 0x33	; bytes=333b
+80010e4e	LD.W	R12,PC[0x26e]	; bytes=fefc026e
+80010e52	MCALL	PC[0x800110cc]	; bytes=f01f009f ; literal=0x80069744 b'\xeb\xcd@\xc0\x1a\x97 m\xee\xc6\xff\xf4\xefL\xff\xf4\xefK\xff\xf0\xefJ\xff\xecI\xf8p\x080\t?\xfa0\x0b\x10\x9c\xf0\x1f'
+80010e56	SUB	SP, -0x4	; bytes=2ffd
+80010e58	LD.W	R8,PC[0x278]	; bytes=fef80278
+80010e5c	LD.UB	R8, R8[0x0]	; bytes=1188
+80010e5e	MOV	R9, R8	; bytes=1099
+80010e60	LD.W	R10,PC[0x274]	; bytes=fefa0274
+80010e64	MOV	R8, 0xbc	; bytes=e06800bc
+80010e68	MUL	R8, R9, R8	; bytes=f2080248
+80010e6c	ADD	R8, R10, R8 <<  0x0	; bytes=f4080008
+80010e70	SUB	R8, -0x68	; bytes=2988
+80010e72	LD.UB	R8, R8[0x3]	; bytes=11b8
+80010e74	MOV	R9, R8	; bytes=1099
+80010e76	LD.W	R8,PC[0x262]	; bytes=fef80262
+80010e7a	ST.W	R8[0x0],R9	; bytes=9109
+80010e7c	LD.W	R9,PC[0x260]	; bytes=fef90260
+80010e80	MOV	R8, 0x1	; bytes=3018
+80010e82	ST.B	R9[0xd], R8	; bytes=f368000d
+80010e86	MOV	R8, 0x0	; bytes=3008
+80010e88	ST.B	R7[-0x1], R8	; bytes=ef68ffff
+80010e8c	RJMP	0x80011082	; bytes=cfb8
+80010e8e	MOV	R8, 0x0	; bytes=3008
+80010e90	ST.H	R7[-0x6], R8	; bytes=ef58fffa
+80010e94	LD.W	R8,PC[0x24c]	; bytes=fef8024c
+80010e98	LD.UB	R8, R8[0x1]	; bytes=1198
+80010e9a	CP.W	R8, 0x0	; bytes=5808
+80010e9c	BR{ne}	0x80010f70	; bytes=c6a1
+80010e9e	LD.W	R8,PC[0x216]	; bytes=fef80216
+80010ea2	LD.SH	R8, R8[0x0]	; bytes=9008
+80010ea4	MOV	R9, R8	; bytes=1099
+80010ea6	LD.W	R8,PC[0x212]	; bytes=fef80212
+80010eaa	LD.W	R8,R8[R9 << 0x2]	; bytes=f0090328
+80010eae	MOV	R11, R8	; bytes=109b
+80010eb0	LD.W	R12,PC[0x20c]	; bytes=fefc020c
+80010eb4	MCALL	PC[0x800110c0]	; bytes=f01f0083 ; literal=0x8006d790 b'\xf9\xeb\x10\n\xe2\x1a'
+80010eb8	MOV	R8, R12	; bytes=1898
+80010eba	CP.W	R8, 0x0	; bytes=5808
+80010ebc	BR{eq}	0x80010eda	; bytes=c0f0
+80010ebe	LDDPC	R8, 0x800110b4	; bytes=4fe8 ; literal=0x59a6
+80010ec0	LD.SH	R8, R8[0x0]	; bytes=9008
+80010ec2	MOV	R9, R8	; bytes=1099
+80010ec4	LD.W	R8,PC[0x200]	; bytes=fef80200
+80010ec8	LD.W	R8,R8[R9 << 0x2]	; bytes=f0090328
+80010ecc	ST.W	--SP,R8	; bytes=1ad8
+80010ece	LDDPC	R10, 0x800110c8	; bytes=4ffa ; literal=0x8000e100 b'%s'
+80010ed0	MOV	R11, 0x33	; bytes=333b
+80010ed2	LDDPC	R12, 0x800110bc	; bytes=4fbc ; literal=0x52ac
+80010ed4	MCALL	PC[0x800110cc]	; bytes=f01f007e ; literal=0x80069744 b'\xeb\xcd@\xc0\x1a\x97 m\xee\xc6\xff\xf4\xefL\xff\xf4\xefK\xff\xf0\xefJ\xff\xecI\xf8p\x080\t?\xfa0\x0b\x10\x9c\xf0\x1f'
+80010ed8	SUB	SP, -0x4	; bytes=2ffd
+80010eda	LD.W	R8,PC[0x206]	; bytes=fef80206
+80010ede	LD.UB	R9, R8[0x1]	; bytes=1199
+80010ee0	MOV	R8, 0x0	; bytes=3008
+80010ee2	CP.B	R9, R8	; bytes=f0091800
+80010ee6	SR{EQ}	R8	; bytes=5f08
+80010ee8	LDDPC	R9, 0x800110dc	; bytes=4fd9 ; literal=0x5e42
+80010eea	ST.B	R9[0x9], R8	; bytes=f3680009
+80010eee	LD.UB	R9,R7[-0x10]	; bytes=ef39fff0
+80010ef2	MOV	R8, 0x1	; bytes=3018
+80010ef4	CP.B	R9, R8	; bytes=f0091800
+80010ef8	BR{ne}	0x80010f02	; bytes=c051
+80010efa	MOV	R12, 0x64	; bytes=364c
+80010efc	MCALL	PC[0x800110e4]	; bytes=f01f007a ; literal=0x80026048 b'\xeb\xcd@\x80\x1a\x97 =\xefL\xff\xf40\x08\xefH\xff\xfc\xee\xf8\xff\xf4X\x08\xc3`\xf0\x1f'
+80010f00	RJMP	0x80010f1c	; bytes=c0e8
+80010f02	MOV	R12, 0x1	; bytes=301c
+80010f04	MCALL	PC[0x800110e8]	; bytes=f01f0079 ; literal=0x80010d18 b'\xeb\xcd@\x80\x1a\x97 M\x18\x98\xefX\xff\xf4\xf0\x1f'
+80010f08	MOV	R8, R12	; bytes=1898
+80010f0a	CP.W	R8, 0x0	; bytes=5808
+80010f0c	BR{eq}	0x80010f1c	; bytes=c080
+80010f0e	LDDPC	R9, 0x800110ec	; bytes=4f89 ; literal=0x226f
+80010f10	MOV	R8, 0x0	; bytes=3008
+80010f12	ST.B	R9[0x0], R8	; bytes=b288
+80010f14	MOV	R8, 0x0	; bytes=3008
+80010f16	ST.W	R7[-0x14],R8	; bytes=ef48ffec
+80010f1a	RJMP	0x800110a8	; bytes=cc78
+80010f1c	LD.UH	R9,R7[-0x6]	; bytes=ef19fffa
+80010f20	LDDPC	R8, 0x800110f0	; bytes=4f48 ; literal=0x4f92
+80010f22	LD.SH	R8, R8[0x0]	; bytes=9008
+80010f24	CASTU.H	R8	; bytes=5c78
+80010f26	SUB	R8, -0x64	; bytes=29c8
+80010f28	CP.W	R9, R8	; bytes=1039
+80010f2a	BR{le}	0x80010f50	; bytes=e08a0013
+80010f2e	LDDPC	R9, 0x800110ec	; bytes=4f09 ; literal=0x226f
+80010f30	MOV	R8, 0x0	; bytes=3008
+80010f32	ST.B	R9[0x0], R8	; bytes=b288
+80010f34	LDDPC	R9, 0x800110f4	; bytes=4f09 ; literal=0x224c
+80010f36	MOV	R8, 0x6	; bytes=3068
+80010f38	ST.B	R9[0x0], R8	; bytes=b288
+80010f3a	LDDPC	R8, 0x800110f8	; bytes=4f08 ; literal=0x224a
+80010f3c	LD.UB	R8, R8[0x0]	; bytes=1188
+80010f3e	LDDPC	R9, 0x800110fc	; bytes=4f09 ; literal=0x224b
+80010f40	ST.B	R9[0x0], R8	; bytes=b288
+80010f42	LDDPC	R9, 0x800110f8	; bytes=4ee9 ; literal=0x224a
+80010f44	MOV	R8, 0x5	; bytes=3058
+80010f46	ST.B	R9[0x0], R8	; bytes=b288
+80010f48	MOV	R8, 0x0	; bytes=3008
+80010f4a	ST.W	R7[-0x14],R8	; bytes=ef48ffec
+80010f4e	RJMP	0x800110a8	; bytes=cad8
+80010f50	LDDPC	R8, 0x800110e0	; bytes=4e48 ; literal=0x5000
+80010f52	LD.UB	R9, R8[0x1]	; bytes=1199
+80010f54	MOV	R8, 0x1	; bytes=3018
+80010f56	CP.B	R9, R8	; bytes=f0091800
+80010f5a	BR{eq}	0x80010f68	; bytes=c070
+80010f5c	LD.SH	R8,R7[-0x6]	; bytes=ef08fffa
+80010f60	SUB	R8, -0x1	; bytes=2ff8
+80010f62	ST.H	R7[-0x6], R8	; bytes=ef58fffa
+80010f66	RJMP	0x80010eee	; bytes=cc4b
+80010f68	MOV	R12, 0x1f4	; bytes=e06c01f4
+80010f6c	MCALL	PC[0x800110e4]	; bytes=f01f005e ; literal=0x80026048 b'\xeb\xcd@\x80\x1a\x97 =\xefL\xff\xf40\x08\xefH\xff\xfc\xee\xf8\xff\xf4X\x08\xc3`\xf0\x1f'
+80010f70	MOV	R12, 0x1f4	; bytes=e06c01f4
+80010f74	MCALL	PC[0x800110e4]	; bytes=f01f005c ; literal=0x80026048 b'\xeb\xcd@\x80\x1a\x97 =\xefL\xff\xf40\x08\xefH\xff\xfc\xee\xf8\xff\xf4X\x08\xc3`\xf0\x1f'
+80010f78	LDDPC	R8, 0x800110b4	; bytes=4cf8 ; literal=0x59a6
+80010f7a	LD.SH	R8, R8[0x0]	; bytes=9008
+80010f7c	MOV	R9, R8	; bytes=1099
+80010f7e	LDDPC	R8, 0x800110b8	; bytes=4cf8 ; literal=0x870
+80010f80	LD.W	R8,R8[R9 << 0x2]	; bytes=f0090328
+80010f84	MOV	R11, R8	; bytes=109b
+80010f86	LDDPC	R12, 0x800110bc	; bytes=4cec ; literal=0x52ac
+80010f88	MCALL	PC[0x800110c0]	; bytes=f01f004e ; literal=0x8006d790 b'\xf9\xeb\x10\n\xe2\x1a'
+80010f8c	MOV	R8, R12	; bytes=1898
+80010f8e	CP.W	R8, 0x0	; bytes=5808
+80010f90	BR{eq}	0x80010fac	; bytes=c0e0
+80010f92	LDDPC	R8, 0x800110b4	; bytes=4c98 ; literal=0x59a6
+80010f94	LD.SH	R8, R8[0x0]	; bytes=9008
+80010f96	MOV	R9, R8	; bytes=1099
+80010f98	LDDPC	R8, 0x80011100	; bytes=4da8 ; literal=0xcf8
+80010f9a	LD.W	R8,R8[R9 << 0x2]	; bytes=f0090328
+80010f9e	ST.W	--SP,R8	; bytes=1ad8
+80010fa0	LDDPC	R10, 0x800110c8	; bytes=4caa ; literal=0x8000e100 b'%s'
+80010fa2	MOV	R11, 0x33	; bytes=333b
+80010fa4	LDDPC	R12, 0x800110bc	; bytes=4c6c ; literal=0x52ac
+80010fa6	MCALL	PC[0x800110cc]	; bytes=f01f004a ; literal=0x80069744 b'\xeb\xcd@\xc0\x1a\x97 m\xee\xc6\xff\xf4\xefL\xff\xf4\xefK\xff\xf0\xefJ\xff\xecI\xf8p\x080\t?\xfa0\x0b\x10\x9c\xf0\x1f'
+80010faa	SUB	SP, -0x4	; bytes=2ffd
+80010fac	LDDPC	R8, 0x800110dc	; bytes=4cc8 ; literal=0x5e42
+80010fae	MOV	R9, 0x1	; bytes=3019
+80010fb0	ST.B	R8[0xa], R9	; bytes=f169000a
+80010fb4	MOV	R8, 0x0	; bytes=3008
+80010fb6	ST.H	R7[-0x4], R8	; bytes=ef58fffc
+80010fba	RJMP	0x80011048	; bytes=c478
+80010fbc	LD.UB	R9,R7[-0x10]	; bytes=ef39fff0
+80010fc0	MOV	R8, 0x1	; bytes=3018
+80010fc2	CP.B	R9, R8	; bytes=f0091800
+80010fc6	BR{ne}	0x80010fd0	; bytes=c051
+80010fc8	MOV	R12, 0x64	; bytes=364c
+80010fca	MCALL	PC[0x800110e4]	; bytes=f01f0047 ; literal=0x80026048 b'\xeb\xcd@\x80\x1a\x97 =\xefL\xff\xf40\x08\xefH\xff\xfc\xee\xf8\xff\xf4X\x08\xc3`\xf0\x1f'
+80010fce	RJMP	0x80010fea	; bytes=c0e8
+80010fd0	MOV	R12, 0x1	; bytes=301c
+80010fd2	MCALL	PC[0x800110e8]	; bytes=f01f0046 ; literal=0x80010d18 b'\xeb\xcd@\x80\x1a\x97 M\x18\x98\xefX\xff\xf4\xf0\x1f'
+80010fd6	MOV	R8, R12	; bytes=1898
+80010fd8	CP.W	R8, 0x0	; bytes=5808
+80010fda	BR{eq}	0x80010fea	; bytes=c080
+80010fdc	LDDPC	R9, 0x800110ec	; bytes=4c49 ; literal=0x226f
+80010fde	MOV	R8, 0x0	; bytes=3008
+80010fe0	ST.B	R9[0x0], R8	; bytes=b288
+80010fe2	MOV	R8, 0x0	; bytes=3008
+80010fe4	ST.W	R7[-0x14],R8	; bytes=ef48ffec
+80010fe8	RJMP	0x800110a8	; bytes=c608
+80010fea	LD.SH	R9,R7[-0x4]	; bytes=ef09fffc
+80010fee	MOV	R8, 0x1e	; bytes=31e8
+80010ff0	CP.H	R9, R8	; bytes=f0091900
+80010ff4	BR{ne}	0x80011024	; bytes=c181
+80010ff6	LDDPC	R8, 0x800110e0	; bytes=4bb8 ; literal=0x5000
+80010ff8	LD.UB	R9, R8[0x1]	; bytes=1199
+80010ffa	MOV	R8, 0x1	; bytes=3018
+80010ffc	CP.B	R9, R8	; bytes=f0091800
+80011000	BR{ne}	0x80011024	; bytes=c121
+80011002	LDDPC	R9, 0x800110ec	; bytes=4bb9 ; literal=0x226f
+80011004	MOV	R8, 0x0	; bytes=3008
+80011006	ST.B	R9[0x0], R8	; bytes=b288
+80011008	LDDPC	R9, 0x800110f4	; bytes=4bb9 ; literal=0x224c
+8001100a	MOV	R8, 0x6	; bytes=3068
+8001100c	ST.B	R9[0x0], R8	; bytes=b288
+8001100e	LDDPC	R8, 0x800110f8	; bytes=4bb8 ; literal=0x224a
+80011010	LD.UB	R8, R8[0x0]	; bytes=1188
+80011012	LDDPC	R9, 0x800110fc	; bytes=4bb9 ; literal=0x224b
+80011014	ST.B	R9[0x0], R8	; bytes=b288
+80011016	LDDPC	R9, 0x800110f8	; bytes=4b99 ; literal=0x224a
+80011018	MOV	R8, 0x5	; bytes=3058
+8001101a	ST.B	R9[0x0], R8	; bytes=b288
+8001101c	MOV	R8, 0x0	; bytes=3008
+8001101e	ST.W	R7[-0x14],R8	; bytes=ef48ffec
+80011022	RJMP	0x800110a8	; bytes=c438
+80011024	LD.SH	R9,R7[-0x4]	; bytes=ef09fffc
+80011028	MOV	R8, 0x23	; bytes=3238
+8001102a	CP.H	R9, R8	; bytes=f0091900
+8001102e	BR{ls}	0x8001103e	; bytes=e0880008
+80011032	LDDPC	R8, 0x800110e0	; bytes=4ac8 ; literal=0x5000
+80011034	LD.UB	R9, R8[0x1]	; bytes=1199
+80011036	MOV	R8, 0x1	; bytes=3018
+80011038	CP.B	R9, R8	; bytes=f0091800
+8001103c	BR{eq}	0x80011056	; bytes=c0d0
+8001103e	LD.SH	R8,R7[-0x4]	; bytes=ef08fffc
+80011042	SUB	R8, -0x1	; bytes=2ff8
+80011044	ST.H	R7[-0x4], R8	; bytes=ef58fffc
+80011048	LDDPC	R8, 0x800110f0	; bytes=4aa8 ; literal=0x4f92
+8001104a	LD.SH	R9, R8[0x0]	; bytes=9009
+8001104c	LD.SH	R8,R7[-0x4]	; bytes=ef08fffc
+80011050	CP.H	R8, R9	; bytes=f2081900
+80011054	BR{cc/lo}	0x80010fbc	; bytes=cb43
+80011056	LDDPC	R9, 0x800110bc	; bytes=49a9 ; literal=0x52ac
+80011058	MOV	R8, 0x0	; bytes=3008
+8001105a	ST.B	R9[0x0], R8	; bytes=b288
+8001105c	LDDPC	R9, 0x80011104	; bytes=4aa9 ; literal=0x2260
+8001105e	MOV	R8, 0x0	; bytes=3008
+80011060	ST.H	R9[0x0], R8	; bytes=b208
+80011062	LDDPC	R9, 0x800110ec	; bytes=4a39 ; literal=0x226f
+80011064	MOV	R8, 0x1	; bytes=3018
+80011066	ST.B	R9[0x0], R8	; bytes=b288
+80011068	LDDPC	R9, 0x800110dc	; bytes=49d9 ; literal=0x5e42
+8001106a	MOV	R8, 0x0	; bytes=3008
+8001106c	ST.B	R9[0xa], R8	; bytes=f368000a
+80011070	MOV	R12, 0x1f4	; bytes=e06c01f4
+80011074	MCALL	PC[0x800110e4]	; bytes=f01f001c ; literal=0x80026048 b'\xeb\xcd@\x80\x1a\x97 =\xefL\xff\xf40\x08\xefH\xff\xfc\xee\xf8\xff\xf4X\x08\xc3`\xf0\x1f'
+80011078	LD.UB	R8,R7[-0x1]	; bytes=ef38ffff
+8001107c	SUB	R8, -0x1	; bytes=2ff8
+8001107e	ST.B	R7[-0x1], R8	; bytes=ef68ffff
+80011082	LD.UB	R9,R7[-0x1]	; bytes=ef39ffff
+80011086	LD.UB	R8,R7[-0xc]	; bytes=ef38fff4
+8001108a	CP.B	R9, R8	; bytes=f0091800
+8001108e	BR{cc/lo}	0x80010e8e	; bytes=fe93ff00
+80011092	LDDPC	R8, 0x800110f8	; bytes=49a8 ; literal=0x224a
+80011094	LD.UB	R8, R8[0x0]	; bytes=1188
+80011096	CP.W	R8, 0x0	; bytes=5808
+80011098	BR{ne}	0x800110a2	; bytes=c051
+8001109a	MOV	R8, 0x0	; bytes=3008
+8001109c	ST.W	R7[-0x14],R8	; bytes=ef48ffec
+800110a0	RJMP	0x800110a8	; bytes=c048
+800110a2	MOV	R8, 0x1	; bytes=3018
+800110a4	ST.W	R7[-0x14],R8	; bytes=ef48ffec
+800110a8	LD.W	R8,R7[-0x14]	; bytes=eef8ffec
+800110ac	MOV	R12, R8	; bytes=109c
+800110ae	SUB	SP, -0x14	; bytes=2fbd
+800110b0	LDM	SP++, R7, PC	; bytes=e3cd8080
+800110b4	NOP		; bytes=0000
+800110b6	CP.W	R6, 0x1a	; bytes=59a6
+800110b8	NOP		; bytes=0000
+800110ba	TST	R0, R4	; bytes=0870
+800110bc	NOP		; bytes=0000
+800110be	STDSP	SP[0x2a], R12	; bytes=52ac
+800110c0	LD.SH	R6, R0[0x0]	; bytes=8006
+800110c2	ACALL	0x1e4	; bytes=d790
+800110c4	NOP		; bytes=0000
+800110c6	ST.W	--R6,R0	; bytes=0cd0
+800110c8	LD.SH	R0, R0[0x0]	; bytes=8000
+800110ca	LD.SH	R0,R0[-0x7ffa]	; bytes=e1008006
+800110ce	ST.W	R11[0x10],R4	; bytes=9744
+800110d0	NOP		; bytes=0000
+800110d2	LDDPC	R8, 0x800112c8	; bytes=4fe8 ; literal=0xfef90270
+800110d4	LD.SH	R2, R0[0x0]	; bytes=8002
+800110d6	CBR	R4, 0x1a	; bytes=bbc4
+800110d8	NOP		; bytes=0000
+800110da	SUB	R0, 0x22	; bytes=2220
+800110dc	NOP		; bytes=0000
+800110de	RET{GE}	R2	; bytes=5e42
+800110e0	NOP		; bytes=0000
+800110e2	STDSP	SP[0x0], R0	; bytes=5000
+800110e4	LD.SH	R2, R0[0x0]	; bytes=8002
+800110e6	LD.W	R8, R0[0x10]	; bytes=6048
+800110e8	LD.SH	R1, R0[0x0]	; bytes=8001
+800110ea	LD.SH	R8, R6++	; bytes=0d18
+800110ec	NOP		; bytes=0000
+800110ee	SUB	PC, 0x26	; bytes=226f
+800110f0	NOP		; bytes=0000
+800110f2	LDDPC	R2, 0x800112d4	; bytes=4f92 ; literal=0x56fef9
+800110f4	NOP		; bytes=0000
+800110f6	SUB	R12, 0x24	; bytes=224c
+800110f8	NOP		; bytes=0000
+800110fa	SUB	R10, 0x24	; bytes=224a
+800110fc	NOP		; bytes=0000
+800110fe	SUB	R11, 0x24	; bytes=224b
+80011100	NOP		; bytes=0000
+80011102	ST.B	--R6, R8	; bytes=0cf8
+80011104	NOP		; bytes=0000
+80011106	SUB	R0, 0x26	; bytes=2260
+80011108	STM	--SP,R7,LR	; bytes=ebcd4080

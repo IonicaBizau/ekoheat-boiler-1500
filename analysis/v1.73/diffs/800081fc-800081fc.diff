@@ -1,0 +1,12 @@
+--- 800081fc
+
++++ 800081fc
+
+@@ -15,5 +15,5 @@
+
+   xRAM_ADDR = 0x142;
+   xRAM_ADDR = 0;
+-  (*(code *)FUNCTION_ADDR)(2,0x21a8);
++  (*(code *)FUNCTION_ADDR)(2,0x2248);
+   (*(code *)FUNCTION_ADDR)(4);
+   return;

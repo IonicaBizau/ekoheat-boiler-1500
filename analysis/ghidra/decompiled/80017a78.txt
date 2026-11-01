@@ -1,0 +1,59 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x80017a78 FUN_80017a78
+[decomp]> decompile
+Decompiling FUN_80017a78
+Decompilation complete
+[decomp]> print C
+
+void FUN_80017a78(void)
+
+{
+  if (cRAM0000227c != '\0') {
+    (*(code *)0x8005efec)(0x50,0xffffffff,1);
+    cRAM0000227c = '\0';
+    goto code_r0x80017b40;
+  }
+  if (cRAM00002284 != '\0') goto code_r0x80017b40;
+  if (iRAM00001546 != -1) {
+    cRAM0000227c = '\x01';
+  }
+  if (iRAM00001546 == 0x1e) {
+    iRAM00001546 = 0xffff;
+    xRAM00002274 = 3;
+    return;
+  }
+  if (iRAM00001546 < 0x1f) {
+    if (iRAM00001546 != -1) {
+      if (iRAM00001546 == 10) {
+        iRAM00001546 = 0xffff;
+        xRAM00002274 = 0x12;
+        return;
+      }
+      goto code_r0x80017b34;
+    }
+  }
+  else {
+    if (iRAM00001546 == 0x1f) {
+      (*(code *)0x80011990)();
+      (*(code *)0x80011a34)();
+      iRAM00001546 = 0xffff;
+      xRAM00002274 = 0;
+      return;
+    }
+    if (iRAM00001546 == 0x20) {
+      iRAM00001546 = 0xffff;
+      xRAM00002274 = 0xb;
+      return;
+    }
+code_r0x80017b34:
+    cRAM0000227c = '\0';
+  }
+  iRAM00001546 = -1;
+code_r0x80017b40:
+  (*(code *)0x8005f4cc)();
+  return;
+}
+[decomp]> quit

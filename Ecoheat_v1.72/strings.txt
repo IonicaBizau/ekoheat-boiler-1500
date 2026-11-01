@@ -1,0 +1,5047 @@
+0 AVR32
+14 fBE#SH
+5d MainTask
+69 LEDTask
+71 TouchTask
+7d DigInTask
+89 ADCTask
+91 TimerTask
+9d BacklightTask
+ad GUITask
+b5 FlowSensorTask
+c5 WatchDogTask
+d5 CommandTask
+e1 ModulesTask
+ed AugerTask
+f9 FanCheckTask
+10f  ]J(
+1af  M0kI<
+21b  MJx
+38b Ki08
+3ce IJ8pIJ(
+406 IIXpIIH
+40f I;0,
+44a HHi0
+8b0 RM+0
+a9c zB@0
+c33 O{0,
+d87 J+0,
+f61 Nein
+fa7 gsuger
+fb1 Gebl
+fb9 Ventil
+fc5 Wentylator
+fd1 Ventilator
+fdd Ventilateur
+fe9 Ventilaator
+ff5 Ventilador
+1001 Burning
+1009 Forbr
+100f nder
+1015 Verbrennung
+1029 Spalanie
+1035 Branden
+103d Puissance
+104b lemine
+1055 Quemando
+1061 Queimador
+106d Pausing
+1075 Pausestop
+1081 Pause
+1089 Pozastaven
+1095 Wstrzymywanie
+10a5 Pauseren
+10b1 Paus
+10b9 Pausa
+10c1 Start
+10d1 Iniciar
+10d9 Restarting...
+10e9 Genstarter...
+10f9 Neu starten...
+1109 Restartov
+1119 Restart...
+1125 Herstarten...
+1139 marrage...
+1145 Taask
+114b ivitamine...
+1159 Rainiciando...
+1169 Stop
+1179 Parar
+1181 Stopping...
+118d Stopper...
+1199 Stopt...
+11a5 Zastaven
+11b5 Zatrzymuj
+11c5 Stoppen...
+11d1 Mise 
+11d7  l'arr
+11de t...
+11e5 Seiskamine...
+11f5 Parando...
+1201 Stopped
+1209 Stoppet
+1211 Gestopt
+1219 Zastaveno
+1225 Zatrzymano
+1239 Seisatud
+1245 Parado
+124d Startup
+1255 Opstart
+125d Beginn
+1271 Rozpocz
+127d Starten
+1285 Allumer
+128f ivitamine
+1299 Encendido
+12a5 Acendimento
+12b1 Awaiting period...
+12c5 Afventer periode...
+12d9 Warte auf Period...
+12fd Czekam na okres...
+1311 Wacht op periode...
+1327 riode d'attente...
+133d Oote periood...
+134d Periodo de espera...
+1365 Periodo em espera...
+137d Awaiting temp. drop...
+1395 Afventer temp. fald...
+13ad Warte auf Temperaturabfall...
+13d1  na pokles teploty...
+13e9 Czekam na spadek temp...
+1405 Wacht op temperatuur daling...
+1425 Attente de la baisse de temp
+1442 rature...
+144d Ootel kuni temp langeb...
+1469 Asperando caida de temperatura...
+148d Em espera abaixamento de temperatura...
+14b5 Aircleaning
+14c1 Luftrenser
+14cd Ausblasen
+14e0  vzduchu
+14e9 Czyszczenie wentylatorem
+1505 Lucht reinigen
+1515 Nettoyage de l'air
+152a hkpuhastus
+1535 Limpieza de aire
+1549 Limpeza de ar
+1559 Adding fuel
+1565 Tilf
+156a jer t
+1570 ndbr
+1575 ndsel
+157d Brennstoffzufuhr
+1598  paliva
+15a1 Dodawanie paliwa
+15b5 Brandstof toevoegen
+15c9 Ajout de combustible
+15e3 tuse lisamine
+15f1 Agregando combustible
+1609 Adicionando combustivel
+1621 Preheating
+162d Forvarmer
+163b ndung
+1643 edeh
+164d Podgrzewanie
+165d Voorverwarmen
+1670 chauffage
+167d Eelsoojendus
+168d Precalentando
+16a0 -aquecimento
+16ad Stepping up
+16b9 Stepper op
+16c5 Stufenweise Erh
+16d5 hung
+16e5 Intensyfikacja
+16f5 Intensiveren
+1705 Intensification
+1715 Astmeline t
+1725 Incrementando
+1735 Increasing air intake with
+1752 ger luftindtag med
+1765 Luftmengenerh
+1773 hung
+1784 vodu vzduchu s
+1799 kszenie dop
+17a5 ywu powietrza z
+17b5 Lucht inname verhogen met
+17d1 Augmentation de l'apport d'air avec
+17f7 lemise 
+17ff hu suurendamine
+1811 Aumentando entrada de aire con
+1831 Aumentando a entrada de ar com
+1851 Startup... no.
+1865 nding... nr.
+1875 Startversuch Nr.
+188c et spu
+1899 Start... nr.
+18a9 Opstart... Geen
+18b9 Allumage... n
+18cb ivitamise nr.
+18d9 Encendido
+18e9 Acendimento
+18f9 Outburned
+1905 Udbr
+1911 Ausbrennen
+191d Spalen
+1924  palivo
+192d Uitgebrand
+193b faut flamme
+194b hjaks p
+1953 lenud
+1959 Fallo de llama
+1969 Falho na queima
+1979 ALARM
+1981 ALARME
+1991 ALARMA
+1999 Overheating!
+19a9 Overkogning!
+19ba berhitzung!
+19d5 Przegrzanie!
+19e5 Overhitting!
+19f5 Surchauffe!
+1a02 lekuumenemine!
+1a12 Sobrecalentamiento!
+1a2a Sobre-aquecimento!
+1a3d Burner disconnected/pellet shaft hot!
+1a68 nder frakoblet/skakt varm!
+1a85 Brenner aus/Fallschacht hei
+1aa9 k odpojen/nebezpe
+1abc  pop
+1ac9 Palnik roz
+1ad5 czony/podawacz pelet gor
+1af5 Brander ontkoppeld/Brander heet!
+1b1c leur d
+1b23 branch
+1b2a /alimentation pellet en surchauffe!
+1b53 leti lahti 
+1b5f hendatud/pelleti tigu kuum!
+1b7e Quemar fuera de caldera/alimenatci
+1ba1 n pellet sobrecalentado!
+1bbe Queimador desligado/sobreaquecimento alimentador pellet!
+1bf9 Startup failed!
+1c0d ndingsfejl!
+1c1b ndvorgang mi
+1c28 lungen!
+1c39  se nezda
+1c43 ilo!
+1c49 Uruchomienie nie powiod
+1c61 o si
+1c69 Start mislukt!
+1c79 Erreur allumage!
+1c8f ivituse viga!
+1c9e Erro de encendido!
+1cb2 Erro na acendimento!
+1cc9 Ash plate
+1cd5 Askeplade
+1ce1 Aschekasten
+1ced Deska popeln
+1cff ytka popio
+1d0d As plaat
+1d19 Dispositif nettoyage br
+1d31 leur
+1d39 Tuha plaat!
+1d46 Dispositivo limpieza quemador!
+1d66 Dispositivo de limpeza do queimadore!
+1d8d sensor not mounted!
+1da3 ler ikke monteret!
+1dbb hler nicht angeschlossen!
+1dd5 senzor nen
+1de3 ipojen!
+1ded czujnik nie zamontowany!
+1e09 Sensor niet geplaatst!
+1e21 sonde non connect
+1e39 andur pole 
+1e45 hendatud!
+1e51 sensor no conectabo!
+1e69 sensor n
+1e72 o conetado!
+1e81 sensor defect!
+1e93 ler defekt!
+1ea3 hler besch
+1eae digt!
+1eb5 vadn
+1ebc idlo!
+1ec5 defekt czujnika!
+1ed9 erreur sonde!
+1ee9 anduri viga!
+1ef9 error de sensor!
+1f0d erro de sensor!
+1f1d Indoor temp
+1f29 Indetemp
+1f35 Innentempreatur
+1f45 Vnit
+1f4c  teplota
+1f55 Temperatura wewn
+1f66 trzna
+1f6d Tempertuur binnen
+1f81 Temp. int
+1f8b rieure
+1f95 Anduri viga
+1fa1 Error de sensor
+1fb1 Erro de sensor
+1fc1 Outdoor temp
+1fd1 Udetemp
+1fdc entemperatur
+1fe9 Venkovn
+1ff1  teplota
+1ffd Temp. zewn
+2008 trzna
+2011 Termperatuur buiten
+2025 Temp. ext
+202f rieure
+2039 Ruumi temp
+2045 Temp. interior
+2055 Boiler temp
+2061 Kedeltemp
+206d Kesseltemperatur
+2081 Teplota kotle
+2091 Temp. kot
+209d Ketel temperatuur
+20b1 Temp. chaudi
+20c1 Katla temp
+20cd Temp. de caldera
+20e1 Temp. caldeira
+20f1 Return temp
+20fd Returtemp
+210b cklauftemperatur
+211d Teplota vratn
+212b  vody
+2131 Temp. zwrotna
+2141 Retour temperatuur
+2155 Temp. retour
+2165 Tagasivoolu temp
+2179 Temp. de retorno
+218d Temp. Retorno
+219d DHW temp
+21a9 VVBtemp
+21b1 Warmwassertemperatur
+21c9 Teplota TUV
+21d5 CWU temp
+21e1 WTW temperatuur
+21f1 Temp. E.C.S.
+2201 Boileri temp
+2211 Temp. de ACS
+2221 Temp. A.Q.S.
+2231 Unknown sensor error!
+2249 Ukendt sensorfejl!
+225f hlerfehler unbekannt!
+2275 Nezn
+227c  chyba senzoru!
+228d Nieznany b
+2299 d czujnika!
+22a5 Onbekende sensor error!
+22bd Erreur sonde inconnu!
+22d5 Tundmatu anduri viga!
+22ee Error de sensor desconocido!
+230e Erro de sensor desconhecido!
+232d Unknown error!
+233d Ukendt fejl!
+234d Error!
+2355 Nezn
+235c  chyba!
+2365 Nieznany b
+2375 Onbekende error!
+2389 Erreur inconnu
+2399 Tundmatu viga!!
+23aa Error desconocido!
+23be Erro desconhecido!
+23d1 Fan error!
+23df gsuger fejl!
+23ed Gebl
+23f2 se fehler!
+23fd Ventil
+2404 tor se nezda
+2411 ilo!
+2419 Wentylator b
+242d Ventilator error!
+2441 Ventilateur erreur!
+2455 Ventilaator viga!
+246a Error ventilador!
+247e Erro de ventilador!
+2495 Flue temp
+24a3 gtemp
+24a9 Abgastemperatur
+24b9 Teplota spalin
+24c9 Temp spalin
+24d5 Rookgastemperatuur
+24e9 Temp. sortie fum
+24fd Suitsugaasi temp
+2511 Temp. de humos
+2521 Temp. de fumos
+2531 Opening ash plate...
+254a bner askeplade...
+255d Aschenkasten 
+256b ffnen...
+2575 Otev
+257d  desky popeln
+258b ku...
+2591 Otwarcie popielnika...
+25a9 As plaat openen...
+25bd Ouverture dispositif nettoyage br
+25df leur...
+25e9 Tuha plaadi avamine...
+2601 Abriendo dispositivo limpieza quemador...
+262d Abrindo dispositivo de limpeza do queimador...
+265d Closing ash plate...
+2675 Lukker askeplade...
+2689 Aschekasten schlie
+269c en...
+26a5 Uzav
+26ad  desky popeln
+26bb ku...
+26c1 Zamykanie popielnika...
+26d9 As plaat sluiten...
+26ed Fermeture dispositif nettoyage br
+270f leur...
+2719 Tuha plaadi sulgemine...
+2735 Cerrando dispositivo limpieza quemador...
+2761 Fechando dispositivo de limpeza do queimador...
+2791 Reading temperatures
+27a9 Indl
+27ae ser temperaturer
+27c1 Temperaturen pr
+27dd  teplot
+27e5 Odczyt temperatury
+27f9 Temperaturen uitlezen
+2811 Lecture temp
+281e rature
+2825 Temperatuuride m
+2837 tmine
+283d Leyendo temperaturas
+2855 Lendo temperaturas
+2869 The test can only be executed if the system is stopped and summer mode is turned off.
+28c1 Testen kan kun udf
+28d4 res n
+28da r styringen er stoppet og sommerdrift er sl
+2906 et fra.
+2911 Test kann nur im Fall wenn Sommermodus aus ist und System nicht im Betrieb ist.
+2961 Test lze vykonat pouze v p
+2984 e je syst
+298e m zastaven a letn
+29a4 im vypnut.
+29b1 Test mo
+29b9 e by
+29be  wykonany tylko w przypadku gdy system jest zatrzymany i tryb letni jest wy
+2a0b czony.
+2a15 De test kan alleen uitgevoerd worden als de zomermode uit staat en de ketel uit staat.
+2a6d Le test peut s
+2a7f cuter si le syst
+2a90 me est 
+2a98  l'arr
+2a9f t et le programmateur horaire d
+2abf sactiv
+2ac9 Test on v
+2ad3 imalik l
+2adc bi viia 
+2ae5 ksnes siis kui s
+2af6 steem on seisatud ja suve reshiim v
+2b1a lja l
+2b20 litatud.
+2b29 El test se puede ejercutar si el sistema esta parado y programador horario desactivado.
+2b81 O teste s
+2b8b  pode ser exectuado se o sistema estiver parado e programador hor
+2bcd rio desactivado.
+2be1 Loading new software...
+2bf9 Indl
+2bfe ser ny software...
+2c11 Neue Software laden...
+2c2d  software se nahr
+2c46 adowanie nowego oprogramowania...
+2c69 Laden nieuwe software...
+2c89 chargement du nouveau software...
+2cad Tarkavara laadimine...
+2cc5 Cargando un nuevo software...
+2ce5 Carregando um novo software...
+2d05 Cleaning internal auger...
+2d23 mmer intern snegl...
+2d39 Reinigung Schnecke...
+2d58  vnit
+2d64 neku...
+2d6d Czyszcze podajnik wewn
+2d84 trzny...
+2d8d Reiniging interne vijzel...
+2da9 Nettoyage de la vis interne...
+2dc9 Sisemise teo puhastamine...
+2de5 Barrena alimentador interno...
+2e05 Trado alimentador interno...
+2e25 Summer mode, On/Off mode and storage tank can't be active at the same time.
+2e71 Sommerdrift, On/Off drift og akkumuleringstank kan ikke v
+2eab re aktiv p
+2eb6  samme tid.
+2ec5 Sommermodus, An/Aus Modus und Pufferladeset k
+2ef3 nnen nicht zu derselben zeit aktiviert werden.
+2f25 Letn
+2f2e im, Re
+2f35 im ZAPNUTO/VYPNUTO a z
+2f4c sobn
+2f51 k nem
+2f58 ou b
+2f5d t aktivn
+2f66  ve stejnou dobu.
+2f79 Sommermodus, W
+2f89 cz/Wy
+2f90 cz und Pufferladeset k
+2fa7 nnen nicht zu derselben zeit aktiviert werden.
+2fd9 Zomermode, Aan/Uit mode en buffermanagement kunnen niet tezamen actief zijn.
+3029 Mode 
+3031 , Mode On/Off et le r
+3047 servoir de stockage tampon ne peuvent pas 
+3072 tre actives en m
+3083 me temps.
+308d Suve reshiim, On/Off reshiim ja akupaak ei aa olla samal ajal aktiivsed.
+30d9 El modo verano y el dep
+30f1 sito de acumulaci
+3103 n no pueden activarse al mismo tiempo.
+312d Boiler setpoint is locked at 80
+314d  when storage tank support is enabled.
+3175 Kedel setpunktet er l
+318b st til 80
+3195  fordi akkumuleringstanken er aktiveret.
+31c1 Kesselsolltemp. Ist bei der erreichten Puffertemperatur bei 80 Grad blockiert.
+3211 Teplota kotle je zablokov
+322b na na 80
+3234 C pokud je podpora z
+3249 sobn
+324e ku povolena.
+325d Keteltemperatuur is vergrendeld op 80 graden als de buffer management actief is.
+32b1 Chaudi
+32b8 re consigne est verrouill
+32d8  lorsque le support du tampon est activ
+3305 Katla temperatuur on seadistatud 80
+3329 C kui akupaagi reshiim on kasutusel.
+3351 La consigna de la caldera se bloquea a 80
+337b  cuando el dep
+338a sito de acumulaci
+339c n de apoyo est
+33ab  activado.
+33b9 Boiler
+33c1 Kedel
+33c9 Kessel
+33d1 Kotle
+33d9 Ketel
+33e1 Chaudi
+33ed Katla
+33f5 Caldera
+33fd Caldeira
+39e9 OHpX
+3a1c @Nxp8
+3a63 MhpX
+3aaa pLHp
+3add p(\XM
+3b3e tLy0
+3c71 Nein
+3cb7 gsuger
+3cc1 Gebl
+3cc9 Ventil
+3cd5 Wentylator
+3ce1 Ventilator
+3ced Ventilateur
+3cf9 Ventilaator
+3d05 Ventilador
+3d11 Burning
+3d19 Forbr
+3d1f nder
+3d25 Verbrennung
+3d39 Spalanie
+3d45 Branden
+3d4d Puissance
+3d5b lemine
+3d65 Quemando
+3d71 Queimador
+3d7d Pausing
+3d85 Pausestop
+3d91 Pause
+3d99 Pozastaven
+3da5 Wstrzymywanie
+3db5 Pauseren
+3dc1 Paus
+3dc9 Pausa
+3dd1 Start
+3de1 Iniciar
+3de9 Restarting...
+3df9 Genstarter...
+3e09 Neu starten...
+3e19 Restartov
+3e29 Restart...
+3e35 Herstarten...
+3e49 marrage...
+3e55 Taask
+3e5b ivitamine...
+3e69 Rainiciando...
+3e79 Stop
+3e89 Parar
+3e91 Stopping...
+3e9d Stopper...
+3ea9 Stopt...
+3eb5 Zastaven
+3ec5 Zatrzymuj
+3ed5 Stoppen...
+3ee1 Mise 
+3ee7  l'arr
+3eee t...
+3ef5 Seiskamine...
+3f05 Parando...
+3f11 Stopped
+3f19 Stoppet
+3f21 Gestopt
+3f29 Zastaveno
+3f35 Zatrzymano
+3f49 Seisatud
+3f55 Parado
+3f5d Startup
+3f65 Opstart
+3f6d Beginn
+3f81 Rozpocz
+3f8d Starten
+3f95 Allumer
+3f9f ivitamine
+3fa9 Encendido
+3fb5 Acendimento
+3fc1 Awaiting period...
+3fd5 Afventer periode...
+3fe9 Warte auf Period...
+400d Czekam na okres...
+4021 Wacht op periode...
+4037 riode d'attente...
+404d Oote periood...
+405d Periodo de espera...
+4075 Periodo em espera...
+408d Awaiting temp. drop...
+40a5 Afventer temp. fald...
+40bd Warte auf Temperaturabfall...
+40e1  na pokles teploty...
+40f9 Czekam na spadek temp...
+4115 Wacht op temperatuur daling...
+4135 Attente de la baisse de temp
+4152 rature...
+415d Ootel kuni temp langeb...
+4179 Asperando caida de temperatura...
+419d Em espera abaixamento de temperatura...
+41c5 Aircleaning
+41d1 Luftrenser
+41dd Ausblasen
+41f0  vzduchu
+41f9 Czyszczenie wentylatorem
+4215 Lucht reinigen
+4225 Nettoyage de l'air
+423a hkpuhastus
+4245 Limpieza de aire
+4259 Limpeza de ar
+4269 Adding fuel
+4275 Tilf
+427a jer t
+4280 ndbr
+4285 ndsel
+428d Brennstoffzufuhr
+42a8  paliva
+42b1 Dodawanie paliwa
+42c5 Brandstof toevoegen
+42d9 Ajout de combustible
+42f3 tuse lisamine
+4301 Agregando combustible
+4319 Adicionando combustivel
+4331 Preheating
+433d Forvarmer
+434b ndung
+4353 edeh
+435d Podgrzewanie
+436d Voorverwarmen
+4380 chauffage
+438d Eelsoojendus
+439d Precalentando
+43b0 -aquecimento
+43bd Stepping up
+43c9 Stepper op
+43d5 Stufenweise Erh
+43e5 hung
+43f5 Intensyfikacja
+4405 Intensiveren
+4415 Intensification
+4425 Astmeline t
+4435 Incrementando
+4445 Increasing air intake with
+4462 ger luftindtag med
+4475 Luftmengenerh
+4483 hung
+4494 vodu vzduchu s
+44a9 kszenie dop
+44b5 ywu powietrza z
+44c5 Lucht inname verhogen met
+44e1 Augmentation de l'apport d'air avec
+4507 lemise 
+450f hu suurendamine
+4521 Aumentando entrada de aire con
+4541 Aumentando a entrada de ar com
+4561 Startup... no.
+4575 nding... nr.
+4585 Startversuch Nr.
+459c et spu
+45a9 Start... nr.
+45b9 Opstart... Geen
+45c9 Allumage... n
+45db ivitamise nr.
+45e9 Encendido
+45f9 Acendimento
+4609 Outburned
+4615 Udbr
+4621 Ausbrennen
+462d Spalen
+4634  palivo
+463d Uitgebrand
+464b faut flamme
+465b hjaks p
+4663 lenud
+4669 Fallo de llama
+4679 Falho na queima
+4689 ALARM
+4691 ALARME
+46a1 ALARMA
+46a9 Overheating!
+46b9 Overkogning!
+46ca berhitzung!
+46e5 Przegrzanie!
+46f5 Overhitting!
+4705 Surchauffe!
+4712 lekuumenemine!
+4722 Sobrecalentamiento!
+473a Sobre-aquecimento!
+474d Burner disconnected/pellet shaft hot!
+4778 nder frakoblet/skakt varm!
+4795 Brenner aus/Fallschacht hei
+47b9 k odpojen/nebezpe
+47cc  pop
+47d9 Palnik roz
+47e5 czony/podawacz pelet gor
+4805 Brander ontkoppeld/Brander heet!
+482c leur d
+4833 branch
+483a /alimentation pellet en surchauffe!
+4863 leti lahti 
+486f hendatud/pelleti tigu kuum!
+488e Quemar fuera de caldera/alimenatci
+48b1 n pellet sobrecalentado!
+48ce Queimador desligado/sobreaquecimento alimentador pellet!
+4909 Startup failed!
+491d ndingsfejl!
+492b ndvorgang mi
+4938 lungen!
+4949  se nezda
+4953 ilo!
+4959 Uruchomienie nie powiod
+4971 o si
+4979 Start mislukt!
+4989 Erreur allumage!
+499f ivituse viga!
+49ae Erro de encendido!
+49c2 Erro na acendimento!
+49d9 Ash plate
+49e5 Askeplade
+49f1 Aschekasten
+49fd Deska popeln
+4a0f ytka popio
+4a1d As plaat
+4a29 Dispositif nettoyage br
+4a41 leur
+4a49 Tuha plaat!
+4a56 Dispositivo limpieza quemador!
+4a76 Dispositivo de limpeza do queimadore!
+4a9d sensor not mounted!
+4ab3 ler ikke monteret!
+4acb hler nicht angeschlossen!
+4ae5 senzor nen
+4af3 ipojen!
+4afd czujnik nie zamontowany!
+4b19 Sensor niet geplaatst!
+4b31 sonde non connect
+4b49 andur pole 
+4b55 hendatud!
+4b61 sensor no conectabo!
+4b79 sensor n
+4b82 o conetado!
+4b91 sensor defect!
+4ba3 ler defekt!
+4bb3 hler besch
+4bbe digt!
+4bc5 vadn
+4bcc idlo!
+4bd5 defekt czujnika!
+4be9 erreur sonde!
+4bf9 anduri viga!
+4c09 error de sensor!
+4c1d erro de sensor!
+4c2d Indoor temp
+4c39 Indetemp
+4c45 Innentempreatur
+4c55 Vnit
+4c5c  teplota
+4c65 Temperatura wewn
+4c76 trzna
+4c7d Tempertuur binnen
+4c91 Temp. int
+4c9b rieure
+4ca5 Anduri viga
+4cb1 Error de sensor
+4cc1 Erro de sensor
+4cd1 Outdoor temp
+4ce1 Udetemp
+4cec entemperatur
+4cf9 Venkovn
+4d01  teplota
+4d0d Temp. zewn
+4d18 trzna
+4d21 Termperatuur buiten
+4d35 Temp. ext
+4d3f rieure
+4d49 Ruumi temp
+4d55 Temp. interior
+4d65 Boiler temp
+4d71 Kedeltemp
+4d7d Kesseltemperatur
+4d91 Teplota kotle
+4da1 Temp. kot
+4dad Ketel temperatuur
+4dc1 Temp. chaudi
+4dd1 Katla temp
+4ddd Temp. de caldera
+4df1 Temp. caldeira
+4e01 Return temp
+4e0d Returtemp
+4e1b cklauftemperatur
+4e2d Teplota vratn
+4e3b  vody
+4e41 Temp. zwrotna
+4e51 Retour temperatuur
+4e65 Temp. retour
+4e75 Tagasivoolu temp
+4e89 Temp. de retorno
+4e9d Temp. Retorno
+4ead DHW temp
+4eb9 VVBtemp
+4ec1 Warmwassertemperatur
+4ed9 Teplota TUV
+4ee5 CWU temp
+4ef1 WTW temperatuur
+4f01 Temp. E.C.S.
+4f11 Boileri temp
+4f21 Temp. de ACS
+4f31 Temp. A.Q.S.
+4f41 Unknown sensor error!
+4f59 Ukendt sensorfejl!
+4f6f hlerfehler unbekannt!
+4f85 Nezn
+4f8c  chyba senzoru!
+4f9d Nieznany b
+4fa9 d czujnika!
+4fb5 Onbekende sensor error!
+4fcd Erreur sonde inconnu!
+4fe5 Tundmatu anduri viga!
+4ffe Error de sensor desconocido!
+501e Erro de sensor desconhecido!
+503d Unknown error!
+504d Ukendt fejl!
+505d Error!
+5065 Nezn
+506c  chyba!
+5075 Nieznany b
+5085 Onbekende error!
+5099 Erreur inconnu
+50a9 Tundmatu viga!!
+50ba Error desconocido!
+50ce Erro desconhecido!
+50e1 Fan error!
+50ef gsuger fejl!
+50fd Gebl
+5102 se fehler!
+510d Ventil
+5114 tor se nezda
+5121 ilo!
+5129 Wentylator b
+513d Ventilator error!
+5151 Ventilateur erreur!
+5165 Ventilaator viga!
+517a Error ventilador!
+518e Erro de ventilador!
+51a5 Flue temp
+51b3 gtemp
+51b9 Abgastemperatur
+51c9 Teplota spalin
+51d9 Temp spalin
+51e5 Rookgastemperatuur
+51f9 Temp. sortie fum
+520d Suitsugaasi temp
+5221 Temp. de humos
+5231 Temp. de fumos
+5241 Opening ash plate...
+525a bner askeplade...
+526d Aschenkasten 
+527b ffnen...
+5285 Otev
+528d  desky popeln
+529b ku...
+52a1 Otwarcie popielnika...
+52b9 As plaat openen...
+52cd Ouverture dispositif nettoyage br
+52ef leur...
+52f9 Tuha plaadi avamine...
+5311 Abriendo dispositivo limpieza quemador...
+533d Abrindo dispositivo de limpeza do queimador...
+536d Closing ash plate...
+5385 Lukker askeplade...
+5399 Aschekasten schlie
+53ac en...
+53b5 Uzav
+53bd  desky popeln
+53cb ku...
+53d1 Zamykanie popielnika...
+53e9 As plaat sluiten...
+53fd Fermeture dispositif nettoyage br
+541f leur...
+5429 Tuha plaadi sulgemine...
+5445 Cerrando dispositivo limpieza quemador...
+5471 Fechando dispositivo de limpeza do queimador...
+54a1 Reading temperatures
+54b9 Indl
+54be ser temperaturer
+54d1 Temperaturen pr
+54ed  teplot
+54f5 Odczyt temperatury
+5509 Temperaturen uitlezen
+5521 Lecture temp
+552e rature
+5535 Temperatuuride m
+5547 tmine
+554d Leyendo temperaturas
+5565 Lendo temperaturas
+5579 The test can only be executed if the system is stopped and summer mode is turned off.
+55d1 Testen kan kun udf
+55e4 res n
+55ea r styringen er stoppet og sommerdrift er sl
+5616 et fra.
+5621 Test kann nur im Fall wenn Sommermodus aus ist und System nicht im Betrieb ist.
+5671 Test lze vykonat pouze v p
+5694 e je syst
+569e m zastaven a letn
+56b4 im vypnut.
+56c1 Test mo
+56c9 e by
+56ce  wykonany tylko w przypadku gdy system jest zatrzymany i tryb letni jest wy
+571b czony.
+5725 De test kan alleen uitgevoerd worden als de zomermode uit staat en de ketel uit staat.
+577d Le test peut s
+578f cuter si le syst
+57a0 me est 
+57a8  l'arr
+57af t et le programmateur horaire d
+57cf sactiv
+57d9 Test on v
+57e3 imalik l
+57ec bi viia 
+57f5 ksnes siis kui s
+5806 steem on seisatud ja suve reshiim v
+582a lja l
+5830 litatud.
+5839 El test se puede ejercutar si el sistema esta parado y programador horario desactivado.
+5891 O teste s
+589b  pode ser exectuado se o sistema estiver parado e programador hor
+58dd rio desactivado.
+58f1 Loading new software...
+5909 Indl
+590e ser ny software...
+5921 Neue Software laden...
+593d  software se nahr
+5956 adowanie nowego oprogramowania...
+5979 Laden nieuwe software...
+5999 chargement du nouveau software...
+59bd Tarkavara laadimine...
+59d5 Cargando un nuevo software...
+59f5 Carregando um novo software...
+5a15 Cleaning internal auger...
+5a33 mmer intern snegl...
+5a49 Reinigung Schnecke...
+5a68  vnit
+5a74 neku...
+5a7d Czyszcze podajnik wewn
+5a94 trzny...
+5a9d Reiniging interne vijzel...
+5ab9 Nettoyage de la vis interne...
+5ad9 Sisemise teo puhastamine...
+5af5 Barrena alimentador interno...
+5b15 Trado alimentador interno...
+5b35 Summer mode, On/Off mode and storage tank can't be active at the same time.
+5b81 Sommerdrift, On/Off drift og akkumuleringstank kan ikke v
+5bbb re aktiv p
+5bc6  samme tid.
+5bd5 Sommermodus, An/Aus Modus und Pufferladeset k
+5c03 nnen nicht zu derselben zeit aktiviert werden.
+5c35 Letn
+5c3e im, Re
+5c45 im ZAPNUTO/VYPNUTO a z
+5c5c sobn
+5c61 k nem
+5c68 ou b
+5c6d t aktivn
+5c76  ve stejnou dobu.
+5c89 Sommermodus, W
+5c99 cz/Wy
+5ca0 cz und Pufferladeset k
+5cb7 nnen nicht zu derselben zeit aktiviert werden.
+5ce9 Zomermode, Aan/Uit mode en buffermanagement kunnen niet tezamen actief zijn.
+5d39 Mode 
+5d41 , Mode On/Off et le r
+5d57 servoir de stockage tampon ne peuvent pas 
+5d82 tre actives en m
+5d93 me temps.
+5d9d Suve reshiim, On/Off reshiim ja akupaak ei aa olla samal ajal aktiivsed.
+5de9 El modo verano y el dep
+5e01 sito de acumulaci
+5e13 n no pueden activarse al mismo tiempo.
+5e3d Boiler setpoint is locked at 80
+5e5d  when storage tank support is enabled.
+5e85 Kedel setpunktet er l
+5e9b st til 80
+5ea5  fordi akkumuleringstanken er aktiveret.
+5ed1 Kesselsolltemp. Ist bei der erreichten Puffertemperatur bei 80 Grad blockiert.
+5f21 Teplota kotle je zablokov
+5f3b na na 80
+5f44 C pokud je podpora z
+5f59 sobn
+5f5e ku povolena.
+5f6d Keteltemperatuur is vergrendeld op 80 graden als de buffer management actief is.
+5fc1 Chaudi
+5fc8 re consigne est verrouill
+5fe8  lorsque le support du tampon est activ
+6015 Katla temperatuur on seadistatud 80
+6039 C kui akupaagi reshiim on kasutusel.
+6061 La consigna de la caldera se bloquea a 80
+608b  cuando el dep
+609a sito de acumulaci
+60ac n de apoyo est
+60bb  activado.
+60c9 Boiler
+60d1 Kedel
+60d9 Kessel
+60e1 Kotle
+60e9 Ketel
+60f1 Chaudi
+60fd Katla
+6105 Caldera
+610d Caldeira
+611d %s...
+6125 %s... %0d:%02d
+6135 %s %d
+613d %s %d%%
+6145 %s... %d%%
+6151 %s %s
+6159 %s (%u/3)
+6228 (JXp
+674b Lz3;L
+67b2 VMI0
+6817 IJ3;I
+692c eNY0
+69e6 7Ky0
+69fd 3;L
+6a83 Iy0(
+71f5 OXpx
+7254 FLi0
+72a9 My0X
+72af My0H
+79c5 .x\X
+7e26 qNI0
+7e32 cMy0
+7e49 3;M\
+7e5e QMXp
+7e9a qLy0
+8305 O8p8
+8bd1 MJ3;J
+8bef 3;JL
+8c15 Ij3;I
+8d6d I)0X
+8fbb 3;Ll
+977f OxpIO
+9787 OXpYOx
+a708 "J)0
+a70f J(pyJ(
+a74b I8pyI8
+a7c3 "KNo
+a7cd Nein
+a813 gsuger
+a81d Gebl
+a825 Ventil
+a831 Wentylator
+a83d Ventilator
+a849 Ventilateur
+a855 Ventilaator
+a861 Ventilador
+a86d Burning
+a875 Forbr
+a87b nder
+a881 Verbrennung
+a895 Spalanie
+a8a1 Branden
+a8a9 Puissance
+a8b7 lemine
+a8c1 Quemando
+a8cd Queimador
+a8d9 Pausing
+a8e1 Pausestop
+a8ed Pause
+a8f5 Pozastaven
+a901 Wstrzymywanie
+a911 Pauseren
+a91d Paus
+a925 Pausa
+a92d Start
+a93d Iniciar
+a945 Restarting...
+a955 Genstarter...
+a965 Neu starten...
+a975 Restartov
+a985 Restart...
+a991 Herstarten...
+a9a5 marrage...
+a9b1 Taask
+a9b7 ivitamine...
+a9c5 Rainiciando...
+a9d5 Stop
+a9e5 Parar
+a9ed Stopping...
+a9f9 Stopper...
+aa05 Stopt...
+aa11 Zastaven
+aa21 Zatrzymuj
+aa31 Stoppen...
+aa3d Mise 
+aa43  l'arr
+aa4a t...
+aa51 Seiskamine...
+aa61 Parando...
+aa6d Stopped
+aa75 Stoppet
+aa7d Gestopt
+aa85 Zastaveno
+aa91 Zatrzymano
+aaa5 Seisatud
+aab1 Parado
+aab9 Startup
+aac1 Opstart
+aac9 Beginn
+aadd Rozpocz
+aae9 Starten
+aaf1 Allumer
+aafb ivitamine
+ab05 Encendido
+ab11 Acendimento
+ab1d Awaiting period...
+ab31 Afventer periode...
+ab45 Warte auf Period...
+ab69 Czekam na okres...
+ab7d Wacht op periode...
+ab93 riode d'attente...
+aba9 Oote periood...
+abb9 Periodo de espera...
+abd1 Periodo em espera...
+abe9 Awaiting temp. drop...
+ac01 Afventer temp. fald...
+ac19 Warte auf Temperaturabfall...
+ac3d  na pokles teploty...
+ac55 Czekam na spadek temp...
+ac71 Wacht op temperatuur daling...
+ac91 Attente de la baisse de temp
+acae rature...
+acb9 Ootel kuni temp langeb...
+acd5 Asperando caida de temperatura...
+acf9 Em espera abaixamento de temperatura...
+ad21 Aircleaning
+ad2d Luftrenser
+ad39 Ausblasen
+ad4c  vzduchu
+ad55 Czyszczenie wentylatorem
+ad71 Lucht reinigen
+ad81 Nettoyage de l'air
+ad96 hkpuhastus
+ada1 Limpieza de aire
+adb5 Limpeza de ar
+adc5 Adding fuel
+add1 Tilf
+add6 jer t
+addc ndbr
+ade1 ndsel
+ade9 Brennstoffzufuhr
+ae04  paliva
+ae0d Dodawanie paliwa
+ae21 Brandstof toevoegen
+ae35 Ajout de combustible
+ae4f tuse lisamine
+ae5d Agregando combustible
+ae75 Adicionando combustivel
+ae8d Preheating
+ae99 Forvarmer
+aea7 ndung
+aeaf edeh
+aeb9 Podgrzewanie
+aec9 Voorverwarmen
+aedc chauffage
+aee9 Eelsoojendus
+aef9 Precalentando
+af0c -aquecimento
+af19 Stepping up
+af25 Stepper op
+af31 Stufenweise Erh
+af41 hung
+af51 Intensyfikacja
+af61 Intensiveren
+af71 Intensification
+af81 Astmeline t
+af91 Incrementando
+afa1 Increasing air intake with
+afbe ger luftindtag med
+afd1 Luftmengenerh
+afdf hung
+aff0 vodu vzduchu s
+b005 kszenie dop
+b011 ywu powietrza z
+b021 Lucht inname verhogen met
+b03d Augmentation de l'apport d'air avec
+b063 lemise 
+b06b hu suurendamine
+b07d Aumentando entrada de aire con
+b09d Aumentando a entrada de ar com
+b0bd Startup... no.
+b0d1 nding... nr.
+b0e1 Startversuch Nr.
+b0f8 et spu
+b105 Start... nr.
+b115 Opstart... Geen
+b125 Allumage... n
+b137 ivitamise nr.
+b145 Encendido
+b155 Acendimento
+b165 Outburned
+b171 Udbr
+b17d Ausbrennen
+b189 Spalen
+b190  palivo
+b199 Uitgebrand
+b1a7 faut flamme
+b1b7 hjaks p
+b1bf lenud
+b1c5 Fallo de llama
+b1d5 Falho na queima
+b1e5 ALARM
+b1ed ALARME
+b1fd ALARMA
+b205 Overheating!
+b215 Overkogning!
+b226 berhitzung!
+b241 Przegrzanie!
+b251 Overhitting!
+b261 Surchauffe!
+b26e lekuumenemine!
+b27e Sobrecalentamiento!
+b296 Sobre-aquecimento!
+b2a9 Burner disconnected/pellet shaft hot!
+b2d4 nder frakoblet/skakt varm!
+b2f1 Brenner aus/Fallschacht hei
+b315 k odpojen/nebezpe
+b328  pop
+b335 Palnik roz
+b341 czony/podawacz pelet gor
+b361 Brander ontkoppeld/Brander heet!
+b388 leur d
+b38f branch
+b396 /alimentation pellet en surchauffe!
+b3bf leti lahti 
+b3cb hendatud/pelleti tigu kuum!
+b3ea Quemar fuera de caldera/alimenatci
+b40d n pellet sobrecalentado!
+b42a Queimador desligado/sobreaquecimento alimentador pellet!
+b465 Startup failed!
+b479 ndingsfejl!
+b487 ndvorgang mi
+b494 lungen!
+b4a5  se nezda
+b4af ilo!
+b4b5 Uruchomienie nie powiod
+b4cd o si
+b4d5 Start mislukt!
+b4e5 Erreur allumage!
+b4fb ivituse viga!
+b50a Erro de encendido!
+b51e Erro na acendimento!
+b535 Ash plate
+b541 Askeplade
+b54d Aschekasten
+b559 Deska popeln
+b56b ytka popio
+b579 As plaat
+b585 Dispositif nettoyage br
+b59d leur
+b5a5 Tuha plaat!
+b5b2 Dispositivo limpieza quemador!
+b5d2 Dispositivo de limpeza do queimadore!
+b5f9 sensor not mounted!
+b60f ler ikke monteret!
+b627 hler nicht angeschlossen!
+b641 senzor nen
+b64f ipojen!
+b659 czujnik nie zamontowany!
+b675 Sensor niet geplaatst!
+b68d sonde non connect
+b6a5 andur pole 
+b6b1 hendatud!
+b6bd sensor no conectabo!
+b6d5 sensor n
+b6de o conetado!
+b6ed sensor defect!
+b6ff ler defekt!
+b70f hler besch
+b71a digt!
+b721 vadn
+b728 idlo!
+b731 defekt czujnika!
+b745 erreur sonde!
+b755 anduri viga!
+b765 error de sensor!
+b779 erro de sensor!
+b789 Indoor temp
+b795 Indetemp
+b7a1 Innentempreatur
+b7b1 Vnit
+b7b8  teplota
+b7c1 Temperatura wewn
+b7d2 trzna
+b7d9 Tempertuur binnen
+b7ed Temp. int
+b7f7 rieure
+b801 Anduri viga
+b80d Error de sensor
+b81d Erro de sensor
+b82d Outdoor temp
+b83d Udetemp
+b848 entemperatur
+b855 Venkovn
+b85d  teplota
+b869 Temp. zewn
+b874 trzna
+b87d Termperatuur buiten
+b891 Temp. ext
+b89b rieure
+b8a5 Ruumi temp
+b8b1 Temp. interior
+b8c1 Boiler temp
+b8cd Kedeltemp
+b8d9 Kesseltemperatur
+b8ed Teplota kotle
+b8fd Temp. kot
+b909 Ketel temperatuur
+b91d Temp. chaudi
+b92d Katla temp
+b939 Temp. de caldera
+b94d Temp. caldeira
+b95d Return temp
+b969 Returtemp
+b977 cklauftemperatur
+b989 Teplota vratn
+b997  vody
+b99d Temp. zwrotna
+b9ad Retour temperatuur
+b9c1 Temp. retour
+b9d1 Tagasivoolu temp
+b9e5 Temp. de retorno
+b9f9 Temp. Retorno
+ba09 DHW temp
+ba15 VVBtemp
+ba1d Warmwassertemperatur
+ba35 Teplota TUV
+ba41 CWU temp
+ba4d WTW temperatuur
+ba5d Temp. E.C.S.
+ba6d Boileri temp
+ba7d Temp. de ACS
+ba8d Temp. A.Q.S.
+ba9d Unknown sensor error!
+bab5 Ukendt sensorfejl!
+bacb hlerfehler unbekannt!
+bae1 Nezn
+bae8  chyba senzoru!
+baf9 Nieznany b
+bb05 d czujnika!
+bb11 Onbekende sensor error!
+bb29 Erreur sonde inconnu!
+bb41 Tundmatu anduri viga!
+bb5a Error de sensor desconocido!
+bb7a Erro de sensor desconhecido!
+bb99 Unknown error!
+bba9 Ukendt fejl!
+bbb9 Error!
+bbc1 Nezn
+bbc8  chyba!
+bbd1 Nieznany b
+bbe1 Onbekende error!
+bbf5 Erreur inconnu
+bc05 Tundmatu viga!!
+bc16 Error desconocido!
+bc2a Erro desconhecido!
+bc3d Fan error!
+bc4b gsuger fejl!
+bc59 Gebl
+bc5e se fehler!
+bc69 Ventil
+bc70 tor se nezda
+bc7d ilo!
+bc85 Wentylator b
+bc99 Ventilator error!
+bcad Ventilateur erreur!
+bcc1 Ventilaator viga!
+bcd6 Error ventilador!
+bcea Erro de ventilador!
+bd01 Flue temp
+bd0f gtemp
+bd15 Abgastemperatur
+bd25 Teplota spalin
+bd35 Temp spalin
+bd41 Rookgastemperatuur
+bd55 Temp. sortie fum
+bd69 Suitsugaasi temp
+bd7d Temp. de humos
+bd8d Temp. de fumos
+bd9d Opening ash plate...
+bdb6 bner askeplade...
+bdc9 Aschenkasten 
+bdd7 ffnen...
+bde1 Otev
+bde9  desky popeln
+bdf7 ku...
+bdfd Otwarcie popielnika...
+be15 As plaat openen...
+be29 Ouverture dispositif nettoyage br
+be4b leur...
+be55 Tuha plaadi avamine...
+be6d Abriendo dispositivo limpieza quemador...
+be99 Abrindo dispositivo de limpeza do queimador...
+bec9 Closing ash plate...
+bee1 Lukker askeplade...
+bef5 Aschekasten schlie
+bf08 en...
+bf11 Uzav
+bf19  desky popeln
+bf27 ku...
+bf2d Zamykanie popielnika...
+bf45 As plaat sluiten...
+bf59 Fermeture dispositif nettoyage br
+bf7b leur...
+bf85 Tuha plaadi sulgemine...
+bfa1 Cerrando dispositivo limpieza quemador...
+bfcd Fechando dispositivo de limpeza do queimador...
+bffd Reading temperatures
+c015 Indl
+c01a ser temperaturer
+c02d Temperaturen pr
+c049  teplot
+c051 Odczyt temperatury
+c065 Temperaturen uitlezen
+c07d Lecture temp
+c08a rature
+c091 Temperatuuride m
+c0a3 tmine
+c0a9 Leyendo temperaturas
+c0c1 Lendo temperaturas
+c0d5 The test can only be executed if the system is stopped and summer mode is turned off.
+c12d Testen kan kun udf
+c140 res n
+c146 r styringen er stoppet og sommerdrift er sl
+c172 et fra.
+c17d Test kann nur im Fall wenn Sommermodus aus ist und System nicht im Betrieb ist.
+c1cd Test lze vykonat pouze v p
+c1f0 e je syst
+c1fa m zastaven a letn
+c210 im vypnut.
+c21d Test mo
+c225 e by
+c22a  wykonany tylko w przypadku gdy system jest zatrzymany i tryb letni jest wy
+c277 czony.
+c281 De test kan alleen uitgevoerd worden als de zomermode uit staat en de ketel uit staat.
+c2d9 Le test peut s
+c2eb cuter si le syst
+c2fc me est 
+c304  l'arr
+c30b t et le programmateur horaire d
+c32b sactiv
+c335 Test on v
+c33f imalik l
+c348 bi viia 
+c351 ksnes siis kui s
+c362 steem on seisatud ja suve reshiim v
+c386 lja l
+c38c litatud.
+c395 El test se puede ejercutar si el sistema esta parado y programador horario desactivado.
+c3ed O teste s
+c3f7  pode ser exectuado se o sistema estiver parado e programador hor
+c439 rio desactivado.
+c44d Loading new software...
+c465 Indl
+c46a ser ny software...
+c47d Neue Software laden...
+c499  software se nahr
+c4b2 adowanie nowego oprogramowania...
+c4d5 Laden nieuwe software...
+c4f5 chargement du nouveau software...
+c519 Tarkavara laadimine...
+c531 Cargando un nuevo software...
+c551 Carregando um novo software...
+c571 Cleaning internal auger...
+c58f mmer intern snegl...
+c5a5 Reinigung Schnecke...
+c5c4  vnit
+c5d0 neku...
+c5d9 Czyszcze podajnik wewn
+c5f0 trzny...
+c5f9 Reiniging interne vijzel...
+c615 Nettoyage de la vis interne...
+c635 Sisemise teo puhastamine...
+c651 Barrena alimentador interno...
+c671 Trado alimentador interno...
+c691 Summer mode, On/Off mode and storage tank can't be active at the same time.
+c6dd Sommerdrift, On/Off drift og akkumuleringstank kan ikke v
+c717 re aktiv p
+c722  samme tid.
+c731 Sommermodus, An/Aus Modus und Pufferladeset k
+c75f nnen nicht zu derselben zeit aktiviert werden.
+c791 Letn
+c79a im, Re
+c7a1 im ZAPNUTO/VYPNUTO a z
+c7b8 sobn
+c7bd k nem
+c7c4 ou b
+c7c9 t aktivn
+c7d2  ve stejnou dobu.
+c7e5 Sommermodus, W
+c7f5 cz/Wy
+c7fc cz und Pufferladeset k
+c813 nnen nicht zu derselben zeit aktiviert werden.
+c845 Zomermode, Aan/Uit mode en buffermanagement kunnen niet tezamen actief zijn.
+c895 Mode 
+c89d , Mode On/Off et le r
+c8b3 servoir de stockage tampon ne peuvent pas 
+c8de tre actives en m
+c8ef me temps.
+c8f9 Suve reshiim, On/Off reshiim ja akupaak ei aa olla samal ajal aktiivsed.
+c945 El modo verano y el dep
+c95d sito de acumulaci
+c96f n no pueden activarse al mismo tiempo.
+c999 Boiler setpoint is locked at 80
+c9b9  when storage tank support is enabled.
+c9e1 Kedel setpunktet er l
+c9f7 st til 80
+ca01  fordi akkumuleringstanken er aktiveret.
+ca2d Kesselsolltemp. Ist bei der erreichten Puffertemperatur bei 80 Grad blockiert.
+ca7d Teplota kotle je zablokov
+ca97 na na 80
+caa0 C pokud je podpora z
+cab5 sobn
+caba ku povolena.
+cac9 Keteltemperatuur is vergrendeld op 80 graden als de buffer management actief is.
+cb1d Chaudi
+cb24 re consigne est verrouill
+cb44  lorsque le support du tampon est activ
+cb71 Katla temperatuur on seadistatud 80
+cb95 C kui akupaagi reshiim on kasutusel.
+cbbd La consigna de la caldera se bloquea a 80
+cbe7  cuando el dep
+cbf6 sito de acumulaci
+cc08 n de apoyo est
+cc17  activado.
+cc25 Boiler
+cc2d Kedel
+cc35 Kessel
+cc3d Kotle
+cc45 Ketel
+cc4d Chaudi
+cc59 Katla
+cc61 Caldera
+cc69 Caldeira
+cc79 %02d
+cc81 %04d
+cc89 (%2.1f-%2.1fkg)
+cc9d EH900
+cca5 EH1500
+ccad EH2500
+ccb5 EH4000
+ccbd EHTEST
+ccc5 v%d.%02d  %s
+ccd5 Dec  3 2014
+cce5 %3.0f
+cced %3.1f
+ccf5 %3.1f%%
+ccfd On/Off
+cd05 %3.1f l/h
+cd11 - l/h
+cd19 %3.1f kW
+cd25 - kW
+cd2d %4.1f kg
+cd39 %d lux
+cd41 %s %d%%
+cd49 %s...
+cd51 EKOHEAT 900
+cd5d EKOHEAT 1500
+cd6d EKOHEAT 2500
+cd7d EKOHEAT 4000
+cd8d EKOHEAT TEST
+cf8d %02d:%02d
+d131 %0d:%02d
+d13d 0:00
+d781 %s... %d
+e538 HJI0
+e6a9 j0{
+f271 Oy08
+f286 pIy0
+f5de )Iz1
+f5ec hIj1
+f94a hLhp(
+f951 LZ0;L\
+f965 0;L<
+f993 KHpX
+f9c8 1J)0
+fb1a (Iy08
+fcf2 )00
+fdfc )00
+feac )00
+ffb6 )00
+10066 )00
+10170 )00
+10220 )00
+1032a )00
+103da )00
+104e4 )00
+10594 )00
+1069e )00
+1074e )00
+10858 )00
+10908 )00
+10a12 )00
+10ac2 )00
+10bcc )00
+10c7c )00
+10d86 )00
+1173b JJ3;M|
+11767 M)08
+11938 )00
+119f4 )00
+11ab0 )00
+11adb OZ0;O
+11b18 i/}M
+11b38 )00
+11b63 M:0;M
+11ba0 G/}K
+11bc4 )00
+11bf5 Kz0[K|
+11c32 #/}II0
+11c3d Jy08
+11c52 %J)0
+11f84 &J90
+12058 @O)0
+1213f \XLy
+121ee &J90
+123ea )00
+125dc 5K)0
+126ea @J90
+1272d Iy08
+1273b I90X
+12741 I)08
+12b33 0[Nl
+12b49 0[N,
+12b66 XNZ0
+12bf7 0[K\
+12c2a 'KZ0
+12c68 *Jy0
+12c77 JI0x
+12d52 )N*0{N,
+12d82 )Mj0{M|
+12df0 HLi0
+12e8b JY0h
+12f65 M8p8
+12f95 LxpH
+12fb8 )LZ0{Ll
+12fcd \XLI
+1306a &J90
+13259 \X\X
+133f1 N*3;Nl
+133fd NY08
+1343a MLy0
+1348b 3;L
+1389e HNI1h
+138d8 #00
+13959 \XKi
+139a2 ,J90
+13a8a @Jy0
+13ab0 /J)1
+13b7e @Iy0
+13d24 )0\0
+13d9f Nxp(
+13dd9 p)NHp
+13ded M8p)M
+13e9b p)K8
+13edb Jy08
+1400c )00
+14060 )00
+140b4 )00
+14108 )00
+1415c )00
+141b0 )00
+14204 )00
+14256 )00
+142a0 )00
+142ec )00
+14307 \XMY
+14338 )00
+14353 \XL)
+143f6 0IY0
+14423 JY18
+146c9 OZ0[O
+146fb 0[OL
+14736  Ny0
+1474b MZ0[N,
+14788  MI0
+147c1 0[L|
+147da  L)0
+14811 J:0[KL
+14993 Jz0[J|
+14cb3 \XN)
+14cbf NJ0{NL
+14d8a 8KY0
+15081 \XMI
+1511b KI08
+15212 $J)0
+15256 xIY1H
+152d6 5K90
+1531b Ji1H
+1537a jEq0
+15438 @J)0
+15544 tOI0
+15584 dNI0
+155c4 TMI0
+15604 DLI0
+15644 4KI0
+15688 #J90
+15770 @M)0
+157e0 )00
+15833 Jy0X
+1594c &JI0
+15990 xIy0
+15a0b J96H
+15a16 "J)?
+15afd x*1[
+15e56 @J)0
+16a23 Oj3;Ol
+16a3e rO)0
+16a79 \XNI
+16a9b N:0{N<
+16ae6 WMy08
+17179 \XJi
+1718c H\XJ)
+171ba QIi0
+171d0 RI)0
+17497 \XMI
+175a1 \XIy
+1760b _(No
+17615 Nein
+1765b gsuger
+17665 Gebl
+1766d Ventil
+17679 Wentylator
+17685 Ventilator
+17691 Ventilateur
+1769d Ventilaator
+176a9 Ventilador
+176b5 Burning
+176bd Forbr
+176c3 nder
+176c9 Verbrennung
+176dd Spalanie
+176e9 Branden
+176f1 Puissance
+176ff lemine
+17709 Quemando
+17715 Queimador
+17721 Pausing
+17729 Pausestop
+17735 Pause
+1773d Pozastaven
+17749 Wstrzymywanie
+17759 Pauseren
+17765 Paus
+1776d Pausa
+17775 Start
+17785 Iniciar
+1778d Restarting...
+1779d Genstarter...
+177ad Neu starten...
+177bd Restartov
+177cd Restart...
+177d9 Herstarten...
+177ed marrage...
+177f9 Taask
+177ff ivitamine...
+1780d Rainiciando...
+1781d Stop
+1782d Parar
+17835 Stopping...
+17841 Stopper...
+1784d Stopt...
+17859 Zastaven
+17869 Zatrzymuj
+17879 Stoppen...
+17885 Mise 
+1788b  l'arr
+17892 t...
+17899 Seiskamine...
+178a9 Parando...
+178b5 Stopped
+178bd Stoppet
+178c5 Gestopt
+178cd Zastaveno
+178d9 Zatrzymano
+178ed Seisatud
+178f9 Parado
+17901 Startup
+17909 Opstart
+17911 Beginn
+17925 Rozpocz
+17931 Starten
+17939 Allumer
+17943 ivitamine
+1794d Encendido
+17959 Acendimento
+17965 Awaiting period...
+17979 Afventer periode...
+1798d Warte auf Period...
+179b1 Czekam na okres...
+179c5 Wacht op periode...
+179db riode d'attente...
+179f1 Oote periood...
+17a01 Periodo de espera...
+17a19 Periodo em espera...
+17a31 Awaiting temp. drop...
+17a49 Afventer temp. fald...
+17a61 Warte auf Temperaturabfall...
+17a85  na pokles teploty...
+17a9d Czekam na spadek temp...
+17ab9 Wacht op temperatuur daling...
+17ad9 Attente de la baisse de temp
+17af6 rature...
+17b01 Ootel kuni temp langeb...
+17b1d Asperando caida de temperatura...
+17b41 Em espera abaixamento de temperatura...
+17b69 Aircleaning
+17b75 Luftrenser
+17b81 Ausblasen
+17b94  vzduchu
+17b9d Czyszczenie wentylatorem
+17bb9 Lucht reinigen
+17bc9 Nettoyage de l'air
+17bde hkpuhastus
+17be9 Limpieza de aire
+17bfd Limpeza de ar
+17c0d Adding fuel
+17c19 Tilf
+17c1e jer t
+17c24 ndbr
+17c29 ndsel
+17c31 Brennstoffzufuhr
+17c4c  paliva
+17c55 Dodawanie paliwa
+17c69 Brandstof toevoegen
+17c7d Ajout de combustible
+17c97 tuse lisamine
+17ca5 Agregando combustible
+17cbd Adicionando combustivel
+17cd5 Preheating
+17ce1 Forvarmer
+17cef ndung
+17cf7 edeh
+17d01 Podgrzewanie
+17d11 Voorverwarmen
+17d24 chauffage
+17d31 Eelsoojendus
+17d41 Precalentando
+17d54 -aquecimento
+17d61 Stepping up
+17d6d Stepper op
+17d79 Stufenweise Erh
+17d89 hung
+17d99 Intensyfikacja
+17da9 Intensiveren
+17db9 Intensification
+17dc9 Astmeline t
+17dd9 Incrementando
+17de9 Increasing air intake with
+17e06 ger luftindtag med
+17e19 Luftmengenerh
+17e27 hung
+17e38 vodu vzduchu s
+17e4d kszenie dop
+17e59 ywu powietrza z
+17e69 Lucht inname verhogen met
+17e85 Augmentation de l'apport d'air avec
+17eab lemise 
+17eb3 hu suurendamine
+17ec5 Aumentando entrada de aire con
+17ee5 Aumentando a entrada de ar com
+17f05 Startup... no.
+17f19 nding... nr.
+17f29 Startversuch Nr.
+17f40 et spu
+17f4d Start... nr.
+17f5d Opstart... Geen
+17f6d Allumage... n
+17f7f ivitamise nr.
+17f8d Encendido
+17f9d Acendimento
+17fad Outburned
+17fb9 Udbr
+17fc5 Ausbrennen
+17fd1 Spalen
+17fd8  palivo
+17fe1 Uitgebrand
+17fef faut flamme
+17fff hjaks p
+18007 lenud
+1800d Fallo de llama
+1801d Falho na queima
+1802d ALARM
+18035 ALARME
+18045 ALARMA
+1804d Overheating!
+1805d Overkogning!
+1806e berhitzung!
+18089 Przegrzanie!
+18099 Overhitting!
+180a9 Surchauffe!
+180b6 lekuumenemine!
+180c6 Sobrecalentamiento!
+180de Sobre-aquecimento!
+180f1 Burner disconnected/pellet shaft hot!
+1811c nder frakoblet/skakt varm!
+18139 Brenner aus/Fallschacht hei
+1815d k odpojen/nebezpe
+18170  pop
+1817d Palnik roz
+18189 czony/podawacz pelet gor
+181a9 Brander ontkoppeld/Brander heet!
+181d0 leur d
+181d7 branch
+181de /alimentation pellet en surchauffe!
+18207 leti lahti 
+18213 hendatud/pelleti tigu kuum!
+18232 Quemar fuera de caldera/alimenatci
+18255 n pellet sobrecalentado!
+18272 Queimador desligado/sobreaquecimento alimentador pellet!
+182ad Startup failed!
+182c1 ndingsfejl!
+182cf ndvorgang mi
+182dc lungen!
+182ed  se nezda
+182f7 ilo!
+182fd Uruchomienie nie powiod
+18315 o si
+1831d Start mislukt!
+1832d Erreur allumage!
+18343 ivituse viga!
+18352 Erro de encendido!
+18366 Erro na acendimento!
+1837d Ash plate
+18389 Askeplade
+18395 Aschekasten
+183a1 Deska popeln
+183b3 ytka popio
+183c1 As plaat
+183cd Dispositif nettoyage br
+183e5 leur
+183ed Tuha plaat!
+183fa Dispositivo limpieza quemador!
+1841a Dispositivo de limpeza do queimadore!
+18441 sensor not mounted!
+18457 ler ikke monteret!
+1846f hler nicht angeschlossen!
+18489 senzor nen
+18497 ipojen!
+184a1 czujnik nie zamontowany!
+184bd Sensor niet geplaatst!
+184d5 sonde non connect
+184ed andur pole 
+184f9 hendatud!
+18505 sensor no conectabo!
+1851d sensor n
+18526 o conetado!
+18535 sensor defect!
+18547 ler defekt!
+18557 hler besch
+18562 digt!
+18569 vadn
+18570 idlo!
+18579 defekt czujnika!
+1858d erreur sonde!
+1859d anduri viga!
+185ad error de sensor!
+185c1 erro de sensor!
+185d1 Indoor temp
+185dd Indetemp
+185e9 Innentempreatur
+185f9 Vnit
+18600  teplota
+18609 Temperatura wewn
+1861a trzna
+18621 Tempertuur binnen
+18635 Temp. int
+1863f rieure
+18649 Anduri viga
+18655 Error de sensor
+18665 Erro de sensor
+18675 Outdoor temp
+18685 Udetemp
+18690 entemperatur
+1869d Venkovn
+186a5  teplota
+186b1 Temp. zewn
+186bc trzna
+186c5 Termperatuur buiten
+186d9 Temp. ext
+186e3 rieure
+186ed Ruumi temp
+186f9 Temp. interior
+18709 Boiler temp
+18715 Kedeltemp
+18721 Kesseltemperatur
+18735 Teplota kotle
+18745 Temp. kot
+18751 Ketel temperatuur
+18765 Temp. chaudi
+18775 Katla temp
+18781 Temp. de caldera
+18795 Temp. caldeira
+187a5 Return temp
+187b1 Returtemp
+187bf cklauftemperatur
+187d1 Teplota vratn
+187df  vody
+187e5 Temp. zwrotna
+187f5 Retour temperatuur
+18809 Temp. retour
+18819 Tagasivoolu temp
+1882d Temp. de retorno
+18841 Temp. Retorno
+18851 DHW temp
+1885d VVBtemp
+18865 Warmwassertemperatur
+1887d Teplota TUV
+18889 CWU temp
+18895 WTW temperatuur
+188a5 Temp. E.C.S.
+188b5 Boileri temp
+188c5 Temp. de ACS
+188d5 Temp. A.Q.S.
+188e5 Unknown sensor error!
+188fd Ukendt sensorfejl!
+18913 hlerfehler unbekannt!
+18929 Nezn
+18930  chyba senzoru!
+18941 Nieznany b
+1894d d czujnika!
+18959 Onbekende sensor error!
+18971 Erreur sonde inconnu!
+18989 Tundmatu anduri viga!
+189a2 Error de sensor desconocido!
+189c2 Erro de sensor desconhecido!
+189e1 Unknown error!
+189f1 Ukendt fejl!
+18a01 Error!
+18a09 Nezn
+18a10  chyba!
+18a19 Nieznany b
+18a29 Onbekende error!
+18a3d Erreur inconnu
+18a4d Tundmatu viga!!
+18a5e Error desconocido!
+18a72 Erro desconhecido!
+18a85 Fan error!
+18a93 gsuger fejl!
+18aa1 Gebl
+18aa6 se fehler!
+18ab1 Ventil
+18ab8 tor se nezda
+18ac5 ilo!
+18acd Wentylator b
+18ae1 Ventilator error!
+18af5 Ventilateur erreur!
+18b09 Ventilaator viga!
+18b1e Error ventilador!
+18b32 Erro de ventilador!
+18b49 Flue temp
+18b57 gtemp
+18b5d Abgastemperatur
+18b6d Teplota spalin
+18b7d Temp spalin
+18b89 Rookgastemperatuur
+18b9d Temp. sortie fum
+18bb1 Suitsugaasi temp
+18bc5 Temp. de humos
+18bd5 Temp. de fumos
+18be5 Opening ash plate...
+18bfe bner askeplade...
+18c11 Aschenkasten 
+18c1f ffnen...
+18c29 Otev
+18c31  desky popeln
+18c3f ku...
+18c45 Otwarcie popielnika...
+18c5d As plaat openen...
+18c71 Ouverture dispositif nettoyage br
+18c93 leur...
+18c9d Tuha plaadi avamine...
+18cb5 Abriendo dispositivo limpieza quemador...
+18ce1 Abrindo dispositivo de limpeza do queimador...
+18d11 Closing ash plate...
+18d29 Lukker askeplade...
+18d3d Aschekasten schlie
+18d50 en...
+18d59 Uzav
+18d61  desky popeln
+18d6f ku...
+18d75 Zamykanie popielnika...
+18d8d As plaat sluiten...
+18da1 Fermeture dispositif nettoyage br
+18dc3 leur...
+18dcd Tuha plaadi sulgemine...
+18de9 Cerrando dispositivo limpieza quemador...
+18e15 Fechando dispositivo de limpeza do queimador...
+18e45 Reading temperatures
+18e5d Indl
+18e62 ser temperaturer
+18e75 Temperaturen pr
+18e91  teplot
+18e99 Odczyt temperatury
+18ead Temperaturen uitlezen
+18ec5 Lecture temp
+18ed2 rature
+18ed9 Temperatuuride m
+18eeb tmine
+18ef1 Leyendo temperaturas
+18f09 Lendo temperaturas
+18f1d The test can only be executed if the system is stopped and summer mode is turned off.
+18f75 Testen kan kun udf
+18f88 res n
+18f8e r styringen er stoppet og sommerdrift er sl
+18fba et fra.
+18fc5 Test kann nur im Fall wenn Sommermodus aus ist und System nicht im Betrieb ist.
+19015 Test lze vykonat pouze v p
+19038 e je syst
+19042 m zastaven a letn
+19058 im vypnut.
+19065 Test mo
+1906d e by
+19072  wykonany tylko w przypadku gdy system jest zatrzymany i tryb letni jest wy
+190bf czony.
+190c9 De test kan alleen uitgevoerd worden als de zomermode uit staat en de ketel uit staat.
+19121 Le test peut s
+19133 cuter si le syst
+19144 me est 
+1914c  l'arr
+19153 t et le programmateur horaire d
+19173 sactiv
+1917d Test on v
+19187 imalik l
+19190 bi viia 
+19199 ksnes siis kui s
+191aa steem on seisatud ja suve reshiim v
+191ce lja l
+191d4 litatud.
+191dd El test se puede ejercutar si el sistema esta parado y programador horario desactivado.
+19235 O teste s
+1923f  pode ser exectuado se o sistema estiver parado e programador hor
+19281 rio desactivado.
+19295 Loading new software...
+192ad Indl
+192b2 ser ny software...
+192c5 Neue Software laden...
+192e1  software se nahr
+192fa adowanie nowego oprogramowania...
+1931d Laden nieuwe software...
+1933d chargement du nouveau software...
+19361 Tarkavara laadimine...
+19379 Cargando un nuevo software...
+19399 Carregando um novo software...
+193b9 Cleaning internal auger...
+193d7 mmer intern snegl...
+193ed Reinigung Schnecke...
+1940c  vnit
+19418 neku...
+19421 Czyszcze podajnik wewn
+19438 trzny...
+19441 Reiniging interne vijzel...
+1945d Nettoyage de la vis interne...
+1947d Sisemise teo puhastamine...
+19499 Barrena alimentador interno...
+194b9 Trado alimentador interno...
+194d9 Summer mode, On/Off mode and storage tank can't be active at the same time.
+19525 Sommerdrift, On/Off drift og akkumuleringstank kan ikke v
+1955f re aktiv p
+1956a  samme tid.
+19579 Sommermodus, An/Aus Modus und Pufferladeset k
+195a7 nnen nicht zu derselben zeit aktiviert werden.
+195d9 Letn
+195e2 im, Re
+195e9 im ZAPNUTO/VYPNUTO a z
+19600 sobn
+19605 k nem
+1960c ou b
+19611 t aktivn
+1961a  ve stejnou dobu.
+1962d Sommermodus, W
+1963d cz/Wy
+19644 cz und Pufferladeset k
+1965b nnen nicht zu derselben zeit aktiviert werden.
+1968d Zomermode, Aan/Uit mode en buffermanagement kunnen niet tezamen actief zijn.
+196dd Mode 
+196e5 , Mode On/Off et le r
+196fb servoir de stockage tampon ne peuvent pas 
+19726 tre actives en m
+19737 me temps.
+19741 Suve reshiim, On/Off reshiim ja akupaak ei aa olla samal ajal aktiivsed.
+1978d El modo verano y el dep
+197a5 sito de acumulaci
+197b7 n no pueden activarse al mismo tiempo.
+197e1 Boiler setpoint is locked at 80
+19801  when storage tank support is enabled.
+19829 Kedel setpunktet er l
+1983f st til 80
+19849  fordi akkumuleringstanken er aktiveret.
+19875 Kesselsolltemp. Ist bei der erreichten Puffertemperatur bei 80 Grad blockiert.
+198c5 Teplota kotle je zablokov
+198df na na 80
+198e8 C pokud je podpora z
+198fd sobn
+19902 ku povolena.
+19911 Keteltemperatuur is vergrendeld op 80 graden als de buffer management actief is.
+19965 Chaudi
+1996c re consigne est verrouill
+1998c  lorsque le support du tampon est activ
+199b9 Katla temperatuur on seadistatud 80
+199dd C kui akupaagi reshiim on kasutusel.
+19a05 La consigna de la caldera se bloquea a 80
+19a2f  cuando el dep
+19a3e sito de acumulaci
+19a50 n de apoyo est
+19a5f  activado.
+19a6d Boiler
+19a75 Kedel
+19a7d Kessel
+19a85 Kotle
+19a8d Ketel
+19a95 Chaudi
+19aa1 Katla
+19aa9 Caldera
+19ab1 Caldeira
+19b95 %s: %s
+19ba4 %s: %3.1f
+19bb8 %s: %3.1f
+19bc9 %s%s
+19bce %s: %3.1f
+19bd9 {}%02d-%02d-%02d %02d:%02d:%02d,
+19bfd %3.1f,%3.1f,%3.1f,%3.1f,%3.1f,%3.1f,%3.1f,
+19c29 %u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,
+19c55 %.2f,%.2f,%u,%3.1f,
+1a016 jEq0
+1a1ff p(\X
+1a20b ph\X
+1a217 p8\X
+1a223 pH\X
+1a23c lpX\X
+1a4ec ,px\X
+1a522 x\X
+1a538 h\X
+1a54e x\X
+1a564 h\X
+1a57a x\X
+1a583 \X\X
+1a5bc hOY6H
+1a610 AOi0
+1ac8c t/-N
+1ad1b MHpx
+1ad94 2/-KXp
+1b0cf @@ComRXTask
+1b0dd ComTXTask
+1b12c hI8p
+1b13d \XI9
+1b271 0+I,
+1b315 LHp
+1ba72 >pxY
+1bf54 QLY0
+1d1aa 1N(p
+1d58d Nxp(
+1d5d5 \x x
+1d5de yM8piM(
+1d620 )KXp
+1d69e iJHp
+1d6ad \x x
+1da8d ImIp
+1da9b I`Ia
+1daad I@IQ
+1dabf I I!
+1db1d "AT26DFX Data Flash"
+1dc87 kPIDLE
+1dd3e DLHp
+1de84 'Jxp
+1e1a6 FLhp
+1e1ba qL(p
+1e23e pJxp8p8
+1e290 PIXp
+1e3e5 p8p8
+1e5c3 p8p8
+1e5e6 %JXp
+1f3e7 d( m
+1fa50 xB@0
+1fd5e 8\x (
+21d0d p(\X
+22518 'JXp
+22df0 8HI0
+22e0f 1KH<
+22ecf 2{H<
+23766 +JX/
+2388e zB?0
+2389c xB@0
+23c7e !&15;@2
+23d39 ",7>ES`2
+23df5 '1DS\bd2
+23eb0 "-27@DJO2
+23f6d ",7>ES`
+24043 Clean now
+2404d Rens nu
+24055 Jetzt reinigen
+2406b te nyn
+24078  teraz
+2407f Reinig nu
+24089 Nettoyer
+24092 Puhasta kohe
+2409f Limpiar 
+240a8 Limpar
+240c7 Choose number of cleanings
+240e4 lg antal rensninger
+240f8 Wahl des Reinigungsintervalls
+24116 Vyberte po
+2412c Wybierz liczb
+2413a  czyszcze
+24145 Kies aantal reinigings cyclussen
+24168 lectionner le nombre de nettoyage
+2418a Vali puhastamiste arv
+241a0 Seleccionar n
+241ae mero de limpiezas
+241c0 Selecionar n
+241cd mero de limpezas
+2424e Cancel
+24255 Annuller
+2425e Abbrechen
+2426f Anulowa
+24278 Annuleren
+2428a Keeldu
+24291 Cancelar
+2429a Cancelar
+243d5 Information
+243e1 Information
+243ed Info
+243f2 Informace
+243fc Informacja
+24407 Informatie
+24412 Information
+2441e Informatsioon
+2442c Informaci
+24438 Informa
+244b5 Ontime in hours (from new kettle):
+244d8 Drifttid i timer (fra kedlen var ny):
+244fe Betriebsstunden
+24511 et hodin v provozu (od nov
+2452c ho kotle):
+2453a czony w godzinach (od nowego kot
+2455f In werking uren (sinds ingebruikname)
+24585 Heures de fonctionnement
+245a1 tatud aeg tundides
+245b4 Horas de funcionamiento
+245cc Horas de funcionamento
+245fb Number of ignitions (from new kettle):
+24622 Antal opt
+2462c ndinger (fra elt
+2463d nderen var ny):
+2464d Anzahl der Z
+2465a ndvorg
+24668 et zapalov
+24675  (od nov
+2467e ho zapalova
+2468e Liczba zap
+2469c w (od nowego zapalnika):
+246b5 Aantal ontstekingen (sinds ingebruikname)
+246df Nombre de d
+246eb marrage
+246f6 tamiste arv
+24704 mero de arrancadas
+24719 mero de arranques
+24747 Reset
+2474d Nulstil
+24755 Reset
+2475b Resetovat
+24765 Resetuj
+2476d Reset
+24773 Reset
+24779 Reset
+2477f Reset
+24785 Reset
+247a3 Software version:
+247b5 Software version:
+247c7 Programmversion
+247d7 Verze softwaru:
+247e7 Wersja oprogramowania:
+247fe Software versie:
+2480f Version Software
+24820 Tarkvara versioon:
+24833 Versi
+24839 n de software
+24847 Vers
+2484c o de software
+24872 Controller id:
+24881 Styring id:
+2488d Controller id.
+248a2  jednotka 
+248b0 Kontroler id:
+248be Controller id:
+248cd Id platine contr
+248e1 Controller id:
+248f0 Id tarjeta control
+24903 Id placa de controlo
+24930 Boiler type:
+2493d Kedel type:
+24949 Kesseltyp
+24953 Typ kotle:
+2495e Typ kot
+24969 Ketel type:
+24979 le chaudi
+24986 Katla t
+24992 Modelo caldera
+249a1 Modelo caldeira
+24a26 Exit
+24a2b Afslut
+24a32 Exit
+24a37 Konec
+24a45 Exit
+24a4a Sortir
+24a57 Salir
+24a5d Salir
+24ac0 Language
+24b33 Dansk
+24ba9 English
+24c07 Deutsch
+24c43 Polski
+24cdc Nederlands
+24d2d Fran
+24d7a Eesti
+24dea Espa
+24e4a Portugu
+24e7e Menu
+24e83 Menu
+24e8d Menu
+24e92 Menu
+24e97 Menu
+24e9c Menu
+24eac Menu
+24edb Exit
+24ee0 Afslut
+24ee7 Exit
+24eec Konec
+24efa Exit
+24eff Sortir
+24f0c Salir
+24f12 Salir
+25069 Menu
+2506e Menu
+25078 Menu
+2507d Menu
+25082 Menu
+25087 Menu
+25097 Menu
+25132 User settings
+25140 Bruger indstillinger
+25155 Benutzereinstellungen
+2516d ivatelsk
+25176  nastaven
+25181 Ustawienia u
+2518e ytkownika
+25198 Gebruikers instellingen
+251b0 Configuration
+251be Kasutaja seaded
+251ce Configuraci
+251dc Configurra
+25202 Service settings
+25213 Mont
+25218 r indstillinger
+25228 Serviceeinstellungen
+2523d Servisn
+25245  nastaven
+25250 Ustawienia serwisowe
+25265 Service instellingen
+2527a Technicien
+25285 Hoolduse seaded
+25297 cnico
+2529f cnico
+252bd Change hopper content
+252d3 Ret siloindhold
+252e3 Magazininhalt 
+252f2 ndern
+252fb na objemu z
+25307 sobn
+2530f Zmie
+25314  zawarto
+2531e  pojemnika
+25329 Verander inhoud hopper
+25340 Contenu de la tr
+25355 Muuda salve mahtu
+25367 Cambiar contenido tolva
+2537f Mudar conte
+2538b do do dep
+25395 sito
+253b2 Clean now
+253bc Rens nu
+253c4 Reinige jetzt
+253d9 te nyn
+253e6  teraz
+253ed Reinig nu
+253f7 Nettoyer
+25400 Puhasta kohe
+2540d Limpiar 
+25416 Limpar
+2542c Language
+2544d Self-Test
+25457 Self-Test
+25461 Selbsttest
+2546c Test za
+2547a Self-Test
+25484 Self-Test
+2548e Auto-test
+25498 Testimine
+254a2 Auto-Test
+254ac Auto-teste
+254cf Exit
+254d4 Afslut
+254db Exit
+254e0 Konec
+254ee Exit
+254f3 Sortir
+25500 Salir
+25506 Salir
+25a5a Warm w.
+25a6e E.C.S.
+25a75 Tarbevesi
+25a83 A.Q.S.
+25ab4 Info
+25ab9 Info
+25abe Info
+25ac3 Info
+25ac8 Info
+25acd Info
+25ad2 Info.
+25ad8 Info
+25add Info 
+25ae3 Info
+25b12 Menu
+25b17 Menu
+25b21 Menu
+25b26 Menu
+25b2b Menu
+25b30 Menu
+25b40 Menu
+25f11 Boiler
+25f18 Kedel
+25f1e Kessel
+25f25 Kotel
+25f2b Piec
+25f30 Ketel
+25f36 Chaudi
+25f40 Katel
+25f46 Caldera
+25f4e Caldeira
+25fc0 Ekoheat 900
+25fda Ekoheat 1500
+25ff6 Ekoheat 2500
+26012 Ekoheat 4000
+2602f Test boiler
+260c4 Menu
+260c9 Menu
+260d3 Menu
+260d8 Menu
+260dd Menu
+260e2 Menu
+260f2 Menu
+26121 Exit
+26126 Afslut
+2612d Exit
+26132 Konec
+26140 Exit
+26145 Sortir
+26152 Salir
+26158 Salir
+2618a Next >
+26193 ste >
+26199 Next >
+261a8 Nast
+261ad pne >
+261b3 Volgende >
+261be Suivant >
+261ca rgmine >
+261d3 Siguiente >
+261df Seguinte >
+262c2 PDKADIO:OUWould you like to copy the settings from the test boiler to the selected boiler?
+2631d Vil du kopiere indstillingerne fra test-kedlen til den valgte kedel?
+26364 chten sie die Kopie der Einstellungen zum ausgew
+26395 hlten Kessel 
+263a3 bertragen?
+263ae Chcete kop
+263b9 rovat nastaven
+263c8  testovac
+263d2 ho kotle do zvolen
+263e5 ho kotle? 
+263f0 Czy chcesz skopiowa
+26404  ustawienia z kot
+26416 a testowej do wybranego kot
+26435 Wilt u de settings kopieren van de testketel naar de geselecteerde ketel?
+2647f Voulez-vous copier les r
+26498 glages de la chaudi
+264ac re d'essai 
+264b8  la chaudi
+264c3 re choisie?
+264cf Kas soovid kopeerida seaded test katlast valitud katlasse?
+2650a Le gustaria copiar los ajustes de la caldera de prueba a la caldra seleccionado
+2655a Gostaria de copiar as configura
+2657b es de caldeira de teste para a caldeira selecionado?
+265e1 Nein
+26689 Self-Test (1/3)
+26699 Self-Test (1/3)
+266a9 Selbtest (1/3)
+266b8 Test za
+266c5  (1/3)
+266cc Self-Test (1/3)
+266dc Self-Test (1/3)
+266ec Auto-Test (1/3)
+266fc Testimine (1/3)
+2670c Auto-Test (1/3)
+2671c Auto-teste (1/3)
+267e7 Lux sensor
+267f2 Lux sensor
+267fd Flammensensor
+2680b Optick
+26814 idlo
+26819 Czujnik p
+26823 omienia
+2682b Lux sensor
+26836 Cellule Photo-
+26845 lectrique
+2684f LUX andur
+26859 Sonda de luxes
+26868 Sonda de luzes
+2688f ,-Endstop ash plate
+268a3 Endestop askeplade
+268b6 Endschalter Reinigungsplatte
+268d3 Doraz desky na popel
+268e8 Ogranicznik p
+268f6 yty popio
+26902 Asplaat eindstop
+26913 Fin de course dispositif nettoyage br
+26939 leur
+2693e Tuhaplaadi l
+2694b ppasend
+26953 Fin de carrera dispositivo limpieza quemador
+26980 Fim de curso dispositivo limpeza do queimador
+269c8 Thermal switch
+269d7 Termisk sikring
+269e7 Schalter Temperatur
+269fb Teplotn
+26a0f cznik termiczny
+26a1f Thermische schakeling
+26a35 Interrupteur thermique
+26a4c Termostaat
+26a57 Switch t
+26a60 rmico
+26a66 Switch t
+26a6f rmico
+26a8f Boiler temp.
+26a9c Kedel temp.
+26aa8 Kesseltemperatur
+26ab9 Teplota kotle
+26ac7 Temp. Kot
+26ad3 Ketel temperatuur
+26ae5 Temp. Chaudi
+26af5 Katla temp
+26b00 Temp. de caldera
+26b11 Temp. caldeira
+26b3a Indoor temp.
+26b47 Indetemp.
+26b51 Innentemperatur
+26b61 Vnit
+26b68  teplota
+26b71 Temperatura wewn
+26b82 trzna.
+26b89 Tempertuur binnen
+26b9b Temp. Ambiante
+26baa Ruumi temp
+26bb5 Temp. interior
+26bc4 Temp. interior
+26bed Outdoor temp.
+26bfb Udetemp.
+26c07 entemperatur
+26c14 Venkovn
+26c1c  teplota
+26c25 Temp. zewn.
+26c31 Termperatuur buiten
+26c45 Temp. Ext
+26c4f rieur
+26c5b hu temp
+26c63 Temp. exterior
+26c72 Temp. exterior
+26c9b Boiling
+26ca3 Overkogning
+26caf Warnung heiss
+26cc1 Wrzenie
+26cc9 Kookpunt
+26cd2 Limiteur Temp. Chaudi
+26ceb Keemine
+26cf3 Limitador temp. caldera 
+26d0c Limitador temp. caldeira
+26d3f Hopper
+26d46 Magasin
+26d4e Magazin
+26d58 sobn
+26d60 Zbiornik paliwa
+26d70 Hopper
+26d78 bullition
+26d82 Pelleti salv
+26d8f Tolva
+26d99 sito
+26e60 < Back
+26e67 < Tilbage
+26e71 < Zur
+26e7a < Zp
+26e81 < Powr
+26e8a < Terug
+26e92 < Arri
+26e9c < Tagasi
+26ea5 < Atr
+26ead < Para tr
+26ee3 Menu
+26ee8 Menu
+26ef2 Menu
+26ef7 Menu
+26efc Menu
+26f01 Menu
+26f11 Menu
+26f40 Exit
+26f45 Afslut
+26f4c Exit
+26f51 Konec
+26f5f Exit
+26f64 Sortir
+26f71 Salir
+26f77 Salir
+26fa9 Next >
+26fb2 ste >
+26fb8 Next >
+26fc7 Nast
+26fcc pne >
+26fd2 Volgende >
+26fdd Suivant >
+26fe9 rgmine >
+26ff2 Siguiente >
+26ffe Seguinte >
+27045 Self-Test (2/3)
+27055 Self-Test (2/3)
+27065 Selbsttest (2/3)
+27076 Test za
+27083  (2/3)
+2708a Self-Test (2/3)
+2709a Self-Test (2/3)
+270aa Auto-Test (2/3)
+270ba Testimine (2/3)
+270ca Auto-Test (2/3)
+270da Auto-teste (2/3)
+27153 Flow-sensor
+27161 Flow-sensor
+2716d Durchflusssensor
+2717e Senzor odtahu
+2718c Czujnik przep
+2719e Stromingsensor
+271ad Sonde de d
+271be bivoolu andur
+271cc Caudal
+271d3 metro
+271d9 Caudalimetro
+27200 Smoke temp.
+2720e g temp.
+27216 Abgastemperatur
+27226 Teplota kou
+27235 Temp. Dymu
+27240 Rookgastemperatuur
+27253 Temp. Fum
+2725f Suitsugaasi temp.
+27271 Temp. de humos
+27280 Temp. de fumos
+272a9 DHW temp.
+272b3 VVB temp.
+272bd Warmwassertemperatur
+272d2 TUV tepl.
+272dc CWU temp.
+272e6 WTW temperatuur
+272f6 Temp. E.C.S.
+27303 Boileri temp.
+27311 Temp. de ACS
+2731e Temp. A.Q.S. 
+27346 Return temp.
+27353 Retur temp.
+27361 cklauftemperatur
+27378  teplota.
+27382 Temp. zwrotna
+27390 Retour temperatuur
+273a3 Temp Retour
+273af Tagasivoolu temp.
+273c1 Temp. de retorno
+273d2 Temp. Retorno
+27456 < Back
+2745d < Tilbage
+27467 < Zur
+27470 < Zp
+27477 < Powr
+27480 < Terug
+27488 < Arri
+27492 < Tagasi
+2749b < Atr
+274a3 < Para tr
+274d9 Menu
+274de Menu
+274e8 Menu
+274ed Menu
+274f2 Menu
+274f7 Menu
+27507 Menu
+27536 Exit
+2753b Afslut
+27542 Exit
+27547 Konec
+27555 Exit
+2755a Sortir
+27567 Salir
+2756d Salir
+2759f Next >
+275a8 ste >
+275ae Next >
+275bc Nast
+275c1 pne >
+275c7 Volgende >
+275d2 Suivant >
+275de rgmine >
+275e7 Siguiente >
+275f3 Seguinte >
+27639 Self-Test (3/3)
+27649 Self-Test (3/3)
+27659 Selbsttest (3/3)
+2766a Test za
+27677  (3/3)
+2767e Self-Test (3/3)
+2768e Self-Test (3/3)
+2769e Auto-Test (3/3)
+276ae Testimine (3/3)
+276be Auto-Test (3/3)
+276ce Auto-teste (3/3)
+27875 Internal feeder
+27885 Intern snegl
+27892 Interne Schnecke
+278a3 Vnit
+278aa  podava
+278b3 Wewn
+278b8 trzny podajnik
+278c7 Inwendige vijzel
+278d8 Alimentation interne
+278ed Sisemine tigu
+278fb Alimetador interno
+2790e Alimentador interno
+2793c Ignition
+27949 nder
+27950 ndung
+27956 Zapalov
+27968 Ontsteking
+27975 sistance
+27981 tamine
+27988 Resistencia
+27994 Resist
+2799b ncia
+279b8 ##Ash plate open
+279c9 Askeplade 
+279d8 Aschekasten offen
+279ea Otev
+279f2  desky popeln
+27a00 ku ...
+27a09 yta popio
+27a13 u otwarta
+27a1d Asplaat open
+27a2a Ouvrir dispositif de nettoyage br
+27a4c leur
+27a51 Tuha plaat avatud
+27a63 Abrir dispositivo limpieza quemador
+27a87 Abrir dispositivo limpeza queimador
+27ac3 $$Ash plate close
+27ad5 Askeplade lukke
+27ae5 Aschekasten zu
+27afb  desky popeln
+27b09 ku...
+27b11 yta popio
+27b1b u zamkni
+27b27 Asplaat sluiten
+27b37 Ferm
+27b3c e dispositif de nettoyage br
+27b59 leur
+27b5e Tuha plaat suletud
+27b71 Cerrar dispositivo limpieza quemador
+27b96 Fechar dispositivo limpeza queimador
+27bdb gsuger
+27be2 Gebl
+27bea Ventil
+27bf5 Wentylator
+27c00 Ventilator
+27c0b Ventilateur
+27c17 Ventilaator
+27c23 Ventilador
+27c2e Ventilador
+27c53 Cleaning springs
+27c64 Rensefjedre
+27c70 Reinigungsspirale
+27c89  pru
+27c97 yny czyszcz
+27ca6 Reinigingsveren
+27cb6 Cames de nettoyage
+27cc9 Puhastuse spiraal
+27cdb Levas de limpieza
+27ced Molas de limpeza
+27d18 External feeder
+27d28 Ekstern snegl
+27d36 Externe Schnecke
+27d47 Extern
+27d4e  podava
+27d57 Zewn
+27d5c trzny podajnik
+27d6b Externe vijzel
+27d7a Chargeur externe
+27d8d limine Tigu
+27d99 Alimentador externo
+27dad Alimentador externo
+27ddb Pump
+27de0 Pumpe
+27de6 Pumpe
+27ded erpadlo
+27df5 Pompowa
+27dfe Pomp
+27e03 Circulateur
+27e0f Pump
+27e14 Bomba
+27e1a Bomba
+27e39 DHW pump
+27e43 VVB pumpe
+27e4d Pumpe WWB
+27e58 erpadlo TUV
+27e64 Pompa CWU
+27e6e Warm tapwater pomp
+27e81 Circulateur E.C.S.
+27e94 Tarbevee pump
+27ea2 Bomba ACS
+27eac Bomba A.Q.S.
+27f48 < Back
+27f4f < Tilbage
+27f59 < Zur
+27f62 < Zp
+27f69 < Powr
+27f72 < Terug
+27f7a < Arri
+27f84 < Tagasi
+27f8d < Atr
+27f95 < Para tr
+27fcb Menu
+27fd0 Menu
+27fda Menu
+27fdf Menu
+27fe4 Menu
+27fe9 Menu
+27ff9 Menu
+28028 Exit
+2802d Afslut
+28034 Exit
+28039 Konec
+28047 Exit
+2804c Sortir
+28059 Salir
+2805f Salir
+280ea Internal feeder
+280fa Intern snegl
+28107 Interne Schnecke
+28118 Vnit
+2811f  podava
+28128 Wewn
+2812d trzny podajnik
+2813c Inwendige vijzel
+2814d Alimentation interne
+28162 Sisemine tigu
+28170 Alimetador interno
+28183 Alimentador interno
+281be Ignition
+281cb nder
+281d2 ndung
+281d8 Zapalov
+281ea Ontsteking
+281f7 sistance
+28203 tamine
+2820a Resistencia
+28216 Resist
+2821d ncia
+28244 ##Ash plate open
+28255 Askeplade 
+28264 Aschekasten offen
+28276 Otev
+2827e  desky popeln
+2828c ku ...
+28295 yta popio
+2829f u otwarta
+282a9 Asplaat open
+282b6 Ouvrir dispositif de nettoyage br
+282d8 leur
+282dd Tuha plaat avatud
+282ef Abrir dispositivo limpieza quemador
+28313 Abrir dispositivo limpeza queimador
+2835c $$Ash plate close
+2836e Askeplade lukke
+2837e Aschekasten zu
+28394  desky popeln
+283a2 ku...
+283aa yta popio
+283b4 u zamkni
+283c0 Asplaat sluiten
+283d0 Ferm
+283d5 e dispositif de nettoyage br
+283f2 leur
+283f7 Tuha plaat suletud
+2840a Cerrar dispositivo limpieza quemador
+2842f Fechar dispositivo limpeza queimador
+28480 gsuger
+28487 Gebl
+2848f Ventil
+2849a Wentylator
+284a5 Ventilator
+284b0 Ventilateur
+284bc Ventilaator
+284c8 Ventilador
+284d3 Ventilador
+28502 Cleaning springs
+28513 Rensefjedre
+2851f Reinigungsspirale
+28538  pru
+28546 yny czyszcz
+28555 Reinigingsveren
+28565 Cames de nettoyage
+28578 Puhastuse spiraal
+2858a Levas de limpieza
+2859c Molas de limpeza
+285d2 External feeder
+285e2 Ekstern snegl
+285f0 Externe Schnecke
+28601 Extern
+28608  podava
+28611 Zewn
+28616 trzny podajnik
+28625 Externe vijzel
+28634 Chargeur externe
+28647 limine Tigu
+28653 Alimentador externo
+28667 Alimentador externo
+286a2 Pump
+286a7 Pumpe
+286ad Pumpe
+286b4 erpadlo
+286bc Pompowa
+286c5 Pomp
+286ca Circulateur
+286d6 Pump
+286db Bomba
+286e1 Bomba
+2870d DHW pump
+28717 VVB pumpe
+28721 Pumpe WWB
+2872c erpadlo TUV
+28738 Pompa CWU
+28742 Warm tapwater pomp
+28755 Circulateur E.C.S.
+28768 Tarbevee pump
+28776 Bomba ACS
+28780 Bomba A.Q.S.
+287be ,%+1Ash plate movement (0.0-100.0sec)
+287e4 Bundpladevandring (0.0-100.0sek)
+28805 Zeit Aschekasten ( 0.0-100.0 s)
+28825 Pohyb desky popeln
+28838 ku (0.0-100.0sec)
+2884a Praca p
+28852 yty popio
+2885c u (0.0-100.0sec)
+2886d Asplaat beweging (0.0-100.0s)
+2888b Mouv. disp. nettoyage br
+288a4 leur (0.0-100.0sec)
+288b8 Tuha plaadi liikumine  (0.0-100.0sec)
+288de Mov. disp. limpieza quemador (0.0-100.0sec)
+2890a Mov. do disp. de limpeza do queim. (0.0-100.0sec)
+289a6 Combustionvalue (2.5-7.0kWh)
+289ca rdi (2.5-7.0kWh)
+289db Brennwert (2.5-7.0kWh)
+289f2 Hodnota spalov
+28a03  (2.5-7.0kWh)
+28a15 r zwrotny (2.5 7.0kWh)
+28a2c Brandstof waarde (2.5-7.0kWh)
+28a4a Valeur de combustion (2.5-7.0kWh)
+28a6e lemine (2.5-7.0kWh)
+28a82 Valor de combusti
+28a94 n (2.5-7.0kWh)
+28aa3 Valor combustivel (2.5-7.0kWh)
+28b2a Extra equipment
+28b3a Ekstra udstyr
+28b48 Extra Ausstattung
+28b5d davn
+28b6c Dodatkowe wyposa
+28b7d enie
+28b82 Extra onderdelen
+28b94 quipement suppl
+28ba4 mentaire
+28bad Lisavarustus
+28bba Equipamiento extra
+28bcd Equipamento extra
+28bff Indstil
+28c0b Nastavit
+28c14 Zestaw
+28c1b Bevestig
+28c28 Seadista
+28c82 Fan performance
+28c92 Ydeevne for r
+28ca0 gsuger
+28ca7 Gebl
+28cac seleistung
+28cb9 kon ventil
+28cc4 toru
+28cc9 Wydajno
+28cd2  wentylatora
+28cdf Ventilator snelheid
+28cf3 Puissance ventilateur
+28d09 Ventilaatori v
+28d18 imsus
+28d1e Potencia ventilator
+28d36 ncia ventilador
+28d66 Indstil
+28d72 Nastavit
+28d7b Zestaw
+28d82 Bevestig
+28d8f Seadista
+28de8 Max performance
+28dfa Max ydelse
+28e05 Leistung max
+28e12 Max. v
+28e1d Maksymalna wydajno
+28e32 Maximale vermogen
+28e44 Puissance max
+28e52 Max v
+28e58 imsus
+28e5e Potencia max
+28e6f ncia max
+28ee0 Min performance
+28ef2 Min ydelse
+28efd Leistung min
+28f0a Min. v
+28f15 Wydajno
+28f1e  min
+28f23 Min vermogen
+28f30 Puissance min
+28f3e Min v
+28f44 imsus
+28f4a Potencia min
+28f5b ncia min
+29016 Indstil
+29022 Nastavit
+2902b Zestaw
+29032 Bevestig
+2903f Seadista
+2909a "'Start up fuel (0-200g)
+290b7 ndingsbr
+290c0 ndsel (0-200g)
+290cf Startmenge Pellets (0-200g)
+290eb Startovac
+290f8 vka paliva (0-200g)
+2910c Paliwo do uruchomienia (0-200g)
+2912c Opstart brandstof (0-200g)
+29147 Combustible pour d
+2915a marrage (0-200g
+2916a Stardi k
+29173 tuse kogus (0-200g)
+29187 Combustible para encendido (0-200)
+291aa Combustivel para o acendimento (0-200g)
+29241 Service settings (1/2)
+29258 Mont
+2925d r indstillinger (1/2)
+29273 Serviceeinstellungen (1/2)
+2928e Servisn
+29296  nastaven
+292a0  (1/2)
+292a7 Ustawienia serwisowe (1/2)
+292c2 Service instellingen (1/2)
+292dd Technicien (1/2)
+292ee Hoolduse seaded (1/2)
+29306 cnico (1/2)
+29314 cnico (1/2)
+293ae Menu
+293b3 Menu
+293bd Menu
+293c2 Menu
+293c7 Menu
+293cc Menu
+293dc Menu
+2940b Exit
+29410 Afslut
+29417 Exit
+2941c Konec
+2942a Exit
+2942f Sortir
+2943c Salir
+29442 Salir
+29474 Next >
+2947d ste >
+29483 Next >
+29492 Nast
+29497 pne >
+2949d Volgende >
+294a8 Suivant >
+294b4 rgmine >
+294bd Siguiente >
+294c9 Seguinte >
+29511 Service settings (2/2)
+29528 Mont
+2952d r indstillinger (2/2)
+29543 Serviceeinstellungen (2/2)
+2955e Servisn
+29566  nastaven
+29570  (2/2)
+29577 Ustawienia serwisowe (2/2)
+29592 Service instellingen (2/2)
+295ad Technicien (2/2)
+295be Hoolduse seaded (2/2)
+295d6 cnico (2/2)
+295e4 cnico (2/2)
+2963d On/Off mode
+2964a On/Off drift
+29657 An/Aus Modus
+29664 On/Off mode
+29673 cz/Wy
+2967d Aan/Uit mode
+2968a Mode On/Off
+29696 On/Off reshiim
+296a5 Programador En/Apagado
+296bc Modo Em/Fora
+296e1 Restore factorysettings
+296f9 Gendan standardindstillinger
+29716 Auf Werkseinstellung zur
+2972f cksetzen
+29738 Obnava tov
+29746 ho nastaven
+29753 Przywr
+2975b  ustawienia fabryczne
+29771 Herstel fabriek instellingen
+2978e Restaurer valeur d'usine
+297a7 Taasta tehase seaded
+297bc Restablecer configuraci
+297d4 n por defecto
+297e2 Restaurar configura
+297fb brica
+29819 New software
+29826 Ny software
+29832 Neue Software
+29844  software
+2984e Nowe oprogramowanie
+29862 Nieuwe software
+29872 Nouveau Software
+29883 Uus tarkvara
+29890 Nuevo software
+2989f Novo software
+298d9 Indstil
+298e5 Nastavit
+298ee Zestaw
+298f5 Bevestig
+29902 Seadista
+2992f Restore
+29937 Gendan
+29942 cksetzen
+2994b Obnovit
+29953 Przywraca
+2995e Herstel
+29966 Restaurer
+29970 Taasta
+29977 Restaurar
+29981 Restaurar  
+299a9 Load
+299ae Indl
+299b9 llen
+299ca adowa
+299d1 Laden
+299d7 Charger
+299df Laadi
+299e5 Cargar
+299ec Carregar
+29a1f < Back
+29a26 < Tilbage
+29a30 < Zur
+29a39 < Zp
+29a40 < Powr
+29a49 < Terug
+29a51 < Arri
+29a5b < Tagasi
+29a64 < Atr
+29a6c < Para tr
+29aa2 Menu
+29aa7 Menu
+29ab1 Menu
+29ab6 Menu
+29abb Menu
+29ac0 Menu
+29ad0 Menu
+29aff Exit
+29b04 Afslut
+29b0b Exit
+29b10 Konec
+29b1e Exit
+29b23 Sortir
+29b30 Salir
+29b36 Salir
+29dd9 Storage Tank
+29de6 Akkumuleringstank
+29df8 Pufferspeicher
+29e09 sobn
+29e0e k na vodu
+29e18 Zbiornik akumulacji
+29e2c Buffervat
+29e38 servoir de stockage
+29e4c Akupaak
+29e58 sito de acumulaci
+29e85 Storage tank*
+29e93 Akkutank*
+29e9d Pufferspeicher*
+29eaf sobn
+29eb4 k na vodu*
+29ebf Zbiornik aku.*
+29ece Buffervat*
+29edb servoir de stockage*
+29ef0 Akupaak*
+29efd sito de acu.*
+29f24 Top temp.
+29f2e Top temp.
+29f38 Puffertemp. Oben
+29f49 Tep. z
+29f50 s. naho
+29f5a Temp. zbio. gora
+29f6b Boven temp.
+29f77 Temp. haute
+29f84 lemine Temp
+29f90 Temp. alta
+29f9b Temp. baja
+29fbe Bottom temp.
+29fcb Bund temp.
+29fd6 Puffertemp. Unten
+29fe8 Tep. z
+29fef s. dole 
+29ff8 Temp. zbio. dol
+2a008 Onder temp.
+2a014 Temp. basse
+2a020 Alumine Temp
+2a08e 7;@0F<>?97When "Yes", the boiler setpoint will be changed to 80
+2a0d0 Ved sat til "Ja" vil kedel setpunktet blive 
+2a0fd ndret til 80
+2a10c Wenn 'ja' aufgestellt, Kesselsolltemp wird bei 80 Grad ge
+2a146 ndert.
+2a14d Pokud "Ano", teplota kotle bude zm
+2a170 nilo na 80
+2a17e Jesli ustawiono 'tak' temperatura kotla bedzie zmieniony na 80 stopni.
+2a1c5 Wanneer "Ja" geselecteerd is zal de ketel setpoint 80
+2a1fb  zijn.
+2a202 Lorsque "Oui", la consigne de la chaudi
+2a22a re sera modifi
+2a241 Valides "Jah" katla temperatuuri seadepunkt muutunud 80
+2a279  peale.
+2a281 Cuando "S
+2a28b ", la consigna de la caldera se cambiado a 80
+2a2bb When "Yes", the boiler setpoint will be changed to 80
+2a375 < Back
+2a37c < Tilbage
+2a386 < Zur
+2a38f < Zp
+2a396 < Powr
+2a39f < Terug
+2a3a7 < Arri
+2a3b1 < Tagasi
+2a3ba < Atr
+2a3c2 < Para tr
+2a3f8 Menu
+2a3fd Menu
+2a407 Menu
+2a40c Menu
+2a411 Menu
+2a416 Menu
+2a426 Menu
+2a455 Exit
+2a45a Afslut
+2a461 Exit
+2a466 Konec
+2a474 Exit
+2a479 Sortir
+2a486 Salir
+2a48c Salir
+2a53b Warning!
+2a544 Advarsel!
+2a54e Warnung!
+2a557 Varov
+2a561 Ostrze
+2a568 enie!
+2a56e Waarschuwing!
+2a57c Attention!
+2a587 Hoiatus!
+2a591 Precauci
+2a59d Aviso
+2a5ba /A53876(?AAre you sure you want to load factory settings?
+2a5f4 Er du sikker p
+2a603  at du vil genindl
+2a616 se alle fabriksindstillingerne?
+2a636 Sind sie sicher die Werkseinstellung laden zu wollen?
+2a66c Jste si jisti, 
+2a67c e chcete nahr
+2a68a t tov
+2a693  nastaven
+2a6a0 Jeste
+2a6a6  pewny, 
+2a6af e chcesz przywr
+2a6c2  ustawienia fabryczne?
+2a6d9 Weet u zeker dat u de fabrieks instellingen wilt laden?
+2a712 tes-vous s
+2a71d r de vouloir charger les r
+2a738 glages d'usine?
+2a748 Soovid kindlasti taastada tehase seaded?
+2a776  seguro que desea volvar  a cargar los ajustes de f
+2a7aa brica?
+2a7b1 Tem certeza de que deseja recarregar as configura
+2a7e4 es de f
+2a7ec brica?
+2a81d Cancel
+2a824 Annuller
+2a82d Abbrechen
+2a83e Anulowa
+2a847 Annuleren
+2a859 Keeldu
+2a860 Cancelar
+2a869 Cancelar
+2a89c Load
+2a8a1 Indl
+2a8ac llen
+2a8bd adowa
+2a8c4 Laden
+2a8ca Charger
+2a8d2 Laadi
+2a8d8 Cargar
+2a8df Carregar
+2a94d Fan performance
+2a95d Ydeevne for bl
+2a970 Gebl
+2a975 seleistung
+2a982 kon ventil
+2a98d toru
+2a992 Wydajno
+2a99b  wentylatora
+2a9a8 Ventilator snelheid
+2a9bc Puissance ventilateur
+2a9d2 Ventilaatori v
+2a9e1 imsus
+2a9e7 Potencia ventilator
+2a9ff ncia ventilador
+2aa27 System (%)
+2aa32 System (%)
+2aa3d System (%)
+2aa48 Syst
+2aa4d m (%)
+2aa53 System (%)
+2aa5e Systeem (%)
+2aa6a Syst
+2aa6f me (%)
+2aa78 steem (%)
+2aa82 Sistema (%)
+2aa8e Sistema (%)
+2aab2 Fan (%)
+2aabc gsuger (%)
+2aac7 Gebl
+2aacc se (%)
+2aad3 Ventil
+2aada tor (%)
+2aae2 Wentylator (%)
+2aaf1 Ventilator (%)
+2ab00 Ventilateur (%)
+2ab10 Ventilaator (%)
+2ab20 Ventilador (%)
+2ab2f Ventilador (%)
+2ab56 System (%)
+2ab61 System (%)
+2ab6c System (%)
+2ab77 Syst
+2ab7c m (%)
+2ab82 System (%)
+2ab8d Systeem (%)
+2ab99 Syst
+2ab9e me (%)
+2aba7 steem (%)
+2abb1 Sistema (%)
+2abbd Sistema (%)
+2abe1 Fan (%)
+2abeb gsuger (%)
+2abf6 Gebl
+2abfb se (%)
+2ac02 Ventil
+2ac09 tor (%)
+2ac11 Wentylator (%)
+2ac20 Ventilator (%)
+2ac2f Ventilateur (%)
+2ac3f Ventilaator (%)
+2ac4f Ventilador (%)
+2ac5e Ventilador (%)
+2adb7 General
+2adbf Generelt
+2adc8 Allgemein
+2add2 Obecn
+2ade0 Algemeen
+2adf1 Peamine
+2adf9 General
+2ae01 Geral
+2af21 < Back
+2af28 < Tilbage
+2af32 < Zur
+2af3b < Zp
+2af42 < Powr
+2af4b < Terug
+2af53 < Arri
+2af5d < Tagasi
+2af66 < Atr
+2af6e < Para tr
+2afa4 Menu
+2afa9 Menu
+2afb3 Menu
+2afb8 Menu
+2afbd Menu
+2afc2 Menu
+2afd2 Menu
+2b001 Exit
+2b006 Afslut
+2b00d Exit
+2b012 Konec
+2b020 Exit
+2b025 Sortir
+2b032 Salir
+2b038 Salir
+2b183 Warning!
+2b18c Advarsel!
+2b196 Warnung!
+2b19f Varov
+2b1a9 Ostrze
+2b1b0 enie!
+2b1b6 Waarschuwing!
+2b1c4 Attention!
+2b1cf Hoiatus!
+2b1d9 Precauci
+2b1e5 Aviso
+2b202 0.3/0.5&76Are you sure that you want to load new software?
+2b23d Er du sikker p
+2b24c  at du vil indl
+2b25c se ny software?
+2b26c Sind sie sicher eine neue Software laden zu wollen?
+2b2a0 Jste si jisti, 
+2b2b0 e chcete nahr
+2b2be t nov
+2b2c4  software? 
+2b2d0 Jeste
+2b2d6  pewny, 
+2b2df e chcesz za
+2b2eb adowa
+2b2f1  nowy software?
+2b301 Weet u zeker dat u nieuwe software wilt laden?
+2b331 tes-vous s
+2b33c r de vouloir charger un nouveau logiciel?
+2b366 Soovid kindlasti laadida uue tarkvara?
+2b392  seguro que desea volvar  a cargar nuevo software?
+2b3c5 Tem certeza de que deseja recarregar as novo software?
+2b426 Cancel
+2b42d Annuller
+2b436 Abbrechen
+2b447 Anulowa
+2b450 Annuleren
+2b462 Keeldu
+2b469 Cancelar
+2b472 Cancelar
+2b4a5 Load
+2b4aa Indl
+2b4b5 llen
+2b4c6 adowa
+2b4cd Laden
+2b4d3 Charger
+2b4db Laadi
+2b4e1 Cargar
+2b4e8 Carregar
+2b52d Extra equipment (1/2)
+2b543 Ekstra udstyr (1/2)
+2b557 Extra Ausstattung (1/2)
+2b572 davn
+2b580  (1/2)
+2b587 Dodatkowe wyposa
+2b598 enie (1/2)
+2b5a3 Extra onderdelen (1/2)
+2b5bb quipement suppl
+2b5cb mentaire (1/2)
+2b5da Lisavarustus (1/2)
+2b5ed Equipamiento extra (1/2)
+2b606 Equipamento extra (1/2)
+2b6c6 Oxygen sensor
+2b6d4 Iltsonde
+2b6dd Sauerstoffsensor
+2b6ee Senzor kysl
+2b6fd Czujnik tlenu
+2b70b Zuurstof sensor
+2b71b Sonde d'oxyg
+2b72b O2 andur
+2b734 Sensor lambda
+2b742 Sensor lambda
+2b768 Communicationsbox
+2b77a Kommunikationsboks
+2b78d Komunikationsbox
+2b79e Komunika
+2b7a9  box
+2b7ae Box komunikacji
+2b7be Communicatiebox
+2b7d1 te de communication
+2b7e5 Kommunikatsiooni karp
+2b7fb Caja de comunicaciones
+2b812 Caixa de comunica
+2b83f Flue temp sensor
+2b852 gtemp f
+2b85e Abgastemperaturf
+2b86f hler
+2b875 idlo teploty spalin
+2b889 Czujnik temp. Dymu
+2b89c Rookgastemperatuur sensor
+2b8b6 Sonde Temp. Fum
+2b8ca tuse temp andur
+2b8da Sensor de temperatura de humos
+2b8f9 Sonda de temperatura de fumos
+2b92f Return temp sensor
+2b942 Returtemp f
+2b954 cklauftemperaturf
+2b966 hler
+2b96c idlo teploty vratn
+2b97f  vody
+2b985 Czujnik temp. Zwrotnej
+2b99c Return temperatuur sensor
+2b9b6 Sonde Temp. Retour
+2b9c9 Tagasivoolu temp andur
+2b9e0 Sensor de retordo
+2b9f2 Sonda de retorno
+2ba1b Flowsensor
+2ba26 Flowm
+2ba30 Durchflusssensor
+2ba4b toku
+2ba50 Czujnik przep
+2ba62 Stromingsensor
+2ba73 bit m
+2ba7f bivoolu andur
+2ba8d Medici
+2ba94 n de caudal
+2baa0 Medi
+2baa6 o de caudal
+2baca DHW temp sensor
+2bada VVB temp f
+2bae9 Warmwassertemperaturf
+2baff hler
+2bb04 TUV 
+2bb09 idlo teploty
+2bb16 Czujnik temperatury CWU
+2bb2e WTW temperatuur sensor
+2bb45 Sonde Temp E.C.S.
+2bb57 Tarbevee andur
+2bb66 Sensor Temp. ACS
+2bb77 Sonda Temp. A.Q.S.
+2bba2 Outdoor temp sensor
+2bbb6 Udetemp f
+2bbc7 entemperaturf
+2bbd5 hler
+2bbdb idlo venkovn
+2bbe8  teploty
+2bbf1 Zewn
+2bbf6 trzny czujnik temp.
+2bc0a Buiten temperatuur sensor
+2bc24 Sonde Temp. Ext
+2bc34 rieur
+2bc40 hu temp andur
+2bc4e Sensor de temperatura exterior
+2bc6d Sonda temperatura exterior
+2bca0 Indoor temp sensor
+2bcb3 Indetemp f
+2bcc2 Innentemperaturf
+2bcd3 hler
+2bcd9 idlo vnit
+2bce5  teploty
+2bcee Wewn
+2bcf3 trzny czujnik temperatury
+2bd0d Binnen temperatuur sensor
+2bd27 Sonde Temp., Ambiante
+2bd3d Ruumi temp andur
+2bd4e Sensor de temperatura ambiente
+2bd6d Sonda temperatura ambiente
+2be56 < Back
+2be5d < Tilbage
+2be67 < Zur
+2be70 < Zp
+2be77 < Powr
+2be80 < Terug
+2be88 < Arri
+2be92 < Tagasi
+2be9b < Atr
+2bea3 < Para tr
+2bed9 Menu
+2bede Menu
+2bee8 Menu
+2beed Menu
+2bef2 Menu
+2bef7 Menu
+2bf07 Menu
+2bf36 Exit
+2bf3b Afslut
+2bf42 Exit
+2bf47 Konec
+2bf55 Exit
+2bf5a Sortir
+2bf67 Salir
+2bf6d Salir
+2bf9f Next >
+2bfa8 ste >
+2bfae Next >
+2bfbd Nast
+2bfc2 pne >
+2bfc8 Volgende >
+2bfd3 Suivant >
+2bfdf rgmine >
+2bfe8 Siguiente >
+2bff4 Seguinte >
+2c03d Extra equipment (2/2)
+2c053 Ekstra udstyr (2/2)
+2c067 Extra Ausstattung (2/2)
+2c082 davn
+2c090  (2/2)
+2c097 Dodatkowe wyposa
+2c0a8 enie (2/2)
+2c0b3 Extra onderdelen (2/2)
+2c0cb quipement suppl
+2c0db mentaire (2/2)
+2c0ea Lisavarustus (2/2)
+2c0fd Equipamiento extra (2/2)
+2c116 Equipamento extra (2/2)
+2c17c Logger
+2c183 Logger
+2c18a Logger
+2c193 znamn
+2c19b Logger
+2c1a2 Logger
+2c1a9 Se connecter
+2c1b6 Loger
+2c1bc Logger
+2c1dc Fuel level alarm
+2c1ed Silo overv
+2c1f8 gning
+2c1fe Brennstofflevelalarm
+2c213 Alarm - n
+2c220  mno
+2c229  paliva
+2c231 Alarm poziomu paliwa
+2c247 Alarme niveau combustible
+2c27c Storage tank
+2c289 Buffer tanke
+2c298 Zbiornik akumulacji
+2c2af servoir de stockage
+2c2c3 Akupaak
+2c30c Indstil
+2c318 Nastavit
+2c321 Zestaw
+2c328 Bevestig
+2c335 Seadista
+2c383 < Back
+2c38a < Tilbage
+2c394 < Zur
+2c39d < Zp
+2c3a4 < Powr
+2c3ad < Terug
+2c3b5 < Arri
+2c3bf < Tagasi
+2c3c8 < Atr
+2c3d0 < Para tr
+2c406 Menu
+2c40b Menu
+2c415 Menu
+2c41a Menu
+2c41f Menu
+2c424 Menu
+2c434 Menu
+2c463 Exit
+2c468 Afslut
+2c46f Exit
+2c474 Konec
+2c482 Exit
+2c487 Sortir
+2c494 Salir
+2c49a Salir
+2c6fc On/Off Mode
+2c709 On/Off Drift
+2c716 An/Aus Modus
+2c726 im ZAPNUTO/VYPNUTO
+2c73c cz/Wy
+2c746 Aan/Uit mode
+2c753 Mode On/Off
+2c75f On/Off reshiim
+2c76e Programador En/Apagado
+2c785 Modo Em/Fora
+2c7e0 On/Off mode (Yes/No)*
+2c7f6 On/Off drift (Ja/Nej)*
+2c80d An/Aus Modus (Ja/Nein)*
+2c825 Zapnuto/vypnuto (Ano/Ne)*
+2c842 cz/Wy
+2c849 cz Tak/Nie
+2c854 Aan/Uit mode (Ja/Nee)*
+2c86b Mode On/Off (Oui/Non)*
+2c882 On/Off reshiim (Jah/Ei)*
+2c89b Programador En/Apagado (S
+2c8b5 /No)
+2c8ba Modo Em/Fora (Sim/N
+2c8ea Setpoint (60-80
+2c8fc Setpunkt (60-80
+2c90e Temperatur (60-80
+2c925 adovan
+2c92c  teplota (60-80
+2c93e Temperatura zadana (60-80
+2c95a Temperatuur instelling (60-80
+2c97a Consigne (60-80
+2c98c Seadepunkt (60-80
+2c9a0 Ajusta de temparatura (60-80
+2c9bf Ajuste de temperatura (60-80
+2c9f6 Max performance (20-100%)
+2ca10 Max ydelse (20-100%)
+2ca25 Leistung max. (20-100%)
+2ca3d Maxim
+2ca49 kon (20-100%)
+2ca57 Maksymalna moc (20-100%)
+2ca70 Maximaal vermogen (20-100%)
+2ca8c Performance maximale (20-100%)
+2caab Max v
+2cab1 imsus (20-100%)
+2cac1 Potencia max (20-100%)
+2cadc ncia max (20-100%)
+2cb5f &1:8,31When set to "Yes", summer mode will be disabled.
+2cb97 Ved sat til "Ja", deaktiveres Sommerdrift og Akkumuleringstank.
+2cbd7 Wenn Ja:  Sommermodus aus.
+2cbf2 Pokud "ANO", letn
+2cc08 im bude vypnut. 
+2cc1c li ustawiono Tak, modu
+2cc33  letni bedzie wy
+2cc45 czony
+2cc4b Wanneer u Ja selecteerd, word de zomerstand uitgeschakeld.
+2cc86 Si vous r
+2cc90 glez sur "Oui", le mode d'
+2ccad  sera d
+2ccb5 sactiv
+2ccbf Valides "Jah", suvereshiim l
+2ccdc litatakse v
+2ccec Al cambiar dos "S
+2ccfe " programador horario desactivada
+2cd20 Mudando dois "SIM" programador hor
+2cd43 rio desativada
+2cd7c < Back
+2cd83 < Tilbage
+2cd8d < Zur
+2cd96 < Zp
+2cd9d < Powr
+2cda6 < Terug
+2cdae < Arri
+2cdb8 < Tagasi
+2cdc1 < Atr
+2cdc9 < Para tr
+2cdff Menu
+2ce04 Menu
+2ce0e Menu
+2ce13 Menu
+2ce18 Menu
+2ce1d Menu
+2ce2d Menu
+2ce5c Exit
+2ce61 Afslut
+2ce68 Exit
+2ce6d Konec
+2ce7b Exit
+2ce80 Sortir
+2ce8d Salir
+2ce93 Salir
+2ced9 PID regulator menu
+2ceec PID regulator menu
+2ceff PID Regelung Men
+2cf11 PID regulace
+2cf1e Regulator PID menu
+2cf31 PID instellingen menu
+2cf47 Menu r
+2cf4e gulation PID
+2cf5b PID regulaatori men
+2cf75  regulaci
+2cf7f n PID
+2cf85 Menu regula
+2cf92 o PID
+2d02b Restore factory PID
+2d03f Gendan standard PID
+2d053 Werkseinstellung PID
+2d068 Obnovit tov
+2d077  PID
+2d07c Przywracanie fabrycznego PID
+2d099 Herstel fabriek PID
+2d0ad Restaurer PID usine
+2d0c1 Taasta tehase PID seaded
+2d0da Restaurar PID de f
+2d0ed brica
+2d0f3 Restaurar PID de f
+2d106 brica
+2d16d Restore
+2d175 Gendan
+2d180 cksetzen
+2d189 Obnovit
+2d191 Przywraca
+2d19c Herstel
+2d1a4 Restaurer
+2d1ae Taasta
+2d1b5 Restaurar
+2d1bf Restaurar
+2d1f3 < Back
+2d1fa < Tilbage
+2d204 < Zur
+2d20d < Zp
+2d214 < Powr
+2d21d < Terug
+2d225 < Arri
+2d22f < Tagasi
+2d238 < Atr
+2d240 < Para tr
+2d276 Menu
+2d27b Menu
+2d285 Menu
+2d28a Menu
+2d28f Menu
+2d294 Menu
+2d2a4 Menu
+2d2d3 Exit
+2d2d8 Afslut
+2d2df Exit
+2d2e4 Konec
+2d2f2 Exit
+2d2f7 Sortir
+2d304 Salir
+2d30a Salir
+2d40f Warning!
+2d418 Advarsel!
+2d422 Warnung!
+2d42b Varov
+2d435 Ostrze
+2d43c enie!
+2d442 Waarschuwing!
+2d450 Attention!
+2d45b Hoiatus!
+2d465 Precauci
+2d471 Aviso
+2d48e ah[IU`gSe\Changing the PID settings can cause the system to get unstable, would you still like to continue?
+2d4fb ndring af PID regulatoren kan medf
+2d51e re at systemet bliver ustabilt, er du sikker p
+2d54d  at du vil forts
+2d55e tte?
+2d564 nderung der PID Einstellungen kann Instabilit
+2d592 t verursachen, wollen Sie weiter fortfahren?
+2d5c2 na nastaven
+2d5ce  PID m
+2d5d6 e zp
+2d5db sobit nestabilitu syst
+2d5f2 mu, chcete pokra
+2d603 ovat?
+2d609 Zmiana ustawie
+2d618  PID mo
+2d620 e spowodowa
+2d62c  system niestabilny, czy nadal chcesz kontynuowa
+2d65f Het wijzigen van de PID instellingen kan uw ketel onherstelbare schade toedoen, wilt u doorgaan?
+2d6c0 Changer les param
+2d6d2 tres PID peut provoquer un fonctionnement instable du syst
+2d70d me, voulez-vous continuer?
+2d728 PID seadete muutmine v
+2d73f ib p
+2d744 hjustada s
+2d74f steemi ebastabiilse t
+2d766 , kas soovid j
+2d775 tkata?
+2d77c Cambier los par
+2d78c metros de PID puede causar um funcionamirnto inestable del sistema; quiere continuar?
+2d7e2 Mudar os par
+2d7ef metros PID pode causarum funcionamento inst
+2d81b vel do sistema, pretende continuar?
+2d869 Cancel
+2d870 Annuller
+2d879 Abbrechen
+2d88a Anulowa
+2d893 Annuleren
+2d8a5 Keeldu
+2d8ac Cancelar
+2d8b5 Cancelar
+2d8e8 Continue
+2d8f1 Forts
+2d8f9 Weiter
+2d900 Pokra
+2d906 ovat
+2d90b Kontynuowa
+2d917 Doorgaan
+2d920 Continuer
+2d930 Continuar
+2d93a Continuar
+2da99 Suger:
+2dac4 Snegl:
+2db41 User settings (1/2)
+2db55 Bruger indstillinger (1/2)
+2db70 Benutzereinstellungen (1/2)
+2db8e ivatelsk
+2db97  nastaven
+2dba1  (1/2)
+2dba8 Ustawienia u
+2dbb5 ytkownika (1/2)
+2dbc5 Gebruikers instellingen (1/2)
+2dbe3 Configuration (1/2)
+2dbf7 Kasutaja seaded (1/2)
+2dc0d Configuraci
+2dc19 n (1/2)
+2dc21 Configurra
+2dc2d o (1/2)
+2dcdd Boiler temp (40-80
+2dcf2 Kedel temp (40-80
+2dd06 Kesseltemperatur (40-80
+2dd20 Teplota kotle (40-80
+2dd37 Kocio
+2dd3d  temp (40-80
+2dd4c Ketel temperatuur (40-80
+2dd67 Temp. Chaudi
+2dd74 re (40-80
+2dd80 Katla temp (40-80
+2dd94 Temp. de caldera (40-80
+2ddae Temp. caldeira (40-80
+2ddde Fuel
+2dde6 ndsel
+2ddec Brennstoff
+2ddf7 Palivo
+2ddfe Paliwo
+2de05 Brandstof
+2de0f Combustible
+2de21 Cumbustible
+2de2d Combustivel
+2de60 Cleaning
+2de69 Rensning
+2de72 Reinigung
+2de84 Czyszczenie
+2de90 Reiniging
+2de9a Param
+2dea0 tre de nettoyage
+2deb1 Puhastamine
+2dec1 metros de limpieza
+2ded8 metros de limpeza
+2df02 Summermode
+2df0d Sommerdrift
+2df19 Sommermodus
+2df25 Letn
+2df31 Tryb letni
+2df3c Zomermode
+2df46 Programmateur horaire
+2df5c Suve reshiim
+2df69 Programador horario
+2df7d Programador hor
+2dfa9 DHW priority
+2dfb6 VVB prioritet
+2dfc4 Warmwasserpriorit
+2dfd8 TUV priorita
+2dfe5 Priorytet CWU
+2dff3 Warm tapwater prioriteit
+2e00c Priorit
+2e014  ECS
+2e019 Tarbevee eelistus
+2e02b Prioridad ACS
+2e039 Prioridade A.Q.S.
+2e063 PumpStop (0-85
+2e074 PumpeStop (0-85
+2e086 Pumpe-Stop (0-85
+2e099 Zastaven
+2e0a2  pumpy p
+2e0ab i (0-85
+2e0b5 Pompa nie pracuje (0-85
+2e0cf Pompstop (0-85
+2e0e4 t Circulateur (0-85
+2e0fa Pumba seisak (0-85
+2e10f Paro bomba (0-85
+2e122 Paragem da bomba (0-85
+2e152 !Auger calibration
+2e165 Kalibrering af snegl
+2e17a Schnecke kalibrieren
+2e18f Kalibrace 
+2e19a nekov
+2e1a0 ho podava
+2e1ac Kalibracja podajnika
+2e1c1 Vijzel instellingen
+2e1d5 Calibration chargeur externe
+2e1f2 Teo kalibreerimine
+2e205 Calibraci
+2e20f n alimentador externo
+2e225 Calibra
+2e22e o do alimentador externo
+2e25f Date and time
+2e26d Dato & Tid
+2e278 Zeit und Datum
+2e287 Datum a 
+2e293 Data i czas
+2e29f Datum en tijd
+2e2ad Date et heure
+2e2bb Kuup
+2e2c0 ev ja kellaaeg
+2e2cf Fecha y hora
+2e2dc Data e hora
+2e346 Indstil
+2e352 Nastavit
+2e35b Zestaw
+2e362 Bevestig
+2e36f Seadista
+2e3ac Indstil
+2e3b8 Nastavit
+2e3c1 Zestaw
+2e3c8 Bevestig
+2e3d5 Seadista
+2e406 Indstil
+2e412 Nastavit
+2e41b Zestaw
+2e422 Bevestig
+2e42f Seadista
+2e473 Indstil
+2e47f Nastavit
+2e488 Zestaw
+2e48f Bevestig
+2e49c Seadista
+2e4cd Indstil
+2e4d9 Nastavit
+2e4e2 Zestaw
+2e4e9 Bevestig
+2e4f6 Seadista
+2e531 Menu
+2e536 Menu
+2e540 Menu
+2e545 Menu
+2e54a Menu
+2e54f Menu
+2e55f Menu
+2e58e Exit
+2e593 Afslut
+2e59a Exit
+2e59f Konec
+2e5ad Exit
+2e5b2 Sortir
+2e5bf Salir
+2e5c5 Salir
+2e5f7 Next >
+2e600 ste >
+2e606 Next >
+2e615 Nast
+2e61a pne >
+2e620 Volgende >
+2e62b Suivant >
+2e637 rgmine >
+2e640 Siguiente >
+2e64c Seguinte >
+2e699 User settings (2/2)
+2e6ad Bruger indstillinger (2/2)
+2e6c8 Benutzereinstellungen (2/2)
+2e6e6 ivatelsk
+2e6ef  nastaven
+2e6f9  (2/2)
+2e700 Ustawienia u
+2e70d ytkownika (2/2)
+2e71d Gebruikers instellingen (2/2)
+2e73b Configuration (2/2)
+2e74f Kasutaja seaded (2/2)
+2e765 Configuraci
+2e771 n (2/2)
+2e779 Configurra
+2e785 o (2/2)
+2e7b7 Storage tank
+2e7c4 Akkumuleringstank
+2e7d6 Pufferspeicher
+2e7e7 sobn
+2e7ec k na vodu
+2e7f6 Zbiornik akumulacji
+2e80a Buffervat
+2e816 servoir de stockage
+2e82a Akupaak
+2e836 sito de acumulaci
+2e877 Indstil
+2e883 Nastavit
+2e88c Zestaw
+2e893 Bevestig
+2e8a0 Seadista
+2e8db Menu
+2e8e0 Menu
+2e8ea Menu
+2e8ef Menu
+2e8f4 Menu
+2e8f9 Menu
+2e909 Menu
+2e938 Exit
+2e93d Afslut
+2e944 Exit
+2e949 Konec
+2e957 Exit
+2e95c Sortir
+2e969 Salir
+2e96f Salir
+2e99f < Back
+2e9a6 < Tilbage
+2e9b0 < Zur
+2e9b9 < Zp
+2e9c0 < Powr
+2e9c9 < Terug
+2e9d1 < Arri
+2e9db < Tagasi
+2e9e4 < Atr
+2e9ec < Para tr
+2ea39 Cleaning
+2ea42 Rensning
+2ea4b Abbrechen
+2ea5d Czyszczenie
+2ea69 Reiniging
+2ea73 Param
+2ea79 tre de nettoyage
+2ea8a Puhastamine
+2ea9a metros de limpieza
+2eab1 metros de limpeza
+2eb0f '&Airclean interval (0-120min)
+2eb31 seinterval (0-120min)
+2eb47 Reinigung Luft Intervall (0-120 min)
+2eb73  ventil
+2eb7b torem (0-120min)
+2eb8c Czas czyszczenia powietrzem (0-120min)
+2ebb3 Luchtreinigen interval (0-120min)
+2ebd5 Intervalle de nettoyage passage fum
+2ebf9 es (0-120min)
+2ec08 hkuphastuse sagedus (0-120min)
+2ec27 Intervalo de limpieza humos (0-120min.)
+2ec4f Intervalo de limpeza fumos (0-120min.)
+2ec9e %#Airclean time (0-60sec)
+2ecbb setid (0-60sek)
+2eccb Reinigung Luft Zeit (0-60s)
+2ece7 Airclean 
+2ecf1 asu (0-60sec)
+2ecff Czas czyszczenia (0-60sek)
+2ed1a Luchtreinigen tijd (0-60s)
+2ed35 Temps de nettoyage passage fum
+2ed54 es (0-60 sec)
+2ed63 hkpuhastuse aeg (0-60sec)
+2ed7d Tiempo de limpieza de humos (0-60sec)
+2eda3 Tempo de limpeza de fumos (0-60sec)
+2edde 3Ash plate interval
+2edf2 Askeristinterval
+2ee03 Intervall Aschekasten
+2ee19 Interval desky popeln
+2ee32 Interwa
+2ee3a  pracy p
+2ee43 yty popio
+2ee4f Asplaat interval
+2ee60 Intervalle disp. nettoyage br
+2ee7e leur
+2ee83 Tuhaplaadi sagedus
+2ee96 Int. disp. limpieza quemador
+2eeb3 Intervalo dispositivo limpeza queimador (0.5-6.0kg)
+2ef55 ,$)#,'*+)&At a value of 0, the function is deactivated
+2ef8c Ved v
+2ef92 rdien 0 deaktiveres funktionen
+2efb1 Einstellung 0 bedeutet  Funktion ist aus.
+2efdd i hodnot
+2efe6  0, se funkce deaktivuje
+2efff Przy ustawieniu na 0, funkcja jest wy
+2f026 czona
+2f02c Is de waarde 0, deactiveerd deze funtie
+2f054 Avec valeur 0 la fonction reste d
+2f076 sactiv
+2f07f Seadearvuga 0, on funktsioon deaktiveeritud
+2f0ab Con valor 0 la funci
+2f0c0 n queda desactivada 
+2f0d5 Com o valor 0 a fun
+2f0ea o fica desativada
+2f138 < Back
+2f13f < Tilbage
+2f149 < Zur
+2f152 < Zp
+2f159 < Powr
+2f162 < Terug
+2f16a < Arri
+2f174 < Tagasi
+2f17d < Atr
+2f185 < Para tr
+2f1bb Menu
+2f1c0 Menu
+2f1ca Menu
+2f1cf Menu
+2f1d4 Menu
+2f1d9 Menu
+2f1e9 Menu
+2f218 Exit
+2f21d Afslut
+2f224 Exit
+2f229 Konec
+2f237 Exit
+2f23c Sortir
+2f249 Salir
+2f24f Salir
+2f335 Date and time
+2f343 Dato og tid
+2f34f Datum- und Uhrzeiteinstellungen
+2f36f Datum a 
+2f37b Data i czas
+2f387 Datum en tijd
+2f395 Date et heure
+2f3a3 Kuup
+2f3a8 ev ja kellaaeg
+2f3b7 Fecha y hora
+2f3c4 Data e hora
+2f40c Set time (HH:MM)
+2f41d Stil ur (TT:MM)
+2f42d Uhrzeit einstellen (SS:MM)
+2f448 Nastavit 
+2f452 as (HH:MM)
+2f45d Ustaw czas (GG:MM)
+2f470 Bevestig tijd (UU:MM)
+2f486 Ajuster heure (HH:MM)
+2f49c Aeg (HH:MM)
+2f4a8 Ajustar hora (HH:MM)
+2f4bd Ajustar hora (HH:MM)
+2f4fb Set date (DD:MM:YYYY)
+2f511 Stil dato (DD:MM:YYYY)
+2f528 Datum einstellen (TT:MM:JJ)
+2f544 Nastavit datum (DD:MM:RRRR)
+2f560 Ustaw dat
+2f56a  (DD: MM:RRRR)
+2f579 Bevestig datum (DD:MM:YYYY)
+2f595 Ajuster date (DD:MM:YYYY)
+2f5af Kuup
+2f5b4 ev (DD:MM:YYYY)
+2f5c4 Ajustar fecha (FF:MM:AAAA)
+2f5df Ajustar Data (DD:MM:AAAA)
+2f6a4 < Back
+2f6ab < Tilbage
+2f6b5 < Zur
+2f6be < Zp
+2f6c5 < Powr
+2f6ce < Terug
+2f6d6 < Arri
+2f6e0 < Tagasi
+2f6e9 < Atr
+2f6f1 < Para tr
+2f727 Menu
+2f72c Menu
+2f736 Menu
+2f73b Menu
+2f740 Menu
+2f745 Menu
+2f755 Menu
+2f784 Exit
+2f789 Afslut
+2f790 Exit
+2f795 Konec
+2f7a3 Exit
+2f7a8 Sortir
+2f7b5 Salir
+2f7bb Salir
+2f895 Auger calibration
+2f8a7 Kalibrering af snegl
+2f8bc Schnecke kalibrieren
+2f8d1 Pomal
+2f8d7  kalibrace
+2f8e2 Kalibracja 
+2f8ee Slak kalibratie
+2f8fe Calibration vis sans fin
+2f917 Teo kalibreerimine
+2f92a Calibraci
+2f934 n sinf
+2f93d Calibramento senfim
+2f97b Amount after 200 dosages (g)
+2f99a ngde ved 200 doseringer (g)
+2f9b6 Summe nach 200 Dosen (g)
+2f9d1 ha paliva po 200 d
+2f9e7 ch (g)
+2f9f3  po 200 dawkach (g)
+2fa07 Hoeveelheid na 200 doseringen (g)
+2fa29 Poids 200 doses (g)
+2fa3d Kogus peale 200 doosi (g)
+2fa57 Peso 200 dosis (g)
+2fa6a Peso 200 doses (g)
+2fac5 Manual run
+2fad0 Manuel k
+2fad9 rsel
+2fade Hand ein
+2faec  spu
+2faf6 Ustawienie manualne
+2fb0a Handmatig regelen
+2fb1e marrage manuel
+2fb2f sitsi juhtimine
+2fb3f Arranque manual 
+2fb50 Arranque manual
+2fbbf Dosages
+2fbc7 Doseringstest
+2fbd5 Dosen
+2fbe1 Dawki
+2fbe7 Doseringen
+2fbf2 Dose
+2fbf7 Doosid
+2fbfe Dosis
+2fc04 Dose
+2fc69 Reset
+2fc6f Nulstil
+2fc77 Reset
+2fc7d Resetovat
+2fc87 Resetuj
+2fc8f Reset
+2fc95 Reset
+2fc9b Reset
+2fca1 Reset
+2fca7 Reset
+2fcd7 < Back
+2fcde < Tilbage
+2fce8 < Zur
+2fcf1 < Zp
+2fcf8 < Powr
+2fd01 < Terug
+2fd09 < Arri
+2fd13 < Tagasi
+2fd1c < Atr
+2fd24 < Para tr
+2fd5a Menu
+2fd5f Menu
+2fd69 Menu
+2fd6e Menu
+2fd73 Menu
+2fd78 Menu
+2fd88 Menu
+2fdb7 Exit
+2fdbc Afslut
+2fdc3 Exit
+2fdc8 Konec
+2fdd6 Exit
+2fddb Sortir
+2fde8 Salir
+2fdee Salir
+30079 DHW priority
+30086 VVB prioritet
+30094 Warmwasserpriorit
+300a8 TUV priorita
+300b5 Priorytet CWU
+300c3 Warm tapwater prioriteit
+300dc Priorit
+300e4  E.C.S.
+300ec Tarbevee prioriteet
+30100 Prioridad ACS
+3010e Prio A.Q.S.
+30168 DHWPrio (Yes/No)
+30179 VVBPrio (Ja/Nej)
+3018a Warmwasservorrang (Ja/Nein)
+301a6 TUV Priorita (Ano/Ne)
+301bc DHWPrioryta (Tak/Nie)
+301d2 Warm tapwater prioriteit (ja/nee)
+301f4 Priorit
+301fc  E.C.S. (Oui/Non)
+3020e Tarbevee prioriteet (Jah/Ei)
+3022b Prio ACS (Si/No)
+3023c Prio A.Q.S. (Sim/N
+3026a DHWTemp (0-70
+3027a VVBTemp (0-70
+3028a Warmwassertemperatur (0-70
+302a7 TUV teplota (0-70
+302bb DHWTemp (0-70
+302cb Warm tapwater (0-70
+302e1 Temp
+302e6 rature E.C.S. (0-70
+302fc Tarbevee temp (0-70
+30312 Temp. ACS (0-70
+30325 Temp. A.Q.S. (0-70
+30353 DHWDrop (0-20
+30363 VVBFald (0-20
+30373 Warmwassertemperatursenkung (0-20
+30397 TUV pokles teploty (0-20
+303b2 DHW Spadek (0-20
+303c5 Warm tapwater daling (0-20
+303e2 Diff
+303e7 rentiel ECS (0-20
+303fb Tarbevee langus (0-20
+30413 Diferencial ACS (0-20
+3042b Diferencial A.Q.S. (0-20
+304b5 < Back
+304bc < Tilbage
+304c6 < Zur
+304cf < Zp
+304d6 < Powr
+304df < Terug
+304e7 < Arri
+304f1 < Tagasi
+304fa < Atr
+30502 < Para tr
+30538 Menu
+3053d Menu
+30547 Menu
+3054c Menu
+30551 Menu
+30556 Menu
+30566 Menu
+30595 Exit
+3059a Afslut
+305a1 Exit
+305a6 Konec
+305b4 Exit
+305b9 Sortir
+305c6 Salir
+305cc Salir
+306b5 Summermode
+306c0 Sommerdrift
+306cc Sommermodus
+306d8 Letn
+306e4 Tryb letni
+306ef Zomermode
+306f9 Programmateur horaire
+3070f Suve reshiim
+3071c Programador horario
+30730 Programador hor
+307c8 Summermode (Yes/No)
+307dc Sommerdrift (Ja/Nej)
+307f1 Sommermodus (ja/nein)
+30807 Letn
+30810 im (ANO/NE)
+3081c Tryb letni (Tak/Nie)
+30831 Zomermode (ja/nee)
+30844 Programmateur horaire (Oui/Non)
+30864 Suve reshiim (Jah/Ei)
+3087a Programador horario (Si/No)
+30896 Programador hor
+308a6 rio (Sim/N
+308cc Periode
+308d4 Periode
+308dc Periode
+308e4 Perioda
+308ec Okres
+308f2 Periode
+308fc riode
+30902 Periood
+3090a Periodo  
+30914 Periodo
+30934 Start (HH:MM)
+30942 Start (TT:MM)
+30950 Start (SS:MM)
+30962 tek (HH:MM)
+3096e Start (GG: MM)
+3097d Start (HH:MM)
+3098d but (HH:MM)
+30999 Start (HH:MM)
+309a7 Iniciar (HH:MM)
+309b7 Iniciar (HH:MM)
+309d5 
+309df Stop (HH:MM)
+309ec Stop (TT:MM)
+309f9 Stop (SS:MM)
+30a06 Stop (HH:MM)
+30a13 Stop (GG: MM)
+30a21 Stop (HH:MM)
+30a2e Fin (HH:MM)
+30a3a Stop (HH:MM)
+30a47 Parar (HH:MM)
+30a55 Parar (HH:MM)
+30a7b Period 1
+30a84 Periode 1
+30a8e Periode 1
+30a98 Obdob
+30aa1 Okres 1
+30aa9 Periode 1
+30ab5 riode 1
+30abd Periood 1
+30ac7 Periodo 1
+30ad1 Periodo 1
+30b15 Period 2
+30b1e Periode 2
+30b28 Periode 2
+30b32 Obdob
+30b3b Okres 2
+30b43 Periode 2
+30b4f riode 2
+30b57 Periood 2
+30b61 Periodo 2
+30b6b Periodo 2
+30baf Period 3
+30bb8 Periode 3
+30bc2 Periode 3
+30bcc Obdob
+30bd5 Okres 3
+30bdd Periode 3
+30be9 riode 3
+30bf1 Periood 3
+30bfb Periodo 3
+30c05 Periodo 3
+30c49 Period 4
+30c52 Periode 4
+30c5c Periode 4
+30c66 Obdob
+30c6f Okres 4
+30c77 Periode 4
+30c83 riode 4
+30c8b Periood 4
+30c95 Periodo 4
+30c9f Periodo 4
+30ce3 Period 5
+30cec Periode 5
+30cf6 Periode 5
+30d00 Obdob
+30d09 Okres 5
+30d11 Periode 5
+30d1d riode 5
+30d25 Periood 5
+30d2f Periodo 5
+30d39 Periodo 5
+30f2a Reset
+30f30 Nulstil
+30f38 Reset
+30f3e Resetovat
+30f48 Resetuj
+30f50 Reset
+30f56 Reset
+30f5c Reset
+30f62 Reset
+30f68 Reset
+30f98 Save and
+30fa1 Gem og
+30fa8 Speichern
+30fb6 it a
+30fbb Zapisz i
+30fc4 Bewaar en
+30fce Enregistrer et
+30fdd Salvesta ja
+30fe9 Guardar y
+30ff3 Guardar e
+31015 restart
+3101d genstart
+31026 und Neustart
+31033 restart
+3103b restart
+31043 herstart
+31050 marrer
+31057 taask
+3105d ivita
+31063 reiniciar
+3106d reiniciar
+310a1 < Back
+310a8 < Tilbage
+310b2 < Zur
+310bb < Zp
+310c2 < Powr
+310cb < Terug
+310d3 < Arri
+310dd < Tagasi
+310e6 < Atr
+310ee < Para tr
+31124 Menu
+31129 Menu
+31133 Menu
+31138 Menu
+3113d Menu
+31142 Menu
+31152 Menu
+31181 Exit
+31186 Afslut
+3118d Exit
+31192 Konec
+311a0 Exit
+311a5 Sortir
+311b2 Salir
+311b8 Salir
+3459e lmdM
+34964 lmdN
+39741 ruM<mDmDmDmDM<
+39ab7 mDQu
+39b81 RumD
+39c52 ,1m;
+39ce8 Cf+G
+3a38e }r}QmmD'
+3a42f mDQur}
+3ac98 e,4'
+3be8d G''
+3c3e7 )%)%
+3c934 uh=)%
+3ca8f Ru1m
+3cb3c }1mRu
+3cb6a }1m1mRu
+3cb99 Ru1mRu
+3cbbb 1m1m
+3cbf3 Qm0e
+3ce81 g*5
+3fbb4 LmDW
+3fc2e LmLV
+405b1 L<,<,<,<,<,<,<,<
+40677 ,<,<,<,<,<,<,<,<
+40a01 ''
+40b02 $Fm(M
+40b08 Le\M
+40c02 mG)E
+40d07 NUmE
+41712 [vS5K
+41730 [vSvS
+41750 [Yt^
+41764 t[l:l9l9l
+41b7d ''
+41ba2 $Fm(M
+41ba8 Le\M
+41bc6 mG)E
+41bef NUmE
+475f7 d'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'd'
+479cd 0123456789ABCDEF
+47eda j\x 
+47efc l\x 
+4aa3b |"|1|@|X
+4c9ba LHY0
+4c9e6 &J90
+4caa4 6Ki?
+4caae 6Ki0
+4cabe rK)0
+4cafe xJ)0
+4d071 #/(
+4d097 #/h
+4d6b8 HIy0
+4f0b2 X"&0
+506d6 8&6X
+50d49 Hi.8
+5333a P\8\
+53548 T\8\
+537dc R\8\
+53a36 V\8\
+54e26 dHi1
+54e2e fHI?
+55674 DI{/
+55afe dHi1
+55b06 fHI?
+573d0 (JI0
+57587 \X\h
+57758 8" X
+57918 X""N
+57922 X"$?
+57aac h" H
+57d4c 8" X
+58813 ` P@
+58ee1 HP,T
+58ef9 HP8D
+59abb ` P@
+5a683 B0p`
+5aaff `0x`
+5af2b p P 
+5b40f @h0x|
+5b82d 8l8s
+5b8e4 80p`
+5bd23 `p08
+5c700 &<f<
+5c719 ?<lol
+5c86e <f<f
+5ce4a 80p`
+5d07b $0`@
+5daaa x8p`
+5daf0 xxp8
+5daf6 p8xx?
+5e94a ")("
+5fcc2 ,,,,,
+61286 )3FIMHJ  
+618c9 0K0<
+6199d 0+0l
+61d22 8Khp
+61d2e 6K8p
+61ec5 I)5X
+61f2d NY18
+61f33 0:N;0,
+620d7  -JI5X
+6211f Ik0,
+62185 Iy5X
+62191 II2(
+62197 0:I+0,
+6225b /(\XIy
+62271 0zI+0,
+62309 Ii0H
+6230f 0JIK0,
+6238d Ji5X
+62393 JY0X
+6244f JI5X
+62455 J)0X
+62485 0zIk0,
+62525 \XJY
+62531 0jJ+0,
+62579 IK0,
+62688 PJ)0
+627b4 `NHp
+628b3 JXp(
+62912 PI(p
+62c18 %l(\X
+62c2e  lh\X
+62c45 l8\X
+62c5b lH\X
+62c7b lX\X&
+62deb <s<%;
+62e05 8s8/7
+62e0d 7i7%6
+62e89 "L!~ 
+62edd !"#$%&&'(+--./0127<=>??@AKFYZ[\]^_ad
+63422 3Oi0
+6351e xLY0
+637c2 ( X\
+637d6 8 X\
+63895 LI0X
+638a5 0:2[L
+6395a #J:0
+63966 "J*0
+63d42 JJ0
+63ed0 y^+\;^
+63f32 0\9/
+64018 y_7\
+64053 ^/^=
+6405d ^/^=
+64080 y_7\
+640bb ^-^?
+640c5 ^-^?
+64127 _(^h
+6412e <^/^=
+64134 ;^/^=X
+64169 _8^h
+64170 <^-^?
+64176 ;^-^?X
+645a8 x]^
+645f2 [\9/
+64798 y^^
+64874 y^^
+648af X^
+648ec {]^
+6491e {]^
+64931 X^
+6499c x]^
+649c6 |^*\:^
+649db X^m
+64a82 j\:\
+64aba {]^
+64af6 {]^
+64f08 ((IJ
+650a1 l9l(
+6513b s0b#f
+654f7 t)t8
+65535 n9n(
+655d9 t)t8
+655e0 8n)n8
+655f2 un9n(
+657cb x*v)\
+657d7 x:v9\
+657de P//
+65811 \Z\Y
+6589d P+P<P
+65970 F@<A
+65978 EAyXf
+65bca H@(Q
+65cbe  @*0
+65def 2(@:
+65eed @\X
+65f53 2(@:
+65f79 /LPL@
+65f7f \<P@
+65f8f @KrJ
+65fcc X0@
+660cf @lX
+660fe QrHX
+66139 @\X
+66498 w@\X
+66589 X^LH*
+66597 _T0X
+665a1 X^LH*
+665af _T08
+665b9 X^LH*
+665c7 _T0H
+665d1 X^LH*
+665e9 X^LH*
+66601 X^LH*
+666ad PXP(
+666f1 H(p/L^
+6676c  *L 
+66778 q0K
+667ca qJH0
+6680b IeIf
+66813 IkIj
+6687a #J4h(p
+66957 v9v(
+669d0 Xt)t8
+66ac6 1 -P
+66ade AvHX
+66b89 lKlY
+66c21 llH
+66ccf llH
+66d52 (0/
+66d8c xj(j
+66daa D*G 
+66ea2 1 MP)P
+670f0 (0%
+67145 `8X(
+671ff `8X(
+67251 nIn(
+6731a 1 -M
+67376 TXz_
+6740c >_8Xz_
+67490 k0L/
+674a4 8^/
+675cc 12^
+675db xHvI
+6765e !xH/
+67843 p<X
+67850 )rX
+67946 1tIvH
+67990 $lH/
+67a22 1vH/
+67abf vItH
+67ad2 Pn(vEtDv
+67e0a `0)0
+68042 JPLPZ
+680cb <_I0
+68197 PKQI
+681a2 KxP
+681ac pvhX
+681b8 FLh@J
+681c0 Q@Yr
+681c8 (L8@K
+681d0 Q@Zt
+681f4 AvHX
+681fa q@K@\
+682c3 A32Z
+68330 h@K@\
+6837a 9Q:P
+6845f xQHP
+68490 u\8P
+684a6 9Q:P
+6856f xQHP
+68599 A6QH@
+685de :Q;P
+6876b QHx
+6893a 4QHP
+689ad QHx
+689d7 QHxP
+68a8b P:P)P
+68a9d P;P*P
+68b59 @;@*
+68b6f @9@(
+68bee G\92
+68ca8 x6yP
+68f10 }ALY
+69111 QHx3
+69131 0.Q+
+69254 HALY
+694a0 5ALY
+694b0 4QHx
+695bc 4QHx
+696de HML@
+6979a h@K@\
+697dc h@K@\
+69840 h@K@\
+69882 h@K@\
+698cc h@K@\
+6990e h@K@\
+6994e h@K@\
+69994 h@K@\
+69a20 h@K@\
+69a6e h@K@\
+69aab @K@\
+69b30 h@K@\
+69b82 h@K@\
+69bc3 @K@\
+69c0e h@K@\
+69c5a h@K@\
+69c9b @K@\
+69cf0 h@K@\
+69d4a h@K@\
+69d88 h@K@\
+69e06 h@K@\
+69e42 h@K@\
+69eab @K@\
+69f1c h@K@\
+69f5a h@K@\
+69f9d @K@\
+69ff0 h@K@\
+6a014 h@K@\
+6a09d pX
+6a0a2 `xhX
+6a0ce AJhp
+6a116 hnHX
+6a13c (nX\8
+6a152 (nHX
+6a215 xHvK
+6a2a3 @X
+6a33c xP\PI|,
+6a34b P*@Y
+6a388 @@Z0
+6a3c6 (K,@
+6a456 (AyA
+6a584 V0P
+6a58c X\:Pj0
+6a5b5 PzPiP
+6a5d9 @HX(
+6a5e8 x@LXL
+6a619 P81%P
+6a638 8@5P
+6a6ae @\x
+6a7bd @$Q<
+6a7ed Q)Q8
+6a819 A,X
+6a85d A(MI 
+6aaee A@e@w
+6ab36 6@e@w
+6ab5a PyP
+6ab6a X@e@
+6abe6 (@zA
+6ac6d  H@l
+6ad13 0Z@\
+6ad2f @9Aa\
+6ad39 A8A$P
+6ad45 Q<Aa3
+6af69 Q:@\A
+6af8b Al.}
+6afd6 plhX
+6b032 QnK
+6b0b8 `xhX
+6b16a "nEX
+6b839 inity
+6b8cd ABCDEF
+6b8d5 abcdef
+6b8dd 0123456789
+6b949 B7Hv
+6b979 Cv4W
+6bbf9                 
+6bc75 0123456789ABCDEF
+6bc99 0123456789abcdef
+6bcad bug in vfprintf: bad base
+6bccd 0000000000000000
+6bddd Infinity
+6be21 ISO-8859-1

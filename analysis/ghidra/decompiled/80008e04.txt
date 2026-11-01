@@ -1,0 +1,50 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x80008e04 FUN_80008e04
+[decomp]> decompile
+Decompiling FUN_80008e04
+Decompilation complete
+[decomp]> print C
+
+xunknown1 FUN_80008e04(uint2 *param_1,uint2 *param_2,uint1 *param_3)
+
+{
+  int4 iVar1;
+  bool extraout_Z;
+  xunknown1 xStack_a;
+  xunknown1 xStack_9;
+  
+  xStack_9 = 0;
+  if (iRAM000021d0 == 0) {
+    iRAM000021d0 = (*(code *)0x80026a34)(1,0);
+    if (iRAM000021d0 != 0) {
+      (*(code *)0x80026b50)(iRAM000021d0,0,0,0);
+    }
+  }
+  if (cRAM000021ce == '\0') {
+    (*(code *)0x80026d68)(iRAM000021d0,0,0xfa,0);
+    iVar1 = (*(code *)0x80029b08)(10);
+    if (iVar1 == 1) {
+      (*(code *)0x80069cc0)(2,0x21e4,&xStack_a);
+      if (extraout_Z) {
+        uRAM000021e0 = (uint4)uRAM000021e8 * 0x80 +
+                       (uint4)uRAM000021e5 * 0x1000 +
+                       (uint4)uRAM000021e6 * 0x80000 + (uint4)uRAM000021e4 * -0x80000000 +
+                       (uint4)uRAM000021e7;
+        *param_1 = (uint2)(uRAM000021e0 >> 0xc) & 0xfff;
+        *param_2 = (uint2)uRAM000021e0 & 0xfff;
+        *param_3 = (uint1)(uRAM000021e0 >> 0x1f);
+        cRAM000021ce = '\x01';
+        xStack_9 = 1;
+      }
+    }
+    else {
+      *param_3 = 0;
+    }
+    (*(code *)0x80026b50)(iRAM000021d0,0,0,0);
+  }
+  return xStack_9;
+}
+[decomp]> quit

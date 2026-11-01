@@ -1,0 +1,59 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8006b7f8 FUN_8006b7f8
+[decomp]> decompile
+Decompiling FUN_8006b7f8
+Decompilation complete
+[decomp]> print C
+
+void FUN_8006b7f8(void)
+
+{
+  xRAM00005e42 = 0;
+  xRAM00005e43 = 0;
+  xRAM00005e44 = 0;
+  xRAM00005e46 = 0;
+  xRAM00005e47 = 0;
+  xRAM00005e49 = 0;
+  xRAM00005e48 = 0;
+  xRAM00005e4c = 0;
+  xRAM00005e4b = 0;
+  xRAM00005e4d = 0;
+  xRAM00005e4f = 0;
+  xRAM00005e4a = 0;
+  xRAM00005e4e = 0;
+  xRAM00005e2c = 0;
+  xRAM00005e2d = 0;
+  xRAM00005e33 = 0;
+  xRAM00005e34 = 0;
+  xRAM00005e36 = 1;
+  xRAM00005e37 = 1;
+  uRAM00005e32 = 5;
+  (*(code *)0x8002999c)(4,1);
+  (*(code *)0x800298c4)(0x8006af0c,0x25,3);
+  (*(code *)0x800298c4)(0x8006b02c,0x1c0,3);
+  (*(code *)0x800298c4)(0x8006afbc,0x1c1,1);
+  (*(code *)0x800298c4)(0x8006af6c,0x1c2,2);
+  (*(code *)0x8002a754)(0xffff0d80,0x5e32,1);
+  (*(code *)0x8002aa0e)(0xffff0d80,(int4)(1L << (uRAM00005e32 & 0x1f)));
+  (*(code *)0x8002aa2e)(0xffff0d80,uRAM00005e32);
+  (*(code *)0x80028196)(0xffff3800,0x8006af04);
+  (*(code *)0x80028196)(0xffff3800,0x8006aefc);
+  (*(code *)0x80028196)(0xffff3800,0x8006aef4);
+  if (cRAM00002240 == '\x03') {
+    (*(code *)0x800283c6)(0xffff3800,0,0x69b);
+  }
+  else {
+    (*(code *)0x800283c6)(0xffff3800,0,0x3f2);
+  }
+  (*(code *)0x800283c6)(0xffff3800,2,0xc16);
+  (*(code *)0x80027f26)(0xffff3800,0,0x8006aef0);
+  (*(code *)0x80027f26)(0xffff3800,1,0x8006aeec);
+  (*(code *)0x80027f26)(0xffff3800,2,0x8006aee8);
+  (*(code *)0x800283c6)(0xffff3800,1,0x80e);
+  (*(code *)0x800282f8)(0xffff3800,1);
+  return;
+}
+[decomp]> quit

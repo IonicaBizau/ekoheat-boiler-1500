@@ -1,0 +1,88 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8001f978 FUN_8001f978
+[decomp]> decompile
+Decompiling FUN_8001f978
+Decompilation complete
+[decomp]> print C
+
+void FUN_8001f978(void)
+
+{
+  char cVar1;
+  char cVar2;
+  int4 iStack_14;
+  uint1 uStack_d;
+  
+  uRAM000050b2 = 0;
+  xRAM000050b3 = 0;
+  uRAM000050ae = 0;
+  xRAM000050af = 0;
+  uRAM000050b0 = 0;
+  xRAM000050b1 = 0;
+  uRAM000050ac = 0;
+  cRAM000050ad = '\0';
+  iRAM000050b4 = (*(code *)0x80026cb0)();
+  iStack_14 = iRAM000050b4;
+  do {
+    cVar1 = uRAM000050b2 * '\x02';
+    cVar2 = (*(code *)0x8002a4e4)(0x20);
+    uRAM000050b2 = cVar1 + cVar2;
+    cVar1 = uRAM000050b0 * '\x02';
+    cVar2 = (*(code *)0x8002a4e4)(0x24);
+    uRAM000050b0 = cVar1 + cVar2;
+    cVar1 = uRAM000050ac * '\x02';
+    cVar2 = (*(code *)0x8002a4e4)(0x23);
+    uRAM000050ac = cVar1 + cVar2;
+    if (uRAM000050b2 < 5) {
+      if (uRAM000050b2 < 4) {
+        xRAM000050b3 = 0;
+      }
+    }
+    else {
+      xRAM000050b3 = 1;
+    }
+    if (uRAM000050ae < 5) {
+      if (uRAM000050ae < 4) {
+        xRAM000050af = 0;
+      }
+    }
+    else {
+      xRAM000050af = 1;
+    }
+    if (uRAM000050b0 < 5) {
+      if (uRAM000050b0 < 4) {
+        xRAM000050b1 = 0;
+      }
+    }
+    else {
+      xRAM000050b1 = 1;
+    }
+    if (uRAM000050ac < 5) {
+      if (uRAM000050ac < 4) {
+        cRAM000050ad = '\x01';
+      }
+    }
+    else {
+      cRAM000050ad = '\0';
+    }
+    uStack_d = uRAM000050ac;
+    if ((cRAM000050ad != cRAM0000234b) && (cRAM0000234b = cRAM000050ad, cRAM000050ad == '\x01')) {
+      if ((uint4)(iStack_14 - iRAM000050b4) < 5000) {
+        cRAM0000234a = cRAM0000234a + '\x01';
+        if (cRAM0000234a == '\x03') {
+          xRAM0000226c = 0;
+          (*(code *)0x80011e64)();
+        }
+      }
+      else {
+        cRAM0000234a = '\x01';
+        iRAM000050b4 = iStack_14;
+      }
+    }
+    (*(code *)0x80026904)(&iStack_14,0xd);
+  } while( true );
+}
+[decomp]> quit

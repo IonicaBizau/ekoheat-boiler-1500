@@ -1,0 +1,52 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8006c918 FUN_8006c918
+[decomp]> decompile
+Decompiling FUN_8006c918
+Decompilation complete
+[decomp]> print C
+
+uint4 FUN_8006c918(int4 param_1)
+
+{
+  int4 iVar1;
+  uint4 uVar2;
+  uint4 uVar3;
+  uint4 uVar4;
+  
+  if (param_1 == 0) {
+    return 0;
+  }
+  iVar1 = -LZCOUNT(param_1);
+  uVar2 = iVar1 + 0x9e;
+  uVar3 = param_1 << (LZCOUNT(param_1) & 0x1fU);
+  if (0 < (int4)uVar2) {
+    uVar4 = 0x7f;
+    if ((uVar3 & 0x100) != 0) {
+      uVar4 = 0x80;
+    }
+    if (CARRY4(uVar3,uVar4)) {
+      uVar2 = iVar1 + 0xa0;
+    }
+    if ((uVar4 + uVar3 & 0x80000000) == 0) {
+      uVar2 = uVar2 - 1;
+    }
+    return (uVar4 + uVar3 >> 7 & 0xffffff | (uVar2 & 0xff) << 8) >> 1;
+  }
+  uVar2 = 1 - uVar2;
+  if (uVar2 < 0x19) {
+    uVar4 = uVar3 >> (uVar2 & 0x1f);
+    iVar1 = 0x7f;
+    if ((uVar4 & 0x100) != 0) {
+      iVar1 = 0x80;
+    }
+    uVar3 = iVar1 + (uVar4 | uVar3 << (0x20 - uVar2 & 0x1f) != 0) >> 8;
+  }
+  else {
+    uVar3 = 0;
+  }
+  return uVar3;
+}
+[decomp]> quit

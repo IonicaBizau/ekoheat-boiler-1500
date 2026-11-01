@@ -1,0 +1,122 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x800508bc FUN_800508bc
+[decomp]> decompile
+Decompiling FUN_800508bc
+Decompilation complete
+[decomp]> print C
+
+void FUN_800508bc(uint1 *param_1,int2 param_2,int2 param_3,int2 param_4,int2 param_5,int2 param_6,
+                 int2 param_7,int4 param_8,char param_9)
+
+{
+  int4 iVar1;
+  int2 aiStack_44 [2];
+  int2 aiStack_40 [2];
+  int2 aiStack_3c [2];
+  int2 aiStack_38 [2];
+  int2 aiStack_34 [2];
+  int2 aiStack_30 [2];
+  uint1 *puStack_2c;
+  uint1 *puStack_28;
+  int2 iStack_24;
+  int2 iStack_22;
+  uint1 *puStack_20;
+  uint1 *puStack_1c;
+  int2 iStack_14;
+  
+  iStack_24 = ((uint2)(((uint2)param_1[1] << 8 & 0x8000) != 0) * -0x8000 | (uint2)param_1[1] << 8) +
+              (uint2)*param_1;
+  iStack_22 = ((uint2)(((uint2)param_1[3] << 8 & 0x8000) != 0) * -0x8000 | (uint2)param_1[3] << 8) +
+              (uint2)param_1[2];
+  puStack_2c = param_1 + 4;
+  iRAM00004ece = param_2 + iStack_24 + -1;
+  iRAM00004ed0 = param_3 + iStack_22 + -1;
+  aiStack_30[0] = iRAM000046c2 + param_2;
+  aiStack_34[0] = iRAM000046c4 + param_3;
+  if (param_9 == '\x01') {
+    aiStack_38[0] = iRAM000046c2 + param_4;
+    aiStack_3c[0] = iRAM000046c4 + param_5;
+    aiStack_40[0] = iRAM000046c2 + param_6;
+    aiStack_44[0] = iRAM000046c4 + param_7;
+    (*(code *)0x8004fd1c)(aiStack_38,aiStack_40);
+    (*(code *)0x8004fd1c)(aiStack_3c,aiStack_44);
+    if ((int4)aiStack_30[0] + (int4)iStack_24 + -1 < (int4)aiStack_38[0]) {
+      return;
+    }
+    if (aiStack_40[0] < aiStack_30[0]) {
+      return;
+    }
+    if ((int4)aiStack_34[0] + (int4)iStack_22 + -1 < (int4)aiStack_3c[0]) {
+      return;
+    }
+    if (aiStack_44[0] < aiStack_34[0]) {
+      return;
+    }
+    if (aiStack_38[0] < aiStack_30[0]) {
+      aiStack_38[0] = aiStack_30[0];
+    }
+    if ((int4)aiStack_30[0] + (int4)iStack_24 + -1 < (int4)aiStack_40[0]) {
+      aiStack_40[0] = aiStack_30[0] + iStack_24 + -1;
+    }
+    if (aiStack_3c[0] < aiStack_34[0]) {
+      aiStack_3c[0] = aiStack_34[0];
+    }
+    if ((int4)aiStack_34[0] + (int4)iStack_22 + -1 < (int4)aiStack_44[0]) {
+      aiStack_44[0] = aiStack_34[0] + iStack_22 + -1;
+    }
+  }
+  else {
+    aiStack_40[0] = aiStack_30[0] + iStack_24 + -1;
+    aiStack_44[0] = aiStack_34[0] + iStack_22 + -1;
+    aiStack_3c[0] = param_5;
+    aiStack_38[0] = param_4;
+    (*(code *)0x8004fd1c)(aiStack_30,aiStack_40);
+    (*(code *)0x8004fd1c)(aiStack_34,aiStack_44);
+    aiStack_38[0] = aiStack_30[0];
+    aiStack_3c[0] = aiStack_34[0];
+  }
+  iVar1 = (*(code *)0x8004fd6c)(aiStack_38,aiStack_3c,aiStack_40,aiStack_44);
+  if (iVar1 != 0) {
+    (*(code *)0x8004ff30)
+              ((int4)aiStack_38[0],(int4)aiStack_3c[0],(int4)aiStack_40[0],(int4)aiStack_44[0]);
+    puStack_2c = puStack_2c +
+                 ((int4)iStack_24 * ((int4)aiStack_3c[0] - (int4)aiStack_34[0]) +
+                 ((int4)aiStack_38[0] - (int4)aiStack_30[0])) * 2;
+    puStack_20 = (uint1 *)(iRAM00004690 +
+                          (int4)aiStack_3c[0] * (uint4)uRAM000046b4 + aiStack_38[0] * 2);
+    for (; aiStack_3c[0] <= aiStack_44[0]; aiStack_3c[0] = aiStack_3c[0] + 1) {
+      puStack_1c = puStack_20;
+      puStack_28 = puStack_2c;
+      aiStack_30[0] = aiStack_38[0];
+      while (aiStack_30[0] <= aiStack_40[0]) {
+        iStack_14 = (aiStack_40[0] - aiStack_30[0]) + 1;
+        aiStack_30[0] = aiStack_30[0] + iStack_14;
+        if (param_8 == -1) {
+          for (; iStack_14 != 0; iStack_14 = iStack_14 + -1) {
+            *puStack_1c = puStack_28[1];
+            puStack_1c[1] = *puStack_28;
+            puStack_1c = puStack_1c + 2;
+            puStack_28 = puStack_28 + 2;
+          }
+        }
+        else {
+          for (; iStack_14 != 0; iStack_14 = iStack_14 + -1) {
+            if (*(int2 *)puStack_28 != (int2)param_8) {
+              *puStack_1c = puStack_28[1];
+              puStack_1c[1] = *puStack_28;
+            }
+            puStack_1c = puStack_1c + 2;
+            puStack_28 = puStack_28 + 2;
+          }
+        }
+      }
+      puStack_2c = puStack_2c + iStack_24 * 2;
+      puStack_20 = puStack_20 + uRAM000046b4;
+    }
+  }
+  return;
+}
+[decomp]> quit

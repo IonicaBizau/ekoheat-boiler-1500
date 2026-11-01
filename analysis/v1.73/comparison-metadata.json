@@ -1,0 +1,16 @@
+[
+  {
+    "file": "Ecoheat_v1.72/DTX9003.uc3",
+    "size": 450509,
+    "sha256": "b5ab1b7380f2486c29cf6708954cdb5bbaa2d7798fd0103f845fa254da51a5e8",
+    "crc32": "0x42452353",
+    "header": "4156523332a321b4203ee911ddae160800200c9a6642452353"
+  },
+  {
+    "file": "DTX9003 v1.73/DTX9003.uc3",
+    "size": 453229,
+    "sha256": "e57bb9517c66e8f37ecb864daca5735bc14e3ef6a2614c94a962dc62809f2e3a",
+    "crc32": "0xa69ea7cf",
+    "header": "4156523332a321b4203ee911ddae160800200c9a66a69ea7cf"
+  }
+]

@@ -1,0 +1,36 @@
+--- 80008b74
+
++++ 80008b60
+
+@@ -38,5 +38,5 @@
+
+       if (iVar1 != 1) break;
+       (*(code *)FUNCTION_ADDR)(200);
+-      (*(code *)FUNCTION_ADDR)(2,0x21d4,&xStack_9);
++      (*(code *)FUNCTION_ADDR)(2,0x2274,&xStack_9);
+       (*(code *)FUNCTION_ADDR)(200);
+     }
+@@ -54,5 +54,5 @@
+
+       if (iVar1 != 1) break;
+       (*(code *)FUNCTION_ADDR)(200);
+-      (*(code *)FUNCTION_ADDR)(2,0x21d4,&xStack_9);
++      (*(code *)FUNCTION_ADDR)(2,0x2274,&xStack_9);
+       (*(code *)FUNCTION_ADDR)(200);
+     }
+@@ -70,5 +70,5 @@
+
+       if (iVar1 != 1) break;
+       (*(code *)FUNCTION_ADDR)(200);
+-      (*(code *)FUNCTION_ADDR)(2,0x21d4,&xStack_9);
++      (*(code *)FUNCTION_ADDR)(2,0x2274,&xStack_9);
+       (*(code *)FUNCTION_ADDR)(200);
+     }
+@@ -86,5 +86,5 @@
+
+       if (iVar1 != 1) break;
+       (*(code *)FUNCTION_ADDR)(200);
+-      (*(code *)FUNCTION_ADDR)(2,0x21d4,&xStack_9);
++      (*(code *)FUNCTION_ADDR)(2,0x2274,&xStack_9);
+       (*(code *)FUNCTION_ADDR)(1000);
+     }

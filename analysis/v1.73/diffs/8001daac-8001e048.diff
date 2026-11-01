@@ -1,0 +1,14 @@
+--- 8001daac
+
++++ 8001e048
+
+@@ -6,6 +6,6 @@
+
+   iRAM_ADDR = -1;
+   xRAM_ADDR = 1;
+-  (*(code *)FUNCTION_ADDR)(0x55b0,0x15,in_stack_00000008);
+-  (*(code *)FUNCTION_ADDR)(0x5524,0xd,FUNCTION_ADDR);
++  (*(code *)FUNCTION_ADDR)(0x5664,0x15,in_stack_00000008);
++  (*(code *)FUNCTION_ADDR)(0x55d8,0xd,FUNCTION_ADDR);
+   (*(code *)FUNCTION_ADDR)(0x5d,0xffffffff,1);
+   (*(code *)FUNCTION_ADDR)();

@@ -1,0 +1,9 @@
+{
+  "table": "0x8004e9e4",
+  "index": 11,
+  "address": "0x80048044",
+  "offset": "0x4005d",
+  "width": 41,
+  "height": 20,
+  "meaning": "New bitmap index 11 corresponds to old index 12; the old runtime logo was removed, shifting the later indices."
+}

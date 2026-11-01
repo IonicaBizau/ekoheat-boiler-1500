@@ -1,0 +1,49 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8001e048 FUN_8001e048
+[decomp]> decompile
+Decompiling FUN_8001e048
+Decompilation complete
+[decomp]> print C
+
+/* WARNING: Switch with 1 destination removed at 0x8001e116 */
+/* WARNING: Restarted to delay deadcode elimination for space: RAM */
+/* WARNING: Exceeded maximum restarts with more pending */
+
+void FUN_8001e048(void)
+
+{
+  xunknown4 in_stack_00000008;
+  
+  iRAM000015be = -1;
+  xRAM0000232c = 1;
+  (*(code *)0x8006a028)(0x5664,0x15,in_stack_00000008);
+  (*(code *)0x8006a028)(0x55d8,0xd,0x80015b28);
+  (*(code *)0x8005e078)(0x5d,0xffffffff,1);
+  (*(code *)0x8005e558)();
+  while (iRAM0000074c != 0) {
+    (*(code *)0x800169c8)();
+    if (cRAM00002328 == '\0') {
+      if (cRAM00002330 == '\0') {
+        if (iRAM000015be != -1) {
+          cRAM00002328 = '\x01';
+        }
+                    /* WARNING: Calculation of case label failed */
+        iRAM000015be = -1;
+        if (cRAM00002328 != '\0') {
+          (*(code *)0x8005e078)(0x5d,0xffffffff,1);
+          cRAM00002328 = '\0';
+        }
+      }
+    }
+    else {
+      cRAM00002328 = '\0';
+    }
+    (*(code *)0x8005e558)();
+    (*(code *)0x80026a24)(10);
+  }
+  return;
+}
+[decomp]> quit

@@ -1,0 +1,51 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x80023c68 FUN_80023c68
+[decomp]> decompile
+Decompiling FUN_80023c68
+Decompilation complete
+[decomp]> print C
+
+void FUN_80023c68(xunknown4 param_1)
+
+{
+  uint4 uVar1;
+  int4 iVar2;
+  uint4 uVar3;
+  uint2 uVar4;
+  uint1 auStack_110 [256];
+  uint2 uStack_10;
+  uint2 uStack_e;
+  
+  do {
+    iVar2 = (*(code *)0x80027744)(xRAM000050cc,auStack_110,0,1,auStack_110,param_1);
+    if ((iVar2 == 1) &&
+       (uVar1 = (uint4)auStack_110[0], uVar3 = (*(code *)0x800278fc)(xRAM000050cc), uVar1 < uVar3))
+    {
+      (*(code *)0x80027744)(xRAM000050d4,auStack_110,0,0);
+      (*(code *)0x80027744)(xRAM000050cc,auStack_110,0,0);
+      uStack_e = 1;
+      while ((uStack_e <= auStack_110[0] &&
+             (iVar2 = (*(code *)0x80027744)(xRAM000050cc,auStack_110 + uStack_e,0x32,0), iVar2 != 0)
+             )) {
+        uStack_e = uStack_e + 1;
+      }
+      if (auStack_110[0] < uStack_e) {
+        uStack_10 = ((uint2)(((uint2)auStack_110[auStack_110[0] - 1] << 8 & 0x8000) != 0) * -0x8000
+                    | (uint2)auStack_110[auStack_110[0] - 1] << 8) +
+                    (uint2)auStack_110[auStack_110[0]];
+        uVar4 = (*(code *)0x80023fe4)(auStack_110,auStack_110[0] - 1);
+        if (uStack_10 == (uint2)((uint2)((uVar4 & 0x8000) != 0) * -0x8000 | uVar4)) {
+          for (uStack_e = 0; (int4)(uint4)uStack_e < (int4)(auStack_110[0] - 1);
+              uStack_e = uStack_e + 1) {
+            (*(code *)0x8002752c)(xRAM000050bc,auStack_110 + uStack_e,0xffffffff,0);
+          }
+        }
+      }
+    }
+    (*(code *)0x80026a24)(100);
+  } while( true );
+}
+[decomp]> quit

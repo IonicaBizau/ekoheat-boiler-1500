@@ -1,0 +1,27 @@
+--- 8001acfc
+
++++ 8001b288
+
+@@ -4,17 +4,17 @@
+
+   xunknown4 xVar1;
+   
+-  (*(code *)FUNCTION_ADDR)(0x545c,9);
++  (*(code *)FUNCTION_ADDR)(0x5508,9);
+   xVar1 = (*(code *)FUNCTION_ADDR)(xRAM_ADDR);
+   xVar1 = (*(code *)FUNCTION_ADDR)(xVar1);
+   (*(code *)FUNCTION_ADDR)(xVar1);
+-  (*(code *)FUNCTION_ADDR)(0x53d4,7);
++  (*(code *)FUNCTION_ADDR)(0x5480,7);
+   xVar1 = (*(code *)FUNCTION_ADDR)(xRAM_ADDR);
+   xVar1 = (*(code *)FUNCTION_ADDR)(xVar1);
+   (*(code *)FUNCTION_ADDR)(xVar1);
+-  (*(code *)FUNCTION_ADDR)(0x50a0,7);
++  (*(code *)FUNCTION_ADDR)(0x514c,7);
+   xVar1 = (*(code *)FUNCTION_ADDR)(xRAM_ADDR);
+   xVar1 = (*(code *)FUNCTION_ADDR)(xVar1);
+   (*(code *)FUNCTION_ADDR)(xVar1);
+-  (*(code *)FUNCTION_ADDR)(0x5510,7,FUNCTION_ADDR);
++  (*(code *)FUNCTION_ADDR)(0x55c4,7,FUNCTION_ADDR);
+   xRAM_ADDR = xRAM_ADDR;
+   xRAM_ADDR = xRAM_ADDR;

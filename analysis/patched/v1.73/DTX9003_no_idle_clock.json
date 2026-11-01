@@ -1,0 +1,34 @@
+{
+  "source": "DTX9003 v1.73/DTX9003.uc3",
+  "output": "analysis/patched/v1.73/DTX9003_no_idle_clock.uc3",
+  "source_sha256": "e57bb9517c66e8f37ecb864daca5735bc14e3ef6a2614c94a962dc62809f2e3a",
+  "output_sha256": "dec5a6496a4688258a0566d9b33cdf61f9497d18912310e097b71bf91972503e",
+  "size": 453229,
+  "original_crc32": "0xA69EA7CF",
+  "patched_crc32": "0xC097A83F",
+  "patches": [
+    {
+      "address": "0x8000ba8e",
+      "file_offset": "0x3aa7",
+      "before": "3008",
+      "after": "3648",
+      "purpose": "MOV R8,0 -> MOV R8,100 at inactivity-expiry brightness request"
+    }
+  ],
+  "changed_byte_offsets": [
+    "0x15",
+    "0x16",
+    "0x17",
+    "0x18",
+    "0x3aa7",
+    "0x3aa8"
+  ],
+  "verification": {
+    "status": "PASS",
+    "payload_bytes_changed": 2,
+    "source_unchanged": true,
+    "crc32_valid": true,
+    "size_unchanged": true,
+    "hardware_execution": false
+  }
+}

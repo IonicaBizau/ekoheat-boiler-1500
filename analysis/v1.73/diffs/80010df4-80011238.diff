@@ -1,0 +1,41 @@
+--- 80010df4
+
++++ 80011238
+
+@@ -13,10 +13,10 @@
+
+   iStack_14 = (uint4)param_1 << 0x18;
+   iStack_18 = (uint4)param_2 << 0x18;
+-  iVar3 = (*(code *)FUNCTION_ADDR)(&xRAM_ADDR,*(xunknown4 *)(iRAM_ADDR * 4 + 0x870));
++  iVar3 = (*(code *)FUNCTION_ADDR)(&xRAM_ADDR,*(xunknown4 *)(iRAM_ADDR * 4 + 0x898));
+   if (iVar3 != 0) {
+-    xVar2 = *(xunknown4 *)(iRAM_ADDR * 4 + 0xcd0);
++    xVar2 = *(xunknown4 *)(iRAM_ADDR * 4 + 0xcf8);
+     (*(code *)FUNCTION_ADDR)(&xRAM_ADDR,0x33,FUNCTION_ADDR,(int4)iRAM_ADDR,xVar2,xVar2);
+   }
+-  uRAM_ADDR = (uint4)*(uint1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd43d1);
++  uRAM_ADDR = (uint4)*(uint1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd39f5);
+   xRAM_ADDR = 1;
+   uStack_9 = 0;
+@@ -27,7 +27,7 @@
+
+     uStack_e = 0;
+     if (cRAM_ADDR == '\0') {
+-      iVar3 = (*(code *)FUNCTION_ADDR)(&xRAM_ADDR,*(xunknown4 *)(iRAM_ADDR * 4 + 0x870));
++      iVar3 = (*(code *)FUNCTION_ADDR)(&xRAM_ADDR,*(xunknown4 *)(iRAM_ADDR * 4 + 0x898));
+       if (iVar3 != 0) {
+-        iStack_18 = *(int4 *)(iRAM_ADDR * 4 + 0xcd0);
++        iStack_18 = *(int4 *)(iRAM_ADDR * 4 + 0xcf8);
+         (*(code *)FUNCTION_ADDR)(&xRAM_ADDR,0x33,FUNCTION_ADDR);
+       }
+@@ -58,7 +58,7 @@
+
+     }
+     (*(code *)FUNCTION_ADDR)(500);
+-    iVar3 = (*(code *)FUNCTION_ADDR)(&xRAM_ADDR,*(xunknown4 *)(iRAM_ADDR * 4 + 0x870));
++    iVar3 = (*(code *)FUNCTION_ADDR)(&xRAM_ADDR,*(xunknown4 *)(iRAM_ADDR * 4 + 0x898));
+     if (iVar3 != 0) {
+-      iStack_14 = *(int4 *)(iRAM_ADDR * 4 + 0xcf8);
++      iStack_14 = *(int4 *)(iRAM_ADDR * 4 + 0xd20);
+       (*(code *)FUNCTION_ADDR)(&xRAM_ADDR,0x33,FUNCTION_ADDR);
+     }

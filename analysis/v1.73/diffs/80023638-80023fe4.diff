@@ -1,0 +1,12 @@
+--- 80023638
+
++++ 80023fe4
+
+@@ -10,5 +10,5 @@
+
+   for (uStack_c = 0; uStack_c < param_2; uStack_c = uStack_c + 1) {
+     uStack_a = uStack_a >> 8 ^
+-               *(uint2 *)((((uint4)uStack_a ^ (uint4)*puStack_10) & 0xff) * 2 + -0x7ffdd148);
++               *(uint2 *)((((uint4)uStack_a ^ (uint4)*puStack_10) & 0xff) * 2 + -0x7ffdc79c);
+     puStack_10 = puStack_10 + 1;
+   }

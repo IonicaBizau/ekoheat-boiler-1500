@@ -1,0 +1,34 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x80054a80 FUN_80054a80
+[decomp]> decompile
+Decompiling FUN_80054a80
+Decompilation complete
+[decomp]> print C
+
+void FUN_80054a80(void)
+
+{
+  int2 iStack_a;
+  
+  (*(code *)0x80053ab4)();
+  xRAM000059a4 = 0xffff;
+  (*(code *)0x8005da40)();
+  xRAM00004a14 = 0;
+  xRAM000046be = 0;
+  xRAM000046c0 = 0;
+  xRAM000046c2 = xRAM000046ba;
+  xRAM000046c4 = xRAM000046bc;
+  xRAM00004ecc = 0;
+  for (iStack_a = 0; iStack_a < 10; iStack_a = iStack_a + 1) {
+    *(xunknown1 *)(iStack_a * 8 + 0x4e82) = 0;
+    *(xunknown2 *)((iStack_a + 0x4c6) * 8 + 0x284c) = 0;
+    *(xunknown2 *)((iStack_a + 0x4c6) * 8 + 0x284e) = 0;
+    *(xunknown2 *)(iStack_a * 8 + 0x4e80) = 0;
+  }
+  (*(code *)0x8005f6dc)();
+  return;
+}
+[decomp]> quit

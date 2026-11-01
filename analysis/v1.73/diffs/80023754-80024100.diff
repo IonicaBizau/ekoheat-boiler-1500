@@ -1,0 +1,36 @@
+--- 80023754
+
++++ 80024100
+
+@@ -62,5 +62,5 @@
+
+             uRAM_ADDR = (uint4)((int2)(uRAM_ADDR >> 2) * 0x170) / (uint4)uRAM_ADDR;
+           }
+-          iRAM_ADDR = uRAM_ADDR + *(uint1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd43d0);
++          iRAM_ADDR = uRAM_ADDR + *(uint1 *)((uint4)uRAM_ADDR * 0xbc + -0x7ffd39f4);
+           iRAM_ADDR = uRAM_ADDR + 2;
+           uRAM_ADDR = 0;
+@@ -115,9 +115,9 @@
+
+       if (cRAM_ADDR == '\x01') {
+         if ((uRAM_ADDR == 3) &&
+-           (((((0x27 < uRAM_ADDR && (uRAM_ADDR < 0x2b)) ||
+-              ((0x4f < uRAM_ADDR && (uRAM_ADDR < 0x53)))) ||
+-             (((0x77 < uRAM_ADDR && (uRAM_ADDR < 0x7b)) ||
+-              ((0x9f < uRAM_ADDR && (uRAM_ADDR < 0xa3)))))) ||
+-            ((199 < uRAM_ADDR && (uRAM_ADDR < 0xcb)))))) {
++           ((((0x27 < uRAM_ADDR && (uRAM_ADDR < 0x2b)) ||
++             (((0x4f < uRAM_ADDR && (uRAM_ADDR < 0x53)) ||
++              ((0x77 < uRAM_ADDR && (uRAM_ADDR < 0x7b)))))) ||
++            (((0x9f < uRAM_ADDR && (uRAM_ADDR < 0xa3)) ||
++             ((199 < uRAM_ADDR && (uRAM_ADDR < 0xcb)))))))) {
+           if (cRAM_ADDR == '\0') {
+             xRAM_ADDR = 1000000;
+@@ -180,5 +180,5 @@
+
+           (*(code *)FUNCTION_ADDR)(4);
+         }
+-        else if ((uRAM_ADDR == 0) && (cRAM_ADDR == '\x01')) {
++        else if (((uRAM_ADDR == 0) || (uRAM_ADDR == 1)) && (cRAM_ADDR == '\x01')) {
+           (*(code *)FUNCTION_ADDR)(0);
+         }

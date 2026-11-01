@@ -1,0 +1,54 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8001d2a4 FUN_8001d2a4
+[decomp]> decompile
+Decompiling FUN_8001d2a4
+Decompilation complete
+[decomp]> print C
+
+void FUN_8001d2a4(void)
+
+{
+  xunknown4 xVar1;
+  
+  if (cRAM0000227c == '\0') {
+    if (cRAM00002284 == '\0') {
+      if (iRAM00001546 != -1) {
+        cRAM0000227c = '\x01';
+      }
+      if (iRAM00001546 == 0) {
+        iRAM00001546 = 0xffff;
+        xRAM00002274 = 0x14;
+        return;
+      }
+      if (iRAM00001546 == 1) {
+        xRAM00002248 = 1;
+        xVar1 = *(xunknown4 *)(iRAM000059a6 * 4 + 0x147c);
+        (*(code *)0x80069744)(0x5210,0x33,0x80014c5c,(int4)iRAM000059a6,xVar1,xVar1);
+        (*(code *)0x8005efec)(0xb,0xffffffff,1);
+        (*(code *)0x8005f4cc)();
+        (*(code *)0x80011990)();
+        (*(code *)0x80011a34)();
+        xVar1 = (*(code *)0x8002a13c)(0x808001f8,0x4d534946,4,1);
+        (*(code *)0x800279b0)(xVar1,0,0x4571);
+        (*(code *)0x80027aa8)();
+        do {
+                    /* WARNING: Do nothing block with infinite loop */
+        } while( true );
+      }
+      if (iRAM00001546 != -1) {
+        cRAM0000227c = '\0';
+      }
+      iRAM00001546 = -1;
+    }
+  }
+  else {
+    (*(code *)0x8005efec)(0x40,0xffffffff,1);
+    cRAM0000227c = '\0';
+  }
+  (*(code *)0x8005f4cc)();
+  return;
+}
+[decomp]> quit

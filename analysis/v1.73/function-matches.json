@@ -1,0 +1,644 @@
+[
+  {
+    "old": "800080f0",
+    "new": "800080f0",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80008190",
+    "new": "80008190",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "800081fc",
+    "new": "800081fc",
+    "similarity": 0.95,
+    "identical_normalized": false
+  },
+  {
+    "old": "800082b8",
+    "new": "800082b8",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80008324",
+    "new": "80008324",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80008348",
+    "new": "80008348",
+    "similarity": 0.93548,
+    "identical_normalized": false
+  },
+  {
+    "old": "80008454",
+    "new": "80008454",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "800084e8",
+    "new": "800084e8",
+    "similarity": 0.97095,
+    "identical_normalized": false
+  },
+  {
+    "old": "80008a2c",
+    "new": "80008a18",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80008a7c",
+    "new": "80008a68",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80008a94",
+    "new": "80008a80",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80008ab8",
+    "new": "80008aa4",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80008b74",
+    "new": "80008b60",
+    "similarity": 0.96117,
+    "identical_normalized": false
+  },
+  {
+    "old": "80008e04",
+    "new": "80008df0",
+    "similarity": 0.97436,
+    "identical_normalized": false
+  },
+  {
+    "old": "8000ac2c",
+    "new": "80008a80",
+    "similarity": 0.625,
+    "identical_normalized": false
+  },
+  {
+    "old": "8000b3f4",
+    "new": "8000b410",
+    "similarity": 0.79036,
+    "identical_normalized": false
+  },
+  {
+    "old": "8000d93c",
+    "new": "80008a80",
+    "similarity": 0.625,
+    "identical_normalized": false
+  },
+  {
+    "old": "8000e17c",
+    "new": "8000e32c",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "8000e2cc",
+    "new": "8000e47c",
+    "similarity": 0.73239,
+    "identical_normalized": false
+  },
+  {
+    "old": "8000e900",
+    "new": "8000eb40",
+    "similarity": 0.93793,
+    "identical_normalized": false
+  },
+  {
+    "old": "8000eaf8",
+    "new": "8000ed44",
+    "similarity": 0.85646,
+    "identical_normalized": false
+  },
+  {
+    "old": "8000f400",
+    "new": "8000f64c",
+    "similarity": 0.86804,
+    "identical_normalized": false
+  },
+  {
+    "old": "80010068",
+    "new": "80010380",
+    "similarity": 0.875,
+    "identical_normalized": false
+  },
+  {
+    "old": "80010548",
+    "new": "800108e8",
+    "similarity": 0.69508,
+    "identical_normalized": false
+  },
+  {
+    "old": "80010d18",
+    "new": "800110e4",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80010da4",
+    "new": "80011170",
+    "similarity": 0.77419,
+    "identical_normalized": false
+  },
+  {
+    "old": "80010df4",
+    "new": "80011238",
+    "similarity": 0.92553,
+    "identical_normalized": false
+  },
+  {
+    "old": "80011108",
+    "new": "8001154c",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80011168",
+    "new": "800115ac",
+    "similarity": 0.95105,
+    "identical_normalized": false
+  },
+  {
+    "old": "800115ac",
+    "new": "800119dc",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80011628",
+    "new": "80011a58",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80011704",
+    "new": "80011b34",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80011990",
+    "new": "80011dc0",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80011a34",
+    "new": "80011e64",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80011da0",
+    "new": "800121d0",
+    "similarity": 0.15493,
+    "identical_normalized": false
+  },
+  {
+    "old": "800125c4",
+    "new": "800129f4",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "8001264c",
+    "new": "80012a7c",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "800126d4",
+    "new": "80012b04",
+    "similarity": 0.92857,
+    "identical_normalized": false
+  },
+  {
+    "old": "80014498",
+    "new": "80008a80",
+    "similarity": 0.625,
+    "identical_normalized": false
+  },
+  {
+    "old": "80015774",
+    "new": "80015bf8",
+    "similarity": 0.62016,
+    "identical_normalized": false
+  },
+  {
+    "old": "800164e4",
+    "new": "800169c8",
+    "similarity": 0.96774,
+    "identical_normalized": false
+  },
+  {
+    "old": "800165c8",
+    "new": "80016aac",
+    "similarity": 0.79452,
+    "identical_normalized": false
+  },
+  {
+    "old": "800174d4",
+    "new": "800179c4",
+    "similarity": 0.9,
+    "identical_normalized": false
+  },
+  {
+    "old": "80017654",
+    "new": "80017b44",
+    "similarity": 0.89868,
+    "identical_normalized": false
+  },
+  {
+    "old": "80017a78",
+    "new": "80017f70",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80017b6c",
+    "new": "80018064",
+    "similarity": 0.96948,
+    "identical_normalized": false
+  },
+  {
+    "old": "80019898",
+    "new": "80019d90",
+    "similarity": 0.92222,
+    "identical_normalized": false
+  },
+  {
+    "old": "80019cd0",
+    "new": "8001a1c8",
+    "similarity": 0.93103,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001a008",
+    "new": "8001a500",
+    "similarity": 0.89333,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001a270",
+    "new": "8001a768",
+    "similarity": 0.71815,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001a69c",
+    "new": "8001ac28",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "8001a778",
+    "new": "8001ad04",
+    "similarity": 0.78723,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001acfc",
+    "new": "8001b288",
+    "similarity": 0.95122,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001af14",
+    "new": "8001b4a0",
+    "similarity": 0.95455,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001b0f0",
+    "new": "8001b67c",
+    "similarity": 0.91538,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001b588",
+    "new": "8001bb14",
+    "similarity": 0.94915,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001ba3c",
+    "new": "8001bfc8",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "8001bb30",
+    "new": "8001c0bc",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "8001bbd8",
+    "new": "8001c164",
+    "similarity": 0.96809,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001bf6c",
+    "new": "8001c4f8",
+    "similarity": 0.98462,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001c4ac",
+    "new": "8001ca38",
+    "similarity": 0.78667,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001c8e0",
+    "new": "8001ce6c",
+    "similarity": 0.92857,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001ca34",
+    "new": "8001cfc0",
+    "similarity": 0.8932,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001ce54",
+    "new": "8001d3f0",
+    "similarity": 0.89011,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001d1e0",
+    "new": "8001d77c",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "8001d2a4",
+    "new": "8001d840",
+    "similarity": 0.95349,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001d3cc",
+    "new": "8001d968",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "8001d4b4",
+    "new": "8001da50",
+    "similarity": 0.968,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001d720",
+    "new": "8001dcbc",
+    "similarity": 0.98551,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001d904",
+    "new": "8001dea0",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "8001d9ec",
+    "new": "8001df88",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "8001daac",
+    "new": "8001e048",
+    "similarity": 0.94118,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001ddc8",
+    "new": "8001e364",
+    "similarity": 0.94118,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001ded0",
+    "new": "8001e46c",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "8001e034",
+    "new": "8001e5d0",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "8001e08c",
+    "new": "8001e628",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "8001e7e8",
+    "new": "8001ed84",
+    "similarity": 0.93396,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001ec34",
+    "new": "8001f1d0",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "8001f0f8",
+    "new": "8001f694",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "8001f138",
+    "new": "8001f6d4",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "8001f208",
+    "new": "8001f7a4",
+    "similarity": 0.91667,
+    "identical_normalized": false
+  },
+  {
+    "old": "8001f3dc",
+    "new": "8001f978",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "800212e0",
+    "new": "80008a80",
+    "similarity": 0.625,
+    "identical_normalized": false
+  },
+  {
+    "old": "80021c50",
+    "new": "800222ac",
+    "similarity": 0.98361,
+    "identical_normalized": false
+  },
+  {
+    "old": "800227ec",
+    "new": "80022e48",
+    "similarity": 0.3633,
+    "identical_normalized": false
+  },
+  {
+    "old": "800230e0",
+    "new": "80023a8c",
+    "similarity": 0.90476,
+    "identical_normalized": false
+  },
+  {
+    "old": "80023184",
+    "new": "80023b30",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80023224",
+    "new": "80023bd0",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "800232bc",
+    "new": "80023c68",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80023420",
+    "new": "80023dcc",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80023588",
+    "new": "80023f34",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80023638",
+    "new": "80023fe4",
+    "similarity": 0.9375,
+    "identical_normalized": false
+  },
+  {
+    "old": "800236dc",
+    "new": "80024088",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "800236f8",
+    "new": "800240a4",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80023734",
+    "new": "800240e0",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80023754",
+    "new": "80024100",
+    "similarity": 0.97569,
+    "identical_normalized": false
+  },
+  {
+    "old": "80024ec8",
+    "new": "800258a4",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80025394",
+    "new": "80025d70",
+    "similarity": 0.96491,
+    "identical_normalized": false
+  },
+  {
+    "old": "80025720",
+    "new": "800260fc",
+    "similarity": 0.89189,
+    "identical_normalized": false
+  },
+  {
+    "old": "8002584c",
+    "new": "80026228",
+    "similarity": 0.89189,
+    "identical_normalized": false
+  },
+  {
+    "old": "80025978",
+    "new": "80026354",
+    "similarity": 0.87097,
+    "identical_normalized": false
+  },
+  {
+    "old": "80025b38",
+    "new": "80026514",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80025b9c",
+    "new": "80026578",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80025be4",
+    "new": "800265c0",
+    "similarity": 1.0,
+    "identical_normalized": true
+  },
+  {
+    "old": "80025c78",
+    "new": "80026654",
+    "similarity": 0.98,
+    "identical_normalized": false
+  },
+  {
+    "old": "80025e5c",
+    "new": "80026838",
+    "similarity": 0.96875,
+    "identical_normalized": false
+  },
+  {
+    "old": "80025f28",
+    "new": "80026904",
+    "similarity": 1.0,
+    "identical_normalized": true
+  }
+]

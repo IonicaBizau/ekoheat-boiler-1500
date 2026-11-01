@@ -1,0 +1,94 @@
+--- 8001a778
+
++++ 8001ad04
+
+@@ -17,10 +17,10 @@
+
+       case 10:
+         cRAM_ADDR = '\0';
+-        (*(code *)FUNCTION_ADDR)(0x539c,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe64));
+-        (*(code *)FUNCTION_ADDR)(0x5310,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x54d8,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x53f4,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x54ec,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x5074,9,FUNCTION_ADDR);
++        (*(code *)FUNCTION_ADDR)(0x5448,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xeb4));
++        (*(code *)FUNCTION_ADDR)(0x53bc,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x5584,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x54a0,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x5598,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x5120,9,FUNCTION_ADDR);
+         xRAM_ADDR = 0;
+         if (cVar1 == '\x04') {
+@@ -38,10 +38,10 @@
+
+       case 0xb:
+         cRAM_ADDR = '\x01';
+-        (*(code *)FUNCTION_ADDR)(0x539c,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x5310,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe64));
+-        (*(code *)FUNCTION_ADDR)(0x54d8,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x53f4,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x54ec,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x5074,9,FUNCTION_ADDR);
++        (*(code *)FUNCTION_ADDR)(0x5448,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x53bc,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xeb4));
++        (*(code *)FUNCTION_ADDR)(0x5584,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x54a0,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x5598,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x5120,9,FUNCTION_ADDR);
+         xRAM_ADDR = 0;
+         if (cVar1 == '\x04') {
+@@ -59,10 +59,10 @@
+
+       case 0xc:
+         cRAM_ADDR = '\x02';
+-        (*(code *)FUNCTION_ADDR)(0x539c,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x5310,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x54d8,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe64));
+-        (*(code *)FUNCTION_ADDR)(0x53f4,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x54ec,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x5074,9,FUNCTION_ADDR);
++        (*(code *)FUNCTION_ADDR)(0x5448,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x53bc,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x5584,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xeb4));
++        (*(code *)FUNCTION_ADDR)(0x54a0,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x5598,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x5120,9,FUNCTION_ADDR);
+         xRAM_ADDR = 0;
+         if (cVar1 == '\x04') {
+@@ -80,10 +80,10 @@
+
+       case 0xd:
+         cRAM_ADDR = '\x03';
+-        (*(code *)FUNCTION_ADDR)(0x539c,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x5310,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x54d8,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x53f4,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe64));
+-        (*(code *)FUNCTION_ADDR)(0x54ec,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x5074,9,FUNCTION_ADDR);
++        (*(code *)FUNCTION_ADDR)(0x5448,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x53bc,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x5584,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x54a0,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xeb4));
++        (*(code *)FUNCTION_ADDR)(0x5598,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x5120,9,FUNCTION_ADDR);
+         xRAM_ADDR = 0;
+         if (cVar1 == '\x04') {
+@@ -101,10 +101,10 @@
+
+       case 0xe:
+         cRAM_ADDR = '\x04';
+-        (*(code *)FUNCTION_ADDR)(0x539c,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x5310,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x54d8,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x53f4,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe3c));
+-        (*(code *)FUNCTION_ADDR)(0x54ec,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe64));
+-        (*(code *)FUNCTION_ADDR)(0x5074,9,FUNCTION_ADDR);
++        (*(code *)FUNCTION_ADDR)(0x5448,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x53bc,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x5584,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x54a0,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xe8c));
++        (*(code *)FUNCTION_ADDR)(0x5598,5,*(xunknown4 *)(iRAM_ADDR * 4 + 0xeb4));
++        (*(code *)FUNCTION_ADDR)(0x5120,9,FUNCTION_ADDR);
+         xRAM_ADDR = 1;
+         (*(code *)FUNCTION_ADDR)();

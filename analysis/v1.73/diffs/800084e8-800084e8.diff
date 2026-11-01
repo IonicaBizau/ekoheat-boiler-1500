@@ -1,0 +1,24 @@
+--- 800084e8
+
++++ 800084e8
+
+@@ -81,6 +81,5 @@
+
+     cStack_3d = '\0';
+   }
+-  cVar4 = (*(code *)FUNCTION_ADDR)(0x20);
+-  cRAM_ADDR = cStack_3d + cStack_45 + cStack_4d + (iVar2 == 0) + cVar4 + '\x02';
++  cRAM_ADDR = cStack_3d + cStack_45 + cStack_4d + (iVar2 == 0) + '\x03';
+   (*(code *)FUNCTION_ADDR)(66000000);
+   (*(code *)FUNCTION_ADDR)();
+@@ -91,6 +90,8 @@
+
+   (*(code *)FUNCTION_ADDR)(0x3f);
+   (*(code *)FUNCTION_ADDR)(0x31);
+-  xStack_10 = 0x4f6c;
++  xStack_10 = 0;
++  pxStack_14 = (xunknown1 *)0x5018;
+   (*(code *)FUNCTION_ADDR)(FUNCTION_ADDR,FUNCTION_ADDR,2000,0,4);
++  xStack_10 = 0x5020;
+   (*(code *)FUNCTION_ADDR)(FUNCTION_ADDR,FUNCTION_ADDR,2000,0,2);
+   (*(code *)FUNCTION_ADDR)(FUNCTION_ADDR,FUNCTION_ADDR,2000,0,4);

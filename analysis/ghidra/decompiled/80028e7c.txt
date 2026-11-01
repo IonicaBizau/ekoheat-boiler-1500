@@ -1,0 +1,95 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x80028e7c FUN_80028e7c
+[decomp]> decompile
+Decompiling FUN_80028e7c
+Decompilation complete
+[decomp]> print C
+
+xunknown4 FUN_80028e7c(uint4 *param_1)
+
+{
+  uint4 uVar1;
+  uint4 uVar2;
+  bool bVar3;
+  bool bVar4;
+  xunknown4 xVar5;
+  uint4 uStack_24;
+  uint4 uStack_20;
+  uint4 uStack_1c;
+  uint4 uStack_18;
+  uint4 uStack_10;
+  
+  uVar1 = *param_1;
+  uVar2 = param_1[2];
+  uStack_1c = 0;
+  uStack_18 = 0;
+  (*(code *)0x800296b4)(0xffff0c00,uVar2,param_1[3]);
+  if (uVar1 == uVar2) {
+    *param_1 = uVar2;
+    param_1[1] = uVar2;
+    xVar5 = 0;
+  }
+  else {
+    for (uStack_24 = 1; (uStack_24 < 0x20 && ((uStack_24 * (uVar1 % uVar2)) % uVar2 != 0));
+        uStack_24 = uStack_24 + 1) {
+    }
+    if (uStack_24 == 0x20) {
+      xVar5 = 0xffffffff;
+    }
+    else {
+      uVar1 = (uVar1 * uStack_24) / uVar2;
+      if (uVar1 < 0x10) {
+        for (; (uStack_24 & 1) == 0; uStack_24 = uStack_24 >> 1) {
+          uStack_1c = uStack_1c + 1;
+        }
+        for (; ((uVar2 * uVar1 * 2) / uStack_24 < 240000000 && (uVar1 * 2 < 0x10));
+            uVar1 = uVar1 << 1) {
+          uStack_1c = uStack_1c + 1;
+        }
+        bVar3 = uStack_1c != 0;
+        if (bVar3) {
+          uStack_1c = uStack_1c - 1;
+        }
+        uStack_20 = (uint4)bVar3;
+        uVar2 = (uVar2 * uVar1) / (uStack_24 << uStack_20);
+        *param_1 = uVar2 >> (uStack_1c & 0x1f);
+        (*(code *)0x800294e6)(0xffff0c00,0,uVar1 - 1,uStack_24,0,0x10);
+        (*(code *)0x8002958a)(0xffff0c00,0,uVar2 < 160000000,uStack_20,0);
+        uStack_10 = uVar2;
+        do {
+          if ((uStack_10 < 0x3ef1481) && (param_1[1] == uStack_10)) break;
+          uStack_18 = uStack_18 + 1;
+          uStack_10 = uVar2 >> (uStack_18 & 0x1f);
+        } while (param_1[1] <= uStack_10);
+        param_1[1] = uVar2 >> (uStack_18 & 0x1f);
+        (*(code *)0x80029614)(0xffff0c00,0);
+        (*(code *)0x8002964c)(0xffff0c00);
+        bVar3 = uStack_1c != 0;
+        if (bVar3) {
+          uStack_1c = uStack_1c - 1;
+        }
+        bVar4 = uStack_18 != 0;
+        if (bVar4) {
+          uStack_18 = uStack_18 - 1;
+        }
+        (*(code *)0x800293dc)(0xffff0c00,bVar4,uStack_18,bVar3,uStack_1c,bVar3,uStack_1c);
+        if (*param_1 < 0x1f78a41) {
+          (*(code *)0x80029ca4)(0);
+        }
+        else {
+          (*(code *)0x80029ca4)(1);
+        }
+        (*(code *)0x8002966a)(0xffff0c00,2);
+        xVar5 = 0;
+      }
+      else {
+        xVar5 = 0xffffffff;
+      }
+    }
+  }
+  return xVar5;
+}
+[decomp]> quit

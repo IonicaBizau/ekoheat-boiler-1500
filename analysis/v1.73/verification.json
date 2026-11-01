@@ -1,0 +1,8 @@
+{
+  "ash_allowance_100": true,
+  "ignition_light_18": true,
+  "three_attempts": true,
+  "low_fuel_crossing": true,
+  "clock_transition_present": true,
+  "profile_ignition_600": true
+}

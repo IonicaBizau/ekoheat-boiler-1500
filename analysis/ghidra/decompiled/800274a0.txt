@@ -1,0 +1,33 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x800274a0 FUN_800274a0
+[decomp]> decompile
+Decompiling FUN_800274a0
+Decompilation complete
+[decomp]> print C
+
+xunknown4 * FUN_800274a0(int4 param_1,xunknown4 param_2,xunknown4 param_3)
+
+{
+  *(xunknown4 *)(param_1 + -4) = 0x8080808;
+  *(xunknown4 *)(param_1 + -8) = 0x9090909;
+  *(xunknown4 *)(param_1 + -0xc) = 0xa0a0a0a;
+  *(xunknown4 *)(param_1 + -0x10) = 0xb0b0b0b;
+  *(xunknown4 *)(param_1 + -0x14) = param_3;
+  *(xunknown4 *)(param_1 + -0x18) = 0xdeadbeef;
+  *(xunknown4 *)(param_1 + -0x1c) = param_2;
+  *(xunknown4 *)(param_1 + -0x20) = 0x400000;
+  *(xunknown4 *)(param_1 + -0x24) = 0xff0000ff;
+  *(xunknown4 *)(param_1 + -0x28) = 0x1010101;
+  *(xunknown4 *)(param_1 + -0x2c) = 0x2020202;
+  *(xunknown4 *)(param_1 + -0x30) = 0x3030303;
+  *(xunknown4 *)(param_1 + -0x34) = 0x4040404;
+  *(xunknown4 *)(param_1 + -0x38) = 0x5050505;
+  *(xunknown4 *)(param_1 + -0x3c) = 0x6060606;
+  *(xunknown4 *)(param_1 + -0x40) = 0x7070707;
+  *(xunknown4 *)(param_1 + -0x44) = 0;
+  return (xunknown4 *)(param_1 + -0x44);
+}
+[decomp]> quit

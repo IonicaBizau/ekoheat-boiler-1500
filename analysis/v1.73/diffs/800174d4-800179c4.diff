@@ -1,0 +1,28 @@
+--- 800174d4
+
++++ 800179c4
+
+@@ -14,8 +14,8 @@
+
+       (*(code *)FUNCTION_ADDR)(xRAM_ADDR);
+       (*(code *)FUNCTION_ADDR)();
+-      (*(code *)FUNCTION_ADDR)(0x55d0,0x11,FUNCTION_ADDR,xVar2,param_3,CONCAT44(xVar2,param_3));
++      (*(code *)FUNCTION_ADDR)(0x5684,0x11,FUNCTION_ADDR,xVar2,param_3,CONCAT44(xVar2,param_3));
+     }
+     else {
+-      (*(code *)FUNCTION_ADDR)(0x55d0,0x11,FUNCTION_ADDR);
++      (*(code *)FUNCTION_ADDR)(0x5684,0x11,FUNCTION_ADDR);
+     }
+   }
+@@ -27,8 +27,8 @@
+
+     xVar5 = (*(code *)FUNCTION_ADDR)(xVar5);
+     (*(code *)FUNCTION_ADDR)(xVar5);
+-    (*(code *)FUNCTION_ADDR)(0x55d0,0x11,FUNCTION_ADDR,xVar3,xVar2,CONCAT44(xVar3,xVar2));
++    (*(code *)FUNCTION_ADDR)(0x5684,0x11,FUNCTION_ADDR,xVar3,xVar2,CONCAT44(xVar3,xVar2));
+   }
+   else {
+-    (*(code *)FUNCTION_ADDR)(0x55d0,0x11,FUNCTION_ADDR);
++    (*(code *)FUNCTION_ADDR)(0x5684,0x11,FUNCTION_ADDR);
+   }
+   if (cRAM_ADDR != '\0') {

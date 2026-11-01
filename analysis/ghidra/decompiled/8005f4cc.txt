@@ -1,0 +1,77 @@
+[decomp]> load file analysis/ghidra/firmware.xml
+analysis/ghidra/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x8005f4cc FUN_8005f4cc
+[decomp]> decompile
+Decompiling FUN_8005f4cc
+Decompilation complete
+[decomp]> print C
+
+void FUN_8005f4cc(void)
+
+{
+  xunknown4 xVar1;
+  char cVar2;
+  bool extraout_Z;
+  bool extraout_Z_00;
+  xunknown1 axStack_2c [30];
+  int2 iStack_e;
+  int2 iStack_c;
+  char cStack_a;
+  xunknown1 xStack_9;
+  
+  (*(code *)0x800692dc)();
+  iRAM00004694 = iRAM00004694 + 1;
+  cStack_a = '\0';
+  iStack_e = (*(code *)0x8005ce28)();
+  (*(code *)0x8006d2d8)(axStack_2c,0x28e4,0x1e);
+  while( true ) {
+    if (iStack_e == -1) break;
+    (*(code *)0x8005de58)((int4)iStack_e);
+    if (extraout_Z) {
+      iStack_e = (*(code *)0x8005ce4c)((int4)iStack_e);
+    }
+    else {
+      xVar1 = (*(code *)0x8005db00)((int4)iStack_e);
+      (*(code *)0x8006d2d8)(0x284c,xVar1,0x90);
+      xVar1 = (*(code *)0x8005db5c)((int4)iStack_e);
+      (*(code *)0x8006d2d8)(0x28e4,xVar1,0x1e);
+      (*(code *)0x8005e0a8)((int4)iStack_e);
+      xStack_9 = 2;
+      cVar2 = (*(code *)0x8005d008)((int4)iStack_e);
+      iStack_c = (int2)cVar2;
+      (*(code *)0x8005cf50)((int4)iStack_e);
+      if (extraout_Z_00) {
+        xRAM000046b0 = 0;
+        iStack_e = (*(code *)0x8005ce4c)((int4)iStack_e);
+      }
+      else {
+        iStack_e = (*(code *)0x8005d898)((int4)iStack_e);
+        xRAM000046b0 = 1;
+        if (-1 < iRAM000046b2) {
+          iStack_e = (*(code *)0x8005ce4c)((int4)iStack_e);
+        }
+      }
+      (*(code *)0x800586a0)();
+      xRAM000046ee = 0;
+      xRAM000047fc = 0;
+      (*(code *)0x80058d4c)(xStack_9);
+      if (iStack_c == 0) {
+        cStack_a = '\x01';
+      }
+      xRAM000046b0 = 0;
+    }
+  }
+  (*(code *)0x8006d2d8)(0x28e4,axStack_2c,0x1e);
+  if (((cRAM000047fb != '\0') && (cStack_a != '\0')) && (iRAM000028e0 != 0)) {
+    xRAM000046ee = 0;
+    xRAM000047fc = 0;
+    (*(code *)0x8005e1cc)(iRAM000028e0,2);
+    (*(code *)0x8005496c)();
+  }
+  (*(code *)0x800692e6)();
+  (*(code *)0x8006955c)();
+  return;
+}
+[decomp]> quit

@@ -1,0 +1,12 @@
+--- 80025e5c
+
++++ 80026838
+
+@@ -21,5 +21,5 @@
+
+     (*(code *)FUNCTION_ADDR)(iStack_14 + 0x18);
+   }
+-  (*(code *)FUNCTION_ADDR)(0x261c,iStack_14 + 4);
++  (*(code *)FUNCTION_ADDR)(0x26c8,iStack_14 + 4);
+   iRAM_ADDR = iRAM_ADDR + 1;
+   iRAM_ADDR = iRAM_ADDR + 1;

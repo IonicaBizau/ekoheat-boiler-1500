@@ -1,0 +1,93 @@
+[decomp]> load file analysis/v1.73/firmware.xml
+analysis/v1.73/firmware.xml successfully loaded: Generic AVR32-A big-endian
+[decomp]> option readonly on
+Read-only memory locations now propagate as constants
+[decomp]> map function 0x80011b34 FUN_80011b34
+[decomp]> decompile
+Decompiling FUN_80011b34
+Decompilation complete
+[decomp]> print C
+
+void FUN_80011b34(void)
+
+{
+  int4 iVar1;
+  char cVar2;
+  uint2 uStack_194;
+  int2 iStack_192;
+  xunknown1 xStack_138;
+  xunknown1 axStack_108 [254];
+  char cStack_a;
+  char cStack_9;
+  
+  (*(code *)0x8006dd2c)(axStack_108,0,0x100);
+  if (iRAM80800000 == 0x2501) {
+    xRAM000022fc = xRAM8080000c;
+    xRAM00002304 = xRAM80800010;
+    xRAM00002300 = xRAM80800014;
+  }
+  else {
+    xRAM000022fc = 0;
+    xRAM00002304 = 0;
+    xRAM00002300 = 0;
+    (*(code *)0x8002aa78)(0x80800000,0xff,0x8c,1);
+    (*(code *)0x80011dc0)();
+  }
+  do {
+    iVar1 = (*(code *)0x8002bca8)(0,axStack_108);
+  } while (iVar1 != 0);
+  (*(code *)0x8006dbe4)(&uStack_194,axStack_108,0x8c);
+  if (cStack_a == 'U') {
+    cVar2 = (*(code *)0x8001154c)(axStack_108,0xfe);
+    if (cVar2 == cStack_9) {
+      if (uStack_194 == 0x2608) {
+        (*(code *)0x800115ac)(&uStack_194);
+        (*(code *)0x80011a58)(&uStack_194,0x10,0x8c,1);
+      }
+      else if ((uStack_194 < 0x2500) || (0x26ff < uStack_194)) {
+        (*(code *)0x800121d0)(0,1);
+        (*(code *)0x8005e52c)(1);
+      }
+      else {
+        (*(code *)0x800115ac)(&uStack_194);
+        if (uStack_194 < 0x2606) {
+          (*(code *)0x800121d0)(xStack_138,0);
+          (*(code *)0x8005e52c)((int4)iStack_192);
+        }
+        if (uStack_194 < 0x2608) {
+          xRAM000050a5 = 0;
+          xRAM0000507c = 0x46;
+          xRAM00005048 = 0x2d;
+        }
+        (*(code *)0x80011e64)();
+      }
+    }
+    else {
+      do {
+        iVar1 = (*(code *)0x8002bca8)(0x10,axStack_108);
+      } while (iVar1 != 0);
+      (*(code *)0x8006dbe4)(&uStack_194,axStack_108,0x8c);
+      cVar2 = (*(code *)0x8001154c)(axStack_108,0xfe);
+      if (cVar2 == cStack_9) {
+        (*(code *)0x80011a58)(&uStack_194,0,0x8c,1);
+        (*(code *)0x800115ac)(&uStack_194);
+      }
+      else {
+        (*(code *)0x800121d0)(0,1);
+        (*(code *)0x8005e52c)(1);
+      }
+    }
+  }
+  else if (uStack_194 == 0x2608) {
+    (*(code *)0x800115ac)(&uStack_194);
+    (*(code *)0x80011e64)();
+  }
+  else {
+    (*(code *)0x800121d0)(0,1);
+    (*(code *)0x8005e52c)(1);
+  }
+  xRAM000054ac = cRAM00005094 == '\x04';
+  xRAM000022e9 = 1;
+  return;
+}
+[decomp]> quit

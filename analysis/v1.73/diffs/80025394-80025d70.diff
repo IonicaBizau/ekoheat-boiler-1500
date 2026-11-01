@@ -1,0 +1,20 @@
+--- 80025394
+
++++ 80025d70
+
+@@ -36,5 +36,5 @@
+
+     iRAM_ADDR = iRAM_ADDR >> 5;
+     iRAM_ADDR = iRAM_ADDR >> 5;
+-    uVar1 = *(uint2 *)((uRAM_ADDR >> 0xb) * 2 + -0x7ffdb948);
++    uVar1 = *(uint2 *)((uRAM_ADDR >> 0xb) * 2 + -0x7ffdaf6c);
+   }
+   else {
+@@ -47,5 +47,5 @@
+
+     iRAM_ADDR = (*(code *)FUNCTION_ADDR)(uRAM_ADDR >> 5 & 0xffff);
+     iRAM_ADDR = (*(code *)FUNCTION_ADDR)(uRAM_ADDR >> 5 & 0xffff);
+-    uVar1 = *(uint2 *)((uRAM_ADDR >> 0xb) * 2 + -0x7ffdb948);
++    uVar1 = *(uint2 *)((uRAM_ADDR >> 0xb) * 2 + -0x7ffdaf6c);
+     iRAM_ADDR = iRAM_ADDR;
+   }

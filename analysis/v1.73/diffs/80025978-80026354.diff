@@ -1,0 +1,22 @@
+--- 80025978
+
++++ 80026354
+
+@@ -13,12 +13,12 @@
+
+   else {
+     for (uStack_14 = 1; uStack_14 < 0x308; uStack_14 = uStack_14 + 1) {
+-      if (param_1 < *(uint2 *)((uint4)uStack_14 * 2 + -0x7ffdbc50)) {
++      if (param_1 < *(uint2 *)((uint4)uStack_14 * 2 + -0x7ffdb274)) {
+         xVar1 = (*(code *)FUNCTION_ADDR)((uint4)uStack_14 * 100 + -100);
+         xVar2 = (*(code *)FUNCTION_ADDR)
+-                          (((uint4)param_1 - (uint4)*(uint2 *)((uStack_14 - 1) * 2 + -0x7ffdbc50)) *
++                          (((uint4)param_1 - (uint4)*(uint2 *)((uStack_14 - 1) * 2 + -0x7ffdb274)) *
+                            100);
+         xVar3 = (*(code *)FUNCTION_ADDR)
+-                          ((uint4)*(uint2 *)((uint4)uStack_14 * 2 + -0x7ffdbc50) -
+-                           (uint4)*(uint2 *)((uStack_14 - 1) * 2 + -0x7ffdbc50));
++                          ((uint4)*(uint2 *)((uint4)uStack_14 * 2 + -0x7ffdb274) -
++                           (uint4)*(uint2 *)((uStack_14 - 1) * 2 + -0x7ffdb274));
+         xVar2 = (*(code *)FUNCTION_ADDR)(xVar2,xVar3);
+         xVar1 = (*(code *)FUNCTION_ADDR)(xVar1,xVar2);
