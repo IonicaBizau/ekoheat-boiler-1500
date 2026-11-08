@@ -62,12 +62,17 @@
       {
         "icon": "sparkles",
         "title": "What is inside",
-        "body": "Here is what I have put together so far:\n\n- A **v1.72 → v1.73 comparison**, covering low-fuel warnings, status messages, pump control, and UI changes.\n- **Patches for v1.72 and v1.73** that keep the screen awake and give the ash plate more time to open: 30 seconds beyond the configured movement time, up from 10.\n- Disassembly, decompiled routines, hashes, and checksums so you can follow the findings.\n- Manuals and notes about ignition, touchscreen calibration, wiring, and the images used by the display."
+        "body": "Here is what I have put together so far:\n\n- A **v1.72 → v1.73 comparison**, covering low-fuel warnings, status messages, pump control, and UI changes.\n- A **minimal v2.42 patch** based on original v1.73 that keeps the screen awake and displays the custom November 8, 2026 date.\n- Older **v1.72 and v1.73 patches** that also give the ash plate more time to open: 30 seconds beyond the configured movement time, up from 10.\n- Disassembly, decompiled routines, hashes, and checksums so you can follow the findings.\n- Manuals and notes about ignition, touchscreen calibration, wiring, and the images used by the display."
       },
       {
         "icon": "cloud",
         "title": "Getting started",
         "body": "You need **Python 3.6+** for the patch scripts. They use the standard library; Node.js is only needed to regenerate this README.\n\n```sh\ngit clone https://github.com/ionicabizau/ekoheat-boiler-1500.git\ncd ekoheat-boiler-1500\n```\n\nStart with the [firmware comparison](analysis/v1.73/comparison.md), [changelog](CHANGELOG.md), or [interesting findings](FUN_FACTS.md)."
+      },
+      {
+        "icon": "desktop",
+        "title": "Minimal v2.42 update package",
+        "body": "For the requested screen and version changes, use the two-file [v2.42 update folder](update-v2.42/). It contains only `DTX9003.uc3` and the original v1.73 `license.key`. The image displays **`v2.42  Nov  8 2026`** and prevents the automatic idle-clock transition. Original v1.73 ash-plate timing and three startup attempts remain in place.\n\nThis uses the **same byte-patching method** as the current v2.73 image: fixed-length changes to the original v1.73 file, followed by a recalculated payload CRC32. Both use a literal Info label and the same idle instruction. An earlier v2.73 build changed the numeric version argument; the latest v2.73 and v2.42 images both embed the complete label. The v2.42 build adds a separate verifier and packages only the two USB files. These checks cannot establish whether an update will persist after a restart.\n\n```sh\npython3 analysis/tools/patch_v242.py\npython3 analysis/tools/verify_v242.py --update-dir update-v2.42\n```\n\nSee the [v2.42 patch notes](analysis/patched/v2.42/README.md) for exact bytes, hashes, disassembly, and verification results. Use the [update guide](docs/updating-firmware.md) for the controller steps and post-update checks."
       },
       {
         "icon": "wrench",
@@ -82,7 +87,7 @@
       {
         "icon": "floppy_disk",
         "title": "Update the boiler software",
-        "body": "I wrote down the [USB update procedure](docs/updating-firmware.md), including which patched image and `license.key` to use, the original `DTX9003.uc3` filename, and the controller menu steps.\n\n**Record your settings first:** the manual warns that an update can reset everything and select Ekoheat 900. Check the model is **Ekoheat 1500** and restore the pellet calibration before restarting.\n\nThe guide follows the supplied manuals. I have not flashed these patches or verified bootloader/license-file acceptance on hardware."
+        "body": "For v2.42, copy only the two files from [update-v2.42/](update-v2.42/) to the USB root. I wrote down the [USB update procedure](docs/updating-firmware.md), including which patched image and `license.key` to use, the original `DTX9003.uc3` filename, and the controller menu steps.\n\n**Record your settings first:** the manual warns that an update can reset everything and select Ekoheat 900. Check the model is **Ekoheat 1500** and restore the pellet calibration before restarting.\n\nThe guide follows the supplied manuals. I have not flashed these patches or verified bootloader/license-file acceptance on hardware."
       },
       {
         "icon": "mag",
@@ -92,7 +97,7 @@
       {
         "icon": "file_folder",
         "title": "Repository map",
-        "body": "| Path | Contents |\n| --- | --- |\n| [`DTX9003 v1.72/`](DTX9003%20v1.72) | Original v1.72 firmware |\n| [`DTX9003 v1.73/`](DTX9003%20v1.73) | Original v1.73 firmware |\n| [`analysis/tools/`](analysis/tools) | Python patch/analysis scripts and SLEIGH disassembler source |\n| [`analysis/patched/`](analysis/patched) | Derivatives, manifests, and patch evidence |\n| [`analysis/v1.73/`](analysis/v1.73) | Version comparison and decompiled v1.73 routines |\n| [`analysis/ghidra/`](analysis/ghidra) | Original v1.72 disassembly and decompiled routines |\n| [`analysis/assets/`](analysis/assets) | Extracted RGB565 bitmap previews and HTML viewer |\n| [`docs/`](docs) | Boiler manuals and display datasheet |\n\nSee [analysis setup and reproduction](analysis/README.md) for the distinction between Python-only tools and the native Ghidra tooling. The supplied `license.key` files are included in their firmware folders. They are not needed for offline analysis or patch generation. Local native builds, generated XML images, and caches are excluded from Git."
+        "body": "| Path | Contents |\n| --- | --- |\n| [`DTX9003 v1.72/`](DTX9003%20v1.72) | Original v1.72 firmware |\n| [`DTX9003 v1.73/`](DTX9003%20v1.73) | Original v1.73 firmware |\n| [`update-v2.42/`](update-v2.42/) | Two files to copy to USB for the minimal v2.42 update |\n| [`analysis/tools/`](analysis/tools) | Python patch/analysis scripts and SLEIGH disassembler source |\n| [`analysis/patched/`](analysis/patched) | Derivatives, manifests, and patch evidence |\n| [`analysis/v1.73/`](analysis/v1.73) | Version comparison and decompiled v1.73 routines |\n| [`analysis/ghidra/`](analysis/ghidra) | Original v1.72 disassembly and decompiled routines |\n| [`analysis/assets/`](analysis/assets) | Extracted RGB565 bitmap previews and HTML viewer |\n| [`docs/`](docs) | Boiler manuals and display datasheet |\n\nSee [analysis setup and reproduction](analysis/README.md) for the distinction between Python-only tools and the native Ghidra tooling. The supplied `license.key` files are included in their firmware folders. They are not needed for offline analysis or patch generation. Local native builds, generated XML images, and caches are excluded from Git."
       },
       {
         "icon": "memo",

@@ -1,0 +1,61 @@
+{
+  "firmware_version": "2.42",
+  "source": "DTX9003 v1.73/DTX9003.uc3",
+  "output": "analysis/patched/v2.42/DTX9003.uc3",
+  "source_sha256": "e57bb9517c66e8f37ecb864daca5735bc14e3ef6a2614c94a962dc62809f2e3a",
+  "output_sha256": "816adffec4f7427acdbc96a06916aac5d324ebbd8e08030205d21b79f4383185",
+  "size": 453229,
+  "original_crc32": "0xa69ea7cf",
+  "patched_crc32": "0xd4df84",
+  "patches": [
+    {
+      "address": "0x80015130",
+      "file_offset": "0xd149",
+      "before": "7625642e2530326420202573000000004a756c203133203230313600",
+      "after": "76322e343220204e6f76202038203230323600000000000000000000",
+      "purpose": "Info label: v2.42 with custom date 2026-11-08, in the existing 28-byte allocation"
+    },
+    {
+      "address": "0x8000ba8e",
+      "file_offset": "0x3aa7",
+      "before": "3008",
+      "after": "3648",
+      "purpose": "Idle expiry: MOV R8,0 -> MOV R8,100; prevent the automatic idle-clock path"
+    }
+  ],
+  "changed_byte_offsets": [
+    "0x15",
+    "0x16",
+    "0x17",
+    "0x18",
+    "0x3aa7",
+    "0x3aa8",
+    "0xd14a",
+    "0xd14b",
+    "0xd14c",
+    "0xd14d",
+    "0xd14e",
+    "0xd14f",
+    "0xd150",
+    "0xd151",
+    "0xd152",
+    "0xd153",
+    "0xd154",
+    "0xd155",
+    "0xd156",
+    "0xd157",
+    "0xd158",
+    "0xd159",
+    "0xd15a",
+    "0xd15b",
+    "0xd15c",
+    "0xd15d",
+    "0xd15e",
+    "0xd15f",
+    "0xd160",
+    "0xd161",
+    "0xd162",
+    "0xd163"
+  ],
+  "validation_scope": "Static disassembly, checksum and bounded logical checks; no hardware execution or flashing"
+}

@@ -35,3 +35,7 @@ The user requested five total attempts. The rebuild changes the limit comparison
 The user subsequently reported no idle clock and `1.73` on the Info screen. The installed file's identity remains unconfirmed. The prior numeric-argument patch still statically predicts `2.73`; no cause of the mismatch has been proven. The current rebuild embeds the complete label literally in the Info formatter's storage. Its CRC32 is `0465D03D`; the preceding five-attempt build's CRC32 was `3DA58A4D`. This removes numeric formatting as a factor without changing the clock or startup patches. Hardware display and acceptance of this latest rebuild remain untested.
 
 The current literal label uses the custom build date November 1, 2026, at the user's request. The vendor source date remains July 13, 2016; the source file is untouched.
+
+## Later v2.42 derivative
+
+The [v2.42 build](patched/v2.42/README.md) applies the same idle instruction and literal-label method to the original v1.73 firmware, with the requested November 8, 2026 date. It omits the v2.73 ash-plate and ignition changes and uses a stricter independent byte/package verifier. This changes the patch scope and verification, not the controller's unknown update or license rules. The earlier reported load failure and `1.73` Info display remain unexplained until an exact installed image is identified and checked after normal restarts.

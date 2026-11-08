@@ -1,5 +1,11 @@
 # Changelog
 
+## Minimal v2.42 update package — 2026-11-08
+
+- Built from original v1.73 with a literal `v2.42  Nov  8 2026` Info label and the same two-byte idle-clock change used in the latest v2.73 build.
+- Preserved original v1.73 ash-plate timing, startup attempts, and source-matched `license.key`; placed only the firmware and key in `update-v2.42/`.
+- Added independent verification of exact allowed changes, checksum, original control routines, and the copied update files. Repeated builds are byte-for-byte identical. Hardware update acceptance and persistence remain unverified.
+
 ## Custom build date in Info — 2026-11-01
 
 - Set the literal v2.73 Info label to `v2.73  Nov  1 2026`, using today's custom build date instead of the vendor date.

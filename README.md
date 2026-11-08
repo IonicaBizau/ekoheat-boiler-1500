@@ -21,7 +21,8 @@ This repo is where I keep my notes, tools, firmware comparisons, and patches. I 
 Here is what I have put together so far:
 
 - A **v1.72 → v1.73 comparison**, covering low-fuel warnings, status messages, pump control, and UI changes.
-- **Patches for v1.72 and v1.73** that keep the screen awake and give the ash plate more time to open: 30 seconds beyond the configured movement time, up from 10.
+- A **minimal v2.42 patch** based on original v1.73 that keeps the screen awake and displays the custom November 8, 2026 date.
+- Older **v1.72 and v1.73 patches** that also give the ash plate more time to open: 30 seconds beyond the configured movement time, up from 10.
 - Disassembly, decompiled routines, hashes, and checksums so you can follow the findings.
 - Manuals and notes about ignition, touchscreen calibration, wiring, and the images used by the display.
 
@@ -35,6 +36,19 @@ cd ekoheat-boiler-1500
 ```
 
 Start with the [firmware comparison](analysis/v1.73/comparison.md), [changelog](CHANGELOG.md), or [interesting findings](FUN_FACTS.md).
+
+## :desktop: Minimal v2.42 update package
+
+For the requested screen and version changes, use the two-file [v2.42 update folder](update-v2.42/). It contains only `DTX9003.uc3` and the original v1.73 `license.key`. The image displays **`v2.42  Nov  8 2026`** and prevents the automatic idle-clock transition. Original v1.73 ash-plate timing and three startup attempts remain in place.
+
+This uses the **same byte-patching method** as the current v2.73 image: fixed-length changes to the original v1.73 file, followed by a recalculated payload CRC32. Both use a literal Info label and the same idle instruction. An earlier v2.73 build changed the numeric version argument; the latest v2.73 and v2.42 images both embed the complete label. The v2.42 build adds a separate verifier and packages only the two USB files. These checks cannot establish whether an update will persist after a restart.
+
+```sh
+python3 analysis/tools/patch_v242.py
+python3 analysis/tools/verify_v242.py --update-dir update-v2.42
+```
+
+See the [v2.42 patch notes](analysis/patched/v2.42/README.md) for exact bytes, hashes, disassembly, and verification results. Use the [update guide](docs/updating-firmware.md) for the controller steps and post-update checks.
 
 ## :wrench: Keep the screen awake and give the ash plate more time on v1.73
 
@@ -66,7 +80,7 @@ The combined image displays **v1.72.42**. The v1.72.42 label preserves the vendo
 
 ## :floppy_disk: Update the boiler software
 
-I wrote down the [USB update procedure](docs/updating-firmware.md), including which patched image and `license.key` to use, the original `DTX9003.uc3` filename, and the controller menu steps.
+For v2.42, copy only the two files from [update-v2.42/](update-v2.42/) to the USB root. I wrote down the [USB update procedure](docs/updating-firmware.md), including which patched image and `license.key` to use, the original `DTX9003.uc3` filename, and the controller menu steps.
 
 **Record your settings first:** the manual warns that an update can reset everything and select Ekoheat 900. Check the model is **Ekoheat 1500** and restore the pellet calibration before restarting.
 
@@ -90,6 +104,7 @@ The mapping between that thermostat connection and firmware GPIO `0x20` is **unc
 | --- | --- |
 | [`DTX9003 v1.72/`](DTX9003%20v1.72) | Original v1.72 firmware |
 | [`DTX9003 v1.73/`](DTX9003%20v1.73) | Original v1.73 firmware |
+| [`update-v2.42/`](update-v2.42/) | Two files to copy to USB for the minimal v2.42 update |
 | [`analysis/tools/`](analysis/tools) | Python patch/analysis scripts and SLEIGH disassembler source |
 | [`analysis/patched/`](analysis/patched) | Derivatives, manifests, and patch evidence |
 | [`analysis/v1.73/`](analysis/v1.73) | Version comparison and decompiled v1.73 routines |

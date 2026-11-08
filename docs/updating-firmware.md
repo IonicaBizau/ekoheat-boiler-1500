@@ -18,14 +18,21 @@ Use one firmware image and the license file supplied with its source version:
 
 | Custom version | Patched image in this repository | Matching license file |
 | --- | --- | --- |
+| **2.42** (minimal v1.73 patch) | [`update-v2.42/DTX9003.uc3`](../update-v2.42/DTX9003.uc3) | [`update-v2.42/license.key`](../update-v2.42/license.key) |
 | **1.72.42** | [`analysis/patched/v1.72.42/DTX9003.uc3`](../analysis/patched/v1.72.42/DTX9003.uc3) | [`analysis/patched/v1.72.42/license.key`](../analysis/patched/v1.72.42/license.key) |
 | **2.73** | [`analysis/patched/v2.73/DTX9003.uc3`](../analysis/patched/v2.73/DTX9003.uc3) | [`analysis/patched/v2.73/license.key`](../analysis/patched/v2.73/license.key) |
 
-Both custom versions keep the current screen awake and allow the ash plate **30 seconds beyond the configured opening time**. The v2.73 rebuild additionally allows five total normal startup attempts; v1.72.42 retains three. Longer ignition operation has not been validated on hardware. The version numbers identify these custom patches; they are not official vendor releases.
+**v2.42** keeps the current screen awake and displays `v2.42  Nov  8 2026`. It preserves original v1.73 ash-plate timing and three normal startup attempts. The [update-v2.42 folder](../update-v2.42/) contains only the two files needed for USB; analysis and verification records are [stored separately](../analysis/patched/v2.42/README.md).
+
+The older v1.72.42 and v2.73 custom builds keep the screen awake and allow the ash plate **30 seconds beyond the configured opening time**. The v2.73 rebuild additionally allows five total normal startup attempts; v1.72.42 retains three. Longer ignition operation has not been validated on hardware. The version numbers identify these custom patches; they are not official vendor releases.
 
 To regenerate and check the combined images, run these commands from the repository root:
 
 ```sh
+# v2.42, including its two-file update folder
+python3 analysis/tools/patch_v242.py
+python3 analysis/tools/verify_v242.py --update-dir update-v2.42
+
 # v1.72.42
 python3 analysis/tools/patch_firmware.py
 python3 analysis/tools/verify_patch.py
@@ -52,7 +59,13 @@ USB drive/
 
 Each patched folder already includes the matching `license.key`, so both USB files can be taken from the same folder.
 
-After copying, you can compare both USB files with the verified v2.73 build (replace the drive path):
+After copying v2.42, compare the USB folder containing exactly those two files with the verified build (replace the drive path):
+
+```sh
+python3 analysis/tools/verify_v242.py --update-dir /Volumes/USB_NAME
+```
+
+For the older v2.73 build instead:
 
 ```sh
 python3 analysis/tools/verify_patch.py --version 1.73 --update-dir /Volumes/USB_NAME
@@ -73,7 +86,9 @@ If the controller rejects the files or does not return to its normal interface, 
 
 ## Check before restarting the boiler
 
-Open **Info** and check the software label: **v1.72.42** or **v2.73**, depending on the image you chose. The v2.73 label should read `v2.73  Nov  1 2026`; v1.72.42 retains its original vendor build date. The physical layout of the longer label has not been checked on the display.
+Open **Info** and check the software label. For **v2.42**, expect **`v2.42  Nov  8 2026`**. The older v2.73 label reads `v2.73  Nov  1 2026`; v1.72.42 retains its original vendor build date. The physical label layout has not been checked on the display.
+
+For v2.42, verify that inactivity keeps the current screen visible, and record the label after USB removal and after later normal power cycles. This is required to establish persistence; offline byte checks cannot do so. The source-matched license is unchanged and there is no proven license modification to prevent a reversion. See [v2.42 validation and limitations](../analysis/patched/v2.42/README.md).
 
 Verify the boiler model is **Ekoheat 1500**, then compare all settings with your record and restore the pellet calibration if it was reset. The 2014 manual describes selecting the boiler size under **Menu → Self test**; use the model-selection instructions that match your controller, and avoid activating unrelated test outputs.
 

@@ -4,6 +4,7 @@ Each patch has its own folder. The firmware keeps the original **`DTX9003.uc3`**
 
 | Folder | Changes |
 | --- | --- |
+| [v2.42](v2.42/README.md) | Minimal patch from original v1.73: no automatic idle clock; Info label `v2.42  Nov  8 2026`. Two-file USB package: [update-v2.42](../../update-v2.42/). |
 | [v1.72.42](v1.72.42/README.md) | Screen stays awake; 30 extra seconds for ash-plate opening; custom version label. |
 | [v2.73](v2.73/README.md) | Screen stays awake; 30 extra opening seconds; five total normal startup attempts; custom version label. Based on original v1.73. |
 

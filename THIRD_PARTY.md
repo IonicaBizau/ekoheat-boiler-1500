@@ -13,7 +13,7 @@ I downloaded firmware from [NH Bioservice’s Ecoheat 900 / 1500 / 2500 page](ht
 | Materials | Attribution / scope |
 | --- | --- |
 | `DTX9003 v1.72/DTX9003.uc3`, `DTX9003 v1.73/DTX9003.uc3` | Copyright © Ekoheat. Original controller firmware. |
-| `analysis/patched/**/*.uc3` | Copyright © Ekoheat for the underlying firmware. The project's MIT license does not relicense these binaries. |
+| `analysis/patched/**/*.uc3`, `update-v2.42/DTX9003.uc3` | Copyright © Ekoheat for the underlying firmware. The project's MIT license does not relicense these binaries. |
 | Decompiled vendor routines, disassembly, firmware strings, extracted bitmap previews | Derived from the analyzed firmware; underlying code and artwork retain their owners' rights. |
 | `docs/ekoheat_series.pdf`, `docs/ekopower ekoheat installation manual 2 2014 eng.pdf` | Supplied Ekoheat/Ekopower manuals; retain their original notices. |
 | `docs/WNSTS00019-1.pdf` | Winstar Display Co., Ltd. display specification; retains its original notices. |
