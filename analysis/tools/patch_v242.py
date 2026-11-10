@@ -33,7 +33,7 @@ def main():
     update_dir.mkdir(exist_ok=True)
     for name in sorted(names):
         (update_dir / name).write_bytes((patch.OUTPUT.parent / name).read_bytes())
-    result = verify(update_dir)
+    result = verify(update_dir, strict_package=True)
     report = json.dumps(result, indent=2) + '\n'
     (patch.OUTPUT.parent / 'verification.json').write_text(report)
     print(report, end='')

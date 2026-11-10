@@ -27,7 +27,7 @@ def sha(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def verify(update_dir=None):
+def verify(update_dir=None, strict_package=False):
     original = SOURCE.read_bytes()
     patched = (ROOT / 'DTX9003.uc3').read_bytes()
     license_bytes = (ROOT / 'license.key').read_bytes()
@@ -98,10 +98,13 @@ def verify(update_dir=None):
                 and record['before'] == before.hex() and record['after'] == after.hex(),
                 'Manifest patch record mismatch')
 
+    extra_entries = []
     if update_dir is not None:
         update_dir = Path(update_dir)
-        require({p.name for p in update_dir.iterdir()} == {'DTX9003.uc3', 'license.key'},
-                'Update folder must contain exactly the two required files')
+        extra_entries = sorted(p.name for p in update_dir.iterdir()
+                               if p.name not in {'DTX9003.uc3', 'license.key'})
+        if strict_package:
+            require(not extra_entries, 'Update folder must contain exactly the two required files')
         for name, data in [('DTX9003.uc3', patched), ('license.key', license_bytes)]:
             target = update_dir / name
             require(target.is_file() and not target.is_symlink(), 'Update entry is not a regular file')
@@ -115,6 +118,7 @@ def verify(update_dir=None):
                 normal_startup_attempts=3, original_motor_and_startup_bytes_preserved=True,
                 update_dir=str(update_dir) if update_dir is not None else None,
                 update_files_match=update_dir is not None,
+                extra_entries=extra_entries, strict_package=strict_package,
                 validation_scope='Static bytes, instruction fields, Info call and package integrity',
                 bootloader_acceptance_verified=False, hardware_execution=False,
                 persistence_verified=False)
@@ -122,10 +126,11 @@ def verify(update_dir=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--update-dir', type=Path, help='Compare an update folder with exactly two files')
+    parser.add_argument('--update-dir', type=Path, help='Compare firmware and license on a USB drive or in a package folder')
+    parser.add_argument('--strict-package', action='store_true', help='Also reject extra entries in the package folder')
     args = parser.parse_args()
     try:
-        result = verify(args.update_dir)
+        result = verify(args.update_dir, args.strict_package)
     except (OSError, ValueError, KeyError, TypeError) as error:
         raise SystemExit('FAIL: ' + str(error))
     report = json.dumps(result, indent=2) + '\n'

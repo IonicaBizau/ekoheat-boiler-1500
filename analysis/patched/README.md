@@ -10,4 +10,4 @@ Each patch has its own folder. The firmware keeps the original **`DTX9003.uc3`**
 
 Each folder also contains the patch manifest and supporting evidence. Copy `DTX9003.uc3` first, then `license.key`, to the USB drive's root. See [Updating the boiler software](../../docs/updating-firmware.md) for the full manual-based procedure and settings checks.
 
-These images have been checked offline; flashing, bootloader acceptance, and physical operation remain untested.
+These images have been checked offline. A reported v2.42 update attempt did not show its expected label or clock behavior; bootloader acceptance and physical operation remain unverified. See the [update investigation](../update-investigation.md).

@@ -15,6 +15,8 @@
   "original_motor_and_startup_bytes_preserved": true,
   "update_dir": "update-v2.42",
   "update_files_match": true,
+  "extra_entries": [],
+  "strict_package": true,
   "validation_scope": "Static bytes, instruction fields, Info call and package integrity",
   "bootloader_acceptance_verified": false,
   "hardware_execution": false,

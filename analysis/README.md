@@ -7,7 +7,7 @@ Run from the repository root with Python 3.6 or later:
 ```sh
 # v2.42: dated label + no automatic idle clock, from original v1.73
 python3 analysis/tools/patch_v242.py
-python3 analysis/tools/verify_v242.py --update-dir update-v2.42
+python3 analysis/tools/verify_v242.py --update-dir update-v2.42 --strict-package
 
 # v1.73 screen + 30-second opening allowance
 python3 analysis/tools/patch_v173_30s.py

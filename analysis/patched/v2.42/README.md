@@ -16,12 +16,12 @@ Run from the repository root:
 
 ```sh
 python3 analysis/tools/patch_v242.py
-python3 analysis/tools/verify_v242.py --update-dir update-v2.42
+python3 analysis/tools/verify_v242.py --update-dir update-v2.42 --strict-package
 ```
 
 The generator writes the image, supplied license and manifest here, independently verifies them, then copies only the two update files into `update-v2.42/`. It refuses unexpected entries in an existing update folder. The verifier uses fixed source hashes and patch expectations independently of the generator and manifest. Checks stay active under `python3 -O`.
 
-For a prepared drive containing exactly those two files:
+For a FAT32 drive prepared on a Mac, verify the two required files even if macOS has added hidden metadata entries. The report lists any extra entries; the actual update package remains exactly two files.
 
 ```sh
 python3 analysis/tools/verify_v242.py --update-dir /Volumes/USB_NAME
@@ -62,7 +62,9 @@ The underlying behavior is supported by the original [timer](../../v1.73/decompi
 
 ## Acceptance and persistence
 
-Offline validation passed. Hardware display, update acceptance, and persistence after power cycles have **not** been tested for this image. The supplied license is unchanged; its acceptance algorithm is unknown. There is no established license modification that fixes persistence, and CRC32 validation cannot establish bootloader acceptance.
+Offline validation passed. A later controller attempt reportedly showed **1.73 immediately after the update sequence** and restored the idle clock after about four minutes; the v2.42 label was never seen. This does not establish that the patched image was installed. The supplied license is unchanged; its acceptance algorithm is unknown. There is no established license modification that fixes acceptance or persistence, and CRC32 validation cannot establish bootloader acceptance. See the [controller result](../../update-investigation.md#v242-controller-result--2026-11-09).
+
+A subsequent attempt from successfully installed stock 1.72 also left Info at **1.72**. This rules out an already-installed 1.73 version as a sufficient explanation. The next useful check is whether the controller accepts the untouched stock 1.73 image and its original license from 1.72; see the [experiment result](../../update-investigation.md#result-of-the-172--v242-test).
 
 After a successful update, record the exact Info label, remove USB as directed by the manual, verify the Ekoheat 1500 model/calibration/settings, and test inactivity and later normal restarts. If the label never changes, installation is unconfirmed. If it changes to v2.42 and subsequently reverts, record the sequence and investigate rollback/reflashing. See [the earlier investigation](../../update-investigation.md).
 

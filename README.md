@@ -14,7 +14,7 @@ I own an **Ekoheat 1500 pellet boiler**, and I wanted to personalize it more for
 
 The first thing I wanted: **keep the current screen visible instead of switching to the idle clock**. :)
 
-This repo is where I keep my notes, tools, firmware comparisons, and patches. I have checked the patches offline, but **I have not tested them on the controller or checked whether the bootloader accepts them**.
+This repo is where I keep my notes, tools, firmware comparisons, and patches. The patches pass offline checks. A reported v2.42 controller update still showed `1.73` and returned to the idle clock after about four minutes, so **installation and bootloader acceptance remain unverified**.
 
 ## :sparkles: What is inside
 
@@ -45,7 +45,7 @@ This uses the **same byte-patching method** as the current v2.73 image: fixed-le
 
 ```sh
 python3 analysis/tools/patch_v242.py
-python3 analysis/tools/verify_v242.py --update-dir update-v2.42
+python3 analysis/tools/verify_v242.py --update-dir update-v2.42 --strict-package
 ```
 
 See the [v2.42 patch notes](analysis/patched/v2.42/README.md) for exact bytes, hashes, disassembly, and verification results. Use the [update guide](docs/updating-firmware.md) for the controller steps and post-update checks.
@@ -84,7 +84,7 @@ For v2.42, copy only the two files from [update-v2.42/](update-v2.42/) to the US
 
 **Record your settings first:** the manual warns that an update can reset everything and select Ekoheat 900. Check the model is **Ekoheat 1500** and restore the pellet calibration before restarting.
 
-The guide follows the supplied manuals. I have not flashed these patches or verified bootloader/license-file acceptance on hardware.
+The guide follows the supplied manuals. A reported v2.42 attempt did not show the expected patched behavior; bootloader and license-file acceptance remain unverified. See the [update investigation](analysis/update-investigation.md).
 
 ## :mag: What the binaries tell us
 
