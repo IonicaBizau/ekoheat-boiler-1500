@@ -30,3 +30,11 @@ To compare a copied clock-only pair with its verified build, run from the reposi
 Run only the command for the chosen pair. The check verifies USB file contents; it cannot prove controller acceptance. The clock-only builds retain their original Info labels, so check the screen after more than four minutes without touching it and after a normal restart. See the [story](firmware-story.md) for the reported outcomes.
 
 The manual warns that an update may reset all settings and select Ekoheat 900. Record the current boiler model, pellet calibration, and settings beforehand. Afterward, confirm Ekoheat 1500 is selected and restore any changed settings before normal operation. A touchscreen recalibration prompt is not documented as a required sign of successful application installation.
+
+## Stepping up from 1.72 to 1.73
+
+If Info shows **1.72** and the goal is the newer original release, prepare only the [original 1.73 pair](../DTX9003%20v1.73/) on the USB drive, then follow [the controller update steps](#on-the-controller). After the update, check that Info shows **1.73**, confirm the model and settings, and observe a normal restart. The earlier attempt to install a modified image directly from 1.72 left Info at 1.72; that result did not establish a general rule that every controller requires an intermediate installation.
+
+If the goal is also to suppress the idle clock, the [1.73 no-clock pair](../update-v1.73-no-clock/) is a separate, experimental update **after** reaching original 1.73. Its Info text still reads **1.73**. Check whether the clock appears after more than four untouched minutes and after a normal restart. The available observations do not establish that this exact image has been accepted or remains installed. A changed screen alone cannot identify the bytes in flash.
+
+There is no active 2.42 image in this repository. The former 2.42 experiment left Info showing 1.73 on the reported attempts; see the [firmware story](firmware-story.md). Do not use the Info label as proof of which 1.73 variant is installed.

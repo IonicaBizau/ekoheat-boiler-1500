@@ -13,9 +13,20 @@ Firmware research, controller notes, and a small display change for the Ekoheat 
 | I want to… | Read |
 | --- | --- |
 | Understand startup, buttons, menus, and alarms | [Alternative controller guide](docs/controller-guide.md) |
+| Step up from firmware 1.72 to 1.73 | [Firmware step-up path](docs/updating-firmware.md#stepping-up-from-172-to-173) |
 | Prepare a USB update and check settings afterward | [Firmware update guide](docs/updating-firmware.md) |
 | Follow what happened during the update attempts | [Firmware story](docs/firmware-story.md) |
 | Explore the binary findings | [Analysis index](analysis/README.md) · [1.72/1.73 comparison](analysis/v1.73/comparison.md) |
+
+## 🚀 Starting up, step by step
+
+1. **Before power-up:** confirm the heating circuit is filled and bled, the electrical connection is earthed, the flue and fuel feed are correctly installed, and the hopper contains suitable pellets. The [controller guide](docs/controller-guide.md#before-the-first-start) explains the checks from both manuals.
+2. **On the first screen:** open **Info** and confirm the selected model is **Ekoheat 1500**. Set date and time if scheduling will be used.
+3. **Before the first Start:** prime and calibrate the external auger. The guide walks through **Manual start**, the **200-dose test**, weighing the pellets, and entering the measured amount in [feed-auger calibration](docs/controller-guide.md#feed-auger-calibration-buttons).
+4. **Press Start:** the controller feeds pellets, ignites them, checks the flame, waits through stabilization, and ramps toward normal running. See [what happens after Start](docs/controller-guide.md#what-happens-after-start) for the three-attempt and flame-detection details.
+5. **To finish:** press **Stop** and allow the normal shutdown to complete before maintenance or a firmware update.
+
+For the firmware **1.72 → 1.73 step-up**, including where the clock-only image fits, see the [step-up path](docs/updating-firmware.md#stepping-up-from-172-to-173).
 
 ## 🧩 Four firmware variants
 
