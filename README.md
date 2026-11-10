@@ -1,16 +1,51 @@
-# Ekoheat 1500 firmware notes
+![Illustrated Ekoheat 1500 boiler and awake display](media/header.svg)
 
-This repository keeps two original DTX9003 firmware releases and one minimal clock-only derivative of each. The update folders contain only the two files to copy to a USB drive.
+# 🔥 Ekoheat 1500
 
-| Firmware | Folder | Info version | Intended idle behavior |
+![Firmware 1.72 and 1.73](https://img.shields.io/badge/firmware-1.72%20%7C%201.73-f3a34a)
+![Four active variants](https://img.shields.io/badge/active%20variants-4-57b894)
+![Static verification](https://img.shields.io/badge/verification-static%20bytes-6b8eaa)
+
+Firmware research, controller notes, and a small display change for the Ekoheat 1500 pellet boiler. The goal is simple: **keep the normal screen visible instead of switching to the idle clock**.
+
+## 🧭 Start here
+
+| I want to… | Read |
+| --- | --- |
+| Understand startup, buttons, menus, and alarms | [Alternative controller guide](docs/controller-guide.md) |
+| Prepare a USB update and check settings afterward | [Firmware update guide](docs/updating-firmware.md) |
+| Follow what happened during the update attempts | [Firmware story](docs/firmware-story.md) |
+| Explore the binary findings | [Analysis index](analysis/README.md) · [1.72/1.73 comparison](analysis/v1.73/comparison.md) |
+
+## 🧩 Four firmware variants
+
+Each folder contains an image named **DTX9003.uc3** and its matching **license.key**. Choose one pair at a time for a USB update.
+
+| Source release | Original 📦 | Clock-only derivative 🌿 | Info text if installed |
 | --- | --- | --- | --- |
-| Original 1.72 | [DTX9003 v1.72](DTX9003%20v1.72/) | 1.72 | Clock appears |
-| 1.72, no clock | [update-v1.72-no-clock](update-v1.72-no-clock/) | 1.72 | Automatic clock disabled |
-| Original 1.73 | [DTX9003 v1.73](DTX9003%20v1.73/) | 1.73 | Clock appears |
-| 1.73, no clock | [update-v1.73-no-clock](update-v1.73-no-clock/) | 1.73 | Automatic clock disabled |
+| **1.72** | [Original 1.72](DTX9003%20v1.72/) | [1.72, no clock](update-v1.72-no-clock/) | 1.72 |
+| **1.73** | [Original 1.73](DTX9003%20v1.73/) | [1.73, no clock](update-v1.73-no-clock/) | 1.73 |
 
-The two derivatives each change one AVR32 idle-expiry instruction and the required payload CRC32. Their original version and date bytes, control logic, and matching vendor license files are preserved. A matching Info version alone cannot prove that either derivative installed.
+The clock-only images change one idle-expiry instruction and the required payload CRC32. Their version, date, motor, startup, and license bytes stay matched to their original release. See the [1.72 patch notes](analysis/patched/v1.72-no-clock/README.md) and [1.73 patch notes](analysis/patched/v1.73-no-clock/README.md) for exact hashes and offsets.
 
-The [story and controller observations](docs/firmware-story.md) explain the earlier v2.42 experiments, including the latest report: after official 1.73 installed, two v2.42 attempts left Info at 1.73 while the clock appeared to stay away. The exact installed image and persistence have not been verified. The v2.42 and older motor/startup derivatives have been removed from the current file set; they remain in Git history.
+> [!IMPORTANT]
+> A matching Info version does not identify which of the two images for that release is installed. The files pass offline byte checks, but the controller's acceptance rule and installed flash contents have not been established.
 
-For initial setup, startup stages, screen buttons, and every documented menu item, use the [alternative controller guide](docs/controller-guide.md). For USB preparation and checks, use the [update guide](docs/updating-firmware.md). For the binary comparison, see [analysis](analysis/README.md). The underlying firmware belongs to its original owner; see [third-party materials](THIRD_PARTY.md).
+## 🕰️ What the controller showed
+
+An earlier v2.42 experiment tried to change the Info label as well as the clock behavior. After official 1.73 was installed, two v2.42 attempts left Info showing **1.73**, while the clock later **seemed to stay away**. The exact installed image and persistence after a normal restart remain unconfirmed. The v2.42 package and older motor/startup experiments are kept in Git history, outside the four active variants. The [full story](docs/firmware-story.md) records each observation.
+
+## 🔬 Rebuild and verify
+
+From the repository root, Python 3 runs the current build and verification tools:
+
+    python3 analysis/tools/patch_v172_no_clock.py
+    python3 analysis/tools/verify_v172_no_clock.py
+    python3 analysis/tools/patch_v173_no_clock.py
+    python3 analysis/tools/verify_v173_no_clock.py
+
+These commands create local files and check their bytes; they do not update the boiler. The [analysis notes](analysis/README.md) explain the firmware wrapper and address mapping.
+
+## 📚 More
+
+[Manuals and references](docs/README.md) · [Startup-failure analysis](analysis/startup-failure.md) · [Changelog](CHANGELOG.md) · [Contributing](CONTRIBUTING.md) · [Third-party materials](THIRD_PARTY.md)
