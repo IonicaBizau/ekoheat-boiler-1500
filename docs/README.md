@@ -1,13 +1,9 @@
 # Reference documents
 
-For the USB preparation, controller menu steps, and checks after updating, see [Updating the boiler software](updating-firmware.md).
+- [Firmware update story](firmware-story.md): chronological controller observations and current uncertainty.
+- [USB update guide](updating-firmware.md): the four retained file pairs and post-update checks.
+- [Ekoheat series manual](ekoheat_series.pdf): operation and wiring.
+- [2014 English installation manual](ekopower%20ekoheat%20installation%20manual%202%202014%20eng.pdf): controller setup and USB update procedure on page 16.
+- [Winstar display specification](WNSTS00019-1.pdf): display hardware reference.
 
-| File | Contents | Useful pages |
-| --- | --- | --- |
-| [Ekoheat series manual](ekoheat_series.pdf) | Boiler installation, operation, and wiring | PDF page 11: ambient thermostat connection described. PDF page 48 / printed page 44: J1 terminals 8–9 labelled TA (air thermostat), with a link shown. |
-| [2014 English installation manual](ekopower%20ekoheat%20installation%20manual%202%202014%20eng.pdf) | Earlier controller, setup, maintenance, and updating | Page 12: controller terminal photograph. Page 16: firmware update procedure. |
-| [Winstar WNSTS00019-1](WNSTS00019-1.pdf) | WF57ETIBCDD# display specification | Display interface, electrical characteristics, controller and dimensions. |
-
-I kept both boiler manuals because they show different wiring. Check which one matches your controller before using the terminal labels. The series manual's TA terminal mapping has not been traced to firmware GPIO `0x20`, and its electrical input requirements have not been established here.
-
-These are the manuals and datasheet I use as references. Their original ownership and notices still apply; see [THIRD_PARTY.md](../THIRD_PARTY.md).
+The manuals show different controller wiring. Match the actual board before using terminal labels. Their original ownership and notices still apply; see [third-party materials](../THIRD_PARTY.md).

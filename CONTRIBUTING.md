@@ -1,33 +1,12 @@
-# :yum: How to contribute
+# Contributing
 
-If you have another firmware version, a correction, or a better way to do something here, I would love to hear about it. Issues and pull requests are welcome.
+Please include the exact firmware SHA-256, virtual address and file offset for a binary finding, along with the disassembly or other evidence. Separate static predictions from controller observations.
 
-## Firmware findings
+The original images must remain unchanged. For the two retained derivatives, run:
 
-Include the source image's SHA-256, firmware version, addresses/file offsets, and supporting disassembly or decompilation. Please say what you found in the code, what you think it means, and what you have tested on hardware. Do not describe the unidentified GPIO as a confirmed thermostat input.
+    python3 analysis/tools/patch_v172_no_clock.py
+    python3 analysis/tools/verify_v172_no_clock.py
+    python3 analysis/tools/patch_v173_no_clock.py
+    python3 analysis/tools/verify_v173_no_clock.py
 
-## Patches
-
-Keep original images intact. Guard against the wrong source hash, verify the payload CRC32, record every allowed byte change, and preserve image size unless a format change is deliberate and documented. Report what was statically checked and whether hardware execution occurred. Do not treat passing checksum checks as proof of safe operation or update acceptance.
-
-For the existing patches, run from the repository root:
-
-```sh
-python3 analysis/tools/patch_v173_30s.py
-python3 analysis/tools/verify_patch.py --version 1.73
-python3 analysis/tools/patch_firmware.py
-python3 analysis/tools/verify_patch.py
-```
-
-## README edits
-
-Edit `package.json` under `blah`, or `.blah/README.ejs` for layout changes, then run:
-
-```sh
-npm ci
-npm run readme
-```
-
-Commit the generated `README.md` with its source changes. Python-only patching does not require npm.
-
-The supplied firmware `license.key` files are included. Keep unrelated credentials, native builds, and caches out of commits. Respect the third-party materials described in [THIRD_PARTY.md](THIRD_PARTY.md).
+Do not treat a passing offline verifier as evidence that the controller accepted an image. Keep unrelated credentials, native builds, and caches out of commits. Third-party firmware and manuals retain their original ownership; see [THIRD_PARTY.md](THIRD_PARTY.md).

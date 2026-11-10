@@ -1,6 +1,6 @@
 # Official v1.73 compared with supplied v1.72
 
-I compared the two firmware images to see what changed between v1.72 and v1.73. These are my findings from the binaries, rather than release notes from the vendor. I left both originals untouched and later made [v1.73 patches to keep the screen awake and extend the opening allowance](../patched/v2.73/README.md).
+I compared the two original firmware images to see what changed between v1.72 and v1.73. These are findings from the binaries rather than vendor release notes. Both originals remain untouched; the current derivatives change only the automatic idle-clock instruction.
 
 ## Image identity
 
@@ -95,4 +95,4 @@ The XML image was generated directly from the new file's bytes after its 25-byte
 
 ## Custom patches after this comparison
 
-The table above describes the original vendor images. I have since added a [combined v1.73 patch](../patched/v2.73/README.md) that keeps the screen awake and raises the ash-plate opening allowance from 10 to 30 seconds beyond the configured movement time, matching the v1.72 patch.
+The table above describes the original vendor images. The active [v1.73 clock-only derivative](../patched/v1.73-no-clock/README.md) does not change the ash-plate allowance or other control behavior. Older combined derivatives were removed from the working tree and remain in Git history.

@@ -1,148 +1,16 @@
-<!-- Generated with blah. Edit the blah field in package.json or .blah/README.ejs, then run npm run readme. -->
+# Ekoheat 1500 firmware notes
 
-[![Ekoheat 1500](media/header.svg)](#fire-why-this-exists)
+This repository keeps two original DTX9003 firmware releases and one minimal clock-only derivative of each. The update folders contain only the two files to copy to a USB drive.
 
-# Ekoheat 1500
+| Firmware | Folder | Info version | Intended idle behavior |
+| --- | --- | --- | --- |
+| Original 1.72 | [DTX9003 v1.72](DTX9003%20v1.72/) | 1.72 | Clock appears |
+| 1.72, no clock | [update-v1.72-no-clock](update-v1.72-no-clock/) | 1.72 | Automatic clock disabled |
+| Original 1.73 | [DTX9003 v1.73](DTX9003%20v1.73/) | 1.73 | Clock appears |
+| 1.73, no clock | [update-v1.73-no-clock](update-v1.73-no-clock/) | 1.73 | Automatic clock disabled |
 
-[![Support me on Patreon](https://ionicabizau.github.io/badges/patreon.svg)](https://www.patreon.com/ionicabizau) [![Ask me anything](https://img.shields.io/badge/ask%20me-anything-1abc9c.svg)](https://github.com/IonicaBizau/ama) [![Firmware](https://img.shields.io/badge/firmware-1.72%20%7C%201.73-ef8e46)](analysis/v1.73/comparison.md) [![Validation](https://img.shields.io/badge/validation-static%20only-64748b)](analysis/patched/v2.73/README.md)
+The two derivatives each change one AVR32 idle-expiry instruction and the required payload CRC32. Their original version and date bytes, control logic, and matching vendor license files are preserved. A matching Info version alone cannot prove that either derivative installed.
 
-> Reverse engineering, firmware notes, and small quality-of-life patches for the Ekoheat 1500 pellet boiler.
+The [story and controller observations](docs/firmware-story.md) explain the earlier v2.42 experiments, including the latest report: after official 1.73 installed, two v2.42 attempts left Info at 1.73 while the clock appeared to stay away. The exact installed image and persistence have not been verified. The v2.42 and older motor/startup derivatives have been removed from the current file set; they remain in Git history.
 
-## :fire: Why this exists
-
-I own an **Ekoheat 1500 pellet boiler**, and I wanted to personalize it more for my needs. So I started looking into its DTX9003 firmware, figuring out how it works, and making a few small changes.
-
-The first thing I wanted: **keep the current screen visible instead of switching to the idle clock**. :)
-
-This repo is where I keep my notes, tools, firmware comparisons, and patches. The patches pass offline checks. A reported v2.42 controller update still showed `1.73` and returned to the idle clock after about four minutes, so **installation and bootloader acceptance remain unverified**.
-
-## :sparkles: What is inside
-
-Here is what I have put together so far:
-
-- A **v1.72 → v1.73 comparison**, covering low-fuel warnings, status messages, pump control, and UI changes.
-- A **minimal v2.42 patch** based on original v1.73 that keeps the screen awake and displays the custom November 8, 2026 date.
-- Older **v1.72 and v1.73 patches** that also give the ash plate more time to open: 30 seconds beyond the configured movement time, up from 10.
-- Disassembly, decompiled routines, hashes, and checksums so you can follow the findings.
-- Manuals and notes about ignition, touchscreen calibration, wiring, and the images used by the display.
-
-## :cloud: Getting started
-
-You need **Python 3.6+** for the patch scripts. They use the standard library; Node.js is only needed to regenerate this README.
-
-```sh
-git clone https://github.com/ionicabizau/ekoheat-boiler-1500.git
-cd ekoheat-boiler-1500
-```
-
-Start with the [firmware comparison](analysis/v1.73/comparison.md), [changelog](CHANGELOG.md), or [interesting findings](FUN_FACTS.md).
-
-## :desktop: Minimal v2.42 update package
-
-For the requested screen and version changes, use the two-file [v2.42 update folder](update-v2.42/). It contains only `DTX9003.uc3` and the original v1.73 `license.key`. The image displays **`v2.42  Nov  8 2026`** and prevents the automatic idle-clock transition. Original v1.73 ash-plate timing and three startup attempts remain in place.
-
-This uses the **same byte-patching method** as the current v2.73 image: fixed-length changes to the original v1.73 file, followed by a recalculated payload CRC32. Both use a literal Info label and the same idle instruction. An earlier v2.73 build changed the numeric version argument; the latest v2.73 and v2.42 images both embed the complete label. The v2.42 build adds a separate verifier and packages only the two USB files. These checks cannot establish whether an update will persist after a restart.
-
-```sh
-python3 analysis/tools/patch_v242.py
-python3 analysis/tools/verify_v242.py --update-dir update-v2.42 --strict-package
-```
-
-See the [v2.42 patch notes](analysis/patched/v2.42/README.md) for exact bytes, hashes, disassembly, and verification results. Use the [update guide](docs/updating-firmware.md) for the controller steps and post-update checks.
-
-## :wrench: Keep the screen awake and give the ash plate more time on v1.73
-
-Run from the repository root:
-
-```sh
-python3 analysis/tools/patch_v173_30s.py
-python3 analysis/tools/verify_patch.py --version 1.73
-```
-
-This creates [`DTX9003.uc3`](analysis/patched/v2.73/DTX9003.uc3). It keeps the current screen visible and increases the ash-plate opening allowance from 10 to **30 seconds beyond the configured movement time**. For a 10-second movement setting, the nominal opening fault point is 40.2 seconds, including the existing loop timing. This is not a 30-second total opening limit.
-
-The script checks the source hash and CRC32, leaves the original untouched, and records the changes in a [JSON manifest](analysis/patched/v2.73/DTX9003.json). See the [patch notes](analysis/patched/v2.73/README.md) for instruction details and verification results. Closing checks are unchanged. The v2.73 build now allows **five total normal startup attempts**, retaining the existing fuel-charge conditions and special startup timeout behavior. This can extend ignition operation; see the patch notes for verification limits.
-
-The combined image displays **v2.73** to distinguish it from the original firmware.
-
-## :hourglass_flowing_sand: The same changes on v1.72
-
-```sh
-python3 analysis/tools/patch_firmware.py
-python3 analysis/tools/verify_patch.py
-```
-
-This produces [`DTX9003.uc3`](analysis/patched/v1.72.42/DTX9003.uc3). I also increased the ash-plate opening allowance to 30 seconds beyond the configured movement duration. This changes motor fault timing; read the [full patch notes](analysis/patched/v1.72.42/README.md) for the details.
-
-Offsets and patch instructions are specific to each source image. Both generators refuse a source with a different SHA-256.
-
-The combined image displays **v1.72.42**. The v1.72.42 label preserves the vendor build date; v2.73 displays the custom build date, November 1, 2026.
-
-## :floppy_disk: Update the boiler software
-
-For v2.42, copy only the two files from [update-v2.42/](update-v2.42/) to the USB root. I wrote down the [USB update procedure](docs/updating-firmware.md), including which patched image and `license.key` to use, the original `DTX9003.uc3` filename, and the controller menu steps.
-
-**Record your settings first:** the manual warns that an update can reset everything and select Ekoheat 900. Check the model is **Ekoheat 1500** and restore the pellet calibration before restarting.
-
-The guide follows the supplied manuals. A reported v2.42 attempt did not show the expected patched behavior; bootloader and license-file acceptance remain unverified. See the [update investigation](analysis/update-investigation.md).
-
-## :mag: What the binaries tell us
-
-| Finding | Evidence |
-| --- | --- |
-| Original firmware uses a processed light threshold of 18 lux; three failed attempts can produce “Startup failed!” | [Startup analysis](analysis/startup-failure.md) |
-| Three ash-plate endstop activations within five seconds appear to request touchscreen recalibration on next startup | [Calibration notes](FUN_FACTS.md) |
-| v1.73 adds low-fuel warning and expanded communication/status fields | [Version comparison](analysis/v1.73/comparison.md) |
-| v1.73 adds start/standby/shutdown reactions to a digital input | [Input analysis](analysis/v1.73/comparison.md#additional-response-to-digital-input-gpio-0x20) |
-| One manual documents an ambient thermostat connection on J1 terminals 8–9 | [Manual index](docs/README.md) |
-
-The mapping between that thermostat connection and firmware GPIO `0x20` is **unconfirmed**. Remote error acknowledgement is also unverified. A physical safety cut-out may require a physical reset; clearing a UI message does not repair its cause.
-
-## :file_folder: Repository map
-
-| Path | Contents |
-| --- | --- |
-| [`DTX9003 v1.72/`](DTX9003%20v1.72) | Original v1.72 firmware |
-| [`DTX9003 v1.73/`](DTX9003%20v1.73) | Original v1.73 firmware |
-| [`update-v2.42/`](update-v2.42/) | Two files to copy to USB for the minimal v2.42 update |
-| [`analysis/tools/`](analysis/tools) | Python patch/analysis scripts and SLEIGH disassembler source |
-| [`analysis/patched/`](analysis/patched) | Derivatives, manifests, and patch evidence |
-| [`analysis/v1.73/`](analysis/v1.73) | Version comparison and decompiled v1.73 routines |
-| [`analysis/ghidra/`](analysis/ghidra) | Original v1.72 disassembly and decompiled routines |
-| [`analysis/assets/`](analysis/assets) | Extracted RGB565 bitmap previews and HTML viewer |
-| [`docs/`](docs) | Boiler manuals and display datasheet |
-
-See [analysis setup and reproduction](analysis/README.md) for the distinction between Python-only tools and the native Ghidra tooling. The supplied `license.key` files are included in their firmware folders. They are not needed for offline analysis or patch generation. Local native builds, generated XML images, and caches are excluded from Git.
-
-## :memo: Regenerate this README
-
-I use [`blah`](https://github.com/ionicabizau/blah) for this README. Edit the **`blah` field in [`package.json`](package.json)**, or [`.blah/README.ejs`](.blah/README.ejs) for layout changes, then run:
-
-```sh
-npm ci
-npm run readme
-```
-
-Commit the generated README along with the source changes.
-
-## :yum: How to contribute
-
-Found another firmware version, figured out an input, or noticed something I got wrong? [Open an issue](https://github.com/ionicabizau/ekoheat-boiler-1500/issues) or send a pull request. Please include the firmware hash and how you reached your conclusion.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the details.
-
-## :sparkling_heart: Support my projects
-
-If this project helps, give it a star or share what you discover. :heart:
-
-[Support me on Patreon](https://www.patreon.com/ionicabizau) · [Buy me a coffee](https://www.buymeacoffee.com/H96WwChMy) · [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVXDDLKKLQRJW)
-
-## :scroll: License
-
-Original project scripts, documentation, and header artwork: [MIT](LICENSE) © [Ionică Bizău](https://ionicabizau.net).
-
-Vendor firmware, patched derivatives, extracted assets, and supplied manuals retain their respective owners’ rights and are excluded from that license grant. See [THIRD_PARTY.md](THIRD_PARTY.md). This project is not affiliated with or endorsed by Ekopower.
-
-Copyright © Ekoheat. The original firmware binaries and the underlying firmware in patched images remain Ekoheat’s property and are not covered by this project’s MIT license.
-
-I downloaded firmware from [NH Bioservice’s Ecoheat 900 / 1500 / 2500 page](https://www.nhbioservice.dk/pillefyr/ecoheat-900-1500-2500/), which provides version 1.72. I requested version 1.73 through [ekoheat.dk](https://ekoheat.dk/), and KESA ApS shared it with me by email from [kesa@kesa.dk](mailto:kesa@kesa.dk).
+For USB preparation and checks, use the [update guide](docs/updating-firmware.md). For the binary comparison, see [analysis](analysis/README.md). The underlying firmware belongs to its original owner; see [third-party materials](THIRD_PARTY.md).
