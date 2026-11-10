@@ -2,6 +2,8 @@
 
 This is a record of what was built and what the controller actually showed. A USB update screen, a touchscreen recalibration prompt, and a matching file hash do not by themselves prove which application is running.
 
+For the normal initial setup, startup stages, buttons, and menu entries, see the [alternative controller guide](controller-guide.md).
+
 ## What we wanted
 
 The original Ekoheat 1500 controller runs DTX9003 firmware. The requested change was to keep the normal display visible instead of switching to the idle clock. An earlier experiment also tried to show a custom v2.42 label dated 8 November 2026. The original releases available here are 1.72 and 1.73.

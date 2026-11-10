@@ -13,4 +13,4 @@ The two derivatives each change one AVR32 idle-expiry instruction and the requir
 
 The [story and controller observations](docs/firmware-story.md) explain the earlier v2.42 experiments, including the latest report: after official 1.73 installed, two v2.42 attempts left Info at 1.73 while the clock appeared to stay away. The exact installed image and persistence have not been verified. The v2.42 and older motor/startup derivatives have been removed from the current file set; they remain in Git history.
 
-For USB preparation and checks, use the [update guide](docs/updating-firmware.md). For the binary comparison, see [analysis](analysis/README.md). The underlying firmware belongs to its original owner; see [third-party materials](THIRD_PARTY.md).
+For initial setup, startup stages, screen buttons, and every documented menu item, use the [alternative controller guide](docs/controller-guide.md). For USB preparation and checks, use the [update guide](docs/updating-firmware.md). For the binary comparison, see [analysis](analysis/README.md). The underlying firmware belongs to its original owner; see [third-party materials](THIRD_PARTY.md).

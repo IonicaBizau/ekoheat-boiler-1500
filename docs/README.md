@@ -1,5 +1,6 @@
 # Reference documents
 
+- [Alternative controller guide](controller-guide.md): initial setup, startup sequence, main-screen buttons, user and service menus, and alarms.
 - [Firmware update story](firmware-story.md): chronological controller observations and current uncertainty.
 - [USB update guide](updating-firmware.md): the four retained file pairs and post-update checks.
 - [Ekoheat series manual](ekoheat_series.pdf): operation and wiring.
